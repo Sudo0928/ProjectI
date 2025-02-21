@@ -5,19 +5,11 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class PoolManager : MonoBehaviour
+public static class PoolManager
 {
-    private GameManager gameManager;
+    public static Dictionary<int, ObjectPool<GameObject>> pools = new Dictionary<int, ObjectPool<GameObject>>();
 
-    // key = id
-    public Dictionary<int, ObjectPool<GameObject>> pools = new Dictionary<int, ObjectPool<GameObject>>();
-
-    internal void Init(GameManager gameManager)
-    {
-        this.gameManager = gameManager;
-    }
-
-    public T GetObject<T>(int id) where T : Component
+    public static T GetObject<T>(int id) where T : Component
     {
         if (pools.TryGetValue(id, out var pool))
         {

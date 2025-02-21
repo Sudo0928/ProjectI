@@ -2,12 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : Singleton<SoundManager>
 {
-    private GameManager gameManager;
 
-    internal void Init(GameManager gameManager)
-    {
-        this.gameManager = gameManager;
-    }
 }
