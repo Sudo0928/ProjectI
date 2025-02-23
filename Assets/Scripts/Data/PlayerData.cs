@@ -41,11 +41,20 @@ public class PlayerData
 			float value = item.OptionValues[i];
 			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
+			
+
 			options[(int)target.Name] += 1.0f;
 			if (myItems.ContainsKey((int)target.Name))
 				myItems[(int)target.Name] += 1;
 			else
 				myItems.Add((int)target.Name, 1);
+		}
+
+		foreach (int idx in item.SpecialOptions)
+		{
+			var sp = DataManager.specialAbilityInfoLoader.GetByKey(idx);
+			DataManager.specialAbilityData.GetSpecialAbility(sp.ComponentName);
+			// TODO Ãß°¡
 		}
 	}
 

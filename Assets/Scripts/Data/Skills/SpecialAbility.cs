@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class SpecialAbility : Component
 {
+	// TODO 함수 추가
     public abstract void AddSkill();
     public abstract void RemoveSkill();
 }
