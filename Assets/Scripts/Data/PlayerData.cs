@@ -6,20 +6,27 @@ using UnityEngine;
 using static DesignEnums;
 
 [Serializable]
-public class PlayerData
+public class PlayerData 
 {
-	public Dictionary<Option, float> options = new Dictionary<Option, float>()
+	float[] options; 
+
+	public PlayerData()
 	{
-		{Option.Attack, 1.0f },
-		{Option.AttackSpeed, 1.0f },
-		{Option.AttackScale, 1.0f },
-		{Option.Range, 1.0f },
-		{Option.RangeScale, 1.0f },
-		{Option.ProjectileSize, 1.0f },
-		{Option.ProjectileSpeed, 1.0f },
-		{Option.Speed, 1.0f },
-		{Option.Health, 1.0f },
-	};
+		options = new float[Enum.GetValues(typeof(Option)).Length];
+		options[(int)Option.Attack] = 1.0f;
+		options[(int)Option.AttackSpeed] = 1.0f;
+		options[(int)Option.AttackScale] = 1.0f;
+		options[(int)Option.Range] = 1.0f;
+		options[(int)Option.RangeScale] = 1.0f;
+		options[(int)Option.ProjectileSize] = 1.0f;
+		options[(int)Option.ProjectileSpeed] = 1.0f;
+		options[(int)Option.Health] = 1.0f;
+	}
+
+	public float GetOptionValue(Option option)
+	{
+		return options[(int)option];
+	} 
 
 	public void AddItem(ItemInfo item)
 	{
@@ -30,7 +37,7 @@ public class PlayerData
 			float value = item.OptionValues[i];
 			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
-			options[target.Name] += value;
+			options[(int)target.Name] += 1.0f;
 		}
 	}
 
@@ -43,7 +50,7 @@ public class PlayerData
 			float value = item.OptionValues[i];
 			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
-			options[target.Name] -= value; 
+			options[(int)target.Name] -= value; 
 		}
 	}
 }

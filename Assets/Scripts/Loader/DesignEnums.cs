@@ -19,5 +19,6 @@ public static class DesignEnums
         ProjectileSpeed = 6,
         Speed = 7,
         Health = 8,
+        Size = 9,
     }
 }

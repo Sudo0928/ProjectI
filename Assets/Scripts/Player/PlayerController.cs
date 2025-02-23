@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     Vector2 moveDir = Vector2.zero;
+	PlayerData playerData;
 
 	void Start()
     {
@@ -16,8 +17,8 @@ public class PlayerController : MonoBehaviour
 	{
 		if (moveDir.magnitude > 0) 
 		{
-			var pos = transform.position;
-			float speed = DataManager.playerData.options[DesignEnums.Option.Speed];
+			var pos = transform.position; 
+			float speed = DataManager.playerData.GetOptionValue(DesignEnums.Option.Speed);
 			transform.position = pos + (new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime);
 		}
 	}
@@ -34,3 +35,6 @@ public class PlayerController : MonoBehaviour
 
 	}
 }
+
+// 아이템의 이미지 데이터 -> 엑셀 관리
+// 컴포넌트 데이터 -> Switch-Case
