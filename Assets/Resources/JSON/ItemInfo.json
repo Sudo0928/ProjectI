@@ -20,7 +20,8 @@
         0
       ],
       "Description": "눈물이 부메랑처럼 되돌아온다.",
-      "Massage": "부메랑 공격"
+      "Massage": "부메랑 공격",
+      "Image": "collectibles_005_myreflection"
     },
     {
       "key": 1001,
@@ -40,7 +41,8 @@
         0
       ],
       "Description": "캐릭터의 눈물 색이 노래지며 눈물 위치가 아래로 바뀌어서 오줌을 싸는 것처럼 보이게 된다.\r\n사거리가 극도로 짧아지고 눈물이 나가는 위치도 낮아지는 특성상 함정 조합이 상당히 많다.",
-      "Massage": "공격 속도 증가, 사거리 감소"
+      "Massage": "공격 속도 증가, 사거리 감소",
+      "Image": "collectibles_006_numberone"
     },
     {
       "key": 1002,
@@ -56,7 +58,8 @@
         0
       ],
       "Description": "눈물 색깔을 빨간색으로 바꾼다.",
-      "Massage": "공격력 증가"
+      "Massage": "공격력 증가",
+      "Image": "collectibles_007_bloodofthemartyr"
     },
     {
       "key": 1003,
@@ -72,7 +75,8 @@
         1
       ],
       "Description": "캐릭터를 따라다니면서 캐릭터가 공격할 때\u00A0공격력 3.5의 눈물을 같이 초당 2번 발사하는 패밀리어가 생긴다.",
-      "Massage": "영원한 친구"
+      "Massage": "영원한 친구",
+      "Image": "collectibles_008_brotherbobby"
     },
     {
       "key": 1004,
@@ -88,7 +92,8 @@
         3
       ],
       "Description": "검은 파리 두 마리가 캐릭터 주위를 맴돌며 적들의 발사체를 막아준다.",
-      "Massage": "투사체 방어"
+      "Massage": "투사체 방어",
+      "Image": "collectibles_010_haloofflies"
     },
     {
       "key": 1005,
@@ -112,7 +117,8 @@
         4
       ],
       "Description": "캐릭터의 크기가 한 단계 커진다. 캐릭터의 크기가 커져도 피격 판정은 커지지 않는다.",
-      "Massage": "모든 능력치 증가!"
+      "Massage": "모든 능력치 증가!",
+      "Image": "collectibles_012_magicmushroom"
     },
     {
       "key": 1006,
@@ -128,7 +134,8 @@
         5
       ],
       "Description": "캐릭터와 접촉한 적에게 틱당 24, 초당 48의 접촉 피해와 함께\u00A0중독\u00A0상태이상을 건다.",
-      "Massage": "독성 \u002B 이동 속도 증가"
+      "Massage": "독성 \u002B 이동 속도 증가",
+      "Image": "collectibles_013_thevirus"
     },
     {
       "key": 1007,
@@ -144,7 +151,8 @@
         2
       ],
       "Description": "똥을 머리에 쓴다. 아이템 획득 이후 적으로 나오는 파리들이 대부분 중립 또는 친화적으로 변한다.",
-      "Massage": "파리 사랑"
+      "Massage": "파리 사랑",
+      "Image": "collectibles_009_skatole"
     }
   ]
 }

@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 
 [Serializable]
-public class ItemInfo
+public class SpecialAbilityInfo
 {
     /// <summary>
     /// ID
@@ -17,52 +17,28 @@ public class ItemInfo
     public string Name;
 
     /// <summary>
-    /// 등급
+    /// 컴포넌트이름
     /// </summary>
-    public DesignEnums.Grade Grade;
-
-    /// <summary>
-    /// 옵션
-    /// </summary>
-    public List<int> AvailableOptions;
-
-    /// <summary>
-    /// 값
-    /// </summary>
-    public List<float> OptionValues;
-
-    /// <summary>
-    /// 특수 효과
-    /// </summary>
-    public List<int> SpecialOptions;
+    public string ComponentName;
 
     /// <summary>
     /// 설명
     /// </summary>
     public string Description;
-
-    /// <summary>
-    /// 습득시 메시지
-    /// </summary>
-    public string Massage;
-
-    /// <summary>
-    /// 아이템 이미지 링크
-    /// </summary>
-    public string Image;
-
 }
-public class ItemInfoLoader
-{
-    public List<ItemInfo> ItemsList { get; private set; }
-    public Dictionary<int, ItemInfo> ItemsDict { get; private set; }
 
-    public ItemInfoLoader(string path = "JSON/ItemInfo")
+public class SpecialAbilityInfoLoader
+{
+    public List<SpecialAbilityInfo> ItemsList { get; private set; }
+    public Dictionary<int, SpecialAbilityInfo> ItemsDict { get; private set; }
+
+
+    public SpecialAbilityInfoLoader(string path = "JSON/SpecialAbilityInfo")
     {
         string jsonData;
         jsonData = Resources.Load<TextAsset>(path).text;
         ItemsList = JsonUtility.FromJson<Wrapper>(jsonData).Items;
-        ItemsDict = new Dictionary<int, ItemInfo>();
+        ItemsDict = new Dictionary<int, SpecialAbilityInfo>();
         foreach (var item in ItemsList)
         {
             ItemsDict.Add(item.key, item);
@@ -72,10 +48,10 @@ public class ItemInfoLoader
     [Serializable]
     private class Wrapper
     {
-        public List<ItemInfo> Items;
+        public List<SpecialAbilityInfo> Items;
     }
 
-    public ItemInfo GetByKey(int key)
+    public SpecialAbilityInfo GetByKey(int key)
     {
         if (ItemsDict.ContainsKey(key))
         {
@@ -83,7 +59,8 @@ public class ItemInfoLoader
         }
         return null;
     }
-    public ItemInfo GetByIndex(int index)
+
+	public SpecialAbilityInfo GetByIndex(int index)
     {
         if (index >= 0 && index < ItemsList.Count)
         {

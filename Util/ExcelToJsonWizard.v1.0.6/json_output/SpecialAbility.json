@@ -1,0 +1,34 @@
+{
+  "Items": [
+    {
+      "key": 1,
+      "Name": "보비 형",
+      "ComponentName": "BrotherBoddy",
+      "Description": "캐릭터를 따라다니면서 캐릭터가 공격할 때\u00A0공격력 3.5의 눈물을 같이 초당 2번 발사하는 패밀리어가 생긴다."
+    },
+    {
+      "key": 2,
+      "Name": "스카톨",
+      "ComponentName": "Skatole",
+      "Description": "똥을 머리에 쓴다. 아이템 획득 이후 적으로 나오는 파리들이 대부분 중립 또는 친화적으로 변한다."
+    },
+    {
+      "key": 3,
+      "Name": "파리 떼",
+      "ComponentName": "HaloOfFlies",
+      "Description": "검은 파리 두 마리가 캐릭터 주위를 맴돌며 적들의 발사체를 막아준다.\n일부 파리 몬스터는 이 파리와 접촉시키는 것으로 즉시 처치할 수 있다."
+    },
+    {
+      "key": 4,
+      "Name": "요술 버섯",
+      "ComponentName": "MagicMushroom",
+      "Description": "캐릭터의 크기가 한 단계 커진다. 캐릭터의 크기가 커져도 피격 판정은 커지지 않는다.\n버섯 오브젝트를 파괴 시 0.5%의 확률로 드랍될 수 있다."
+    },
+    {
+      "key": 5,
+      "Name": "바이러스",
+      "ComponentName": "TheVirus",
+      "Description": "캐릭터와 접촉한 적에게 틱당 24, 초당 48의 접촉 피해와 함께 중독 상태이상을 건다.\n중독 대미지는 캐릭터가 보유하고 있는 빨간 하트 최대 체력과 뼈 하트의 수에 비례하며[7] 총 6~7회 적용된다."
+    }
+  ]
+}

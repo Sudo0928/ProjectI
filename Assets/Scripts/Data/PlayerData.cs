@@ -8,7 +8,11 @@ using static DesignEnums;
 [Serializable]
 public class PlayerData 
 {
-	float[] options; 
+	float[] options;
+	HashSet<SpecialAbility> specialAbilitys = new HashSet<SpecialAbility>();
+
+	// 아이템 아이디, 아이템 개수
+	Dictionary<int, int> myItems = new Dictionary<int, int>();
 
 	public PlayerData()
 	{
@@ -38,6 +42,10 @@ public class PlayerData
 			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
 			options[(int)target.Name] += 1.0f;
+			if (myItems.ContainsKey((int)target.Name))
+				myItems[(int)target.Name] += 1;
+			else
+				myItems.Add((int)target.Name, 1);
 		}
 	}
 
@@ -50,7 +58,12 @@ public class PlayerData
 			float value = item.OptionValues[i];
 			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
-			options[(int)target.Name] -= value; 
+			int ot = (int)target.Name;
+			options[ot] -= value;
+
+			myItems[ot] -= 1;
+			if (myItems[ot] == 0)
+				myItems.Remove(ot);
 		}
 	}
 }
