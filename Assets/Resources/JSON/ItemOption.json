@@ -1,0 +1,49 @@
+{
+  "Items": [
+    {
+      "key": 1,
+      "Name": 0,
+      "Description": "공격력 {0} 증가"
+    },
+    {
+      "key": 2,
+      "Name": 1,
+      "Description": "공격력 {0}% 증가"
+    },
+    {
+      "key": 3,
+      "Name": 2,
+      "Description": "공격속도 {0}% 증가"
+    },
+    {
+      "key": 4,
+      "Name": 3,
+      "Description": "사거리 {0} 증거"
+    },
+    {
+      "key": 5,
+      "Name": 4,
+      "Description": "사거리 {0}% 증가"
+    },
+    {
+      "key": 6,
+      "Name": 5,
+      "Description": "눈물 크기 {0} 증가"
+    },
+    {
+      "key": 7,
+      "Name": 6,
+      "Description": "눈물 속도 {0} 증가"
+    },
+    {
+      "key": 8,
+      "Name": 7,
+      "Description": "이동속도 {0}증가"
+    },
+    {
+      "key": 9,
+      "Name": 8,
+      "Description": "최대 체력 {0} 증가"
+    }
+  ]
+}

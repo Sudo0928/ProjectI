@@ -1,0 +1,65 @@
+{
+  "Items": [
+    {
+      "key": 1,
+      "name": "CommonPool",
+      "LegendaryRate": 5,
+      "RareRate": 20,
+      "CommonRate": 75,
+      "Items": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006
+      ]
+    },
+    {
+      "key": 2,
+      "name": "RarePool",
+      "LegendaryRate": 15,
+      "RareRate": 30,
+      "CommonRate": 55,
+      "Items": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006
+      ]
+    },
+    {
+      "key": 3,
+      "name": "LegendaryPool",
+      "LegendaryRate": 25,
+      "RareRate": 40,
+      "CommonRate": 35,
+      "Items": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006
+      ]
+    },
+    {
+      "key": 4,
+      "name": "OnlyLegendary",
+      "LegendaryRate": 100,
+      "RareRate": 0,
+      "CommonRate": 0,
+      "Items": [
+        1000,
+        1001,
+        1003,
+        1004
+      ]
+    }
+  ]
+}

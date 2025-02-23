@@ -3,43 +3,47 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static DesignEnums;
 
 [Serializable]
 public class PlayerData
 {
-    public ActiveItem activeItem;
-    public HashSet<PassiveItem> items = new HashSet<PassiveItem>();
-     
+	public Dictionary<Option, float> options = new Dictionary<Option, float>()
+	{
+		{Option.Attack, 1.0f },
+		{Option.AttackSpeed, 1.0f },
+		{Option.AttackScale, 1.0f },
+		{Option.Range, 1.0f },
+		{Option.RangeScale, 1.0f },
+		{Option.ProjectileSize, 1.0f },
+		{Option.ProjectileSpeed, 1.0f },
+		{Option.Speed, 1.0f },
+		{Option.Health, 1.0f },
+	};
 
-    public void AddItem(Item item)
-    {
-        if (item is ActiveItem)
-        {
-            // TODO 조합
-            // 현재 아이템과 조합이 가능한지 체크
-            activeItem = (ActiveItem)item;
-		} 
-		else if  (items.Contains(item) == false)
-        {
-			items.Add((PassiveItem)item);
+	public void AddItem(ItemInfo item)
+	{
+		int size = item.OptionValues.Count;
+		for (int i = 0; i < size; i++)
+		{
+			int idx = item.AvailableOptions[i];
+			float value = item.OptionValues[i];
+			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
-            foreach (var skill in ((PassiveItem)item).skills)
-                skill.OnPassive();
+			options[target.Name] += value;
 		}
+	}
 
-	} 
+	public void RemoveItem(ItemInfo item)
+	{
+		int size = item.OptionValues.Count;
+		for (int i = 0; i < size; i++)
+		{
+			int idx = item.AvailableOptions[i];
+			float value = item.OptionValues[i];
+			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
-
-
-    public IActiveSkill GetActiveSkill()
-    {
-        if (activeItem == null)
-            return null;
-
-        return (IActiveSkill)activeItem.activeSkill;
-    }
+			options[target.Name] -= value; 
+		}
+	}
 }
-
-// 중복되는 특성을 가진 아이템이 존재할 때,
-// 2개의 아이템 중 하나를 제거하면 중복된 특성은 그대로 존재해야함
-// 

@@ -9,15 +9,16 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
     {
-        InputSystem.instance.move.action.performed += OnMove;
-		InputSystem.instance.space.action.performed += Action;
+        InputSystem.Instance.move.action.performed += OnMove;
+		InputSystem.Instance.space.action.performed += Action;
 	}
 	private void Update()
 	{
-		if (moveDir.magnitude > 0)
+		if (moveDir.magnitude > 0) 
 		{
 			var pos = transform.position;
-			transform.position = pos + (new Vector3(moveDir.x, moveDir.y, 0) * 3.0f * Time.deltaTime);
+			float speed = DataManager.playerData.options[DesignEnums.Option.Speed];
+			transform.position = pos + (new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime);
 		}
 	}
 
@@ -28,8 +29,8 @@ public class PlayerController : MonoBehaviour
 
 	void Action(InputAction.CallbackContext obj)
 	{
-		IActiveSkill skill = DataManager.instance.playerData.GetActiveSkill();
-		skill.Action();
+		//IActiveSkill skill = DataManager.playerData.GetActiveSkill();
+		//skill.Action();
 
 	}
 }
