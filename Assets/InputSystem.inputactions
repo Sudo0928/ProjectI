@@ -15,10 +15,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Action",
-                    "type": "Button",
+                    "name": "Attack",
+                    "type": "PassThrough",
                     "id": "ac31d84d-3985-4419-80c7-c4741f343bd5",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -39,7 +39,7 @@
                 {
                     "name": "up",
                     "id": "5ccb4639-8889-44cd-ba29-674fa1dd3a17",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -50,7 +50,7 @@
                 {
                     "name": "down",
                     "id": "adaa9f85-b245-40ee-967f-db736d07d282",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -61,7 +61,7 @@
                 {
                     "name": "left",
                     "id": "35612f3c-9321-4668-b4c0-6ff8c52c3873",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -72,7 +72,7 @@
                 {
                     "name": "right",
                     "id": "bc2b949b-2a58-46cc-a9fb-9ffbdefe4aa9",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -81,15 +81,59 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "72fab817-7c7d-44b4-8b1c-1ffa6fc27224",
-                    "path": "<Keyboard>/space",
+                    "name": "2D Vector",
+                    "id": "108e7770-fe2e-4abb-8953-0cabf0148b5a",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Action",
-                    "isComposite": false,
+                    "action": "Attack",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Up",
+                    "id": "096abf26-180d-4ad3-b957-431a9b9904d0",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "cd8d907a-4e4b-4e93-8f10-63cb4b43a23c",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "109aa864-1f89-4b7e-bc91-ecd23dfc6de7",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "6a476aba-52b5-446a-ac50-07dcf30b6c5c",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

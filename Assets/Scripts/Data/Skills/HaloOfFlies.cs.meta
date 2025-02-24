@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: cc00f43c671331f42813e56530ba8cc3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fliesPrefab: {fileID: 2802626510077550283, guid: cc5b6ac17b54940438d38241c2360091, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     Vector2 moveDir = Vector2.zero;
-	PlayerData playerData = new PlayerData();
+	public PlayerData playerData;
+	[SerializeField] GameObject tear;
 
+	private void Awake()
+	{
+		playerData = new PlayerData(this);
+	}
 	void Start()
     {
         InputSystem.Instance.move.action.performed += OnMove;
 		InputSystem.Instance.space.action.performed += Action;
-	
 	}
 	private void Update()
 	{
@@ -31,10 +36,20 @@ public class PlayerController : MonoBehaviour
 
 	void Action(InputAction.CallbackContext obj)
 	{
+		if (obj.ReadValue<Vector2>().magnitude <= 0)
+			return;
+
+		var go = Instantiate<GameObject>(tear);
+		go.transform.position = transform.position;
+		go.GetComponent<TearCtrl>().InitTear(obj.ReadValue<Vector2>(), 10.0f, 10.0f);
+
+
 		//IActiveSkill skill = DataManager.playerData.GetActiveSkill();
 		//skill.Action();
 
 	}
+
+
 }
 
 // 아이템의 이미지 데이터 -> 엑셀 관리

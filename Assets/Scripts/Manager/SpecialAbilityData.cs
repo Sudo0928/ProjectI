@@ -15,7 +15,12 @@ public class SpecialAbilityData
 		{
 			Type type = Type.GetType(info.ComponentName) ;
 			if (type != null)
-				specialAbilitys.Add(info.ComponentName, Activator.CreateInstance(type) as SpecialAbility);
+			{
+				var t = Activator.CreateInstance(type);
+				GameObject abilityObject = new GameObject(info.ComponentName);
+				SpecialAbility ability = abilityObject.AddComponent(type) as SpecialAbility;
+				specialAbilitys.Add(info.ComponentName, ability);
+			}
 		}
 	}
 

@@ -12,6 +12,8 @@ public class GameEventListener : MonoBehaviour
 
 		EventManager.RegisterListener<PlayerDamagedEvent>(OnPlayerDamaged, 10);
 		EventManager.RegisterListener<PlayerDamagedEvent>(OnPlayerDamagedLow, 5);
+
+		EventManager.RegisterListener<AddItemEvent>(OnAddItemEvent, 10);
 	}
 
 	private void OnDisable()
@@ -45,4 +47,10 @@ public class GameEventListener : MonoBehaviour
     {
         Debug.Log($"This game is xxxxxxx : {e.PlayerName}");
     }
+
+	private void OnAddItemEvent(AddItemEvent e)
+	{
+		Debug.Log("Test"); 
+		Debug.Log($"Add Item : {e.itemInfo.Name}");
+	}
 }
