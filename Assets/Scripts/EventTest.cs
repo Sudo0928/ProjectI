@@ -11,8 +11,11 @@ public class EventTest : MonoBehaviour
     public void TestEvents()
     {
         // 플레이어 입장 이벤트 발행
-        PlayerDamagedEvent joinEvent = new PlayerDamagedEvent("Steve" , 10);
-        EventManager.DispatchEvent(joinEvent);
+        PlayerJoinEvent playerJoinEvent = new PlayerJoinEvent("강현종");
+        EventManager.DispatchEvent(playerJoinEvent);
+
+        PlayerDamagedEvent damagedEvent = new PlayerDamagedEvent("Steve" , 10);
+        EventManager.DispatchEvent(damagedEvent);
 
         // 비동기 발행 예제
         StartCoroutine(DispatchAsyncCoroutine());
