@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
 	[SerializeField] SpriteRenderer head;
 	[SerializeField] SpriteRenderer body;
+	public PickupItemInfoUI pickupUI;
 
 	public Animator anim;
 	Animator bodyAnim;

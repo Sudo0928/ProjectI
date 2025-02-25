@@ -9,12 +9,13 @@ public class AddItemEvent : Event
 {
 	public PlayerData playerData;
 	public ItemInfo itemInfo;
-	public Action action;
-	public AddItemEvent(PlayerData pd, ItemInfo itemInfo)
+	public PickupItemInfoUI pickupItemInfoUI;
+
+	public AddItemEvent(PlayerData pd, ItemInfo itemInfo, PickupItemInfoUI pickupItemInfoUI)
 	{
 		playerData = pd;
 		this.itemInfo = itemInfo;
-
+		this.pickupItemInfoUI = pickupItemInfoUI;
 	}
 
 

@@ -52,6 +52,7 @@ public class GameEventListener : MonoBehaviour
 	{
 		Debug.Log("Test"); 
 		Debug.Log($"Add Item : {e.itemInfo.Name}");
+		e.pickupItemInfoUI.PickupItem(e.itemInfo);
 	}
 
 

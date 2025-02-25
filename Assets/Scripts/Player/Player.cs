@@ -52,39 +52,39 @@ public class Player : MonoBehaviour
 
     #region Reusable Methods
 
-    private void AddInputActionsCallbacks()
-    {
-        inputActions.Player.Attack.started += Attack;
-    }
+    //private void AddInputActionsCallbacks()
+    //{
+    //    inputActions.Player.Attack.started += Attack;
+    //}
 
-    private void RemoveInputActionsCallbacks()
-    {
-        inputActions.Player.Attack.started -= Attack;
-    }
+    //private void RemoveInputActionsCallbacks()
+    //{
+    //    inputActions.Player.Attack.started -= Attack;
+    //}
 
-    #endregion
+    //#endregion
 
-    #region Input Methods
+    //#region Input Methods
 
-    private void Attack(InputAction.CallbackContext context)
-    {
-        Vector2 direction = context.ReadValue<Vector2>();
+    //private void Attack(InputAction.CallbackContext context)
+    //{
+    //    Vector2 direction = context.ReadValue<Vector2>();
 
-        if (dir.magnitude <= 0)
-        {
-            isAttack = false;
-            return;
-        }
-        isAttack = true;
+    //    if (dir.magnitude <= 0)
+    //    {
+    //        isAttack = false;
+    //        return;
+    //    }
+    //    isAttack = true;
 
-        head.flipX = dir.x < 0;
-        anim.SetFloat("dirX", Math.Abs(dir.x));
-        anim.SetFloat("dirY", dir.y);
+    //    head.flipX = dir.x < 0;
+    //    anim.SetFloat("dirX", Math.Abs(dir.x));
+    //    anim.SetFloat("dirY", dir.y);
 
-        var go = Instantiate<GameObject>(tear);
-        go.transform.position = transform.position;
-        go.GetComponent<TearCtrl>().InitTear(dir, 10.0f, 10.0f);
-    }
+    //    var go = Instantiate<GameObject>(tear);
+    //    go.transform.position = transform.position;
+    //    go.GetComponent<TearCtrl>().InitTear(dir, 10.0f, 10.0f); 
+    //}
 
     #endregion
 }
