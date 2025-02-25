@@ -17,7 +17,5 @@ public class AddItemEvent : Event
 		this.itemInfo = itemInfo;
 		this.pickupItemInfoUI = pickupItemInfoUI;
 	}
-
-
 }
 

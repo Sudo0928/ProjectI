@@ -32,6 +32,7 @@ public class PlayerData
 		options[(int)Option.Speed] = 3.0f; 
 		CurHp = options[(int)Option.Heart];
 	}
+
 	public float GetOptionValue(Option option)
 	{
 		return options[(int)option];

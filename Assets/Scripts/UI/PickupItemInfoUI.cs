@@ -20,7 +20,7 @@ public class PickupItemInfoUI : MonoBehaviour
         anim.Play("Open");
 
 		name.text = item.Name;   
-        description.text = item.Description;
+        description.text = item.Massage;
         gameObject.SetActive(true);
         GameManager.Instance.SetTimer(() => { anim.Play("Close");}, 3.0f); 
 	} 
