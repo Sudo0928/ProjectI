@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody _rigidbody;
+    private Rigidbody2D _rigidbody2D;
 
     [SerializeField] private SpriteRenderer characterHeadRenderer;
     [SerializeField] private SpriteRenderer characterBodyRenderer;
@@ -17,15 +18,26 @@ public class Player : MonoBehaviour
 
     private PlayerInputAction inputActions;
 
+    private Animator playerHeadAnim;
+    private Animator playerBodyAnim;
+
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
         inputActions = new PlayerInputAction();
+
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        playerHeadAnim = GetComponent<Animator>();
+        playerBodyAnim = characterBodyRenderer.GetComponent<Animator>();
     }
 
     private void OnEnable()
     {
         inputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
 
     private void Update()
@@ -35,12 +47,29 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(movementDirection);
-        _rigidbody.AddForce(movementDirection * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
+        _rigidbody2D.velocity = movementDirection * speed * Time.fixedDeltaTime;
     }
 
-    private void OnDisable()
+    #region Reusable Methods
+
+    private void AddInputActionsCallbacks()
     {
-        inputActions.Disable();
+        inputActions.Player.Attack.started += Attack;
     }
+
+    private void RemoveInputActionsCallbacks()
+    {
+        inputActions.Player.Attack.started -= Attack;
+    }
+
+    #endregion
+
+    #region Input Methods
+
+    private void Attack(InputAction.CallbackContext context)
+    {
+        Vector2 direction = context.ReadValue<Vector2>();
+    }
+
+    #endregion
 }
