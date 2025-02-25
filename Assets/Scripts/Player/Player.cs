@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         lookDirection = inputActions.Player.Attack.ReadValue<Vector2>();
 
         animationHandler.PlayMoveAnim(movementDirection);
-        animationHandler.PlayLookAnim(lookDirection);
+        animationHandler.PlayLookAnim(movementDirection);
 
         desiredVelocity = movementDirection * maxSpeed;
 
@@ -79,6 +79,7 @@ public class Player : MonoBehaviour
 
         if (isAttack)
         {
+            animationHandler.PlayLookAnim(lookDirection);
             HandleAttackDelay(lookDirection);
         }
     }
