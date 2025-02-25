@@ -11,8 +11,19 @@ public class PlayerController : MonoBehaviour
 	public PlayerData playerData;
 	[SerializeField] GameObject tear;
 
+
+	[SerializeField] SpriteRenderer head;
+	[SerializeField] SpriteRenderer body;
+
+	Animator anim;
+	Animator bodyAnim;
+
+	bool isAttack = false;
+
 	private void Awake()
 	{
+		anim = GetComponent<Animator>();
+		bodyAnim = body.gameObject.GetComponent<Animator>();	
 		playerData = new PlayerData(this);
 	}
 	void Start()
@@ -32,21 +43,38 @@ public class PlayerController : MonoBehaviour
 
 	void OnMove(InputAction.CallbackContext obj)
     {
+
 		moveDir = obj.ReadValue<Vector2>();
-	}
+		body.flipX = moveDir.x < 0;
+
+		if (!isAttack)
+		{
+			head.flipX = moveDir.x < 0;
+			anim.SetFloat("dirX", Math.Abs(moveDir.x));
+			anim.SetFloat("dirY", moveDir.y);
+		}
+		
+		bodyAnim.SetFloat("dirX", Math.Abs(moveDir.x));
+		bodyAnim.SetFloat("dirY", Math.Abs(moveDir.y)); 
+	} 
 
 	void Action(InputAction.CallbackContext obj)
 	{
 		Vector2 dir = obj.ReadValue<Vector2>();
 		if (dir.magnitude <= 0)
+		{
+			isAttack = false;
 			return;
+		}
+		isAttack = true; 
+
+		head.flipX = dir.x < 0;
+		anim.SetFloat("dirX", Math.Abs(dir.x));
+		anim.SetFloat("dirY", dir.y); 
 
 		var go = Instantiate<GameObject>(tear);
 		go.transform.position = transform.position;
 		go.GetComponent<TearCtrl>().InitTear(dir, 10.0f, 10.0f);
-
-		//IActiveSkill skill = DataManager.playerData.GetActiveSkill();
-		//skill.Action();
 	}
 
 
