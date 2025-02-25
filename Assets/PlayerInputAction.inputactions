@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Attack",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "3daef762-7be9-4a48-be9e-e66494071331",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -81,48 +81,59 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "bf5a0057-7fff-49e9-9d00-e484fd460ca2",
+                    "name": "2D Vector",
+                    "id": "28a1278b-dd2d-44a8-b79a-184980adda4c",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "924134be-99e6-47c8-9119-e1519a959747",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "e5c1c75d-a400-41d9-a5b4-9b4d4bceabb4",
+                    "name": "down",
+                    "id": "70d3df0e-9694-41fa-a44d-7763b1070750",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "ca3ac394-2129-444e-8db0-d6113eaa6db0",
+                    "name": "left",
+                    "id": "8e126897-9be3-4cff-a590-b1e10901aaf3",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "b3d72399-667d-4c9f-ab6b-98870519dcde",
+                    "name": "right",
+                    "id": "86e4863a-f8b3-4a2c-a97b-c24ed765d4aa",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 }
             ]
         }
