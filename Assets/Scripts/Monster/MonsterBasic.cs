@@ -14,7 +14,6 @@ public enum MonsterState
 // 이동하는 몬스터만 상속
 public interface IMonsterMove
 {
-    [SerializeField, Tooltip("몬스터 이동속도")] protected float moveSpeed { get; set; }
     protected void Move();
 }
 
@@ -43,6 +42,7 @@ public class MonsterBasic : MonoBehaviour
     [SerializeField, Tooltip("몬스터 상태 가지 수")] protected int stateCount = 0;
 
     [Space]
+    [SerializeField, Tooltip("몬스터 이동속도")] protected float moveSpeed = 2;
     [SerializeField, Tooltip("몬스터 최대 체력")] protected int monsterMaxHP = 5;
     // 몬스터 현재 체력
     protected int monsterCurrentHP = 0;

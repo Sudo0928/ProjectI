@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,9 +119,421 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: monster_080_spider_Move_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 176
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3988d49a33b8330409678b96bf6466b4
+      internalID: 1314662127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Move_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 176
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c98af23db17ef48bf77f9bce9aef84
+      internalID: 538642177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_2
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 143
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ce6fda6b7813a46ae86227c0f15c82
+      internalID: 1470777584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_3
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 136
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfa164b4acb7c6498360e202e047c24
+      internalID: -162248139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Move_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 160
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9a4d30a5eda3340ba37bb6d49cb39a
+      internalID: -1256214873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Move_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 160
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cf500852df3084884f0b85677f9cd4
+      internalID: -2103840485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 155
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf8827bdce65af43aa109f6d4b7f2c5
+      internalID: -1928481107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 147
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1482718dacc66cc47a2e94eb70bc6b89
+      internalID: 716981067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Move_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 147
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba4c6fa0e6dc584e98dab88f7e6c407
+      internalID: -862268970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Move_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 144
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4142d58d975e34c9d45112e7508001
+      internalID: 1163627608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Move_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 128
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625e482431a28e94f83f77b9123fc146
+      internalID: 411433727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Move_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 128
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c626d850a5d27df418bd695ce82e6d67
+      internalID: 136230829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 70
+        width: 60
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bd2af95de74f14a88bbbc87abb89c3
+      internalID: -1383167031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 68
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691387aad642d2d47a35ff7f5cd42a84
+      internalID: -2058549643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_6
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 65
+        width: 60
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f23d5f4aa1a2e4ab040a2069887e5c
+      internalID: 1270960647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 68
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069eef6a698fe084397dfa135a09cbfe
+      internalID: 284626348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 15
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363b49ec91deade4ea6f82d2709f763f
+      internalID: 1557890447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6df126188e0b0c44a3a7663d415303b
+      internalID: -1803896893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_Die_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 16
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60024a13f58285e4e914a55df6865cfc
+      internalID: -1023724536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +544,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      monster_080_spider_16: 1779693974
+      monster_080_spider_19: -822080778
+      monster_080_spider_21: 2026807774
+      monster_080_spider_22: -838892726
+      monster_080_spider_23: -1871962059
+      monster_080_spider_24: -1928572065
+      monster_080_spider_25: -381281622
+      monster_080_spider_26: 2072566072
+      monster_080_spider_27: -1857932850
+      monster_080_spider_28: -224010916
+      monster_080_spider_29: -2076257019
+      monster_080_spider_30: -571793251
+      monster_080_spider_31: 1844581454
+      monster_080_spider_32: 2069504934
+      monster_080_spider_34: 328369093
+      monster_080_spider_38: 523468737
+      monster_080_spider_40: -1328655304
+      monster_080_spider_Die_0: -1928481107
+      monster_080_spider_Die_1: 716981067
+      monster_080_spider_Die_10: -1023724536
+      monster_080_spider_Die_2: 1470777584
+      monster_080_spider_Die_3: -162248139
+      monster_080_spider_Die_4: -1383167031
+      monster_080_spider_Die_5: -2058549643
+      monster_080_spider_Die_6: 1270960647
+      monster_080_spider_Die_7: 284626348
+      monster_080_spider_Die_8: 1557890447
+      monster_080_spider_Die_9: -1803896893
+      monster_080_spider_Move_0: 1314662127
+      monster_080_spider_Move_1: 538642177
+      monster_080_spider_Move_2: -1256214873
+      monster_080_spider_Move_3: -2103840485
+      monster_080_spider_Move_4: -862268970
+      monster_080_spider_Move_5: 1163627608
+      monster_080_spider_Move_6: 411433727
+      monster_080_spider_Move_7: 136230829
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
