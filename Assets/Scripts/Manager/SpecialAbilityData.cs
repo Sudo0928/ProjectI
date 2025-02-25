@@ -10,12 +10,17 @@ public class SpecialAbilityData
 	public SpecialAbilityData() 
 	{
 		List<SpecialAbilityInfo> list = DataManager.specialAbilityInfoLoader.ItemsList;
+		GameObject abilityObject = new GameObject();
 
 		foreach (var info in list)
 		{
 			Type type = Type.GetType(info.ComponentName) ;
 			if (type != null)
-				specialAbilitys.Add(info.ComponentName, Activator.CreateInstance(type) as SpecialAbility);
+			{
+				var t = Activator.CreateInstance(type);
+				SpecialAbility ability = abilityObject.AddComponent(type) as SpecialAbility;
+				specialAbilitys.Add(info.ComponentName, ability);
+			}
 		}
 	}
 

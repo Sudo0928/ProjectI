@@ -8,14 +8,18 @@ using static DesignEnums;
 [Serializable]
 public class PlayerData 
 {
-	float[] options;
 	HashSet<SpecialAbility> specialAbilitys = new HashSet<SpecialAbility>();
+	Dictionary<int, int> myItems = new Dictionary<int, int>();
+	PlayerController playerController;
+	float[] options;
 
 	// 아이템 아이디, 아이템 개수
-	Dictionary<int, int> myItems = new Dictionary<int, int>();
+	float curHp = 0f;
+	public float CurHp { get { return curHp; } set { curHp = value; } } 
 
-	public PlayerData()
+	public PlayerData(PlayerController pc)
 	{
+		playerController = pc;
 		options = new float[Enum.GetValues(typeof(Option)).Length];
 		options[(int)Option.Attack] = 1.0f;
 		options[(int)Option.AttackSpeed] = 1.0f;
@@ -24,7 +28,9 @@ public class PlayerData
 		options[(int)Option.RangeScale] = 1.0f;
 		options[(int)Option.ProjectileSize] = 1.0f;
 		options[(int)Option.ProjectileSpeed] = 1.0f;
-		options[(int)Option.Health] = 1.0f;
+		options[(int)Option.Heart] = 1.0f;
+		options[(int)Option.Speed] = 3.0f; 
+		CurHp = options[(int)Option.Heart];
 	}
 
 	public float GetOptionValue(Option option)
@@ -34,6 +40,7 @@ public class PlayerData
 
 	public void AddItem(ItemInfo item)
 	{
+		Debug.Log(item.Massage);
 		int size = item.OptionValues.Count;
 		for (int i = 0; i < size; i++)
 		{
@@ -41,22 +48,35 @@ public class PlayerData
 			float value = item.OptionValues[i];
 			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
-			
-
-			options[(int)target.Name] += 1.0f;
-			if (myItems.ContainsKey((int)target.Name))
-				myItems[(int)target.Name] += 1;
-			else
-				myItems.Add((int)target.Name, 1);
+			if (target != null)
+			{
+				options[(int)target.Name] += value;
+				if (myItems.ContainsKey((int)target.Name))
+					myItems[(int)target.Name] += 1;
+				else
+					myItems.Add((int)target.Name, 1);
+			}
+			 
 		}
 
 		foreach (int idx in item.SpecialOptions)
 		{
 			var sp = DataManager.specialAbilityInfoLoader.GetByKey(idx);
-			DataManager.specialAbilityData.GetSpecialAbility(sp.ComponentName);
-			// TODO 추가
+			if (sp != null)
+			{
+				var skill =DataManager.specialAbilityData.GetSpecialAbility(sp.ComponentName);
+				if (skill != null)
+				{
+					skill.OnAbility(playerController);
+					specialAbilitys.Add(skill);
+				}
+			}
+			
 		}
-	}
+
+		AddItemEvent addItem = new AddItemEvent(this, item);
+		EventManager.DispatchEvent(addItem);
+	} 
 
 	public void RemoveItem(ItemInfo item)
 	{
@@ -75,4 +95,6 @@ public class PlayerData
 				myItems.Remove(ot);
 		}
 	}
+
+
 }

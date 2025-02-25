@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 
 [Serializable]
-public class SpecialAbility
+public class SpecialAbilityInfo
 {
     /// <summary>
     /// ID
@@ -27,17 +27,17 @@ public class SpecialAbility
     public string Description;
 
 }
-public class SpecialAbilityLoader
+public class SpecialAbilityInfoLoader
 {
-    public List<SpecialAbility> ItemsList { get; private set; }
-    public Dictionary<int, SpecialAbility> ItemsDict { get; private set; }
+    public List<SpecialAbilityInfo> ItemsList { get; private set; }
+    public Dictionary<int, SpecialAbilityInfo> ItemsDict { get; private set; }
 
-    public SpecialAbilityLoader(string path = "JSON/SpecialAbility")
+    public SpecialAbilityInfoLoader(string path = "JSON/SpecialAbilityInfo")
     {
         string jsonData;
         jsonData = Resources.Load<TextAsset>(path).text;
         ItemsList = JsonUtility.FromJson<Wrapper>(jsonData).Items;
-        ItemsDict = new Dictionary<int, SpecialAbility>();
+        ItemsDict = new Dictionary<int, SpecialAbilityInfo>();
         foreach (var item in ItemsList)
         {
             ItemsDict.Add(item.key, item);
@@ -47,10 +47,10 @@ public class SpecialAbilityLoader
     [Serializable]
     private class Wrapper
     {
-        public List<SpecialAbility> Items;
+        public List<SpecialAbilityInfo> Items;
     }
 
-    public SpecialAbility GetByKey(int key)
+    public SpecialAbilityInfo GetByKey(int key)
     {
         if (ItemsDict.ContainsKey(key))
         {
@@ -58,7 +58,7 @@ public class SpecialAbilityLoader
         }
         return null;
     }
-    public SpecialAbility GetByIndex(int index)
+    public SpecialAbilityInfo GetByIndex(int index)
     {
         if (index >= 0 && index < ItemsList.Count)
         {

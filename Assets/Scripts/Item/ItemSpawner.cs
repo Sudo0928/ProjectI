@@ -13,7 +13,7 @@ public class ItemSpawner : MonoBehaviour
 
         var go = Instantiate<GameObject>(itemPrefab);
         go.transform.position = pos;
-        var item = DataManager.gachaSystem.GetItem(1);
+        var item = DataManager.gachaSystem.GetItem(4);
         go.GetComponent<Item>().SetItem(item);
 	} 
 }

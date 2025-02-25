@@ -2,63 +2,186 @@
   "Items": [
     {
       "key": 1,
-      "name": "CommonPool",
-      "LegendaryRate": 5,
-      "RareRate": 20,
-      "CommonRate": 75,
+      "name": "Rank0Pool",
+      "Rank0Rate": 60,
+      "Rank1Rate": 40,
+      "Rank2Rate": 0,
+      "Rank3Rate": 0,
+      "Rank4Rate": 0,
       "Items": [
-        1000,
-        1001,
-        1002,
-        1003,
-        1004,
-        1005,
-        1006
+        1009,
+        1008,
+        1025,
+        1129
       ]
     },
     {
       "key": 2,
-      "name": "RarePool",
-      "LegendaryRate": 15,
-      "RareRate": 30,
-      "CommonRate": 55,
+      "name": "Rank1Pool",
+      "Rank0Rate": 40,
+      "Rank1Rate": 40,
+      "Rank2Rate": 20,
+      "Rank3Rate": 0,
+      "Rank4Rate": 0,
       "Items": [
-        1000,
-        1001,
-        1002,
-        1003,
-        1004,
+        1009,
+        1008,
+        1025,
+        1129,
         1005,
-        1006
+        1006,
+        1010,
+        1013,
+        1428
       ]
     },
     {
       "key": 3,
-      "name": "LegendaryPool",
-      "LegendaryRate": 25,
-      "RareRate": 40,
-      "CommonRate": 35,
+      "name": "Rank2Pool",
+      "Rank0Rate": 20,
+      "Rank1Rate": 30,
+      "Rank2Rate": 30,
+      "Rank3Rate": 20,
+      "Rank4Rate": 0,
       "Items": [
-        1000,
-        1001,
-        1002,
-        1003,
-        1004,
+        1009,
+        1008,
+        1025,
+        1129,
         1005,
-        1006
+        1006,
+        1010,
+        1013,
+        1428,
+        1007,
+        1051,
+        1080,
+        1109,
+        1165
       ]
     },
     {
       "key": 4,
-      "name": "OnlyLegendary",
-      "LegendaryRate": 100,
-      "RareRate": 0,
-      "CommonRate": 0,
+      "name": "Rank3Pool",
+      "Rank0Rate": 10,
+      "Rank1Rate": 20,
+      "Rank2Rate": 40,
+      "Rank3Rate": 20,
+      "Rank4Rate": 10,
       "Items": [
-        1000,
-        1001,
-        1003,
-        1004
+        1009,
+        1008,
+        1025,
+        1129,
+        1005,
+        1006,
+        1010,
+        1013,
+        1428,
+        1007,
+        1051,
+        1080,
+        1109,
+        1165,
+        1004,
+        1012
+      ]
+    },
+    {
+      "key": 5,
+      "name": "Rank4Pool",
+      "Rank0Rate": 0,
+      "Rank1Rate": 10,
+      "Rank2Rate": 20,
+      "Rank3Rate": 40,
+      "Rank4Rate": 30,
+      "Items": [
+        1008,
+        1025,
+        1129,
+        1005,
+        1006,
+        1010,
+        1013,
+        1428,
+        1007,
+        1051,
+        1080,
+        1109,
+        1165,
+        1004,
+        1012
+      ]
+    },
+    {
+      "key": 6,
+      "name": "OnlyRank0Pool",
+      "Rank0Rate": 100,
+      "Rank1Rate": 0,
+      "Rank2Rate": 0,
+      "Rank3Rate": 0,
+      "Rank4Rate": 0,
+      "Items": [
+        1009
+      ]
+    },
+    {
+      "key": 7,
+      "name": "OnlyRank1Pool",
+      "Rank0Rate": 0,
+      "Rank1Rate": 100,
+      "Rank2Rate": 0,
+      "Rank3Rate": 0,
+      "Rank4Rate": 0,
+      "Items": [
+        1008,
+        1025,
+        1129
+      ]
+    },
+    {
+      "key": 8,
+      "name": "OnlyRank2Pool",
+      "Rank0Rate": 0,
+      "Rank1Rate": 0,
+      "Rank2Rate": 100,
+      "Rank3Rate": 0,
+      "Rank4Rate": 0,
+      "Items": [
+        1005,
+        1006,
+        1010,
+        1013,
+        1428
+      ]
+    },
+    {
+      "key": 9,
+      "name": "OnlyRank3Pool",
+      "Rank0Rate": 0,
+      "Rank1Rate": 0,
+      "Rank2Rate": 0,
+      "Rank3Rate": 100,
+      "Rank4Rate": 0,
+      "Items": [
+        1007,
+        1051,
+        1080,
+        1109,
+        1165
+      ]
+    },
+    {
+      "key": 10,
+      "name": "OnlyRank4Pool",
+      "Rank0Rate": 0,
+      "Rank1Rate": 0,
+      "Rank2Rate": 0,
+      "Rank3Rate": 0,
+      "Rank4Rate": 100,
+      "Items": [
+        1004,
+        1012
       ]
     }
   ]

@@ -19,17 +19,27 @@ public class GachaTable
     /// <summary>
     /// 확률
     /// </summary>
-    public int LegendaryRate;
+    public int Rank0Rate;
 
     /// <summary>
     /// 확률
     /// </summary>
-    public int RareRate;
+    public int Rank1Rate;
 
     /// <summary>
     /// 확률
     /// </summary>
-    public int CommonRate;
+    public int Rank2Rate;
+
+    /// <summary>
+    /// 확률
+    /// </summary>
+    public int Rank3Rate;
+
+    /// <summary>
+    /// 확률
+    /// </summary>
+    public int Rank4Rate;
 
     /// <summary>
     /// 아이템 리스트
