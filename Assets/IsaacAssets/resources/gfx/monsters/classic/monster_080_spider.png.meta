@@ -160,7 +160,7 @@ TextureImporter:
       name: spider_move1_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 176
         width: 32
         height: 16
@@ -181,7 +181,7 @@ TextureImporter:
       name: spider_move1_02
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 160
         width: 32
         height: 16
@@ -202,8 +202,8 @@ TextureImporter:
       name: spider_move1_03
       rect:
         serializedVersion: 2
-        x: 31
-        y: 161
+        x: 32
+        y: 160
         width: 32
         height: 16
       alignment: 0
@@ -328,7 +328,7 @@ TextureImporter:
       name: spider_move1_06
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 128
         width: 32
         height: 16
@@ -349,7 +349,7 @@ TextureImporter:
       name: spider_move1_07
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 128
         width: 32
         height: 16
