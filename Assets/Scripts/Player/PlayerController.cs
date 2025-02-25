@@ -114,7 +114,6 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 	
-
 	IEnumerator OnIdleHead()
 	{
 		yield return new WaitForSeconds(0.5f);
