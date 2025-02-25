@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: monster_080_spider_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c208b89e64fcbd4083a2441e7594b2c
+      internalID: -127135431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f913d404a8da04d96f1b9d1c6e2a48
+      internalID: 1688921868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d3f160eb191ba4d9a1d50ff698bc5d
+      internalID: -1640397100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce28f20e4d0e6a4fbd52771b3589de5
+      internalID: -461568719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98635df2886f4074489f962dbea94737
+      internalID: 457796946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71552a00bcd37db4ab58bb909a18c4f3
+      internalID: 522544699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8170161073d856458c7f552cf35adcb
+      internalID: -2087810052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df370895f8eb624e82ac798cd479451
+      internalID: 1940945393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3415818ddd0254bb8a7b1310ea9b9a
+      internalID: -304911878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844a0127f2abf9f4ca371b1df0e19de5
+      internalID: -2012717564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45cc9e32f98f8a48875b28158229825
+      internalID: -229162045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650145c53fd5f3643a659fcc989acc4d
+      internalID: 315657579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_48
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ec6e8315bef9f4488bdf37fd90685c
+      internalID: 1541207743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91628226c8a4a048a36ee0a6bd0635d
+      internalID: -1833913069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89faf0a1b3478bf4ca776074bd955e9d
+      internalID: -1646772140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_54
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff331423e8b400b4cb7fe039a3a504ae
+      internalID: -334766309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_64
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01a315ebc122b4419521a6c1339410a
+      internalID: 1789563493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bc5d79fe0fbf74fbbb3d447cefe2de
+      internalID: -1382600567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_66
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7efd8a06109da48b07baf0c4c47455
+      internalID: -310944707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_080_spider_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4065be35d3a5c64fae853efec32818c
+      internalID: 1237582731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +552,74 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      monster_080_spider_0: -127135431
+      monster_080_spider_1: 1688921868
+      monster_080_spider_10: -386412565
+      monster_080_spider_11: 291524752
+      monster_080_spider_12: 1146493733
+      monster_080_spider_13: 1920099748
+      monster_080_spider_14: 378578096
+      monster_080_spider_15: 271325397
+      monster_080_spider_16: 457796946
+      monster_080_spider_17: 522544699
+      monster_080_spider_18: -2087810052
+      monster_080_spider_19: -1769742120
+      monster_080_spider_2: 1237582731
+      monster_080_spider_20: 1940945393
+      monster_080_spider_21: -1644243858
+      monster_080_spider_22: -304911878
+      monster_080_spider_23: -355183957
+      monster_080_spider_24: -972982956
+      monster_080_spider_25: 251430366
+      monster_080_spider_26: -2012717564
+      monster_080_spider_27: -229162045
+      monster_080_spider_28: 315657579
+      monster_080_spider_29: 468016021
+      monster_080_spider_3: 1085727620
+      monster_080_spider_30: 1759580494
+      monster_080_spider_31: -248391683
+      monster_080_spider_32: 1687336940
+      monster_080_spider_33: -554919984
+      monster_080_spider_34: -1157221544
+      monster_080_spider_35: 1497905937
+      monster_080_spider_36: -586335884
+      monster_080_spider_37: -2074605655
+      monster_080_spider_38: -464473328
+      monster_080_spider_39: -1484215404
+      monster_080_spider_4: -303448160
+      monster_080_spider_40: 539340778
+      monster_080_spider_41: -1864815375
+      monster_080_spider_42: -91988746
+      monster_080_spider_43: -688786341
+      monster_080_spider_44: -1376082214
+      monster_080_spider_45: 362766434
+      monster_080_spider_46: -539255972
+      monster_080_spider_47: 1155488650
+      monster_080_spider_48: 1541207743
+      monster_080_spider_49: -354417447
+      monster_080_spider_5: 1879420063
+      monster_080_spider_50: -1833913069
+      monster_080_spider_51: -1669419185
+      monster_080_spider_52: -1646772140
+      monster_080_spider_53: 1534558658
+      monster_080_spider_54: -334766309
+      monster_080_spider_55: 52654984
+      monster_080_spider_56: -2019890643
+      monster_080_spider_57: -2020284047
+      monster_080_spider_58: -1121950335
+      monster_080_spider_59: -1552615198
+      monster_080_spider_6: -1640397100
+      monster_080_spider_60: -1093542564
+      monster_080_spider_61: 561711359
+      monster_080_spider_62: -114185976
+      monster_080_spider_63: -2135339495
+      monster_080_spider_64: 1789563493
+      monster_080_spider_65: -1382600567
+      monster_080_spider_66: -310944707
+      monster_080_spider_7: -461568719
+      monster_080_spider_8: 566566944
+      monster_080_spider_9: 1075254441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

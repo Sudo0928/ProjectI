@@ -32,7 +32,6 @@ public class PlayerData
 		options[(int)Option.Speed] = 3.0f; 
 		CurHp = options[(int)Option.Heart];
 	}
-
 	public float GetOptionValue(Option option)
 	{
 		return options[(int)option];
@@ -40,6 +39,7 @@ public class PlayerData
 
 	public void AddItem(ItemInfo item)
 	{
+		playerController.anim.SetTrigger("getItem");
 		Debug.Log(item.Massage);
 		int size = item.OptionValues.Count;
 		for (int i = 0; i < size; i++)
