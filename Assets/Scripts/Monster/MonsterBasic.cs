@@ -14,6 +14,7 @@ public enum MonsterState
 // 이동하는 몬스터만 상속
 public interface IMonsterMove
 {
+    [SerializeField, Tooltip("몬스터 이동속도")] protected float moveSpeed { get; set; }
     protected void Move();
 }
 
@@ -37,7 +38,6 @@ public class MonsterBasic : MonoBehaviour
     protected Rigidbody2D rigid;
     protected Animator anim;
 
-    [SerializeField, Tooltip("몬스터 이동속도")] protected float moveSpeed = 2f;
     [SerializeField, Tooltip("몬스터의 상대가 변경되는 최소 시간")] protected float minStateChangeTime = 1f;
     [SerializeField, Tooltip("몬스터의 상태가 변경되는 최대 시간")] protected float maxStateChangeTime = 3f;
     [SerializeField, Tooltip("몬스터 상태 가지 수")] protected int stateCount = 0;
@@ -61,5 +61,10 @@ public class MonsterBasic : MonoBehaviour
         stateCount = Enum.GetValues(typeof(MonsterState)).Length;
         stateChangeTime = UnityEngine.Random.Range(minStateChangeTime, maxStateChangeTime);
         monsterCurrentHP = monsterMaxHP;
+    }
+
+    protected void GetDamage(int _damage)
+    {
+
     }
 }
