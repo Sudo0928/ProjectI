@@ -66,25 +66,10 @@ public class Player : MonoBehaviour
 
     //#region Input Methods
 
-    //private void Attack(InputAction.CallbackContext context)
-    //{
-    //    Vector2 direction = context.ReadValue<Vector2>();
-
-    //    if (dir.magnitude <= 0)
-    //    {
-    //        isAttack = false;
-    //        return;
-    //    }
-    //    isAttack = true;
-
-    //    head.flipX = dir.x < 0;
-    //    anim.SetFloat("dirX", Math.Abs(dir.x));
-    //    anim.SetFloat("dirY", dir.y);
-
-    //    var go = Instantiate<GameObject>(tear);
-    //    go.transform.position = transform.position;
-    //    go.GetComponent<TearCtrl>().InitTear(dir, 10.0f, 10.0f); 
-    //}
+    private void Attack(InputAction.CallbackContext context)
+    {
+        Vector2 direction = context.ReadValue<Vector2>();
+    }
 
     #endregion
 }
