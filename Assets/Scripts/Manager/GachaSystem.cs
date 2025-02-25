@@ -11,8 +11,13 @@ public class GachaSystem
 		List<ItemInfo> items = table.Items.Select(id => DataManager.itemInfoLoader.GetByKey(id)).ToList();
 
 		int randomValue = Random.Range(0, 100);
-		DesignEnums.Grade grade = randomValue < table.LegendaryRate ? DesignEnums.Grade.Legendary :
-			randomValue < table.LegendaryRate + table.RareRate ? DesignEnums.Grade.Rare : DesignEnums.Grade.Common;
+		DesignEnums.Grade grade =
+			randomValue < table.Rank0Rate ? DesignEnums.Grade.Rank0 : // 15
+			randomValue < table.Rank0Rate + table.Rank1Rate ? DesignEnums.Grade.Rank1 : // 30
+			randomValue < table.Rank0Rate + table.Rank1Rate + table.Rank2Rate ? DesignEnums.Grade.Rank2 : // 30
+			randomValue < table.Rank0Rate + table.Rank1Rate + table.Rank2Rate + table.Rank3Rate ? DesignEnums.Grade.Rank3 : // 20
+			DesignEnums.Grade.Rank4; // 5
+
 
 		List<ItemInfo> gradeItems = items.FindAll(item => item.Grade == grade);
 		ItemInfo selectedItem = gradeItems[Random.Range(0, gradeItems.Count)];

@@ -28,9 +28,9 @@ public class PlayerData
 		options[(int)Option.RangeScale] = 1.0f;
 		options[(int)Option.ProjectileSize] = 1.0f;
 		options[(int)Option.ProjectileSpeed] = 1.0f;
-		options[(int)Option.Health] = 1.0f;
-		options[(int)Option.Speed] = 3.0f;
-		CurHp = options[(int)Option.Health];
+		options[(int)Option.Heart] = 1.0f;
+		options[(int)Option.Speed] = 3.0f; 
+		CurHp = options[(int)Option.Heart];
 	}
 
 	public float GetOptionValue(Option option)

@@ -29,6 +29,12 @@
       "Name": "바이러스",
       "ComponentName": "TheVirus",
       "Description": "캐릭터와 접촉한 적에게 틱당 24, 초당 48의 접촉 피해와 함께 중독 상태이상을 건다.\n중독 대미지는 캐릭터가 보유하고 있는 빨간 하트 최대 체력과 뼈 하트의 수에 비례하며[7] 총 6~7회 적용된다."
+    },
+    {
+      "key": 6,
+      "Name": "풀 힐",
+      "ComponentName": "FullHeal",
+      "Description": "모든 체력 회복"
     }
   ]
 }

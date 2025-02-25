@@ -53,4 +53,11 @@ public class GameEventListener : MonoBehaviour
 		Debug.Log("Test"); 
 		Debug.Log($"Add Item : {e.itemInfo.Name}");
 	}
+
+
+
+	// 차징을 할건지, 투사체를 몇개 만들건지
+	// 차징 Event (투사체 prefab, bool 차징 켤건지)
+	
+	// 
 }

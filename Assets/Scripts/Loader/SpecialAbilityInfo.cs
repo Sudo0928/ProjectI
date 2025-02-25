@@ -25,13 +25,12 @@ public class SpecialAbilityInfo
     /// 설명
     /// </summary>
     public string Description;
-}
 
+}
 public class SpecialAbilityInfoLoader
 {
     public List<SpecialAbilityInfo> ItemsList { get; private set; }
     public Dictionary<int, SpecialAbilityInfo> ItemsDict { get; private set; }
-
 
     public SpecialAbilityInfoLoader(string path = "JSON/SpecialAbilityInfo")
     {
@@ -59,8 +58,7 @@ public class SpecialAbilityInfoLoader
         }
         return null;
     }
-
-	public SpecialAbilityInfo GetByIndex(int index)
+    public SpecialAbilityInfo GetByIndex(int index)
     {
         if (index >= 0 && index < ItemsList.Count)
         {

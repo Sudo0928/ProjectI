@@ -7,7 +7,7 @@ public class MagicMushroom : SpecialAbility
 {
 	public override void OnAbility(PlayerController pc)
 	{
-		pc.playerData.CurHp = pc.playerData.GetOptionValue(Option.Health);
+		pc.playerData.CurHp = pc.playerData.GetOptionValue(Option.Heart);
 		Debug.Log("체력 회복");
 
 	} 
