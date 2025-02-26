@@ -9,8 +9,13 @@ using static DesignEnums;
 public class Stat
 {
     [field: SerializeField] private float[] options = new float[Enum.GetValues(typeof(Option)).Length];
-
     public Dictionary<Option, UnityEvent> onChangedOption = new Dictionary<Option, UnityEvent>();
+
+    private int maxGauge = 6;
+	private int curGauge = 5;
+    public int MaxGauge { get => maxGauge; set => maxGauge = value; }
+	public int CurGauge { get => curGauge; set => curGauge = value; }
+
 
 	public Stat()
     {
@@ -19,14 +24,14 @@ public class Stat
         options[(int)Option.AttackSpeed] = 1.0f;
         options[(int)Option.AttackScale] = 1.0f;
         options[(int)Option.Range] = 1.0f;
-        options[(int)Option.RangeScale] = 1.0f;
+        options[(int)Option.RangeScale] = 1.0f; 
         options[(int)Option.ProjectileSize] = 1.0f;
         options[(int)Option.ProjectileSpeed] = 1.0f;
         options[(int)Option.MaxHeart] = 1.0f;
         options[(int)Option.CurHeart] = options[(int)Option.MaxHeart];
 		options[(int)Option.Speed] = 3.0f; 
 	}
-     
+
     public float GetStat(Option option) => options[(int)option];
     public void AddStat(Option option, float value)
     {
