@@ -1108,6 +1108,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8605405283846607345, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
+      propertyPath: projectileSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605405283846607345, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
+      propertyPath: projectileSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605405283846607345, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
+      propertyPath: projectileDistance
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
