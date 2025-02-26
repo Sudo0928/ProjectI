@@ -11,7 +11,7 @@ public class PlayerData
 	HashSet<SpecialAbility> specialAbilitys = new HashSet<SpecialAbility>();
 	Dictionary<int, int> myItems = new Dictionary<int, int>();
 	PlayerController playerController;
-	float[] options;
+	float[] options; 
 
 	// 아이템 아이디, 아이템 개수
 	float curHp = 0f;
@@ -72,11 +72,7 @@ public class PlayerData
 					specialAbilitys.Add(skill);
 				}
 			}
-			
 		}
-
-		//AddItemEvent addItem = new AddItemEvent(this, item, playerController.pickupUI);
-	//	EventManager.DispatchEvent(addItem);
 	} 
 
 	public void RemoveItem(ItemInfo item)
@@ -96,6 +92,4 @@ public class PlayerData
 				myItems.Remove(ot);
 		}
 	}
-
-
 }

@@ -21,6 +21,8 @@ public class StageReward : MonoBehaviour
         SpawnItem();
 	}
 
+
+   
     void SpawnItem() 
     {
         for (int i = 0; i < gachaPools.Count; i++)

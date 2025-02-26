@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Burst.Intrinsics.X86.Sse4_2;
 
 public class ItemPreviewUI : MonoBehaviour
 {
-    [SerializeField] GameObject parent;
-	[Space(10)]
+    [SerializeField, Space(10)] GameObject parent;
     [SerializeField] List<Sprite> tierIcons = new List<Sprite>();
-    [SerializeField] Sprite upIcon;
-    [SerializeField] Sprite downIcon;
-    [SerializeField] Sprite specialIcon;
-
-	[Space(10)]
-	[SerializeField] List<GameObject> slots = new List<GameObject>();
+	 
+	List<GameObject> slots = new List<GameObject>();
 	Dictionary<GameObject, ItemInfo> items = new Dictionary<GameObject, ItemInfo> ();
-	public GameObject player { private get; set; } 
-	GameObject prevItem;
-	Coroutine checkNearestItem;
+	public GameObject player { private get; set; }  = null;
+	GameObject prevItem = null;
+	Coroutine checkNearestItem = null;
+
 	private void Awake()
 	{
 		int cnt = parent.transform.childCount;
@@ -34,7 +31,7 @@ public class ItemPreviewUI : MonoBehaviour
 			items.Add(go, item);
 			if (checkNearestItem == null)
 				checkNearestItem = StartCoroutine(CheckNearestItem());
-			
+
 		}
 	}   
 	 
@@ -100,10 +97,14 @@ public class ItemPreviewUI : MonoBehaviour
 		 
 		for (int i = 0; i < item.AvailableOptions.Count; i++)
         {
-            ItemOption op = DataManager.itemOptionLoader.GetByIndex(item.AvailableOptions[i]);
+            ItemOption op = DataManager.itemOptionLoader.GetByKey(item.AvailableOptions[i]);
             float value = item.OptionValues[i];
 			if (value == 0.0f)
 				continue;
+
+			if (op == null)
+				continue;
+
 
 			slot = slots[idx++];
 			slot.SetActive(true);
@@ -115,7 +116,11 @@ public class ItemPreviewUI : MonoBehaviour
 
 		for (int i = 0; i < item.SpecialOptions.Count; i++)
 		{
-			SpecialAbilityInfo sa = DataManager.specialAbilityInfoLoader.GetByIndex(item.SpecialOptions[i]); 
+			SpecialAbilityInfo sa = DataManager.specialAbilityInfoLoader.GetByKey(item.SpecialOptions[i]);
+
+			if (sa == null)
+				continue;
+
 
 			slot = slots[idx++];
 			slot.SetActive(true);
@@ -130,7 +135,7 @@ public class ItemPreviewUI : MonoBehaviour
 		
 	}
 	 
-	void CloseUI()
+	void CloseUI()  
 	{  
 		for (int i = 0; i < slots.Count; i++)
 			slots[i].SetActive(false);
@@ -139,12 +144,12 @@ public class ItemPreviewUI : MonoBehaviour
 
 
 	IEnumerator CheckNearestItem()
-	{
+	{ 
 		while(true)
 		{
 			FindNearestItem();
 			yield return new WaitForSeconds(0.1f);
-		}
+		} 
 	}
 
 }
