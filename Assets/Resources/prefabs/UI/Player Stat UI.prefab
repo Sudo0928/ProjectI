@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 6542977126047726922}
   - component: {fileID: 4466930514018970292}
   m_Layer: 5
-  m_Name: text_cnt
+  m_Name: coin Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,7 +247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &129462704023885597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 5418420000368521796}
   - component: {fileID: 2255338466191187752}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: boom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 5167196926741157243}
   - component: {fileID: 4180972344201341351}
   m_Layer: 5
-  m_Name: text_cnt (2)
+  m_Name: key Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1072,6 +1072,7 @@ GameObject:
   - component: {fileID: 7397945949559797513}
   - component: {fileID: 3165595257196629496}
   - component: {fileID: 8611667842594053824}
+  - component: {fileID: 3436675717661377012}
   m_Layer: 5
   m_Name: Player Stat UI
   m_TagString: Untagged
@@ -1163,6 +1164,49 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3436675717661377012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4917358022865020412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df26b281ae506147ab6d12a9dfa86cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 3361509603328643240}
+  - {fileID: 4591077401604793963}
+  - {fileID: 7986044498768976223}
+  - {fileID: 17578736028583301}
+  - {fileID: 7742409977936082826}
+  - {fileID: 4223200210422601931}
+  - {fileID: 3789771294565167634}
+  - {fileID: 3497157618989951553}
+  - {fileID: 2271145840555057389}
+  - {fileID: 6553507165685655293}
+  - {fileID: 1311508205804299240}
+  - {fileID: 2870105794830595314}
+  fullHeart: {fileID: 762132025, guid: bef618b0841c3f34eb70fd31d96f444c, type: 3}
+  halfHeart: {fileID: 1166980717, guid: bef618b0841c3f34eb70fd31d96f444c, type: 3}
+  emptyHeart: {fileID: -85196061, guid: bef618b0841c3f34eb70fd31d96f444c, type: 3}
+  soulHeart: {fileID: 36680824, guid: bef618b0841c3f34eb70fd31d96f444c, type: 3}
+  halfSoulHeart: {fileID: -536256126, guid: bef618b0841c3f34eb70fd31d96f444c, type: 3}
+  harlfBlackHeart: {fileID: 51011479, guid: bef618b0841c3f34eb70fd31d96f444c, type: 3}
+  blackHeart: {fileID: -1389841330, guid: bef618b0841c3f34eb70fd31d96f444c, type: 3}
+  coinCntText: {fileID: 4466930514018970292}
+  boomCntText: {fileID: 3816392327309431227}
+  keyCntText: {fileID: 4180972344201341351}
+  activeItemSprite: {fileID: 9172407033617300464}
+  gaugeLevels:
+  - {fileID: 8915699930701335550}
+  - {fileID: 5572366431716653295}
+  - {fileID: 618380191457653524}
+  - {fileID: 7605043682699604934}
+  - {fileID: 8927729975930088095}
+  gaugeFill: {fileID: 6459861387522083665}
 --- !u!1 &5271274028943652372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1219,7 @@ GameObject:
   - component: {fileID: 794462356963730735}
   - component: {fileID: 2124582083551178969}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1251,7 +1295,7 @@ GameObject:
   - component: {fileID: 5384836880065105964}
   - component: {fileID: 5997880415047914797}
   m_Layer: 5
-  m_Name: Image
+  m_Name: coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1747,7 +1791,7 @@ GameObject:
   - component: {fileID: 7923109986878076826}
   - component: {fileID: 3816392327309431227}
   m_Layer: 5
-  m_Name: text_cnt (1)
+  m_Name: boom Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2311,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6588593923180548329
 RectTransform:
   m_ObjectHideFlags: 0
