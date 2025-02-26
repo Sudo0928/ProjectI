@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,32 +9,38 @@ public class DashMonsterController : MonsterBasic
 
     [SerializeField, Tooltip("몬스터 이동속도")] protected float moveSpeed = 2;
 
+    // 한 상태가 지속되는 시간(추적 제외)
     protected float stateChangeTime = 0f;
 
+    // 몬스터 이동 방향
     private Vector2 moveDir = Vector2.zero;
 
+    // 애니메이터 해시값
     readonly private int IsMoveHash = Animator.StringToHash("IsMove");
 
     void Start()
     {
         base.Start();
+        // 대기 상태로 시작
         stateChangeTime = idleTime;
     }
 
     void Update()
     {
-        // 몬스터의 감지 범위에 플레이어가 있다면 거리에 따라서 추적 or 공격 모드로
-        // 어쩌면 따로 공격 모드는 필요 없을지도?
+        // 몬스터의 감지 범위에 플레이어가 있다면 추적 모드로
         if (monsterState != MonsterState.Trace)
         {
+            // 한 상태의 유지 시간이 남아있다면
             if(stateChangeTime > 0)
             {
+                // 상태 유지 시간 감소
                 stateChangeTime -= Time.deltaTime;
             }
         else
-            {
-                stateChangeTime = monsterState == MonsterState.Idle ? idleTime : moveTime;
+            {// 상태 유지 시간이 끝났다면
+                // 이번 상태가 아니었던 상태로 전환
                 monsterState = monsterState == MonsterState.Move ? MonsterState.Idle : MonsterState.Move;
+                stateChangeTime = monsterState == MonsterState.Idle ? idleTime : moveTime;
             }
         }
 
@@ -62,8 +67,8 @@ public class DashMonsterController : MonsterBasic
 
         if (rigid.velocity == Vector2.zero)
         {
-            float dirX = UnityEngine.Random.Range(-1f, 1f);
-            float dirY = UnityEngine.Random.Range(-1f, 1f);
+            float dirX = Random.Range(-1f, 1f);
+            float dirY = Random.Range(-1f, 1f);
             moveDir = new Vector2(dirX, dirY).normalized;
             rigid.velocity = moveDir * moveSpeed;
         }
@@ -78,6 +83,11 @@ public class DashMonsterController : MonsterBasic
 
     void MonsterTrace()
     {
-        
+        // 플레이어의 방향으로 이동
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 충돌한 오브젝트가 플레이어라면 추적 모드로
     }
 }
