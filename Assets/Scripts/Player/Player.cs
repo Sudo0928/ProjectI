@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject tear;
 
+    [SerializeField] private Stat stat;
+
     private Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get => movementDirection; }
 
@@ -19,14 +21,13 @@ public class Player : MonoBehaviour
 
     private Vector2 velocity;
 
-    [Range(0f, 100f)]
-    public float maxSpeed = 10f;
+    [SerializeField][Range(0f, 100f)]
+    private float maxSpeed = 10f;
 
-    [Range(0f, 100f)]
-    public float maxAccelertaion = 10f;
+    [SerializeField][Range(0f, 100f)]
+    private float maxAccelertaion = 10f;
 
-    public float speed = 50;
-
+    [SerializeField][Range(0f, 100f)]
     private float maxSlideDistance = 0.5f;
 
     private AnimationHandler animationHandler;
@@ -37,10 +38,35 @@ public class Player : MonoBehaviour
 
     private float timeSinceLastAttack = 1;
 
-    private float attackSpeed = 0.2f;
-    private float projectileSpeed = 200f;
+    [SerializeField][Range(0f, 500f)]
+    private float attackSpeed = 0.1f;
+
+    [SerializeField][Range(0f, 500f)]
+    private float projectileDistance = 3f;
+    public float ProjectileDistance { get => projectileDistance; }
+
+    [SerializeField][Range(0f, 500f)]
+    private float projectileSpeed = 3f;
+    public float ProjectileSpeed { get => projectileSpeed; }
+
+    [SerializeField][Range(0f, 10)]
+    private float projectileSize = 3f;
+    public float ProjectileSize { get => projectileSize; }
+
+    public float AttackSpeed { get => attackSpeed; }
+
+    [SerializeField] [Range(0f, 1f)]
+    private float projectileVelocityAngle = 0.2f;
 
     private bool isAttack = false;
+
+    [SerializeField][Range(0.001f, 10f)]
+    private float maxChargingTime = 1f;
+
+    [SerializeField]
+    private bool isCharging = false;
+
+    private float timeSincePressAttack = 0;
 
     private void Awake()
     {
@@ -68,7 +94,7 @@ public class Player : MonoBehaviour
         lookDirection = inputActions.Player.Attack.ReadValue<Vector2>();
 
         animationHandler.PlayMoveAnim(movementDirection);
-        animationHandler.PlayLookAnim(lookDirection);
+        animationHandler.PlayLookAnim(movementDirection);
 
         desiredVelocity = movementDirection * maxSpeed;
 
@@ -76,10 +102,22 @@ public class Player : MonoBehaviour
         {
             timeSinceLastAttack += Time.deltaTime;
         }
+        else animationHandler.SetChargeSpeed(1);
 
         if (isAttack)
         {
-            HandleAttackDelay(lookDirection);
+            if (isCharging)
+            {
+                animationHandler.PlayLookAnim(lookDirection);
+                animationHandler.SetChargeSpeed(maxChargingTime);
+                animationHandler.PlayerCharging(isAttack);
+                timeSincePressAttack += Time.deltaTime;
+            }
+            else
+            {
+                animationHandler.PlayLookAnim(lookDirection);
+                HandleAttackDelay();
+            }
         }
     }
 
@@ -90,24 +128,23 @@ public class Player : MonoBehaviour
 
     #region Main Methods
 
-    private void HandleAttackDelay(Vector2 direction)
+    private void HandleAttackDelay()
     {
         if (timeSinceLastAttack > attackSpeed)
         {
             timeSinceLastAttack = 0;
-            Attack(direction);
+            Attack();
         }
     }
 
-    private void Attack(Vector2 direction)
+    private void Attack()
     {
-        Vector2 desiredDirection = (direction + _rigidbody2D.velocity.normalized).normalized;
-
-        if (desiredDirection == Vector2.zero) desiredDirection = direction;
+        Vector2 velocity = _rigidbody2D.velocity;
+        Vector2 desiredDirection = (lookDirection + velocity * 0.2f);
 
         GameObject gameObject = Instantiate(tear);
         gameObject.transform.position = transform.position;
-        gameObject.GetComponent<Tear>().Init(direction, projectileSpeed);
+        gameObject.GetComponent<BaseAttackHandler>().Init(this, desiredDirection);
 
         animationHandler.PlayAttackAnim();
     }
@@ -160,11 +197,25 @@ public class Player : MonoBehaviour
     private void OnAttack(InputAction.CallbackContext context)
     {
         isAttack = true;
+        timeSincePressAttack = 0;
     }
 
     private void OffAttack(InputAction.CallbackContext context)
     {
+        bool upPress = Keyboard.current.upArrowKey.isPressed;
+        bool downPress = Keyboard.current.downArrowKey.isPressed;
+        bool LeftPress = Keyboard.current.leftArrowKey.isPressed;
+        bool RightPress = Keyboard.current.rightArrowKey.isPressed;
+
+        if (upPress || downPress || LeftPress || RightPress) return;
+
         isAttack = false;
+        animationHandler.PlayerCharging(isAttack);
+        if (timeSincePressAttack > maxChargingTime)
+        {
+            Attack();
+            timeSincePressAttack = 0;
+        }
     }
 
     private void OnMove(InputAction.CallbackContext context)

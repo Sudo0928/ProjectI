@@ -13,6 +13,9 @@ public class AnimationHandler : MonoBehaviour
     private static readonly int IsAttack = Animator.StringToHash("IsAttack");
     private static readonly int CanTrans = Animator.StringToHash("CanTrans");
 
+    private static readonly int IsCharging = Animator.StringToHash("IsCharging");
+    private static readonly int ChargeSpeed = Animator.StringToHash("ChargeSpeed");
+
     [SerializeField] private SpriteRenderer characterHeadRenderer;
     [SerializeField] private SpriteRenderer characterBodyRenderer;
 
@@ -55,6 +58,16 @@ public class AnimationHandler : MonoBehaviour
     public void PlayAttackAnim()
     {
         playerAnim.SetTrigger(IsAttack);
+    }
+
+    public void PlayerCharging(bool isAttack)
+    {
+        playerAnim.SetBool(IsCharging, isAttack);
+    }
+
+    public void SetChargeSpeed(float chargeSpeed)
+    {
+        playerAnim.SetFloat(ChargeSpeed, 1 / chargeSpeed);
     }
 
     private IEnumerator DelayTrans()
