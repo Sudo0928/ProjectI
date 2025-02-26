@@ -8,32 +8,51 @@ using UnityEngine.InputSystem;
 
 public class Item : MonoBehaviour
 {
-	public UnityEvent onPickupItem;
-    [SerializeField] SpriteRenderer _sprite;
+	[NonSerialized] public UnityEvent onPickupItem = new UnityEvent();
+    [SerializeField] SpriteRenderer _sprite; 
     [SerializeField] int key;
 	ItemInfo item;
 	private void Awake()
 	{
 		item = DataManager.itemInfoLoader.GetByKey(key);
 		if (item != null)
-			_sprite.sprite = Resources.Load<Sprite>("images/items/"+item.Image);
+			_sprite.sprite = GameManager.Instance.GetItemSprite(item);
 	}
 	 
 	public void SetItem(ItemInfo item)
 	{ 
 		this.item = item;
 		key = item.key;
-		_sprite.sprite = Resources.Load<Sprite>("images/items/" + item.Image);
+		_sprite.sprite = GameManager.Instance.GetItemSprite(item);
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("Player"))
+		{
+			//collision.GetComponent<PlayerController>()?.playerData.AddItem(item); 
+			var pu = collision.gameObject.GetComponent<PlayerUIHandler>();
+			pu?.myPickupItemInfoUI.PickupItem(item);
+			gameObject.SetActive(false);
+			onPickupItem?.Invoke();
+		} 
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Player"))
 		{
-			collision.GetComponent<PlayerController>().playerData.AddItem(item);
-			gameObject.SetActive(false);
-			onPickupItem?.Invoke();
-		} 
+			var pu = collision.gameObject.GetComponent<PlayerUIHandler>();
+			pu?.myItemPreviewUI.EnterItem(gameObject, item);
+		}
+	}
+	private void OnTriggerExit2D(Collider2D collision) 
+	{
+		if (collision.CompareTag("Player"))
+		{
+			var pu = collision.gameObject.GetComponent<PlayerUIHandler>();
+			pu?.myItemPreviewUI.ExitItem(gameObject);
+		}  
 	}
 
 	float time = 0.0f;

@@ -10,6 +10,11 @@ public class GameManager : Singleton<GameManager>
 
 	}
 
+	public Sprite GetItemSprite(ItemInfo item)
+	{
+		return Resources.Load<Sprite>("images/items/" + item.Image);
+	}
+
 	public T Instantiate<T>(T prefab) where T : UnityEngine.Object
     {
 		var go = UnityEngine.Object.Instantiate<T>(prefab);

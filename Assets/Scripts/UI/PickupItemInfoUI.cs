@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI; 
 
 public class PickupItemInfoUI : MonoBehaviour
-{
+{ 
     [SerializeField] Text name;
-    [SerializeField] Text description;
+    [SerializeField] Text description; 
     Animator anim;
 	private void Start()
 	{

@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
     private float projectileSpeed = 200f;
 
     private bool isAttack = false;
+    private PlayerUIHandler playerUIHandler;
+    public PlayerUIHandler PlayerUIHandler => playerUIHandler; 
 
     private void Awake()
     {
@@ -61,7 +63,7 @@ public class Player : MonoBehaviour
     {
         inputActions.Disable();
     }
-
+     
     private void Update()
     {
         movementDirection = inputActions.Player.Move.ReadValue<Vector2>();

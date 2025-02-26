@@ -75,8 +75,8 @@ public class PlayerData
 			
 		}
 
-		AddItemEvent addItem = new AddItemEvent(this, item, playerController.pickupUI);
-		EventManager.DispatchEvent(addItem);
+		//AddItemEvent addItem = new AddItemEvent(this, item, playerController.pickupUI);
+	//	EventManager.DispatchEvent(addItem);
 	} 
 
 	public void RemoveItem(ItemInfo item)
