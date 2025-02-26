@@ -11,6 +11,7 @@ public class ChargerController : MonsterBasic
     [SerializeField, Tooltip("차저 방향 전환 시간 최소값")] private float minChangeDirectionTime = 0.5f;
     [SerializeField, Tooltip("차저 방향 전환 시간 최대값")] private float maxChangeDirectionTime = 1f;
     [SerializeField, Tooltip("플레이어를 감지하는 레이 길이")] private float eyeSight = 1f;
+    [SerializeField, Tooltip("레이캐스트로 플레이어를 감지할 수 있도록")] private LayerMask layerMask;
 
     private Vector2 moveDir = Vector2.zero;
 
@@ -66,12 +67,12 @@ public class ChargerController : MonsterBasic
         // 지금 상태로는 벽, 장애물을 향해서도 돌진
         if(moveDir.x != 0)
         {
-            if(Physics2D.Raycast(transform.position, Vector2.up, eyeSight).transform.gameObject.CompareTag("Player"))
+            if(Physics2D.Raycast(transform.position, Vector2.up, eyeSight, layerMask))
             {
                 SetDashDirection(Vector2.up);
                 return;
             }
-            else if(Physics2D.Raycast(transform.position, Vector2.down, eyeSight))
+            else if(Physics2D.Raycast(transform.position, Vector2.down, eyeSight, layerMask))
             {
                 SetDashDirection(Vector2.down);
                 return;
@@ -79,19 +80,19 @@ public class ChargerController : MonsterBasic
         }
         else
         {
-            if(Physics2D.Raycast(transform.position, Vector2.right, eyeSight))
+            if(Physics2D.Raycast(transform.position, Vector2.right, eyeSight, layerMask))
             {
                 SetDashDirection(Vector2.right);
                 return;
             }
-            else if(Physics2D.Raycast(transform.position, Vector2.left, eyeSight))
+            else if(Physics2D.Raycast(transform.position, Vector2.left, eyeSight, layerMask))
             {
                 SetDashDirection(Vector2.left);
                 return;
             }
         }
 
-        if(Physics2D.Raycast(transform.position, moveDir, eyeSight))
+        if(Physics2D.Raycast(transform.position, moveDir, eyeSight, layerMask))
         {
             SetDashDirection(moveDir);
             return;
