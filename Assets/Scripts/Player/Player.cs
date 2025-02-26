@@ -62,8 +62,8 @@ public class Player : MonoBehaviour
     private bool isCharging = false;
 
     private float timeSincePressAttack = 0;
-
-    private void Awake()
+    public Vector2 GetMoveDir => inputActions.Player.Move.ReadValue<Vector2>();
+	private void Awake()
     {
         inputActions = new PlayerInputAction();
 

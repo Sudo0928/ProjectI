@@ -10,19 +10,14 @@ public class StageReward : MonoBehaviour
 
     [Space(10)]
     [SerializeField] List<Item> items;
-
-    [Space(10)]
     [SerializeField] List<int> gachaPools;
 
-    int monsterCnt = 0;
-	private void Awake()
+	private void Awake() 
 	{
         DisableItems();
         SpawnItem();
 	}
 
-
-   
     void SpawnItem() 
     {
         for (int i = 0; i < gachaPools.Count; i++)
@@ -45,19 +40,5 @@ public class StageReward : MonoBehaviour
             items[i].gameObject.SetActive(false);
 		} 
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Monster"))
-        {
-            monsterCnt++;
-            // TODO
-            // 몬스터가 죽을 때 호출되는 Event에 monsterCnt를  -1
-            // monster Cnt 가 0이 될 때, SpawnItem 함수 실행
-        }
-    }
-
-
-
 }
  
