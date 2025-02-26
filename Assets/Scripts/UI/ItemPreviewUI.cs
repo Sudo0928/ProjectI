@@ -36,8 +36,8 @@ public class ItemPreviewUI : MonoBehaviour
 				checkNearestItem = StartCoroutine(CheckNearestItem());
 			
 		}
-	} 
-
+	}   
+	 
 	public void ExitItem(GameObject go)
 	{
 		items.Remove(go);
@@ -48,7 +48,7 @@ public class ItemPreviewUI : MonoBehaviour
 			checkNearestItem = null;
 			CloseUI();
 		}
-	} 
+	}  
 	  
 
 	void FindNearestItem() 
@@ -97,11 +97,13 @@ public class ItemPreviewUI : MonoBehaviour
 		name.gameObject.SetActive(true);
 		tierIcon.gameObject.SetActive(true);
 		slot.SetActive(true);
-
+		 
 		for (int i = 0; i < item.AvailableOptions.Count; i++)
         {
             ItemOption op = DataManager.itemOptionLoader.GetByIndex(item.AvailableOptions[i]);
             float value = item.OptionValues[i];
+			if (value == 0.0f)
+				continue;
 
 			slot = slots[idx++];
 			slot.SetActive(true);
@@ -127,11 +129,12 @@ public class ItemPreviewUI : MonoBehaviour
 			slots[i].SetActive(false); 
 		
 	}
-
+	 
 	void CloseUI()
-	{ 
+	{  
 		for (int i = 0; i < slots.Count; i++)
 			slots[i].SetActive(false);
+		prevItem = null;
 	}
 
 
