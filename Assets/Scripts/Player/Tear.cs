@@ -24,6 +24,16 @@ public class Tear : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
+    private void OnEnable()
+    {
+        
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
     private void Start()
     {
         StartCoroutine(Remove());
@@ -36,7 +46,7 @@ public class Tear : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody2D.velocity = moveDirection * speed * Time.fixedDeltaTime;
+        _rigidbody2D.velocity = moveDirection.normalized * speed * Time.fixedDeltaTime;
     }
 
     private IEnumerator Remove()
