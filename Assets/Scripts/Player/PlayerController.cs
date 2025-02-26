@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
 	private void Awake()
 	{
-		playerData = new PlayerData(this);
+		//playerData = new PlayerData(this);
 
 		bodyAnim = body.gameObject.GetComponent<Animator>();
 		rigid = GetComponent<Rigidbody2D>();
@@ -41,15 +41,15 @@ public class PlayerController : MonoBehaviour
 
 	private void Update()
 	{
-		if (moveDir.magnitude > 0) 
-		{
-			var pos = transform.position; 
-			float speed = playerData.GetOptionValue(DesignEnums.Option.Speed);
-			transform.position = pos + (new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime);
+		//if (moveDir.magnitude > 0) 
+		//{
+		//	var pos = transform.position; 
+		//	float speed = playerData.GetOptionValue(DesignEnums.Option.Speed);
+		//	transform.position = pos + (new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime);
 
-			if (isMove == false)
-				moveDir *= Mathf.Pow(sliderFactor, Time.deltaTime);
-		}   
+		//	if (isMove == false)
+		//		moveDir *= Mathf.Pow(sliderFactor, Time.deltaTime);
+		//}   
 	}
 
 	void OnMove(InputAction.CallbackContext obj)

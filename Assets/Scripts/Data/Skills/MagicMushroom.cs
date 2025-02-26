@@ -5,11 +5,9 @@ using static DesignEnums;
 
 public class MagicMushroom : SpecialAbility
 {
-	public override void OnAbility(PlayerController pc)
+	public override void OnAbility(Player player)
 	{
-		pc.playerData.CurHp = pc.playerData.GetOptionValue(Option.Heart);
-		Debug.Log("체력 회복");
-
+		player.Stat.CurHp = player.Stat.GetStat(Option.Heart); 
 	} 
 
 	public override void RemoveSkill()

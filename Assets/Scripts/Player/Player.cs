@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject tear;
 
-    [SerializeField] private Stat stat;
+   
 
     private Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get => movementDirection; }
@@ -49,9 +49,13 @@ public class Player : MonoBehaviour
 
     private bool isAttack = false;
     private PlayerUIHandler playerUIHandler;
-    public PlayerUIHandler PlayerUIHandler => playerUIHandler; 
+    public PlayerUIHandler PlayerUIHandler => playerUIHandler;
+	private Stat stat = new Stat();
+    public Stat Stat => stat;
+	private Inventory inventory = new Inventory();
+    public Inventory Inventory => inventory;
 
-    [SerializeField][Range(0.001f, 10f)]
+	[SerializeField][Range(0.001f, 10f)]
     private float maxChargingTime = 1f;
 
     [SerializeField]
@@ -66,7 +70,9 @@ public class Player : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         animationHandler = GetComponent<AnimationHandler>();
 
-        AddInputActionsCallbacks();
+        //    inventory.onAddItem.AddListener(() => { anim.SetTrigger("getItem")});
+        inventory.stat = stat;
+		AddInputActionsCallbacks();
     }
 
     private void OnEnable()
