@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,21 +6,26 @@ public class ChargerController : MonsterBasic
 {
     private SpriteRenderer renderer;
 
-    [SerializeField, Tooltip("Â÷Àú ÀÌµ¿ ¼Óµµ")] private float moveSpeed = 3f;
-    [SerializeField, Tooltip("Â÷Àú µ¹Áø ¼Óµµ")] private float dashSpeed = 8f;
-    [SerializeField, Tooltip("Â÷Àú ¹æÇâ ÀüÈ¯ ½Ã°£ ÃÖ¼Ò°ª")] private float minChangeDirectionTime = 0.5f;
-    [SerializeField, Tooltip("Â÷Àú ¹æÇâ ÀüÈ¯ ½Ã°£ ÃÖ´ë°ª")] private float maxChangeDirectionTime = 1f;
-    [SerializeField, Tooltip("ÇÃ·¹ÀÌ¾î¸¦ °¨ÁöÇÏ´Â ·¹ÀÌ ±æÀÌ")] private float eyeSight = 1f;
+    [SerializeField, Tooltip("ì°¨ì € ì´ë™ ì†ë„")] private float moveSpeed = 3f;
+    [SerializeField, Tooltip("ì°¨ì € ëŒì§„ ì†ë„")] private float dashSpeed = 8f;
+    [SerializeField, Tooltip("ì°¨ì € ë°©í–¥ ì „í™˜ ì‹œê°„ ìµœì†Œê°’")] private float minChangeDirectionTime = 0.5f;
+    [SerializeField, Tooltip("ì°¨ì € ë°©í–¥ ì „í™˜ ì‹œê°„ ìµœëŒ€ê°’")] private float maxChangeDirectionTime = 1f;
+    [SerializeField, Tooltip("í”Œë ˆì´ì–´ë¥¼ ê°ì§€í•˜ëŠ” ë ˆì´ ê¸¸ì´")] private float eyeSight = 1f;
 
     private Vector2 moveDir = Vector2.zero;
 
-    // Â÷Àú°¡ ÇÑ ¹æÇâÀ¸·Î ÀÌµ¿ÇÏ´Â ½Ã°£
+    // ì°¨ì €ê°€ í•œ ë°©í–¥ìœ¼ë¡œ ì´ë™í•˜ëŠ” ì‹œê°„
     private float changeDirectionTime = 0;
+
+    // ì• ë‹ˆë©”ì´í„° í•´ì‹œ ê°’ë“¤
+    private readonly int IsDash = Animator.StringToHash("IsDash");
+    private readonly int MoveX = Animator.StringToHash("MoveX");
+    private readonly int MoveY = Animator.StringToHash("MoveY");
 
     void Start()
     {
-        // ±âº»ÀûÀ¸·Î Idle·Î µÇ¾îÀÖ±â ¶§¹®¿¡
-        // ´ë±â »óÅÂ°¡ ¾ø´Â Charger´Â Move·Î ¹Ù²ãÁÖ°í ½ÃÀÛ
+        // ê¸°ë³¸ì ìœ¼ë¡œ Idleë¡œ ë˜ì–´ìˆê¸° ë•Œë¬¸ì—
+        // ëŒ€ê¸° ìƒíƒœê°€ ì—†ëŠ” ChargerëŠ” Moveë¡œ ë°”ê¿”ì£¼ê³  ì‹œì‘
         monsterState = MonsterState.Move;
         changeDirectionTime = Random.Range(minChangeDirectionTime, maxChangeDirectionTime);
         renderer = GetComponentInChildren<SpriteRenderer>();
@@ -57,11 +62,11 @@ public class ChargerController : MonsterBasic
     {
         if (moveDir == Vector2.zero) return;
 
-        // ÇÃ·¹ÀÌ¾î ±¸ºĞÀÌ ¾ÆÁ÷ ¾øÀ½
-        // Áö±İ »óÅÂ·Î´Â º®, Àå¾Ö¹°À» ÇâÇØ¼­µµ µ¹Áø
+        // í”Œë ˆì´ì–´ êµ¬ë¶„ì´ ì•„ì§ ì—†ìŒ
+        // ì§€ê¸ˆ ìƒíƒœë¡œëŠ” ë²½, ì¥ì• ë¬¼ì„ í–¥í•´ì„œë„ ëŒì§„
         if(moveDir.x != 0)
         {
-            if(Physics2D.Raycast(transform.position, Vector2.up, eyeSight))
+            if(Physics2D.Raycast(transform.position, Vector2.up, eyeSight).transform.gameObject.CompareTag("Player"))
             {
                 SetDashDirection(Vector2.up);
                 return;
@@ -111,29 +116,45 @@ public class ChargerController : MonsterBasic
         {
             case 0:
                 moveDir = Vector2.right;
-                renderer.flipX = false;
                 break;
 
                 case 1:
                 moveDir = Vector2.left;
-                renderer.flipX = true;
                 break;
 
                 case 2:
                 moveDir = Vector2.up;
-                renderer.flipX = false;
                 break;
 
                 case 3:
                 moveDir = Vector2.down;
-                renderer.flipX = false;
                 break;
         }
+
+        anim.SetFloat(MoveX, moveDir.x);
+        anim.SetFloat(MoveY, moveDir.y);
+        SetFlipX();
     }
 
     void SetDashDirection(Vector2 _dir)
     {
         moveDir = _dir;
         monsterState = MonsterState.Trace;
+        anim.SetBool(IsDash, true);
+        anim.SetFloat(MoveX, moveDir.x);
+        anim.SetFloat(MoveY, moveDir.y);
+        SetFlipX();
+    }
+
+    void SetFlipX()
+    {
+        if(moveDir.x < 0)
+        {
+            renderer.flipX = true;
+        }
+        else
+        {
+            renderer.flipX = false;
+        }
     }
 }
