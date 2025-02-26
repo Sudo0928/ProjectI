@@ -9,9 +9,7 @@ using static DesignEnums;
 public class Stat
 {
     [field: SerializeField] private float[] options = new float[Enum.GetValues(typeof(Option)).Length];
-    private float curHp;
-    public float CurHp { get => curHp; set => curHp = value; }
-    
+
     public Dictionary<Option, UnityEvent> onChangedOption = new Dictionary<Option, UnityEvent>();
 
 	public Stat()
@@ -24,29 +22,25 @@ public class Stat
         options[(int)Option.RangeScale] = 1.0f;
         options[(int)Option.ProjectileSize] = 1.0f;
         options[(int)Option.ProjectileSpeed] = 1.0f;
-        options[(int)Option.Heart] = 1.0f;
-        options[(int)Option.Speed] = 3.0f;
-        curHp = options[(int)Option.Heart];
+        options[(int)Option.MaxHeart] = 1.0f;
+        options[(int)Option.CurHeart] = options[(int)Option.MaxHeart];
+		options[(int)Option.Speed] = 3.0f; 
 	}
      
     public float GetStat(Option option) => options[(int)option];
     public void AddStat(Option option, float value)
     {
-        if (option == Option.Heart || option == Option.BlackHeart || option == Option.SoulHeart)
-        {
-            UpdateHeartSystem(option, value);
-            return;
-        }
-
 		options[(int)option] = Math.Max(0f, options[(int)option] + value);
 
         if (onChangedOption.TryGetValue(option, out UnityEvent e))
             e.Invoke();
-	} 
 
-    void UpdateHeartSystem(Option heart, float value)
+
+	}
+
+	void UpdateHeartSystem(Option heart, float value)
     {
-        float total = GetStat(Option.Heart) + GetStat(Option.BlackHeart) + GetStat(Option.SoulHeart);
+        float total = GetStat(Option.MaxHeart) + GetStat(Option.BlackHeart) + GetStat(Option.SoulHeart);
         if (total < 12)
 			options[(int)heart] += value;
 		
@@ -59,7 +53,7 @@ public class Stat
             }    
             else
             {
-				AddStat(Option.Heart, -value);
+				AddStat(Option.MaxHeart, -value);
 				AddStat(heart, value);
 			}
         }
