@@ -60,6 +60,8 @@ public class HealthManager : MonoBehaviour
         }
     }
 
+    // 코인 폭탄 열쇠
+
     // 체력을 차감하는 함수 (반 칸 피해)
     public void TakeDamage(float damage)
     {

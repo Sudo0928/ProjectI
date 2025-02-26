@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c78afb3a5b14d0498d1e2ada100d50d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombCount: 0
+  bombCount: 7
   keyCount: 0
   coinCount: 0
   itemCountText: {fileID: 5388586415280364777}
