@@ -7,8 +7,8 @@ public class MagicMushroom : SpecialAbility
 {
 	public override void OnAbility(Player player)
 	{
-		player.Stat.CurHp = player.Stat.GetStat(Option.Heart); 
-	} 
+		player.Stat.AddStat(Option.CurHeart, player.Stat.GetStat(Option.MaxHeart));
+	}  
 
 	public override void RemoveSkill()
 	{
