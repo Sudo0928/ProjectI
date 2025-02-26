@@ -36,7 +36,7 @@ public class Tear : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody2D.velocity = moveDirection * speed * Time.fixedDeltaTime;
+        _rigidbody2D.velocity = moveDirection.normalized * speed * Time.fixedDeltaTime;
     }
 
     private IEnumerator Remove()
