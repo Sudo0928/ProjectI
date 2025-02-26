@@ -437,9 +437,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 983089400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239060c0f754b47408a0cb8e0f715308, type: 3}
+  m_Script: {fileID: 11500000, guid: a191969c54474d04aa3496abd70cb970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterMaxHP: 5
+  monsterAtk: 1
+  minStateChangeTime: 1
+  maxStateChangeTime: 3
+  moveSpeed: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
