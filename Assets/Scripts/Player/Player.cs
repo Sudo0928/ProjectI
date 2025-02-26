@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject tear;
 
+    [SerializeField] private Stat stat;
+
     private Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get => movementDirection; }
 
@@ -47,6 +49,14 @@ public class Player : MonoBehaviour
 
     private bool isAttack = false;
 
+    [SerializeField][Range(0.001f, 10f)]
+    private float maxChargingTime = 1f;
+
+    [SerializeField]
+    private bool isCharging = false;
+
+    private float timeSincePressAttack = 0;
+
     private void Awake()
     {
         inputActions = new PlayerInputAction();
@@ -81,11 +91,22 @@ public class Player : MonoBehaviour
         {
             timeSinceLastAttack += Time.deltaTime;
         }
+        else animationHandler.SetChargeSpeed(1);
 
         if (isAttack)
         {
-            animationHandler.PlayLookAnim(lookDirection);
-            HandleAttackDelay(lookDirection);
+            if (isCharging)
+            {
+                animationHandler.PlayLookAnim(lookDirection);
+                animationHandler.SetChargeSpeed(maxChargingTime);
+                animationHandler.PlayerCharging(isAttack);
+                timeSincePressAttack += Time.deltaTime;
+            }
+            else
+            {
+                animationHandler.PlayLookAnim(lookDirection);
+                HandleAttackDelay();
+            }
         }
     }
 
@@ -96,19 +117,19 @@ public class Player : MonoBehaviour
 
     #region Main Methods
 
-    private void HandleAttackDelay(Vector2 direction)
+    private void HandleAttackDelay()
     {
         if (timeSinceLastAttack > attackSpeed)
         {
             timeSinceLastAttack = 0;
-            Attack(direction);
+            Attack();
         }
     }
 
-    private void Attack(Vector2 attackDirection)
+    private void Attack()
     {
         Vector2 velocity = _rigidbody2D.velocity;
-        Vector2 desiredDirection = (attackDirection + velocity * 0.2f);
+        Vector2 desiredDirection = (lookDirection + velocity * 0.2f);
 
         GameObject gameObject = Instantiate(tear);
         gameObject.transform.position = transform.position;
@@ -165,11 +186,25 @@ public class Player : MonoBehaviour
     private void OnAttack(InputAction.CallbackContext context)
     {
         isAttack = true;
+        timeSincePressAttack = 0;
     }
 
     private void OffAttack(InputAction.CallbackContext context)
     {
+        bool upPress = Keyboard.current.upArrowKey.isPressed;
+        bool downPress = Keyboard.current.downArrowKey.isPressed;
+        bool LeftPress = Keyboard.current.leftArrowKey.isPressed;
+        bool RightPress = Keyboard.current.rightArrowKey.isPressed;
+
+        if (upPress || downPress || LeftPress || RightPress) return;
+
         isAttack = false;
+        animationHandler.PlayerCharging(isAttack);
+        if (timeSincePressAttack > maxChargingTime)
+        {
+            Attack();
+            timeSincePressAttack = 0;
+        }
     }
 
     private void OnMove(InputAction.CallbackContext context)
