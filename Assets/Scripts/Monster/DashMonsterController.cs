@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class DashMonsterController : MonsterBasic
 {
-    [SerializeField, Tooltip("몬스터의 상대가 변경되는 최소 시간")] protected float minStateChangeTime = 1f;
-    [SerializeField, Tooltip("몬스터의 상태가 변경되는 최대 시간")] protected float maxStateChangeTime = 3f;
+    [SerializeField, Tooltip("몬스터 대기 시간")] private float idleTime = 0.3f;
+    [SerializeField, Tooltip("몬스터 이동 시간")] private float moveTime = 0.5f;
 
     [SerializeField, Tooltip("몬스터 이동속도")] protected float moveSpeed = 2;
 
@@ -14,16 +14,19 @@ public class DashMonsterController : MonsterBasic
 
     private Vector2 moveDir = Vector2.zero;
 
+    readonly private int IsMoveHash = Animator.StringToHash("IsMove");
+
     void Start()
     {
         base.Start();
-        stateChangeTime = UnityEngine.Random.Range(minStateChangeTime, maxStateChangeTime);
+        stateChangeTime = idleTime;
     }
 
     void Update()
     {
-        // 몬스터의 감지 범위에 플레이어가 있다면 
-        if (monsterState != MonsterState.Trace && monsterState != MonsterState.Attack)
+        // 몬스터의 감지 범위에 플레이어가 있다면 거리에 따라서 추적 or 공격 모드로
+        // 어쩌면 따로 공격 모드는 필요 없을지도?
+        if (monsterState != MonsterState.Trace)
         {
             if(stateChangeTime > 0)
             {
@@ -31,14 +34,15 @@ public class DashMonsterController : MonsterBasic
             }
         else
             {
-                stateChangeTime = UnityEngine.Random.Range(minStateChangeTime, maxStateChangeTime);
-                monsterState = UnityEngine.Random.Range(0, 2) == 0 ? MonsterState.Idle : MonsterState.Move;
+                stateChangeTime = monsterState == MonsterState.Idle ? idleTime : moveTime;
+                monsterState = monsterState == MonsterState.Move ? MonsterState.Idle : MonsterState.Move;
             }
         }
 
         switch(monsterState)
         {
             case MonsterState.Idle:
+                anim.SetBool(IsMoveHash, false);
                 rigid.velocity = Vector2.zero;
                 break;
 
@@ -49,34 +53,27 @@ public class DashMonsterController : MonsterBasic
             case MonsterState.Trace:
                 MonsterTrace();
                 break;
-
-            case MonsterState.Attack:
-                MonsterAttack();
-                break;
         }
     }
 
     void MonsterMove()
     {
-        if (rigid.velocity != Vector2.zero)
+        anim.SetBool(IsMoveHash, true);
+
+        if (rigid.velocity == Vector2.zero)
         {
-            float dirX = UnityEngine.Random.Range(0f, 1f);
-            float dirY = UnityEngine.Random.Range(0f, 1f);
+            float dirX = UnityEngine.Random.Range(-1f, 1f);
+            float dirY = UnityEngine.Random.Range(-1f, 1f);
             moveDir = new Vector2(dirX, dirY).normalized;
             rigid.velocity = moveDir * moveSpeed;
         }
         else
         {
             Vector2 v = rigid.velocity;
-            v.x = v.x - Time.deltaTime < 0 ? 0 : v.x - Time.deltaTime;
-            v.y = v.y - Time.deltaTime < 0 ? 0 : v.y - Time.deltaTime;
+            v.x = v.x - Time.deltaTime < 0 ? v.x + Time.deltaTime : v.x - Time.deltaTime;
+            v.y = v.y - Time.deltaTime < 0 ? v.y + Time.deltaTime : v.y - Time.deltaTime;
             rigid.velocity = v;
         }
-    }
-
-    void MonsterAttack()
-    {
-        
     }
 
     void MonsterTrace()
