@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
 	}
 
 	[SerializeField] public BaseTear tear;
+	[SerializeField] public BaseTear enemyTear;
 
 	public Sprite GetItemSprite(ItemInfo item)
 	{

@@ -28,7 +28,7 @@ public class RoomDoor : MonoBehaviour
 	{ 
 		if (isOpend && collision.CompareTag("Player"))
 		{
-			var playerForward = collision.GetComponent<Player>().GetMoveDir;
+			var playerForward = collision.GetComponent<PlayerController>().GetMoveDir;
 			Vector2 forward = (front.position - transform.position).normalized;
 
 			float dot = Vector2.Dot(playerForward, forward);

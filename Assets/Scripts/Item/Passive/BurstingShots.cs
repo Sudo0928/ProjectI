@@ -54,7 +54,7 @@ public class BurstingShots : SpecialAbility
                 Debug.Log(direction);
 
                 BaseTear temptear = Instantiate(prefab, tear.transform.position, Quaternion.identity);
-                temptear.Init(tear.Owner, tear.Speed, tear.Distance * 0.5f, tear.Size * 0.5f, direction, tear.IsParbolic);
+                temptear.Init(tear.Owner, tear.Damage * 0.5f, tear.Speed, tear.Distance * 0.5f, tear.Size * 0.5f, direction, tear.IsParbolic);
             }
         }
     }
@@ -69,28 +69,28 @@ public class BurstingShots : SpecialAbility
         float randomY = Random.Range(0f, 1f);
 
         temptear = Instantiate(prefab, tear.transform.position, Quaternion.identity);
-        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(randomX, randomY), tear.IsParbolic);
+        temptear.Init(tear.Owner, tear.Damage, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(randomX, randomY), tear.IsParbolic);
 
         randomX = Random.Range(0f, 1f);
         randomY = Random.Range(0f, 1f);
 
         temptear = Instantiate(prefab, tear.transform.position, Quaternion.identity);
-        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(-randomX, randomY), tear.IsParbolic);
+        temptear.Init(tear.Owner, tear.Damage, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(-randomX, randomY), tear.IsParbolic);
 
         randomX = Random.Range(0f, 1f);
         randomY = Random.Range(0f, 1f);
 
         temptear = Instantiate(prefab, tear.transform.position, Quaternion.identity);
-        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(randomX, -randomY), tear.IsParbolic);
+        temptear.Init(tear.Owner, tear.Damage, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(randomX, -randomY), tear.IsParbolic);
 
         randomX = Random.Range(0f, 1f);
         randomY = Random.Range(0f, 1f);
 
         temptear = Instantiate(prefab, tear.transform.position, Quaternion.identity);
-        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(-randomX, -randomY), tear.IsParbolic);
+        temptear.Init(tear.Owner, tear.Damage, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(-randomX, -randomY), tear.IsParbolic);
     }
 
-    public override void OnAbility(Player player)
+    public override void OnAbility(PlayerController player)
 	{
 		EventManager.RegisterListener<TearDropEvent>(Division, 1);
 		EventManager.RegisterListener<TearHitObstacleEvent>(Division, 1);

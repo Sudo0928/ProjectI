@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Familiar_DryBaby : MonoBehaviour
 {
-    public Player player { private get; set; }
+    public PlayerController player { private get; set; }
 	Animator anim;
 	private void Awake()
 	{

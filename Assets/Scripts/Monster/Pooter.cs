@@ -29,7 +29,7 @@ public class Pooter : MonsterBasic
     void Start()
     {
         base.Start();
-        playerTrs = GameObject.FindAnyObjectByType<Player>().transform;
+        playerTrs = GameObject.FindAnyObjectByType<PlayerController>().transform;
         renderer = GetComponentInChildren<SpriteRenderer>();
         monsterState = MonsterState.Trace;
         checkMoveTime = moveTime;
@@ -95,13 +95,14 @@ public class Pooter : MonsterBasic
         Vector2 direction = (playerTrs.position - transform.position).normalized;
 
 		BaseTear tear = Instantiate(
-            GameManager.Instance.tear, 
+            GameManager.Instance.enemyTear, 
             transform.position, Quaternion.identity);
-		tear.Init(gameObject,
+        tear.Init(gameObject,
+            monsterAtk,
             5.0f,
             7.0f,
             0.5f,
-            direction, 
+            direction,
             false); 
 
 		// 투사체 발사

@@ -1,4 +1,5 @@
 using UnityEngine;
+using static DesignEnums;
 
 public class Tear : MonoBehaviour
 {
@@ -16,13 +17,13 @@ public class Tear : MonoBehaviour
 
     private void Attack(PlayerAttackEvent e)
     {
-        Player player = e.player;
+        PlayerController player = e.player;
 
         Vector2 velocity = player.Rigidbody2D.velocity;
         Vector2 desiredDirection = (player.LookDirection + velocity * 0.2f);
 
         GameObject gameObject = Instantiate(tear);
         gameObject.transform.position = player.transform.position - new Vector3(0, 0.1f, 0);
-        gameObject.GetComponent<BaseTear>().Init(player.gameObject, player.projectileSpeed, player.projectileDistance, player.projectileSize, e.direction, player.IsParbolic);
+        gameObject.GetComponent<BaseTear>().Init(player.gameObject, player.Stat.GetStat(Option.Attack), player.projectileSpeed, player.projectileDistance, player.projectileSize, e.direction, player.IsParbolic);
     }
 }

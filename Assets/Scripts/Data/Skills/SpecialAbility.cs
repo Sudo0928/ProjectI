@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class SpecialAbility : MonoBehaviour
 {
-    public abstract void OnAbility(Player player);
+    public abstract void OnAbility(PlayerController player);
     public abstract void RemoveSkill();
 }

@@ -27,9 +27,9 @@ public class BaseTear : BaseAttackHandler
     private bool isParbolic = true;
     public bool IsParbolic => isParbolic;
 
-    public void Init(GameObject owner, float speed, float distance, float size, Vector2 attackDirection, bool isParbolic = false)
+    public void Init(GameObject owner, float damage, float speed, float distance, float size, Vector2 attackDirection, bool isParbolic = false)
     {
-        base.Init(owner, speed, distance, size, attackDirection);
+        base.Init(owner, damage, speed, distance, size, attackDirection);
 
         startPos = transform.position;
         transform.localScale = Vector2.one * size;
@@ -70,8 +70,11 @@ public class BaseTear : BaseAttackHandler
         if (collision.gameObject.tag == Owner.tag) 
                 return; 
          
-		if (Owner.CompareTag("Monster") && collision.gameObject.CompareTag("Player"))
-			collision.gameObject.GetComponent<Player>().TakeDamage(damage);
+		if (collision.gameObject.CompareTag("Monster") || collision.gameObject.CompareTag("Player"))
+        {
+            TearHitEntityEvent tearHit = new TearHitEntityEvent(this, collision);
+            InvokeEvent(tearHit);
+        }
          
 		if ((HitMask.value | (1 << collision.gameObject.layer)) == HitMask.value)
         {

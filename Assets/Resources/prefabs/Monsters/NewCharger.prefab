@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5885905570199681783}
   - component: {fileID: 2368545060783518318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3000273429832654610}
   - component: {fileID: 3432072375077815337}
   - component: {fileID: 1586904563346719703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChargerMainRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,9 +202,9 @@ GameObject:
   - component: {fileID: 7329791103465165681}
   - component: {fileID: 8302245397760635599}
   - component: {fileID: 1985430277964264906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NewCharger
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterState: 0
   monsterMaxHP: 5
-  monsterAtk: 1
+  monsterAtk: 0.5
   onDie:
     m_PersistentCalls:
       m_Calls: []
