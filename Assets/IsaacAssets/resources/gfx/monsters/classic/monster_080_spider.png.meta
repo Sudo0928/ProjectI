@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: monster_080_spider_0
+      name: spider_move1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster_080_spider_1
+      name: spider_move1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster_080_spider_6
+      name: spider_move1_02
       rect:
         serializedVersion: 2
         x: 0
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster_080_spider_7
+      name: spider_move1_03
       rect:
         serializedVersion: 2
         x: 32
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster_080_spider_16
+      name: spider_move1_04
       rect:
         serializedVersion: 2
         x: 0
@@ -241,7 +241,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster_080_spider_17
+      name: spider_move1_05
       rect:
         serializedVersion: 2
         x: 32
@@ -325,7 +325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster_080_spider_26
+      name: spider_move1_06
       rect:
         serializedVersion: 2
         x: 0
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster_080_spider_27
+      name: spider_move1_07
       rect:
         serializedVersion: 2
         x: 32
@@ -543,7 +543,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,16 +566,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monster_080_spider_0: -127135431
-      monster_080_spider_1: 1688921868
       monster_080_spider_10: -386412565
       monster_080_spider_11: 291524752
       monster_080_spider_12: 1146493733
       monster_080_spider_13: 1920099748
       monster_080_spider_14: 378578096
       monster_080_spider_15: 271325397
-      monster_080_spider_16: 457796946
-      monster_080_spider_17: 522544699
       monster_080_spider_18: -2087810052
       monster_080_spider_19: -1769742120
       monster_080_spider_2: 1237582731
@@ -585,8 +581,6 @@ TextureImporter:
       monster_080_spider_23: -355183957
       monster_080_spider_24: -972982956
       monster_080_spider_25: 251430366
-      monster_080_spider_26: -2012717564
-      monster_080_spider_27: -229162045
       monster_080_spider_28: 315657579
       monster_080_spider_29: 468016021
       monster_080_spider_3: 1085727620
@@ -622,7 +616,6 @@ TextureImporter:
       monster_080_spider_57: -2020284047
       monster_080_spider_58: -1121950335
       monster_080_spider_59: -1552615198
-      monster_080_spider_6: -1640397100
       monster_080_spider_60: -1093542564
       monster_080_spider_61: 561711359
       monster_080_spider_62: -114185976
@@ -630,9 +623,16 @@ TextureImporter:
       monster_080_spider_64: 1789563493
       monster_080_spider_65: -1382600567
       monster_080_spider_66: -310944707
-      monster_080_spider_7: -461568719
       monster_080_spider_8: 566566944
       monster_080_spider_9: 1075254441
+      spider_move1_0: -127135431
+      spider_move1_02: -1640397100
+      spider_move1_03: -461568719
+      spider_move1_04: 457796946
+      spider_move1_05: 522544699
+      spider_move1_06: -2012717564
+      spider_move1_07: -229162045
+      spider_move1_1: 1688921868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
