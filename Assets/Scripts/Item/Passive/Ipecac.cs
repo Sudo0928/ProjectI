@@ -34,7 +34,7 @@ public class Ipecac : SpecialAbility
         }
     }
 
-	public override void OnAbility(Player player)
+	public override void OnAbility(PlayerController player)
 	{
 		EventManager.RegisterListener<TearDropEvent>(Explosion, 2);
 		EventManager.RegisterListener<TearLaunchEvent>(ChangeColor, 1);

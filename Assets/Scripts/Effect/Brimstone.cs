@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Brimstone : BaseAttackHandler
 {
-    public override void Init(GameObject owner, float speed, float distance, float size, Vector2 attackDirection)
+    public override void Init(GameObject owner, float damage, float speed, float distance, float size, Vector2 attackDirection)
     {
-        base.Init(owner, speed, distance, size, attackDirection);
+        base.Init(owner, damage, speed, distance, size, attackDirection);
     }
 
     //IEnumerator MoveAlongParabola(Vector2 startPos, Vector2 endPos, float lerpTime)

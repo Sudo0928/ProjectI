@@ -6,7 +6,7 @@ public class DoubleShotBuddy : SpecialAbility
 {
     [SerializeField] GameObject harlequin;
 
-	public override void OnAbility(Player player)
+	public override void OnAbility(PlayerController player)
 	{
 		var go = Instantiate<GameObject>(harlequin);
 		var har = go.GetComponent<HarlequinBuddy>();

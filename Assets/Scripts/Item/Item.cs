@@ -14,7 +14,7 @@ public class Item : MonoBehaviour
 	ItemInfo item;
 	BoxCollider2D collider;
 
-	private bool isPickUp = false;
+	public bool isPickUp = false;
 
 	private void Awake()
 	{
@@ -24,7 +24,7 @@ public class Item : MonoBehaviour
 			_sprite.sprite = GameManager.Instance.GetItemSprite(item);
 	}
 	 
-	public void SetActiveCollider(bool active) => GetComponent<BoxCollider2D>().enabled = active;
+	public void SetActiveCollider(bool active) => GetComponent<CircleCollider2D>().enabled = active;
 
 	public void SetItem(ItemInfo item) 
 	{ 
@@ -38,7 +38,7 @@ public class Item : MonoBehaviour
 		if (collision.gameObject.CompareTag("Player"))
 		{
 			
-			if (collision.gameObject.TryGetComponent<Player>(out Player player))
+			if (collision.gameObject.TryGetComponent<PlayerController>(out PlayerController player))
 			{
 				player.AddItem(item);
 				transform.SetParent(player.pickUpPivot);

@@ -20,7 +20,7 @@ public class PlayerUIHandler : MonoBehaviour
 		itemInfoUI = Instantiate<GameObject>(itemInfoUIPrefab).GetComponent<PickupItemInfoUI>();
 		itemPreviewUI = Instantiate<GameObject>(itemPreviewUIPrefab).GetComponent<ItemPreviewUI>();
 		playerStatUI = Instantiate<GameObject>(playerStatUIPrefab).GetComponent<PlayerStatUI>();
-		playerStatUI.playerStat = gameObject.GetComponent<Player>()?.Stat;
+		playerStatUI.playerStat = gameObject.GetComponent<PlayerController>()?.Stat;
 		itemPreviewUI.player = gameObject;
 	}
 }

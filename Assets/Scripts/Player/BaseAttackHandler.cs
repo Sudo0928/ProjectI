@@ -32,9 +32,10 @@ public abstract class BaseAttackHandler : MonoBehaviour
     protected float lerpTime = 0;
     protected float currentTime = 0;
 
-    public virtual void Init(GameObject owner, float speed, float distance, float size, Vector2 attackDirection)
+    public virtual void Init(GameObject owner, float damage, float speed, float distance, float size, Vector2 attackDirection)
     {
         this.owner = owner;
+        this.damage = damage;
         this.speed = speed;
         this.distance = distance;
         this.size = size;

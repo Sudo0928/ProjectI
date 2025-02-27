@@ -35,7 +35,7 @@ public class BabyplumController : MonsterBasic
     {
         base.Start();
         renderer = GetComponentInChildren<SpriteRenderer>();
-        playerTrs = GameObject.FindAnyObjectByType<Player>().transform;
+        playerTrs = GameObject.FindAnyObjectByType<PlayerController>().transform;
         nextAttackTime = Random.Range(minAttackTime, maxAttackTime);
     }
 

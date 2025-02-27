@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565508960718211581}
   - component: {fileID: 3182259821841837431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4506279087866232903}
   - component: {fileID: 3005167596684275269}
   - component: {fileID: 2323293123880098161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NewSpider
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterState: 0
-  monsterMaxHP: 5
-  monsterAtk: 1
+  monsterMaxHP: 10
+  monsterAtk: 0.5
   onDie:
     m_PersistentCalls:
       m_Calls: []
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 8542373095951377443}
   - component: {fileID: 3636722763416480135}
   - component: {fileID: 6828142161110790361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpiderMainRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
