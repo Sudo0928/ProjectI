@@ -10,11 +10,15 @@ public class RoomDoor : MonoBehaviour
 	RoomDoor linkedDoor;
 	RoomManager myRoom;
 
-	bool isOpend = true;
+	bool isOpend = false;
+	Animator anim;
+
 	private void Awake() 
 	{
+		anim = GetComponent<Animator>();
 		myRoom = transform.parent.GetComponent<RoomManager>();
-
+		myRoom?.myDoor.Add(this);
+		OpenDoor();
 	}
 
 	public RoomManager Room => myRoom;
@@ -33,9 +37,7 @@ public class RoomDoor : MonoBehaviour
 				collision.transform.position = linkedDoor.front.position;
 				nextRoom.EnterRoom();
 				myRoom.ExitRoom();
-			}
-
-			
+			} 
 		}
 
 
@@ -45,18 +47,25 @@ public class RoomDoor : MonoBehaviour
 			linkedDoor = door;
 			nextRoom = linkedDoor.Room;
 		}
-
 	}
-
-
 
 	public void OpenDoor()
 	{
+		string animName = "OpenDoor";
+		if (isOpend)
+			animName = "OpenDoorState";
 
+		anim.Play(animName); 
+		isOpend = true; 
 	}
 
 	public void CloseDoor()
 	{
-
+		string animName = "CloseDoor";
+		if (!isOpend)
+			animName = "CloseDoorState";
+		  
+		anim.Play(animName);
+		isOpend = false;
 	}
 }

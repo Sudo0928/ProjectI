@@ -668,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
       value: 5.3128386
       objectReference: {fileID: 0}
+    - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      propertyPath: stageReward
+      value: 
+      objectReference: {fileID: 6485897121695889952}
     - target: {fileID: 7414492744096483626, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -896,6 +900,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}
+--- !u!114 &6485897121695889952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4283389221879237355, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}
+  m_PrefabInstance: {fileID: 7022007766574182603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a583fc07bad9f43b686e1e5f4cf36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7491025962856234470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 470158527302077741, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}

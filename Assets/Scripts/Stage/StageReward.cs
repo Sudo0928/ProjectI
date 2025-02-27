@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Diagnostics;
 using static UnityEditor.Progress;
 
 
@@ -12,24 +13,38 @@ public class StageReward : MonoBehaviour
     [SerializeField] List<Item> items;
     [SerializeField] List<int> gachaPools;
 
+    BoxCollider2D myCollider; 
 	private void Awake() 
 	{
         DisableItems();
-        SpawnItem();
+		myCollider = GetComponent<BoxCollider2D>();
+        myCollider.enabled = false;
 	}
 
-    void SpawnItem() 
+	public void SpawnItem() 
     {
-        for (int i = 0; i < gachaPools.Count; i++)
-        {
+        myCollider.enabled = true;
+		// TODO
+		// 중복된 아이템이 <최대한>안나오도록 수정
+
+		for (int i = 0; i < gachaPools.Count; i++)
+        { 
             int idx = i;
 			itemTables[i].SetActive(true);
+            items[idx].SetActiveCollider(false);
 			items[i].gameObject.SetActive(true);
 
 			items[idx].SetItem(DataManager.gachaSystem.GetItem(gachaPools[idx]));
-            items[idx].onPickupItem.RemoveAllListeners();
+			items[idx].onPickupItem.RemoveAllListeners();
             items[idx].onPickupItem.AddListener(DisableItems);
 		}
+
+        GameManager.Instance.SetTimer(() => { 
+            myCollider.enabled = false;
+			for (int i = 0; i < gachaPools.Count; i++)
+				items[i].SetActiveCollider(true);
+             
+		}, 1.0f);
 	} 
 
     void DisableItems()

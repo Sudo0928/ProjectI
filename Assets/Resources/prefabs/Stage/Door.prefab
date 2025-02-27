@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2693757582707918068}
   - component: {fileID: 459708085081626815}
   m_Layer: 0
-  m_Name: right
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,11 +57,11 @@ Transform:
   m_GameObject: {fileID: 1272400098910426118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4199998, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.36, y: 0.01000008, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4558231675229306682}
+  m_Father: {fileID: 3502625013970865801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &459708085081626815
 SpriteRenderer:
@@ -146,6 +146,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4558231675229306682}
+  - {fileID: 2693757582707918068}
   m_Father: {fileID: 7254684167326511469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3370847131168077434
@@ -213,6 +214,7 @@ GameObject:
   - component: {fileID: 3549806590027563989}
   - component: {fileID: 4020765745999326173}
   - component: {fileID: 3949838743343299051}
+  - component: {fileID: 6692260230267193317}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -277,7 +279,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1264448240, guid: 73560e1a0bbc76e47a43010e62eb6e51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -374,6 +376,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &6692260230267193317
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140009659550908785}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55ff7c446647c944185502cef4e0e849, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6595537879272425215
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +408,7 @@ GameObject:
   - component: {fileID: 4558231675229306682}
   - component: {fileID: 5087972752019289872}
   m_Layer: 0
-  m_Name: dorr
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,11 +423,10 @@ Transform:
   m_GameObject: {fileID: 6595537879272425215}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.21, y: 0.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.33, y: 0.01, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2693757582707918068}
+  m_Children: []
   m_Father: {fileID: 3502625013970865801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5087972752019289872

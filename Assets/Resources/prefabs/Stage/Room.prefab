@@ -1939,8 +1939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myDoor: []
-  virtualCamera: {fileID: 0}
-  stageReward: {fileID: 0}
+  stageReward: {fileID: 5235120892499767286}
+  isStartRoom: 0
 --- !u!60 &3272848720306795191
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2085,7 +2085,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 64392811901822605, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}
       propertyPath: m_Name
-      value: RoomManager
+      value: StageReward
       objectReference: {fileID: 0}
     - target: {fileID: 470158527302077741, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2192,6 +2192,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}
+--- !u!114 &5235120892499767286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4283389221879237355, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}
+  m_PrefabInstance: {fileID: 8347216827016144157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a583fc07bad9f43b686e1e5f4cf36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8453559734031870000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 470158527302077741, guid: b9ae789b28d20ed48b98a10e612b2ff8, type: 3}

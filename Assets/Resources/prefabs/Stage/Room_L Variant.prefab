@@ -1346,6 +1346,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: stageReward
+      value: 
+      objectReference: {fileID: 1428321139746702986}
     - target: {fileID: 1605343877301752699, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_Offset.x
       value: 0
@@ -1656,6 +1660,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5059470653050448285, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
   m_PrefabInstance: {fileID: 5319001383840644266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1428321139746702986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6485897121695889952, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+  m_PrefabInstance: {fileID: 5319001383840644266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a583fc07bad9f43b686e1e5f4cf36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2306094746342922094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7624602311683992516, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}

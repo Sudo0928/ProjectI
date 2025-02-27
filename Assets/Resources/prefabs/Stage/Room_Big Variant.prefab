@@ -1892,6 +1892,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: stageReward
+      value: 
+      objectReference: {fileID: 5024344706216679576}
     - target: {fileID: 1605343877301752699, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_Offset.x
       value: 0
@@ -2227,6 +2231,17 @@ PrefabInstance:
       addedObject: {fileID: 1815411680759537282}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+--- !u!114 &5024344706216679576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6485897121695889952, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+  m_PrefabInstance: {fileID: 2285726286074716856}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a583fc07bad9f43b686e1e5f4cf36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6453198888497335077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5059470653050448285, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
