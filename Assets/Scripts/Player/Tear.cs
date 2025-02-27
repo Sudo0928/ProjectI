@@ -18,7 +18,7 @@ public class Tear : BaseAttackHandler
 
     private float heigh = 0;
 
-    private bool isParbolic = false;
+    private bool isParbolic = true;
 
     public override void Init(Player owner, Vector2 attackDirection)
     {
@@ -37,13 +37,12 @@ public class Tear : BaseAttackHandler
     {
         base.Start();
 
-        StartCoroutine(Remove());
         if(isParbolic)
         {
             Vector2 pos = tearSprite.transform.position;
             pos.y -= 0.5f;
             tearSprite.transform.position = pos;
-            StartCoroutine(MoveAlongParabola(startPos, endPos, lerpTime));
+            StartCoroutine(MoveAlongParabola(startPos, endPos - new Vector2(0, 0.2f), lerpTime));
             StartCoroutine(MoveInStraightLine(startPos, endPos, lerpTime));
         }
         else
@@ -115,6 +114,8 @@ public class Tear : BaseAttackHandler
         }
         // 최종 위치로 보정
         transform.position = endPos;
+
+        Remove();
     }
 
     IEnumerator MoveAlongParabola(Vector2 startPos, Vector2 endPos, float lerpTime)
@@ -136,12 +137,15 @@ public class Tear : BaseAttackHandler
         }
         // 이동 완료 후 보정
         tearSprite.transform.position = endPos;
+
+        Remove();
     }
 
-    IEnumerator Remove()
+    public void Remove()
     {
-        yield return new WaitForSeconds(lerpTime);
+        TearDestroyEvent tearDestroyEvent = new TearDestroyEvent(this);
+        EventManager.DispatchEvent(tearDestroyEvent);
+
         Destroy(gameObject);
     }
-
 }
