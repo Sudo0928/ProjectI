@@ -5,19 +5,6 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-[Serializable]
-public class Pos
-{
-	public int y;
-	public int x; 
-}
-
-[Serializable]
-public class DoorInfo
-{
-	public RoomDoor door;
-	public Pos pos;
-}
 
 public class RoomManager : MonoBehaviour
 {
@@ -26,30 +13,18 @@ public class RoomManager : MonoBehaviour
 	[SerializeField] StageReward stageReward;
 	[SerializeField] bool isStartRoom = false;
 
-	[SerializeField] public List<DoorInfo> leftDoor;
-	[SerializeField] public List<DoorInfo> rightDoor;
-	[SerializeField] public List<DoorInfo> upDoor;
-	[SerializeField] public List<DoorInfo> downDoor;  
+	[SerializeField] public List<RoomDoor> leftDoor;
+	[SerializeField] public List<RoomDoor> rightDoor;
+	[SerializeField] public List<RoomDoor> upDoor;
+	[SerializeField] public List<RoomDoor> downDoor;  
 
-	[SerializeField] public List<Pos> roomStructure = new List<Pos>(); 
 	int monsterCnt = 0;  
 	public bool isClear => monsterCnt == 0; 
 
-	public List<DoorInfo> GetDoor(int dir)
+	public bool GetDoor(int dir, out RoomDoor door)
 	{
-		if (dir == 0)
-			return upDoor;
-		else if (dir == 1)
-			return downDoor;
-		else if (dir == 2)
-			return leftDoor;
-		else
-			return rightDoor;
-	} 
-
-	public RoomDoor GetDoor((int, int) idx, int dir)
-	{
-		List<DoorInfo> list;
+		door = null;
+		List<RoomDoor> list;
 		if (dir == 0)
 			list = upDoor;
 		else if (dir == 1)
@@ -57,28 +32,56 @@ public class RoomManager : MonoBehaviour
 		else if (dir == 2)
 			list = leftDoor;
 		else
-			list = rightDoor; 
+			list = rightDoor;
 
-		foreach (var door in list)
+		HashSet<int> idxs = new HashSet<int>();
+		int idx = 0;
+		do
 		{
-			if (door.pos.y == idx.Item1 && door.pos.x == idx.Item2)
-				return door.door;
-		}
-		return null;
-	}
+			if (idxs.Count == list.Count)
+				return false;
+
+			idx = UnityEngine.Random.Range(0, list.Count);
+			idxs.Add(idx);
+
+		} while (list[idx].isLinked);
+
+		door = list[idx];
+		return true;
+	} 
+
 	private void Awake()
 	{
 		virtualCamera = FindFirstObjectByType<CinemachineConfiner2D>();
-		
+
+		foreach (RoomDoor door in leftDoor)
+			myDoor.Add(door);
+
+		foreach (RoomDoor door in rightDoor)
+			myDoor.Add(door);
+
+		foreach (RoomDoor door in upDoor)
+			myDoor.Add(door);
+		 
+		foreach (RoomDoor door in downDoor)
+			myDoor.Add(door);
+		 
 	}
 	private void Start()
 	{
 		if (isStartRoom == false)
 			GameManager.Instance.SetTimer(()=>gameObject.SetActive(false), 0.3f);
+
+		foreach (RoomDoor door in myDoor)
+		{
+			if (door.isLinked == false)
+				door.gameObject.SetActive(false);
+		}
 	}  
 
-	public void EnterRoom()
+	public void EnterRoom(Vector3 movePos)
 	{
+		transform.position += movePos;
 		virtualCamera.m_BoundingShape2D = GetComponent<PolygonCollider2D>(); 
 		gameObject.SetActive(true);
 

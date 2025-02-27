@@ -8,7 +8,7 @@ public class RoomDoor : MonoBehaviour
 	[SerializeField] public Transform front;
 	RoomManager nextRoom;
 	RoomDoor linkedDoor;
-	RoomManager myRoom;
+	public RoomManager myRoom;
 
 	bool isOpend = false;
 	Animator anim;
@@ -28,26 +28,34 @@ public class RoomDoor : MonoBehaviour
 		if (isOpend && collision.CompareTag("Player"))
 		{
 			var playerForward = collision.GetComponent<Player>().GetMoveDir;
-			Vector2 toPlayer = (collision.transform.position - transform.position).normalized;
+			Vector2 forward = (front.position - transform.position).normalized;
 
-			float dot = Vector2.Dot(playerForward, toPlayer);
+			float dot = Vector2.Dot(playerForward, forward);
 
             if (dot < - 0.6f)
             {
-				collision.transform.position = linkedDoor.front.position;
-				nextRoom.EnterRoom();
+				if (linkedDoor == null)
+				{
+					Debug.Log("여기 아닌데~");
+					return; 
+				}
+
+				Vector3 nextPos = transform.position + new Vector3(-forward.x, -forward.y, 0) * 5;
+				Vector3 nextRoomMoveVector = nextPos -  linkedDoor.transform.position;
+				nextRoom.EnterRoom(nextRoomMoveVector); 
 				myRoom.ExitRoom();
+				collision.transform.position = linkedDoor.front.position;
 			} 
 		}
-
-
-		RoomDoor door = collision.GetComponent<RoomDoor>();
-		if (door != null)
-		{
-			linkedDoor = door;
-			nextRoom = linkedDoor.Room;
-		}
 	}
+
+	public void SetLinkedDoor(RoomDoor door)
+	{
+		linkedDoor = door;
+		nextRoom = linkedDoor.myRoom;
+	}
+
+	public bool isLinked => linkedDoor != null;
 
 	public void OpenDoor()
 	{
