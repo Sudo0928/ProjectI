@@ -1,32 +1,35 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BabyplumController : MonsterBasic
 {
-    [SerializeField, Tooltip("Åõ»çÃ¼ ÇÁ¸®ÆÕ")] private GameObject bullet;
-    [SerializeField, Tooltip("º£ÀÌºñ ÇÃ·³ÀÌ ÇÃ·¹ÀÌ¾î¸¦ ÇâÇØ ÀÌµ¿ÇÏ´Â ¼Óµµ")] private float moveSpeed = 0.5f;
-    [SerializeField, Tooltip("ÆÐÅÏ3ÀÇ µ¹Áø ¼Óµµ")] private float pattern3DashSpeed = 3f;
-    [SerializeField, Tooltip("´ÙÀ½ °ø°ÝÀ» ÇÏ´Â ÃÖ¼Ò ½Ã°£")] private float minAttackTime = 2f;
-    [SerializeField, Tooltip("´ÙÀ½ °ø°ÝÀ» ÇÏ´Â ÃÖ´ë ½Ã°£")] private float maxAttackTime = 4f;
-    [SerializeField, Tooltip("º® ·¹ÀÌ¾î")] private LayerMask wallLayer;
+    [SerializeField, Tooltip("íˆ¬ì‚¬ì²´ í”„ë¦¬íŒ¹")] private GameObject bullet;
+    [SerializeField, Tooltip("ë² ì´ë¹„ í”ŒëŸ¼ì´ í”Œë ˆì´ì–´ë¥¼ í–¥í•´ ì´ë™í•˜ëŠ” ì†ë„")] private float moveSpeed = 0.5f;
+    [SerializeField, Tooltip("íŒ¨í„´3ì˜ ëŒì§„ ì†ë„")] private float pattern3DashSpeed = 3f;
+    [SerializeField, Tooltip("ë‹¤ìŒ ê³µê²©ì„ í•˜ëŠ” ìµœì†Œ ì‹œê°„")] private float minAttackTime = 2f;
+    [SerializeField, Tooltip("ë‹¤ìŒ ê³µê²©ì„ í•˜ëŠ” ìµœëŒ€ ì‹œê°„")] private float maxAttackTime = 4f;
+    [SerializeField, Tooltip("ë²½ ë ˆì´ì–´")] private LayerMask wallLayer;
 
-    // ÇÃ·¹ÀÌ¾î À§Ä¡
+    // í”Œë ˆì´ì–´ ìœ„ì¹˜
     private Transform playerTrs;
     private SpriteRenderer renderer;
 
-    // ÀÌµ¿ ¹æÇâ
+    // ì´ë™ ë°©í–¥
     private Vector2 moveDir = Vector2.zero;
-    // ´ÙÀ½ °ø°Ý±îÁö ³²Àº ½Ã°£
+    // ë‹¤ìŒ ê³µê²©ê¹Œì§€ ë‚¨ì€ ì‹œê°„
     private float nextAttackTime;
-    // ÆÐÅÏ3À¸·Î µ¹ÁøÁßÀÎ°¡?
+    // ê³µê²©í•  íŒ¨í„´ì„ 0, 1, 2ë¡œ íŒì •
+    // ê³µê²© ìƒíƒœê°€ ì•„ë‹ ë•ŒëŠ” -1ì„ ê°’ìœ¼ë¡œ
+    private int patternNum = -1;
+    // íŒ¨í„´3ìœ¼ë¡œ ëŒì§„ì¤‘ì¸ê°€?
     private bool pattern3 = false;
 
-    // ¾Ö´Ï¸ÞÀÌÅÍ ÇØ½Ã
+    // ì• ë‹ˆë©”ì´í„° í•´ì‹œ
     private readonly int Pattern_1 = Animator.StringToHash("Pattern_1");
     private readonly int Pattern_2 = Animator.StringToHash("Pattern_2");
     private readonly int Pattern_3 = Animator.StringToHash("Pattern_3");
-
+    private readonly int IsAttack = Animator.StringToHash("IsAttack");
 
     void Start()
     {
@@ -46,6 +49,7 @@ public class BabyplumController : MonsterBasic
         {
             nextAttackTime = Random.Range(minAttackTime, maxAttackTime);
             monsterState = MonsterState.Attack;
+            anim.SetBool(IsAttack, true);
         }
 
         switch(monsterState)
@@ -68,7 +72,10 @@ public class BabyplumController : MonsterBasic
 
     private void ChoiceAttackPattern()
     {
-        int patternNum = Random.Range(0, 3);
+        if (patternNum == -1)
+        {
+            patternNum = Random.Range(0, 3);
+        }
 
         switch(patternNum)
         {
@@ -89,21 +96,24 @@ public class BabyplumController : MonsterBasic
 
     private void PlumPattern1()
     {
-        // ¿øÇüÀ¸·Î Åõ»çÃ¼ ¹ß»ç
+        anim.SetBool(Pattern_1, true);
+        // ì›í˜•ìœ¼ë¡œ íˆ¬ì‚¬ì²´ ë°œì‚¬
     }
 
     private void PlumPattern2()
     {
+        anim.SetBool(Pattern_2, true);
         PlumMove();
         SetPlumFlipX();
 
-        // È¸ÀüÇÏ¸é¼­ Åõ»çÃ¼ ¹ß»ç
+        // íšŒì „í•˜ë©´ì„œ íˆ¬ì‚¬ì²´ ë°œì‚¬
     }
 
     private void PlumPattern3()
     {
         if(moveDir == Vector2.zero)
         {
+            anim.SetBool(Pattern_3, true);
             float dirX = Random.Range(-1f, 1f);
             float dirY = Random.Range(-1f, 1f);
             moveDir = new Vector2(dirX, dirY);
@@ -112,10 +122,10 @@ public class BabyplumController : MonsterBasic
 
         rigid.velocity = moveDir * pattern3DashSpeed;
         
-        // µ¹ÁøÇÏ¸é¼­ Åõ»çÃ¼ Èð»Ñ¸®±â
+        // ëŒì§„í•˜ë©´ì„œ íˆ¬ì‚¬ì²´ í©ë¿Œë¦¬ê¸°
     }
 
-    // ½ºÇÁ¶óÀÌÆ® ·»´õ·¯ ÇÃ¸³ Á¦¾î
+    // ìŠ¤í”„ë¼ì´íŠ¸ ë Œë”ëŸ¬ í”Œë¦½ ì œì–´
     void SetPlumFlipX()
     {
         if(moveDir.x > 0)
@@ -135,5 +145,13 @@ public class BabyplumController : MonsterBasic
             moveDir = -moveDir;
             renderer.flipX = !renderer.flipX;
         }
+    }
+
+    public void EndAttack()
+    {
+        anim.SetBool(IsAttack, false);
+        anim.SetBool(Pattern_1, false);
+        anim.SetBool(Pattern_2, false);
+        anim.SetBool(Pattern_3, false);
     }
 }
