@@ -42,7 +42,18 @@ public class Player : MonoBehaviour
     private float attackSpeed = 0.1f;
 
     [SerializeField][Range(0f, 500f)]
-    private float projectileSpeed = 200f;
+    private float projectileDistance = 3f;
+    public float ProjectileDistance { get => projectileDistance; }
+
+    [SerializeField][Range(0f, 500f)]
+    private float projectileSpeed = 3f;
+    public float ProjectileSpeed { get => projectileSpeed; }
+
+    [SerializeField][Range(0f, 10)]
+    private float projectileSize = 3f;
+    public float ProjectileSize { get => projectileSize; }
+
+    public float AttackSpeed { get => attackSpeed; }
 
     [SerializeField] [Range(0f, 1f)]
     private float projectileVelocityAngle = 0.2f;
@@ -62,8 +73,8 @@ public class Player : MonoBehaviour
     private bool isCharging = false;
 
     private float timeSincePressAttack = 0;
-
-    private void Awake()
+    public Vector2 GetMoveDir => inputActions.Player.Move.ReadValue<Vector2>();
+	private void Awake()
     {
         inputActions = new PlayerInputAction();
 
@@ -72,6 +83,7 @@ public class Player : MonoBehaviour
 
         //    inventory.onAddItem.AddListener(() => { anim.SetTrigger("getItem")});
         inventory.stat = stat;
+        
 		AddInputActionsCallbacks();
     }
 
@@ -141,7 +153,7 @@ public class Player : MonoBehaviour
 
         GameObject gameObject = Instantiate(tear);
         gameObject.transform.position = transform.position;
-        gameObject.GetComponent<Tear>().Init(desiredDirection, projectileSpeed);
+        gameObject.GetComponent<BaseAttackHandler>().Init(this, desiredDirection);
 
         animationHandler.PlayAttackAnim();
     }

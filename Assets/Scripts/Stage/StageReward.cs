@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Diagnostics;
 using static UnityEditor.Progress;
 
 
@@ -10,31 +11,40 @@ public class StageReward : MonoBehaviour
 
     [Space(10)]
     [SerializeField] List<Item> items;
-
-    [Space(10)]
     [SerializeField] List<int> gachaPools;
 
-    int monsterCnt = 0;
-	private void Awake()
+    BoxCollider2D myCollider; 
+	private void Awake() 
 	{
         DisableItems();
-        SpawnItem();
+		myCollider = GetComponent<BoxCollider2D>();
+        myCollider.enabled = false;
 	}
 
-
-   
-    void SpawnItem() 
+	public void SpawnItem() 
     {
-        for (int i = 0; i < gachaPools.Count; i++)
-        {
+        myCollider.enabled = true;
+		// TODO
+		// 중복된 아이템이 <최대한>안나오도록 수정
+
+		for (int i = 0; i < gachaPools.Count; i++)
+        { 
             int idx = i;
 			itemTables[i].SetActive(true);
+            items[idx].SetActiveCollider(false);
 			items[i].gameObject.SetActive(true);
 
 			items[idx].SetItem(DataManager.gachaSystem.GetItem(gachaPools[idx]));
-            items[idx].onPickupItem.RemoveAllListeners();
+			items[idx].onPickupItem.RemoveAllListeners();
             items[idx].onPickupItem.AddListener(DisableItems);
 		}
+
+        GameManager.Instance.SetTimer(() => { 
+            myCollider.enabled = false;
+			for (int i = 0; i < gachaPools.Count; i++)
+				items[i].SetActiveCollider(true);
+             
+		}, 1.0f);
 	} 
 
     void DisableItems()
@@ -45,19 +55,5 @@ public class StageReward : MonoBehaviour
             items[i].gameObject.SetActive(false);
 		} 
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Monster"))
-        {
-            monsterCnt++;
-            // TODO
-            // 몬스터가 죽을 때 호출되는 Event에 monsterCnt를  -1
-            // monster Cnt 가 0이 될 때, SpawnItem 함수 실행
-        }
-    }
-
-
-
 }
  

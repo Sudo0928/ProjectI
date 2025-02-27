@@ -13,8 +13,16 @@ public class Stat
 
     private int maxGauge = 6;
 	private int curGauge = 5;
+
+    public UnityEvent onChangeGauge = new UnityEvent();
     public int MaxGauge { get => maxGauge; set => maxGauge = value; }
-	public int CurGauge { get => curGauge; set => curGauge = value; }
+	public int CurGauge { get => curGauge; set
+        {
+            curGauge = value;
+            onChangeGauge?.Invoke();
+
+		}
+    }
 
 
 	public Stat()
@@ -27,12 +35,30 @@ public class Stat
         options[(int)Option.RangeScale] = 1.0f; 
         options[(int)Option.ProjectileSize] = 1.0f;
         options[(int)Option.ProjectileSpeed] = 1.0f;
-        options[(int)Option.MaxHeart] = 1.0f;
+        options[(int)Option.MaxHeart] = 3.5f;
         options[(int)Option.CurHeart] = options[(int)Option.MaxHeart];
 		options[(int)Option.Speed] = 3.0f; 
 	}
 
-    public float GetStat(Option option) => options[(int)option];
+    public float GetStat(Option option)
+    {
+        float ret = options[(int)option];
+        if (option == Option.Attack)
+        {
+            ret *= 1.0f + options[(int)Option.AttackScale];
+            ret *= 1.0f + (options[(int)Option.AttackPerCoin] * options[(int)Option.Coin]);
+		}
+
+        if (option == Option.Range)
+        {
+            ret *= 1.0f + options[(int)Option.RangeScale];
+
+
+		}
+
+        return ret;
+
+	}
     public void AddStat(Option option, float value)
     {
 		options[(int)option] = Math.Max(0f, options[(int)option] + value);

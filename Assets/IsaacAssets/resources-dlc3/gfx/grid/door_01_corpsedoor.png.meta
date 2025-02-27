@@ -121,7 +121,511 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: door_01_corpsedoor_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 198
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77481a5e6207b34b838bbd4151f423c
+      internalID: 1496529359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 201
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007fdece9fb1ea542988dc46f8c7db40
+      internalID: 1911116100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 153
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4535446788b93274bbc08a75296f7880
+      internalID: -1206948183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 153
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cd4acec4b1abf4d90b246f4ed3edff
+      internalID: -2001856755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 96
+        width: 49
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bcb70f8a060a9468804c598c181c05
+      internalID: 417162763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_5
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 105
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2869e7151ccc0474891bcd13e4e434b6
+      internalID: 1093121045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 105
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37bf62429df8264eadd91be8fcf5244
+      internalID: -120939179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a05b119b2687b445a484e92e37414f3
+      internalID: -621159258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_8
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 80
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3776df80fcdbde54ba25c31a6a3ca319
+      internalID: -3903023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_9
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 80
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98e7947bd573db438603074067b591c
+      internalID: 1026504606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_10
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 80
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd27c7dcc4ba09e46b5032781df12098
+      internalID: 1811001034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_11
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 64
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719f5c98c6811124398b0d187de7e77d
+      internalID: -953178433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 69
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafe559e97e706248975319209500f2e
+      internalID: -465547618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_13
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 73
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a7716c3e42e5f4994e19dd712f0e3d
+      internalID: 59907774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_14
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 51
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3aca71860d73746b10168b83ef9848
+      internalID: -1559387582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44b856b40f448241ab121b7ae3d015e
+      internalID: 1557595529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_16
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 32
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c70f42fcc731547bcc19286ba0aa31
+      internalID: 294582367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_17
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 32
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be56afc5308b124a9f6bc1be1c3364f
+      internalID: -1426319477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 32
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d901308e2998b44b0d520843be97d6
+      internalID: 1726972201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_19
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 32
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8711b1dbd5d2aae40a3cb395433a3a02
+      internalID: 1798397081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_20
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 16
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5491bd16830829745bbcab30c8f735f3
+      internalID: 322704924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_21
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 21
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bc4126eea93774cb2379bed56ebfbf
+      internalID: -415570205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_22
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 25
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4c6b7676ab04548ac16a380f39d036
+      internalID: 1270213566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_01_corpsedoor_23
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 3
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a319bc8825f5934dbada94047a2034b
+      internalID: 1461015589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +636,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      door_01_corpsedoor_0: 1496529359
+      door_01_corpsedoor_1: 1911116100
+      door_01_corpsedoor_10: 1811001034
+      door_01_corpsedoor_11: -953178433
+      door_01_corpsedoor_12: -465547618
+      door_01_corpsedoor_13: 59907774
+      door_01_corpsedoor_14: -1559387582
+      door_01_corpsedoor_15: 1557595529
+      door_01_corpsedoor_16: 294582367
+      door_01_corpsedoor_17: -1426319477
+      door_01_corpsedoor_18: 1726972201
+      door_01_corpsedoor_19: 1798397081
+      door_01_corpsedoor_2: -1206948183
+      door_01_corpsedoor_20: 322704924
+      door_01_corpsedoor_21: -415570205
+      door_01_corpsedoor_22: 1270213566
+      door_01_corpsedoor_23: 1461015589
+      door_01_corpsedoor_3: -2001856755
+      door_01_corpsedoor_4: 417162763
+      door_01_corpsedoor_5: 1093121045
+      door_01_corpsedoor_6: -120939179
+      door_01_corpsedoor_7: -621159258
+      door_01_corpsedoor_8: -3903023
+      door_01_corpsedoor_9: 1026504606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

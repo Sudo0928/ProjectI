@@ -12,13 +12,17 @@ public class Item : MonoBehaviour
     [SerializeField] SpriteRenderer _sprite; 
     [SerializeField] int key;
 	ItemInfo item;
+	BoxCollider2D collider;
 	private void Awake()
 	{
+		collider = GetComponent<BoxCollider2D>();	
 		item = DataManager.itemInfoLoader.GetByKey(key);
 		if (item != null)
 			_sprite.sprite = GameManager.Instance.GetItemSprite(item);
 	}
 	 
+	public void SetActiveCollider(bool active) => collider.enabled = active;
+
 	public void SetItem(ItemInfo item)
 	{ 
 		this.item = item;

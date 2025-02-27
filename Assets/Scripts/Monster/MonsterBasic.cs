@@ -14,7 +14,7 @@ public enum MonsterState
 public class MonsterBasic : MonoBehaviour
 {
     // 몬스터 상태
-    protected MonsterState monsterState = MonsterState.Idle;
+    [SerializeField] protected MonsterState monsterState = MonsterState.Idle;
 
     protected Rigidbody2D rigid;
     protected Animator anim;
