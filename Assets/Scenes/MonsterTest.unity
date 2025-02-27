@@ -481,9 +481,12 @@ MonoBehaviour:
   monsterAtk: 1
   moveSpeed: 3
   dashSpeed: 8
-  minChangeDirectionTime: 0.5
+  minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
