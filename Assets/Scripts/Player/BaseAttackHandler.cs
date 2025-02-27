@@ -10,10 +10,20 @@ public abstract class BaseAttackHandler : MonoBehaviour
 
     protected Player owner;
 
+    [SerializeField] protected float damage = 3;
+    public float Damage => damage;
+
     [SerializeField]protected float distance = 3;
+    public float Distance => distance;
+
     [SerializeField]protected float speed = 3f;
+    public float Speed => speed;
+
     [SerializeField]protected float size = 1;
+    public float Size => size;
+
     [SerializeField]protected bool canPenetrate = false;
+
     [SerializeField]protected bool canIgnoreObstacle = false;
 
     [SerializeField]protected Vector2 attackDirection = Vector2.zero;
