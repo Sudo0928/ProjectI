@@ -6,12 +6,19 @@ public class Ipecac : MonoBehaviour
 {
     private void OnEnable()
     {
-        EventManager.RegisterListener<TearDestroyEvent>(Explosion, 1);
+        EventManager.RegisterListener<TearDestroyEvent>(Explosion, 2);
+        EventManager.RegisterListener<TearLaunchEvent>(ChangeColor, 1);
     }
 
     private void OnDisable()
     {
         EventManager.UnregisterListener<TearDestroyEvent>(Explosion);
+        EventManager.UnregisterListener<TearLaunchEvent>(ChangeColor);
+    }
+
+    private void ChangeColor(TearLaunchEvent e)
+    {
+        e.tear.TearSprite.color = new Color(0, 0.6f, 0);
     }
 
     private void Explosion(TearDestroyEvent e)
@@ -22,7 +29,7 @@ public class Ipecac : MonoBehaviour
         {
             if (collider2D[i].TryGetComponent<IDamagedable>(out var entity))
             {
-                entity.TakeDamage(e.tear);
+                entity.TakeBoomDamage(10);
             }
         }
     }

@@ -1,15 +1,13 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamagedable
 {
     private Rigidbody2D _rigidbody2D;
-
-    [SerializeField] private GameObject tear;
-
-   
+    public Rigidbody2D Rigidbody2D => _rigidbody2D;
 
     private Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get => movementDirection; }
@@ -25,7 +23,7 @@ public class Player : MonoBehaviour
     private float maxSpeed = 10f;
 
     [SerializeField][Range(0f, 100f)]
-    private float maxAccelertaion = 10f;
+    private float maxAcceleration = 10f;
 
     [SerializeField][Range(0f, 100f)]
     private float maxSlideDistance = 0.5f;
@@ -62,6 +60,7 @@ public class Player : MonoBehaviour
     private PlayerUIHandler playerUIHandler;
     public PlayerUIHandler PlayerUIHandler => playerUIHandler;
 	private Stat stat = new Stat();
+
     public Stat Stat => stat;
 	private Inventory inventory = new Inventory();
     public Inventory Inventory => inventory;
@@ -72,7 +71,21 @@ public class Player : MonoBehaviour
     [SerializeField]
     private bool isCharging = false;
 
+    [SerializeField]
+    private bool isParbolic = false;
+    public bool IsParbolic => isParbolic;
+
     private float timeSincePressAttack = 0;
+
+    [SerializeField]
+    private bool ignoreExplosions = false;
+    public bool IgnoreExplosions => ignoreExplosions;
+
+    [SerializeField]
+    private bool autoAttack = false;
+
+    [SerializeField]
+    private LayerMask layerMask;
 
     private void Awake()
     {
@@ -99,7 +112,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         movementDirection = inputActions.Player.Move.ReadValue<Vector2>();
-        lookDirection = inputActions.Player.Attack.ReadValue<Vector2>();
+        if (!autoAttack) lookDirection = inputActions.Player.Attack.ReadValue<Vector2>();
 
         animationHandler.PlayMoveAnim(movementDirection);
         animationHandler.PlayLookAnim(movementDirection);
@@ -110,9 +123,10 @@ public class Player : MonoBehaviour
         {
             timeSinceLastAttack += Time.deltaTime;
         }
-        else animationHandler.SetChargeSpeed(1);
 
-        if (isAttack)
+        if (lookDirection == Vector2.zero) return;
+
+        if (isAttack || autoAttack)
         {
             if (isCharging)
             {
@@ -132,6 +146,29 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         AdjustVelocity();
+
+        if (autoAttack)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, projectileDistance, layerMask);
+
+            if (colliders.Length == 0)
+            {
+                lookDirection = Vector2.zero;
+                return;
+            }
+
+            Vector3 direction = colliders[0].transform.position - transform.position;
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            Debug.Log(angle);
+
+            if (angle < 45 && angle > -45) lookDirection = Vector2.right;
+            else if (angle > 45 && angle < 135) lookDirection = Vector2.up;
+            else if (angle > 135 || angle < -135) lookDirection = Vector2.left;
+            else if (angle > -135 && angle < -45) lookDirection = Vector2.down;
+        }
+        
     }
 
     #region Main Methods
@@ -147,12 +184,11 @@ public class Player : MonoBehaviour
 
     private void Attack()
     {
-        Vector2 velocity = _rigidbody2D.velocity;
-        Vector2 desiredDirection = (lookDirection + velocity * 0.2f);
+        Debug.Log(velocity);
 
-        GameObject gameObject = Instantiate(tear);
-        gameObject.transform.position = transform.position;
-        gameObject.GetComponent<BaseAttackHandler>().Init(this, desiredDirection);
+        PlayerAttackEvent playerAttackEvent;
+        playerAttackEvent = new PlayerAttackEvent(this, lookDirection + _rigidbody2D.velocity * 0.2f);
+        EventManager.DispatchEvent(playerAttackEvent);
 
         animationHandler.PlayAttackAnim();
     }
@@ -166,14 +202,14 @@ public class Player : MonoBehaviour
     private void AdjustVelocity()
     {
         velocity = _rigidbody2D.velocity;
-        float maxSpeedChange = maxAccelertaion * Time.fixedDeltaTime;
+        float maxSpeedChange = maxAcceleration * Time.fixedDeltaTime;
 
         velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
         velocity.y = Mathf.MoveTowards(velocity.y, desiredVelocity.y, maxSpeedChange);
 
         if(desiredVelocity == Vector2.zero)
         {
-            float maxSlideSpeed = Mathf.Sqrt(2f * maxAccelertaion * maxSlideDistance);
+            float maxSlideSpeed = Mathf.Sqrt(2f * maxAcceleration * maxSlideDistance);
             velocity = Vector2.ClampMagnitude(velocity, maxSlideSpeed);
         }
 
@@ -231,6 +267,20 @@ public class Player : MonoBehaviour
         if (movementDirection != Vector2.zero) return;
 
 
+    }
+
+    public bool TakeDamage(float damage)
+    {
+        Debug.Log("Damaged");
+        return true;
+    }
+
+    public bool TakeBoomDamage(float damage)
+    {
+        if (ignoreExplosions) return false;
+
+        Debug.Log("Boomb");
+        return true;
     }
 
     #endregion

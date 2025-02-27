@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IDamagedable
 {
     bool TakeDamage(float damage);
+    bool TakeBoomDamage(float damage);
 }
