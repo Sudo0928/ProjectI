@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,847 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pickup_016_bomb_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 231
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f2ed52a45dc6d45904354d364a7432
+      internalID: -1577338030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 230
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6a3da978cfc9f4383b6a553bfb97db
+      internalID: -774844642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 229
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d08c8d9ec5c32147bd1a3ca59c1da8b
+      internalID: -1643908097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 231
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35175d73d6ae8944b8a2a50dd8219787
+      internalID: -837842232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 227
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d941f4f354de634469b4c4d94f0105ae
+      internalID: 1033015846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_5
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 247
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91987319176b6f345ba0ab2327a3f9f1
+      internalID: -66586449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5cdc5380bd14944b4fa95e479f7a90
+      internalID: -968486464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 198
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0393d3c1f2128834e99cc95427d75db1
+      internalID: 187646107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_8
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 198
+        width: 42
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66fc364ceaa9c24ab357915a7b45214
+      internalID: -453179355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 165
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1119f51978d3d5c4fb6ca4149ddd57b5
+      internalID: -349705328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 163
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9591b8d60c6ca458c91f35bba2f013
+      internalID: -1195226418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 188
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb5ff2af28defe43ba837acd2bc2ed8
+      internalID: -1929780437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_12
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 165
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14d05ce7a849864484df9edf27bc877
+      internalID: -824368290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_13
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 165
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5823bed495647474b98cf62f4e5f0db3
+      internalID: -896698845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_14
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 163
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8aa20f63c4440489ffca22d2c65e14
+      internalID: -817870261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 133
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825f56a68f89b9f4c8a0d6a8fbb6f697
+      internalID: 743325491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_16
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 133
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc652bd3721c254492615ebb9b6c67d
+      internalID: 471973728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 133
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd74d0f96786774fbba9a4b4c4e6950
+      internalID: 1034631717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_18
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 133
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb0027496a0bb749a69b18a6b137580
+      internalID: -1228469118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 137
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64aa906f0f9c16d47bab1e7d84f7ed39
+      internalID: -973297835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 99
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849c9d3ced9eae545b7417509dc8ebf3
+      internalID: 578412694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_21
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 99
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7204622547940d4d8d1cd510a471ef2
+      internalID: -1118811337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_22
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 123
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69efa57822bef5043bab5742852c2db4
+      internalID: 225854955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_23
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 99
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93224f8682279d4498bb59eab5bc45b3
+      internalID: -855925701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 101
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ac528c19c4d57448b925e502861091
+      internalID: 568389955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_25
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 101
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1014b362c6b776b47bfa0399ac5aea8f
+      internalID: 139419736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 110
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1ba80cc2357ba45913b0fc21d42129
+      internalID: -435114764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_27
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 104
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1a2d295decffe428ba86824df88fcf
+      internalID: 2138439392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 71
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5659c848f11a14899f4c97fa4442c4
+      internalID: -1859070132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_29
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 71
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7adec4e3a76ca4bbbf4c8beede1ffb
+      internalID: -2094755746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_30
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 71
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74c64a43ded8e6469c737df0d167659
+      internalID: -1116076945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_31
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 71
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2297ecd6f558a8b43a6ab25dc437bda9
+      internalID: -830362154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_32
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 71
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae875c8337764bb4ea284d668dfd5a61
+      internalID: -1859778929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_33
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 69
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6c59b2e32026948927ec2ccbb899a4
+      internalID: -690208308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_34
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 39
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d048d868d6e49184fa13ba1d1d0e84fc
+      internalID: 353190222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_35
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 39
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cd82ec7b71edd48a34a830cbe477ee
+      internalID: -843339910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_36
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 39
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571306ce3805f654081eb743d9671d0d
+      internalID: -211648545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_37
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 39
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e40a90379bd82c44a9171b67b1acf40
+      internalID: 1105635856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_38
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 39
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e222e3889c4af7346a92208082d0c1bd
+      internalID: 192165145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pickup_016_bomb_39
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 39
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94eb6c5494ff4734bb3bf20652e65d3d
+      internalID: -1887727570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +972,47 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pickup_016_bomb_0: -1577338030
+      pickup_016_bomb_1: -774844642
+      pickup_016_bomb_10: -1195226418
+      pickup_016_bomb_11: -1929780437
+      pickup_016_bomb_12: -824368290
+      pickup_016_bomb_13: -896698845
+      pickup_016_bomb_14: -817870261
+      pickup_016_bomb_15: 743325491
+      pickup_016_bomb_16: 471973728
+      pickup_016_bomb_17: 1034631717
+      pickup_016_bomb_18: -1228469118
+      pickup_016_bomb_19: -973297835
+      pickup_016_bomb_2: -1643908097
+      pickup_016_bomb_20: 578412694
+      pickup_016_bomb_21: -1118811337
+      pickup_016_bomb_22: 225854955
+      pickup_016_bomb_23: -855925701
+      pickup_016_bomb_24: 568389955
+      pickup_016_bomb_25: 139419736
+      pickup_016_bomb_26: -435114764
+      pickup_016_bomb_27: 2138439392
+      pickup_016_bomb_28: -1859070132
+      pickup_016_bomb_29: -2094755746
+      pickup_016_bomb_3: -837842232
+      pickup_016_bomb_30: -1116076945
+      pickup_016_bomb_31: -830362154
+      pickup_016_bomb_32: -1859778929
+      pickup_016_bomb_33: -690208308
+      pickup_016_bomb_34: 353190222
+      pickup_016_bomb_35: -843339910
+      pickup_016_bomb_36: -211648545
+      pickup_016_bomb_37: 1105635856
+      pickup_016_bomb_38: 192165145
+      pickup_016_bomb_39: -1887727570
+      pickup_016_bomb_4: 1033015846
+      pickup_016_bomb_5: -66586449
+      pickup_016_bomb_6: -968486464
+      pickup_016_bomb_7: 187646107
+      pickup_016_bomb_8: -453179355
+      pickup_016_bomb_9: -349705328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
