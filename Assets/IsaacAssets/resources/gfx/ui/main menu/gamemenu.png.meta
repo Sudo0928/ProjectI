@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gamemenu_37
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 162
+        width: 120
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea06e969fb760c94297ce21d7eea0d1d
+      internalID: -1679270916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamemenu_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 203
+        width: 138
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a2bf3a8a5543648a80264eb10925b9
+      internalID: 2126660180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamemenu_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 204
+        width: 83
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792b25835e8d1944e997b3550eebf295
+      internalID: 1624522536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamemenu_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 158
+        width: 118
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac948d8122099c4a9f139359d543177
+      internalID: 1004037235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamemenu_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 111
+        width: 118
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896dbc464a8f4a04882859446218f798
+      internalID: 2123662002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamemenu_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 68
+        width: 83
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e2c86def5d5c841b75c2954937044f
+      internalID: -710642218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamemenu_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 104
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd9bf55d3524ad4685f5fe6721fbec5
+      internalID: 1627551653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamemenu_6
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 20
+        width: 98
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfad858bdde4ad44ab4a63dd5927533
+      internalID: 2056521416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +300,75 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gamemenu_0: 2126660180
+      gamemenu_1: 1624522536
+      gamemenu_10: 74661456
+      gamemenu_11: 1228983650
+      gamemenu_12: 1381479843
+      gamemenu_13: 1677339002
+      gamemenu_14: -69625474
+      gamemenu_15: -1187378398
+      gamemenu_16: -237463927
+      gamemenu_17: 462572522
+      gamemenu_18: -1405867289
+      gamemenu_19: -1690904087
+      gamemenu_2: 1004037235
+      gamemenu_20: 1683915045
+      gamemenu_21: -427576964
+      gamemenu_22: -197731033
+      gamemenu_23: -1230207169
+      gamemenu_24: 2022022897
+      gamemenu_25: -1844807887
+      gamemenu_26: 1388005848
+      gamemenu_27: -1250992959
+      gamemenu_28: -823855507
+      gamemenu_29: -1871044675
+      gamemenu_3: 2123662002
+      gamemenu_30: -1576202366
+      gamemenu_31: 1396090239
+      gamemenu_32: 873212170
+      gamemenu_33: 240006066
+      gamemenu_34: 950315802
+      gamemenu_35: -1968402132
+      gamemenu_36: -1172276565
+      gamemenu_37: -1679270916
+      gamemenu_38: 593211113
+      gamemenu_39: 1184472812
+      gamemenu_4: -710642218
+      gamemenu_40: -2121004941
+      gamemenu_41: 1777768581
+      gamemenu_42: 30829254
+      gamemenu_43: 171896210
+      gamemenu_44: 274338887
+      gamemenu_45: 1649867536
+      gamemenu_46: -1274723147
+      gamemenu_47: -722243054
+      gamemenu_48: -1296524335
+      gamemenu_49: -903328340
+      gamemenu_5: 1627551653
+      gamemenu_50: 1991375868
+      gamemenu_51: 1802191729
+      gamemenu_52: -195212689
+      gamemenu_53: 1331020407
+      gamemenu_54: -2118886751
+      gamemenu_55: 1950432186
+      gamemenu_56: -260881793
+      gamemenu_57: 1357477155
+      gamemenu_58: -2127998773
+      gamemenu_59: 1018004220
+      gamemenu_6: 2056521416
+      gamemenu_60: 813350489
+      gamemenu_61: 1868114357
+      gamemenu_62: 663340543
+      gamemenu_63: -1218838055
+      gamemenu_64: -976631364
+      gamemenu_65: 303493960
+      gamemenu_66: -1549270990
+      gamemenu_67: -1814155769
+      gamemenu_7: -1297390592
+      gamemenu_8: 422426948
+      gamemenu_9: -177269602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,6 +13,9 @@ public class Item : MonoBehaviour
     [SerializeField] int key;
 	ItemInfo item;
 	BoxCollider2D collider;
+
+	private bool isPickUp = false;
+
 	private void Awake()
 	{
 		 
@@ -37,11 +40,19 @@ public class Item : MonoBehaviour
 			
 			if (collision.gameObject.TryGetComponent<Player>(out Player player))
 			{
-				player.Inventory.AddItem(item); 
-			}
+				player.AddItem(item);
+				transform.SetParent(player.pickUpPivot);
+				transform.localPosition = Vector3.zero;
+				_sprite.sortingOrder = 120;
+				transform.localScale = Vector3.one * 0.8f;
+				isPickUp = true;
+            }
 			var pu = collision.gameObject.GetComponent<PlayerUIHandler>();
 			pu?.myPickupItemInfoUI.PickupItem(item);
-			gameObject.SetActive(false);
+
+            Action action = () => gameObject.SetActive(false);
+            GameManager.Instance.SetTimer(action, 1f);
+
 			onPickupItem?.Invoke();
 		} 
 	}
@@ -67,6 +78,8 @@ public class Item : MonoBehaviour
 	int d = 1;
 	private void Update()
 	{
+		if (isPickUp) return;
+
 		var pos = transform.position;
 		pos.y += Time.deltaTime * d * 0.3f;
 		transform.position = pos;

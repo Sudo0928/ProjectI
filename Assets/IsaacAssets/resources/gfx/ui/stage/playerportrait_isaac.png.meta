@@ -126,19 +126,19 @@ TextureImporter:
       name: playerportrait_isaac_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
-        width: 100
-        height: 99
+        x: 10
+        y: 1
+        width: 104
+        height: 73
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a32d4e1b3e24814bb8933bd1a0ce1cb
-      internalID: 940946463
+      spriteID: ef626d5999e938042a4d7702e664bc79
+      internalID: 2096963827
       vertices: []
       indices: 
       edges: []
@@ -148,18 +148,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
-        width: 101
-        height: 99
+        y: 1
+        width: 104
+        height: 73
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d57f1fc6eff8bf49a9d7ce127caf014
-      internalID: 1267693421
+      spriteID: 43117152e77ec894ca3f25ad73a54480
+      internalID: 249707409
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      playerportrait_isaac_0: 298959708
-      playerportrait_isaac_1: 1267693421
+      playerportrait_isaac_0: 2096963827
+      playerportrait_isaac_1: 249707409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

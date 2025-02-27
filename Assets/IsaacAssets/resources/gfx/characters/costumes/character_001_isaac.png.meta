@@ -1113,8 +1113,8 @@ TextureImporter:
       name: character_001_isaac_53
       rect:
         serializedVersion: 2
-        x: 256
-        y: 352
+        x: 272
+        y: 336
         width: 32
         height: 32
       alignment: 0
@@ -1126,27 +1126,6 @@ TextureImporter:
       bones: []
       spriteID: dc729919895a2f440ac3fd1eb31423c9
       internalID: -2110638526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_001_isaac_54
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95b008e198878f54bbce7766a5ce4780
-      internalID: -700987231
       vertices: []
       indices: 
       edges: []
@@ -1236,48 +1215,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_001_isaac_63
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 651986db55136a84da320e26841165e2
-      internalID: 1197636466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_001_isaac_64
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3537cd3ce0d069142a2ad7b0b4c51b7e
-      internalID: 1291945040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: character_001_isaac_73
       rect:
         serializedVersion: 2
@@ -1324,7 +1261,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 256
+        y: 253
         width: 64
         height: 64
       alignment: 9

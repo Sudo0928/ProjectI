@@ -16,6 +16,9 @@ public class AnimationHandler : MonoBehaviour
     private static readonly int IsCharging = Animator.StringToHash("IsCharging");
     private static readonly int ChargeSpeed = Animator.StringToHash("ChargeSpeed");
 
+    private static readonly int IsPickUp = Animator.StringToHash("IsPickUp");
+    private static readonly int TakeDamage = Animator.StringToHash("TakeDamage");
+
     [SerializeField] private SpriteRenderer characterHeadRenderer;
     [SerializeField] private SpriteRenderer characterBodyRenderer;
 
@@ -63,6 +66,16 @@ public class AnimationHandler : MonoBehaviour
     public void PlayerCharging(bool isAttack)
     {
         playerAnim.SetBool(IsCharging, isAttack);
+    }
+
+    public void PlayTakeDamageAnim()
+    {
+        playerAnim.SetTrigger(TakeDamage);
+    }
+
+    public void PlayPickUpAnim(bool isPickUp)
+    {
+        playerAnim.SetBool(IsPickUp, isPickUp);
     }
 
     public void SetChargeSpeed(float chargeSpeed)

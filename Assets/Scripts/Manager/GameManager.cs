@@ -48,7 +48,6 @@ public class GameManager : Singleton<GameManager>
 	{
 		yield return new WaitForSeconds(time);
 		action?.Invoke();
-
 	}
 
 }

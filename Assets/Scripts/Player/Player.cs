@@ -19,6 +19,8 @@ public class Player : MonoBehaviour, IDamagedable
 
     private Vector2 velocity;
 
+    public Transform pickUpPivot;
+
     [SerializeField][Range(0f, 100f)]
     private float maxSpeed = 10f;
 
@@ -35,7 +37,6 @@ public class Player : MonoBehaviour, IDamagedable
     private Coroutine onIdleHead = null;
 
     private float timeSinceLastAttack = 1;
-
 
     public float projectileDistance => stat.GetStat(Option.Range);
     public float projectileSpeed => stat.GetStat(Option.ProjectileSpeed);
@@ -206,6 +207,17 @@ public class Player : MonoBehaviour, IDamagedable
         _rigidbody2D.velocity = velocity;
     }
 
+    public void AddItem(ItemInfo item)
+    {
+        inventory.AddItem(item);
+        animationHandler.PlayPickUpAnim(true);
+
+        Action action = () => animationHandler.PlayPickUpAnim(false);
+
+        GameManager.Instance.SetTimer(action, 1f);
+    }
+    
+
     #endregion
 
     #region Reusable Methods
@@ -261,6 +273,7 @@ public class Player : MonoBehaviour, IDamagedable
 
     public bool TakeDamage(float damage)
     {
+        animationHandler.PlayTakeDamageAnim();
         Debug.Log("Damaged");
         stat.AddStat(Option.CurHeart, -damage); 
         return true;
@@ -269,6 +282,7 @@ public class Player : MonoBehaviour, IDamagedable
     public bool TakeBoomDamage(float damage)
     {
         if (ignoreExplosions) return false;
+        animationHandler.PlayTakeDamageAnim();
 		stat.AddStat(Option.CurHeart, -damage);
 		Debug.Log("Boomb");
         return true;
