@@ -102,9 +102,6 @@ public class RoomManager : MonoBehaviour
 		if (collision.gameObject.CompareTag("Monster"))
 		{
 			monsterCnt++;
-			// TODO
-			// 몬스터가 죽을 때 호출되는 Event에 monsterCnt를  -1
-			// monster Cnt 가 0이 될 때, SpawnItem 함수 실행
 
 			collision.GetComponent<MonsterBasic>().onDie.AddListener(() => 
 			{
