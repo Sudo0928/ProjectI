@@ -304,7 +304,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_8
+      name: spawn1
       rect:
         serializedVersion: 2
         x: 0
@@ -325,7 +325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_9
+      name: spawn2
       rect:
         serializedVersion: 2
         x: 64
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_10
+      name: spawn3
       rect:
         serializedVersion: 2
         x: 128
@@ -367,7 +367,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_11
+      name: spawn4
       rect:
         serializedVersion: 2
         x: 192
@@ -388,7 +388,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_babyplum_12
+      name: spawn5
       rect:
         serializedVersion: 2
         x: 256
@@ -451,7 +451,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_babyplum_15
+      name: spawn6
       rect:
         serializedVersion: 2
         x: 0
@@ -472,7 +472,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_16
+      name: spawn7
       rect:
         serializedVersion: 2
         x: 64
@@ -493,7 +493,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_17
+      name: spawn8
       rect:
         serializedVersion: 2
         x: 128
@@ -514,7 +514,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_18
+      name: spawn9
       rect:
         serializedVersion: 2
         x: 192
@@ -535,7 +535,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_19
+      name: spawn10
       rect:
         serializedVersion: 2
         x: 256
@@ -556,7 +556,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_20
+      name: spawn11
       rect:
         serializedVersion: 2
         x: 320
@@ -619,7 +619,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_23
+      name: spawn12
       rect:
         serializedVersion: 2
         x: 0
@@ -640,7 +640,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_24
+      name: spawn13
       rect:
         serializedVersion: 2
         x: 64
@@ -661,7 +661,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_25
+      name: spawn14
       rect:
         serializedVersion: 2
         x: 128
@@ -682,7 +682,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_26
+      name: spawn15
       rect:
         serializedVersion: 2
         x: 192
@@ -703,7 +703,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_27
+      name: spawn16
       rect:
         serializedVersion: 2
         x: 256
@@ -724,7 +724,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_28
+      name: spawn17
       rect:
         serializedVersion: 2
         x: 320
@@ -745,7 +745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: babyplum_29
+      name: spawn18
       rect:
         serializedVersion: 2
         x: 384
@@ -1304,27 +1304,11 @@ TextureImporter:
       AttackPattern_3-6: 1300437548
       AttackPattern_3-7: -1254011847
       AttackPattern_3-8: -362336758
-      Idle_babyplum_12: -629500884
-      Idle_babyplum_15: 2015682621
-      babyplum_10: -1893382296
-      babyplum_11: 1434697577
       babyplum_13: -67376024
       babyplum_14: 1689982508
-      babyplum_16: 1237530460
-      babyplum_17: 1397871524
-      babyplum_18: 804349092
-      babyplum_19: -1156496338
       babyplum_2: 1856403344
-      babyplum_20: -290047263
       babyplum_21: 1435851566
       babyplum_22: 59741323
-      babyplum_23: 812799723
-      babyplum_24: -1628910513
-      babyplum_25: -365409437
-      babyplum_26: 2081660508
-      babyplum_27: -1018180537
-      babyplum_28: 1270907769
-      babyplum_29: 1476920314
       babyplum_3: 1148657295
       babyplum_30: -2050206213
       babyplum_37: 738261417
@@ -1332,8 +1316,24 @@ TextureImporter:
       babyplum_5: -523065868
       babyplum_6: 608379430
       babyplum_7: -382603259
-      babyplum_8: -1247949670
-      babyplum_9: 1857356247
+      spawn1: -1247949670
+      spawn10: -1156496338
+      spawn11: -290047263
+      spawn12: 812799723
+      spawn13: -1628910513
+      spawn14: -365409437
+      spawn15: 2081660508
+      spawn16: -1018180537
+      spawn17: 1270907769
+      spawn18: 1476920314
+      spawn2: 1857356247
+      spawn3: -1893382296
+      spawn4: 1434697577
+      spawn5: -629500884
+      spawn6: 2015682621
+      spawn7: 1237530460
+      spawn8: 1397871524
+      spawn9: 804349092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
