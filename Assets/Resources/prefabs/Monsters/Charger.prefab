@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 3273833343403711227}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3a438849a6e87434ebf4954e35a4b8c6, type: 2}
+  m_Controller: {fileID: 9100000, guid: e87bbec28fbfa5f4c930c6239bb1473b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -218,11 +218,14 @@ MonoBehaviour:
   monsterState: 0
   monsterMaxHP: 5
   monsterAtk: 1
-  moveSpeed: 3
-  dashSpeed: 8
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
+  moveSpeed: 1
+  dashSpeed: 3
   minChangeDirectionTime: 0.5
   maxChangeDirectionTime: 1
-  eyeSight: 1
+  eyeSight: 5
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 8
