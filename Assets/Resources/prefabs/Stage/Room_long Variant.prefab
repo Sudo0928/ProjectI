@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2820308332999197662}
   - component: {fileID: 5698892202410832598}
   - component: {fileID: 2563224163018224212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 3794766442803555457}
   - component: {fileID: 2025924579459439822}
   - component: {fileID: 3280573009288595984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Up1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 6034614262243117566}
   - component: {fileID: 5646641149466240872}
   - component: {fileID: 8760220401318196991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 5652995472964973943}
   - component: {fileID: 6332953970874244750}
   - component: {fileID: 1276321286496150654}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Up2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

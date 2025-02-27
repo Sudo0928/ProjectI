@@ -63,15 +63,17 @@ public class ChargerController : MonsterBasic
     {
         if (moveDir == Vector2.zero) return;
 
-        // 플레이어 구분이 아직 없음
-        // 지금 상태로는 벽, 장애물을 향해서도 돌진
-        if(moveDir.x != 0)
+
+
+		// 플레이어 구분이 아직 없음
+		// 지금 상태로는 벽, 장애물을 향해서도 돌진
+		if (moveDir.x != 0)
         {
             if(Physics2D.Raycast(transform.position, Vector2.up, eyeSight, layerMask))
             {
                 SetDashDirection(Vector2.up);
-                Debug.DrawRay(transform.position, Vector2.up);
-                return;
+               Debug.DrawRay(transform.position, Vector2.up);
+                return; 
             }
             else if(Physics2D.Raycast(transform.position, Vector2.down, eyeSight, layerMask))
             {

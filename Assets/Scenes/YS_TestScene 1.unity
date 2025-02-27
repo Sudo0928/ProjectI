@@ -3687,7 +3687,7 @@ GameObject:
   - component: {fileID: 1169999329}
   - component: {fileID: 1169999328}
   - component: {fileID: 1169999334}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3788,7 +3788,9 @@ MonoBehaviour:
   maxAccelertaion: 15
   maxSlideDistance: 1
   attackSpeed: 0.5
-  projectileSpeed: 300
+  projectileDistance: 3
+  projectileSpeed: 3
+  projectileSize: 0.42
   projectileVelocityAngle: 0.2
   maxChargingTime: 0.5
   isCharging: 0

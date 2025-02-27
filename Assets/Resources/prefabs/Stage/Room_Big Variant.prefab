@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 2874753710863892446}
   - component: {fileID: 2980462098216837093}
   - component: {fileID: 4051915282911046253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 1659358249691072966}
   - component: {fileID: 5000697643771292578}
   - component: {fileID: 3529505554245324857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 7525456295252307225}
   - component: {fileID: 8845004331425618243}
   - component: {fileID: 956648016322597785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 6244260441095102120}
   - component: {fileID: 7315955791055939617}
   - component: {fileID: 5794320152132387265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 8230238766232816833}
   - component: {fileID: 708630389909274789}
   - component: {fileID: 295650554916571674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1249,7 +1249,7 @@ GameObject:
   - component: {fileID: 1815411680759537282}
   - component: {fileID: 8541323437050247987}
   - component: {fileID: 1560166923869925365}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 1840641327510601142}
   - component: {fileID: 4177590105749733971}
   - component: {fileID: 9044053901378563216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 2181747098380606986}
   - component: {fileID: 8689207814426592857}
   - component: {fileID: 6983048435580780756}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1896,6 +1896,10 @@ PrefabInstance:
       propertyPath: stageReward
       value: 
       objectReference: {fileID: 5024344706216679576}
+    - target: {fileID: 1212806591056573348, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1605343877301752699, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_Offset.x
       value: 0
@@ -2032,6 +2036,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4798376857556661314, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5468660419038895564, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -2055,6 +2063,10 @@ PrefabInstance:
     - target: {fileID: 5961679442015414122, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052716655230184405, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6332953970874244750, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_SortingOrder
@@ -2159,6 +2171,10 @@ PrefabInstance:
     - target: {fileID: 7801250775214768827, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
       value: 10.431651
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080499009167188772, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9084978943820104583, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: m_SortingOrder
