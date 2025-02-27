@@ -11,6 +11,8 @@ public class RoomGenerator : MonoBehaviour
 	[SerializeField] GameObject LRoom;
 	[SerializeField] GameObject longRoom;
 	[SerializeField] GameObject bigRoom;
+	[Space(10)]
+	[SerializeField] RoomManager startRoom;
 
 	[Space(10)]
 	[SerializeField] int roomCnt;
@@ -34,20 +36,21 @@ public class RoomGenerator : MonoBehaviour
 	}
 
 	// ╩С, го, аб, ©Л,
-	int[] dir = { 1, 0, 3, 2 };
+	int[] doorDir = { 1, 0, 3, 2 };
 	int[] dy = { -1, 1, 0, 0 };
 	int[] dx = { 0, 0, 1, -1 };
 	void GenerateRoom((int, int) pos, int dir)
 	{
-
 		var room = GetRandomRoom();
 		var structure = room.roomStructure;
+		 
+		if (GetStartPos(structure, pos, out (int, int) startPos, dir))
+		{
+			RoomDoor curDoor = startRoom.GetDoor(pos, dir);
+			RoomDoor nxtdoor = room.GetDoor(startPos, doorDir[dir]);
 
-		var Idxs = Check(structure, pos, dir);
-
-
-
-	}
+		}
+	}  
 
 	RoomManager GetRandomRoom()
 	{
@@ -84,9 +87,8 @@ public class RoomGenerator : MonoBehaviour
 		return ret;
 	}
 	
-	List<(int, int)> Check(List<Pos> structure, (int, int) pos, int dir)
+	bool GetStartPos(List<Pos> structure, (int, int) pos, out (int, int) ret, int dir)
 	{
-		List<(int, int)> ret = new List<(int, int)> ();
 		for (int i = 0; i < structure.Count; i++)
 		{
 			bool flag = true;
@@ -108,14 +110,13 @@ public class RoomGenerator : MonoBehaviour
 
 			if (flag == true)
 			{
-				foreach (var p in structure)
-					ret.Add((p.y - startIdx.Item1, p.x - startIdx.Item2));
-
-				break;
+				ret = startIdx;
+				return true;
 			}
-
 		}
-		return ret;
+
+		ret = pos;
+		return false;
 	}
 
 	// 00 -> 10

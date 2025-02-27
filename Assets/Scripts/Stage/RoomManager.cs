@@ -35,18 +35,37 @@ public class RoomManager : MonoBehaviour
 	int monsterCnt = 0;  
 	public bool isClear => monsterCnt == 0; 
 
-	public List<DoorInfo> GetDoor(int idx)
+	public List<DoorInfo> GetDoor(int dir)
 	{
-		if (idx == 0)
+		if (dir == 0)
 			return upDoor;
-		else if (idx == 1)
+		else if (dir == 1)
 			return downDoor;
-		else if (idx == 2)
+		else if (dir == 2)
 			return leftDoor;
 		else
 			return rightDoor;
 	} 
 
+	public RoomDoor GetDoor((int, int) idx, int dir)
+	{
+		List<DoorInfo> list;
+		if (dir == 0)
+			list = upDoor;
+		else if (dir == 1)
+			list = downDoor;
+		else if (dir == 2)
+			list = leftDoor;
+		else
+			list = rightDoor; 
+
+		foreach (var door in list)
+		{
+			if (door.pos.y == idx.Item1 && door.pos.x == idx.Item2)
+				return door.door;
+		}
+		return null;
+	}
 	private void Awake()
 	{
 		virtualCamera = FindFirstObjectByType<CinemachineConfiner2D>();
