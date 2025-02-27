@@ -262,14 +262,15 @@ public class Player : MonoBehaviour, IDamagedable
     public bool TakeDamage(float damage)
     {
         Debug.Log("Damaged");
+        stat.AddStat(Option.CurHeart, -damage); 
         return true;
-    }
+    } 
 
     public bool TakeBoomDamage(float damage)
     {
         if (ignoreExplosions) return false;
-
-        Debug.Log("Boomb");
+		stat.AddStat(Option.CurHeart, -damage);
+		Debug.Log("Boomb");
         return true;
     }
 

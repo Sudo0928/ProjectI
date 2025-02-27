@@ -67,9 +67,13 @@ public class BaseTear : BaseAttackHandler
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")) return;
-
-        if ((HitMask.value | (1 << collision.gameObject.layer)) == HitMask.value)
+        if (collision.gameObject.tag == Owner.tag) 
+                return; 
+         
+		if (Owner.CompareTag("Monster") && collision.gameObject.CompareTag("Player"))
+			collision.gameObject.GetComponent<Player>().TakeDamage(damage);
+         
+		if ((HitMask.value | (1 << collision.gameObject.layer)) == HitMask.value)
         {
             TearHitObstacleEvent tearHit = new TearHitObstacleEvent(this, collision, Vector2.zero);
             InvokeEvent(tearHit);
