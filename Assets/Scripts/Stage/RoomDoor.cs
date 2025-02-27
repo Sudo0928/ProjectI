@@ -10,6 +10,7 @@ public class RoomDoor : MonoBehaviour
 	RoomDoor linkedDoor;
 	public RoomManager myRoom;
 
+
 	bool isOpend = false;
 	Animator anim;
 

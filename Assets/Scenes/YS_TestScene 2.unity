@@ -156,8 +156,10 @@ MonoBehaviour:
   LRoom: {fileID: 7481458112735339666, guid: 07a67cfd78bc8a74688d6c97b99051af, type: 3}
   longRoom: {fileID: 3315662044944668728, guid: 830f062687a540744b2c3300b778d772, type: 3}
   bigRoom: {fileID: 3583491886518483584, guid: cadf25ebeab712943b4816c42df15c26, type: 3}
+  bossRoom: {fileID: 8010632415988721716, guid: 2b2c5991ca46abe4ea42c338b5eaeed7, type: 3}
+  bossPrevRoom: {fileID: 8010632415988721716, guid: be99c15b09c90054dba6e17b0abb1113, type: 3}
   startRoom: {fileID: 2024799854}
-  roomDepth: 12
+  roomDepth: 3
 --- !u!4 &9622223
 Transform:
   m_ObjectHideFlags: 0

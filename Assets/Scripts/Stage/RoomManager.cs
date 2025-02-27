@@ -18,10 +18,10 @@ public class RoomManager : MonoBehaviour
 	[SerializeField] public List<RoomDoor> upDoor;
 	[SerializeField] public List<RoomDoor> downDoor;  
 
-	int monsterCnt = 0;  
+	int monsterCnt = 0;   
 	public bool isClear => monsterCnt == 0; 
 
-	public bool GetDoor(int dir, out RoomDoor door)
+	public virtual bool GetDoor(int dir, out RoomDoor door, bool prevBossRoom = false)
 	{
 		door = null;
 		List<RoomDoor> list;

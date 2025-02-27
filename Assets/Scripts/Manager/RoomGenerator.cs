@@ -11,8 +11,11 @@ public class RoomGenerator : MonoBehaviour
 	[SerializeField] GameObject LRoom;
 	[SerializeField] GameObject longRoom;
 	[SerializeField] GameObject bigRoom;
+
+	[SerializeField] GameObject bossRoom;
+	[SerializeField] GameObject bossPrevRoom; 
 	[Space(10)]
-	[SerializeField] RoomManager startRoom;
+	[SerializeField] RoomManager startRoom; 
 
 	[Space(10)]
 	[SerializeField] int roomDepth;
@@ -40,19 +43,19 @@ public class RoomGenerator : MonoBehaviour
 
 		int cnt = 0;
 		RoomDoor prevDoor = null;
-		while (!prevRoom.GetDoor(dir, out prevDoor)) {
+		while (!prevRoom.GetDoor(dir, out prevDoor)) { 
 			dir = dirs[Random.Range(0, dirs.Length)];
 			if (cnt++ >= 5) 
 				return; 
 		}
 		cnt = 0;
 
-		var room = Instantiate<GameObject>(GetRandomRoom());
+		var room = Instantiate<GameObject>(GetRandomRoom(depth));
 		room.transform.position = new Vector3(-1000, -1000, 0);
 		var curRoomManager = room.GetComponent<RoomManager>();
 
 		RoomDoor curDoor = null;
-		while (!curRoomManager.GetDoor(doorDir[dir], out curDoor)) {
+		while (!curRoomManager.GetDoor(doorDir[dir], out curDoor, depth +2== roomDepth)) {
 			if (cnt++ >= 5)
 				return; 
 		}
@@ -63,8 +66,14 @@ public class RoomGenerator : MonoBehaviour
 		GenerateRoom(curRoomManager, dirs, depth + 1);
 	}  
 
-	GameObject GetRandomRoom()
+	GameObject GetRandomRoom(int depth)
 	{
+		if (roomDepth - 2 == depth)
+			return bossPrevRoom;
+		else if (roomDepth -1 == depth)
+			return bossRoom;
+
+
 		int rand = Random.Range(0, 100);
 		if (rand < 70)
 			return miniRoom;
