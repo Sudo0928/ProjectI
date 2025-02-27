@@ -22,6 +22,7 @@ public class RoomGenerator : MonoBehaviour
 
 	[Space(20)]
 	[SerializeField] List<GameObject> monsters;
+	[SerializeField] GameObject boss;
 
 	int[][] dungeonDirs =
 	{
@@ -57,7 +58,14 @@ public class RoomGenerator : MonoBehaviour
 		room.transform.position = new Vector3(-1000, -1000, 0);
 		var curRoomManager = room.GetComponent<RoomManager>();
 
-		curRoomManager.SpawnMonster(monsters);
+		List<GameObject> list = new List<GameObject>();
+		if (depth + 1 == roomDepth)
+		{
+			list.Add(boss);
+			curRoomManager.SpawnMonster(list);
+		}
+		else
+			curRoomManager.SpawnMonster(monsters);
 
 		RoomDoor curDoor = null;
 		while (!curRoomManager.GetDoor(doorDir[dir], out curDoor, depth +2== roomDepth)) {

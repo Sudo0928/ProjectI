@@ -58,8 +58,8 @@ public class RoomManager : MonoBehaviour
 		if (monsterSpawnPos.Count <= 0)
 			return;
 
-		int spawnCnt = Random.Range(monsterSpawnPos.Count - 1, monsterSpawnPos.Count + 1);
-
+		int spawnCnt = Math.Max(1, Random.Range(monsterSpawnPos.Count - 1, monsterSpawnPos.Count + 1));
+		 
 		while (spawnCnt-- > 0) 
 		{
 			var mst = Instantiate(monsters[Random.Range(0, monsters.Count)]);
