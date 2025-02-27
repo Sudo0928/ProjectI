@@ -21,7 +21,7 @@ public class Ipecac : SpecialAbility
         e.tear.TearSprite.color = new Color(0, 0.6f, 0);
     }
 
-    private void Explosion(TearDestroyEvent e)
+    private void Explosion(TearDropEvent e)
     {
         Collider2D[] collider2D = Physics2D.OverlapCircleAll(e.tear.transform.position, 1);
 
@@ -36,13 +36,13 @@ public class Ipecac : SpecialAbility
 
 	public override void OnAbility(Player player)
 	{
-		EventManager.RegisterListener<TearDestroyEvent>(Explosion, 2);
+		EventManager.RegisterListener<TearDropEvent>(Explosion, 2);
 		EventManager.RegisterListener<TearLaunchEvent>(ChangeColor, 1);
 	}
 
 	public override void RemoveSkill()
 	{
-		EventManager.UnregisterListener<TearDestroyEvent>(Explosion);
+		EventManager.UnregisterListener<TearDropEvent>(Explosion);
 		EventManager.UnregisterListener<TearLaunchEvent>(ChangeColor);
 	}
 }

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BurstingShots : SpecialAbility
 {
+    private BaseTear tear;
+
     private void OnEnable()
     {
         //EventManager.RegisterListener<TearDestroyEvent>(Division, 1);
@@ -12,44 +14,60 @@ public class BurstingShots : SpecialAbility
         //EventManager.UnregisterListener<TearDestroyEvent>(Division);
     }
      
-    private void Division(TearDestroyEvent e)
+    private void Division(TearDropEvent e)
     {
-        if (e.tear.Size < 0.5f) return;
+        this.tear = e.tear;
 
-        BaseTear tear;
+        Division();
+    }
+
+    private void Division(TearHitObstacleEvent e)
+    {
+        this.tear = e.tear;
+
+        Division();
+    }
+
+    private void Division()
+    {
+        if (this.tear.Size < 0.5f) return;
+
+        BaseTear temptear = tear;
 
         float randomX = Random.Range(0f, 1f);
         float randomY = Random.Range(0f, 1f);
 
-        tear =Instantiate(e.tear);
-        tear.Init(e.tear.Owner, e.tear.Speed, e.tear.Distance, e.tear.Size * 0.5f, new Vector2(randomX, randomY), e.tear.IsParbolic);
+        temptear = Instantiate(temptear);
+        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(randomX, randomY), tear.IsParbolic);
 
         randomX = Random.Range(0f, 1f);
         randomY = Random.Range(0f, 1f);
 
-        tear = Instantiate(e.tear);
-        tear.Init(e.tear.Owner, e.tear.Speed, e.tear.Distance, e.tear.Size * 0.5f, new Vector2(-randomX, randomY), e.tear.IsParbolic);
+        temptear = Instantiate(tear);
+        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(-randomX, randomY), tear.IsParbolic);
 
         randomX = Random.Range(0f, 1f);
         randomY = Random.Range(0f, 1f);
 
-        tear = Instantiate(e.tear);
-        tear.Init(e.tear.Owner, e.tear.Speed, e.tear.Distance, e.tear.Size * 0.5f, new Vector2(randomX, -randomY), e.tear.IsParbolic);
+        temptear = Instantiate(tear);
+        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(randomX, -randomY), tear.IsParbolic);
 
         randomX = Random.Range(0f, 1f);
         randomY = Random.Range(0f, 1f);
 
-        tear = Instantiate(e.tear);
-        tear.Init(e.tear.Owner, e.tear.Speed, e.tear.Distance, e.tear.Size * 0.5f, new Vector2(-randomX, -randomY), e.tear.IsParbolic);
+        temptear = Instantiate(tear);
+        temptear.Init(tear.Owner, tear.Speed, tear.Distance, tear.Size * 0.5f, new Vector2(-randomX, -randomY), tear.IsParbolic);
     }
 
-	public override void OnAbility(Player player)
+    public override void OnAbility(Player player)
 	{
-		EventManager.RegisterListener<TearDestroyEvent>(Division, 1);
+		EventManager.RegisterListener<TearDropEvent>(Division, 1);
+		EventManager.RegisterListener<TearHitObstacleEvent>(Division, 1);
 	}
 
 	public override void RemoveSkill()
 	{
-		EventManager.UnregisterListener<TearDestroyEvent>(Division);
+		EventManager.UnregisterListener<TearDropEvent>(Division);
+		EventManager.UnregisterListener<TearHitObstacleEvent>(Division);
 	}
 }

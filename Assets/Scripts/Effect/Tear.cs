@@ -63,12 +63,13 @@ public class BaseTear : BaseAttackHandler
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Monster"))
-        {
-            Remove();
-        }
+        Debug.Log(collision.gameObject.name);
+
+        if (collision.gameObject.CompareTag("Player")) return;
+
+        Remove();
     }
 
     IEnumerator MoveInStraightLine(Vector2 startPos, Vector2 endPos, float lerpTime)
@@ -112,7 +113,7 @@ public class BaseTear : BaseAttackHandler
 
     public void Remove()
     {
-        TearDestroyEvent tearDestroyEvent = new TearDestroyEvent(this);
+        TearDropEvent tearDestroyEvent = new TearDropEvent(this);
         EventManager.DispatchEvent(tearDestroyEvent);
 
         Destroy(gameObject);
