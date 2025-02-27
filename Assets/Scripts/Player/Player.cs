@@ -37,10 +37,10 @@ public class Player : MonoBehaviour, IDamagedable
     private float timeSinceLastAttack = 1;
 
 
-    public float projectileDistance => 3.0f + (1.0f / stat.GetStat(Option.Range));
-    public float projectileSpeed => 3.0f + (1.0f / stat.GetStat(Option.ProjectileSpeed));
-    public float projectileSize => 0.5f + (1.0f / stat.GetStat(Option.ProjectileSize)); 
-    public float attackSpeed => 0.5f + (1.0f / stat.GetStat(Option.AttackSpeed));
+    public float projectileDistance => stat.GetStat(Option.Range);
+    public float projectileSpeed => stat.GetStat(Option.ProjectileSpeed);
+    public float projectileSize => stat.GetStat(Option.ProjectileSize); 
+    public float attackSpeed => 1.0f / stat.GetStat(Option.AttackSpeed);
      
 	[SerializeField] [Range(0f, 1f)]
     private float projectileVelocityAngle = 0.2f;
@@ -176,8 +176,6 @@ public class Player : MonoBehaviour, IDamagedable
 
     private void Attack()
     {
-        Debug.Log(velocity);
-
         PlayerAttackEvent playerAttackEvent;
         playerAttackEvent = new PlayerAttackEvent(this, lookDirection + _rigidbody2D.velocity * 0.2f);
         EventManager.DispatchEvent(playerAttackEvent);

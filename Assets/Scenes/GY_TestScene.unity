@@ -1233,6 +1233,10 @@ PrefabInstance:
       propertyPath: projectileSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8605405283846607345, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
