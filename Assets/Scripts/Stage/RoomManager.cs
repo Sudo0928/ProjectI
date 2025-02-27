@@ -1,19 +1,51 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+
+[Serializable]
+public class Pos
+{
+	public int y;
+	public int x; 
+}
+
+[Serializable]
+public class DoorInfo
+{
+	public RoomDoor door;
+	public Pos pos;
+}
 
 public class RoomManager : MonoBehaviour
 {
     [SerializeField] public List<RoomDoor> myDoor = new List<RoomDoor>();
 	CinemachineConfiner2D virtualCamera;
 	[SerializeField] StageReward stageReward;
-	[SerializeField] bool isStartRoom = false;	
-	
+	[SerializeField] bool isStartRoom = false;
 
-	int monsterCnt = 0; 
-	public bool isClear => monsterCnt == 0;
+	[SerializeField] public List<DoorInfo> leftDoor;
+	[SerializeField] public List<DoorInfo> rightDoor;
+	[SerializeField] public List<DoorInfo> upDoor;
+	[SerializeField] public List<DoorInfo> downDoor;  
+
+	[SerializeField] public List<Pos> roomStructure = new List<Pos>(); 
+	int monsterCnt = 0;  
+	public bool isClear => monsterCnt == 0; 
+
+	public List<DoorInfo> GetDoor(int idx)
+	{
+		if (idx == 0)
+			return upDoor;
+		else if (idx == 1)
+			return downDoor;
+		else if (idx == 2)
+			return leftDoor;
+		else
+			return rightDoor;
+	} 
 
 	private void Awake()
 	{
