@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
 
         //    inventory.onAddItem.AddListener(() => { anim.SetTrigger("getItem")});
         inventory.stat = stat;
+        
 		AddInputActionsCallbacks();
     }
 

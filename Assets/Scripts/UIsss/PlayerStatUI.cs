@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerStatUI : MonoBehaviour
 {
-    Stat playerStat;
+    public Stat playerStat { private get; set; }
 
     [SerializeField] List<Image> hearts = new List<Image>();
     [Space(10)]
@@ -39,6 +39,10 @@ public class PlayerStatUI : MonoBehaviour
 
         // playerStat의 Heart 값이 변경될 때 UpdateHealthBar() 호출
         playerStat.AddListener(DesignEnums.Option.CurHeart, UpdateHealthBar);
+        playerStat.AddListener(DesignEnums.Option.Coin, UpdateItemText);
+        playerStat.AddListener(DesignEnums.Option.Boom, UpdateItemText);
+        playerStat.AddListener(DesignEnums.Option.Key, UpdateItemText); 
+        playerStat.onChangeGauge.AddListener(UpdateGaugeLevel);
 
         // 처음 상태 업데이트
         UpdateItemText();
@@ -63,7 +67,7 @@ public class PlayerStatUI : MonoBehaviour
     }
 
     // 3. 아이템에 맞는 게이지 레벨에 따라 gaugeLevels 활성화/비활성화
-    void UpdateGaugeLevel(ItemInfo item)
+    void UpdateGaugeLevel()
     {
         // 아이템에 맞는 게이지 개수를 가져오기 (아이템에 필요한 게이지 레벨을 가져옴)
         int requiredGaugeLevel = playerStat.MaxGauge;
@@ -83,31 +87,32 @@ public class PlayerStatUI : MonoBehaviour
         }
     }
 
-    // 4. 체력바 업데이트
+    // 4. 체력바 업데이트 
     public void UpdateHealthBar()
     {
         float maxHealth = playerStat.GetStat(DesignEnums.Option.MaxHeart);  // 최대 체력
         float currentHealth = playerStat.GetStat(DesignEnums.Option.CurHeart);  // 현재 체력
 
-        // 체력 UI 업데이트
-        for (int i = 0; i < hearts.Count; i++)
+        int cnt = (int)Mathf.Ceil(maxHealth);
+		// 체력 UI 업데이트
+		for (int i = 1; i <= cnt; i++) 
         {
             if (i < currentHealth)  // 체력이 가득 찬 하트로 채우기
             {
-                hearts[i].sprite = fullHeart;
+                hearts[i-1].sprite = fullHeart;
             }
-            else if (i < currentHealth + 0.5f)  // 반 칸 체력
+            else if ((float)i - currentHealth == 0.5f)  // 반 칸 체력
             {
-                hearts[i].sprite = halfHeart;
+                hearts[i-1].sprite = halfHeart;
             }
             else  // 빈 하트
             {
-                hearts[i].sprite = emptyHeart;
+                hearts[i-1].sprite = emptyHeart;
             }
         }
 
         // 최대 체력에 맞게 하트 개수 조정
-        for (int i = (int)maxHealth; i < hearts.Count; i++)
+        for (int i = cnt; i < hearts.Count; i++)
         {
             hearts[i].gameObject.SetActive(false);  // 남는 하트는 비활성화
         }
@@ -137,6 +142,6 @@ public class PlayerStatUI : MonoBehaviour
 
         for (int i = (int)maxHealth; i < hearts.Count; i++)
             hearts[i].gameObject.SetActive(false);
-    }
+    } 
 }
 
