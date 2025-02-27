@@ -43,32 +43,52 @@
     {
       "key": 9,
       "Name": 8,
-      "Description": "최대 체력 {0} 증가"
+      "Description": "체력 {0} 회복"
     },
     {
       "key": 10,
       "Name": 9,
-      "Description": "악마방 등장 확률 {0}% 증가"
+      "Description": "최대 체력 {0} 증가"
     },
     {
       "key": 11,
       "Name": 10,
-      "Description": "천사방 등장 확률 {0}% 증가"
+      "Description": "악마방 등장 확률 {0}% 증가"
     },
     {
       "key": 12,
       "Name": 11,
-      "Description": "블랙 하트 {0} 증가"
+      "Description": "천사방 등장 확률 {0}% 증가"
     },
     {
       "key": 13,
       "Name": 12,
-      "Description": "보유한 코인당 공격력 {0} 증가"
+      "Description": "블랙 하트 {0} 증가"
     },
     {
       "key": 14,
       "Name": 13,
+      "Description": "보유한 코인당 공격력 {0} 증가"
+    },
+    {
+      "key": 15,
+      "Name": 14,
       "Description": "소울 하트 {0} 증가"
+    },
+    {
+      "key": 16,
+      "Name": 15,
+      "Description": "코인 {0}개 획득"
+    },
+    {
+      "key": 17,
+      "Name": 16,
+      "Description": "폭탄 {0}개 획득"
+    },
+    {
+      "key": 18,
+      "Name": 17,
+      "Description": "열쇠 {0}개 획득"
     }
   ]
 }

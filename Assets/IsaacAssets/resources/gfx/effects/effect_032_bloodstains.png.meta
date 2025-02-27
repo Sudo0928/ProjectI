@@ -121,7 +121,490 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: effect_032_bloodstains_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 179
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3025a30192e3a409c08efddfa0e9a0
+      internalID: -136326470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 180
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9648a6783269b04eaaeafb1d675de72
+      internalID: 1132287584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 180
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5850445b28b99442bf0b0d3a6bf3494
+      internalID: 1924631425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 169
+        width: 39
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c14216be2a9d94695156d240765654
+      internalID: -223975385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 163
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b496d9d35ab4fc045b51f9fc1e4b73a7
+      internalID: 134403850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_6
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 160
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81f0ff706e7bb94ba82b855e2d94e8c
+      internalID: -281885370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 167
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28dbef15723b06e4aa635dfa8f43bd5d
+      internalID: 134761839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 132
+        width: 42
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d058b0ffc0b2d4093e4ebdeeeba2ff
+      internalID: -850332241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 147
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2b0f07134f5d6438282a06fe14f9bf
+      internalID: -979032555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_11
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 148
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea6e413ad6816446a4a76dd39a698b0
+      internalID: -371028454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_12
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 148
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca6a1ed528fc8e49b5e50c1691fa902
+      internalID: -2138714322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_14
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 118
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a599128c283d9418d76a8c9ff8696e
+      internalID: -1927049543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 116
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec0de37396da1049a5d6a53cc7ed032
+      internalID: 1770915845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_16
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 132
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae908c6b70156d43ab3ebe658301c16
+      internalID: 44457747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_19
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 119
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cd8e0e0c4f21a4987d7990d8d5719a
+      internalID: 1218069717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 101
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c611052c20c0fc04b97251a659e7773c
+      internalID: 1800362700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_21
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 96
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3627e9a1e55a441ad08c960158a6b9
+      internalID: -864181421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 96
+        width: 43
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c964f05cbb672d4491e0bef958c477a
+      internalID: -160885254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690036bf4d67e3e43811688d19c127d9
+      internalID: -1388501668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_26
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 55
+        width: 67
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a0874b013d31647b70506481f40eb7
+      internalID: 1517350660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_28
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 36
+        width: 43
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418f1e9a39dab8d4aacc88fd2390470e
+      internalID: -2051804865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 48
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed89ee1ca478f924ebfe78e3dbf79adc
+      internalID: 575381767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_032_bloodstains_34
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 3
+        width: 70
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6333fd3851f2d4caff1fe0907e6bda
+      internalID: 458616289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +615,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      effect_032_bloodstains_0: -136326470
+      effect_032_bloodstains_1: 1132287584
+      effect_032_bloodstains_10: -979032555
+      effect_032_bloodstains_11: -371028454
+      effect_032_bloodstains_12: -2138714322
+      effect_032_bloodstains_13: -1699861729
+      effect_032_bloodstains_14: -1927049543
+      effect_032_bloodstains_15: 1770915845
+      effect_032_bloodstains_16: 44457747
+      effect_032_bloodstains_17: 1035509086
+      effect_032_bloodstains_18: -1572107168
+      effect_032_bloodstains_19: 1218069717
+      effect_032_bloodstains_2: 1924631425
+      effect_032_bloodstains_20: 1800362700
+      effect_032_bloodstains_21: -864181421
+      effect_032_bloodstains_22: -160885254
+      effect_032_bloodstains_23: 1440905209
+      effect_032_bloodstains_24: -1388501668
+      effect_032_bloodstains_25: 632090596
+      effect_032_bloodstains_26: 1517350660
+      effect_032_bloodstains_27: 68690130
+      effect_032_bloodstains_28: -2051804865
+      effect_032_bloodstains_29: -259468036
+      effect_032_bloodstains_3: 84120191
+      effect_032_bloodstains_30: 1756065613
+      effect_032_bloodstains_31: -720308608
+      effect_032_bloodstains_32: 575381767
+      effect_032_bloodstains_33: 120299584
+      effect_032_bloodstains_34: 458616289
+      effect_032_bloodstains_35: -199222352
+      effect_032_bloodstains_36: 871352552
+      effect_032_bloodstains_4: -223975385
+      effect_032_bloodstains_5: 134403850
+      effect_032_bloodstains_6: -281885370
+      effect_032_bloodstains_7: 134761839
+      effect_032_bloodstains_8: -1267986434
+      effect_032_bloodstains_9: -850332241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
