@@ -3,16 +3,22 @@ using System.Collections;
 
 public class ImageAnimation : MonoBehaviour
 {
-    public float moveDuration = 1f;  // 이미지가 들어오는 시간
-    public float returnDuration = 1f; // 원래 자리로 돌아가는 시간
-    public float scaleDuration = 0.2f;  // 찌그러짐과 원상태 복귀 시간
-    public Vector3 leftOffScreenPosition = new Vector3(-10f, 0f, 0f);  // 왼쪽 화면 밖 위치
-    public Vector3 rightOffScreenPosition = new Vector3(10f, 0f, 0f);  // 오른쪽 화면 밖 위치
+    public enum AnimationType { FromLeft, FromRight, FogAnimation }
+    public float rotationDuration = 2f;  // 2초 동안 2바퀴 회전
+    public AnimationType animationType;  // 선택한 애니메이션 타입
+    public float moveDuration = 0.5f;  // 이미지가 들어오는 시간 (빠르게 설정)
+    public float returnDuration = 0.5f; // 원래 자리로 돌아가는 시간 (빠르게 설정)
+    public float scaleDuration = 0.1f;  // 찌그러짐과 원상태 복귀 시간
+    public float scaleDuration2 = 3f;  // 찌그러짐과 원상태 복귀 시간
+    public float maxScale = 1.05f;  // 찌그러짐 크기
+    public GameObject fogImage;         // 회전하는 안개 이미지
+    public Vector3 leftOffScreenPosition = new Vector3(-15f, 0f, 0f);  // 왼쪽 화면 밖 위치
+    public Vector3 rightOffScreenPosition = new Vector3(15f, 0f, 0f);  // 오른쪽 화면 밖 위치
     public Vector3 targetPosition;  // 원래 자리
-    public float maxScale = 1.2f;  // 찌그러짐 크기
-
     private Vector3 originalScale;  // 원래 크기
+
     private bool isMoving = false;  // 애니메이션 진행 중 여부
+    private bool hasRotated = false; // 회전 애니메이션이 끝났는지 여부
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +26,21 @@ public class ImageAnimation : MonoBehaviour
         originalScale = transform.localScale;
         targetPosition = transform.position;
 
-        // 예시로 왼쪽에서 들어오는 애니메이션 시작
-        StartCoroutine(AnimateImageFromLeft());
+        // 애니메이션 종류에 따라 시작
+        switch (animationType)
+        {
+            case AnimationType.FromLeft:
+                StartCoroutine(AnimateImageFromLeft());
+                break;
+
+            case AnimationType.FromRight:
+                StartCoroutine(AnimateImageFromRight());
+                break;
+
+            case AnimationType.FogAnimation:
+                StartCoroutine(RotateAndScaleFogImage());
+                break;
+        }
     }
 
     // 왼쪽에서 이미지가 들어오는 애니메이션
@@ -43,7 +62,7 @@ public class ImageAnimation : MonoBehaviour
 
         // 2. 찌그러짐 애니메이션 (좌우 찌그러짐)
         elapsedTime = 0f;
-        Vector3 squishedScale = new Vector3(maxScale, 1f, 1f); // 찌그러진 상태
+        Vector3 squishedScale = new Vector3(1f, 1f, 1f); // 찌그러진 상태
         while (elapsedTime < scaleDuration)
         {
             transform.localScale = Vector3.Lerp(originalScale, squishedScale, elapsedTime / scaleDuration);
@@ -71,6 +90,18 @@ public class ImageAnimation : MonoBehaviour
             yield return null;
         }
         transform.position = targetPosition;
+
+        // 5. 원래 자리에서 오른쪽으로 조금 더 이동
+        elapsedTime = 0f;
+
+        Vector3 rightMovePosition = targetPosition + new Vector3(50f, 0f, 0f); // 오른쪽으로 조금 이동
+        while (elapsedTime < scaleDuration2)
+        {
+            transform.position = Vector3.Lerp(targetPosition, rightMovePosition, elapsedTime / scaleDuration2);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = rightMovePosition;
 
         isMoving = false;  // 애니메이션 완료
     }
@@ -94,7 +125,7 @@ public class ImageAnimation : MonoBehaviour
 
         // 2. 찌그러짐 애니메이션 (좌우 찌그러짐)
         elapsedTime = 0f;
-        Vector3 squishedScale = new Vector3(maxScale, 1f, 1f); // 찌그러진 상태
+        Vector3 squishedScale = new Vector3(1f, 1f, 1f); // 찌그러진 상태
         while (elapsedTime < scaleDuration)
         {
             transform.localScale = Vector3.Lerp(originalScale, squishedScale, elapsedTime / scaleDuration);
@@ -123,31 +154,54 @@ public class ImageAnimation : MonoBehaviour
         }
         transform.position = targetPosition;
 
+        // 5. 원래 자리에서 왼쪽으로 조금 더 이동
+        elapsedTime = 0f;
+
+        Vector3 leftMovePosition = targetPosition - new Vector3(50f, 0f, 0f); // 왼쪽으로 조금 이동
+        while (elapsedTime < scaleDuration2)
+        {
+            transform.position = Vector3.Lerp(targetPosition, leftMovePosition, elapsedTime / scaleDuration2);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = leftMovePosition;
+
         isMoving = false;  // 애니메이션 완료
     }
 
-    // 안개의 이미지 애니메이션
-    IEnumerator AnimateFogImage()
-    {
-        if (isMoving) yield break;  // 애니메이션이 진행 중이면 중복 실행 방지
-        isMoving = true;
 
-        // 1. 크기 변화와 회전 (큰 상태에서 작아지며 회전)
+    // 안개의 이미지 애니메이션 (회전하는 이미지)
+    IEnumerator RotateAndScaleFogImage()
+    {
+        
+        float totalRotation = 720f;   // 두 바퀴 회전 (360 * 2)
+        float maxScale = 2f;          // 최대 크기 (원래 크기보다 커지는 값)
+        float minScale = 1f;          // 최소 크기 (원래 크기)
         float elapsedTime = 0f;
-        Vector3 startScale = new Vector3(2f, 2f, 1f); // 큰 상태
-        Quaternion startRotation = Quaternion.Euler(0f, 0f, 180f); // 반바퀴 회전
-        while (elapsedTime < moveDuration)
+
+        // 시작 크기 (원래 크기)
+        Vector3 originalScale = fogImage.transform.localScale;
+
+        while (elapsedTime < rotationDuration)
         {
-            transform.localScale = Vector3.Lerp(startScale, originalScale, elapsedTime / moveDuration);
-            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.identity, elapsedTime / moveDuration);
+            float progress = elapsedTime / rotationDuration;
+
+            // 크기 변화 (Lerp 사용)
+            float scale = Mathf.Lerp(minScale, maxScale, Mathf.PingPong(progress * 2f, 1f)); // 크기가 커졌다 작아짐
+
+            // 회전 변화 (Lerp 사용)
+            float angle = Mathf.Lerp(0f, totalRotation, progress);
+
+            // 적용
+            fogImage.transform.localScale = originalScale * scale;  // 크기 변경
+            fogImage.transform.rotation = Quaternion.Euler(0f, 0f, angle);  // 회전
+
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        // 2. 원래 크기와 회전으로 돌아오는 애니메이션
-        transform.localScale = originalScale;
-        transform.rotation = Quaternion.identity;
-
-        isMoving = false;  // 애니메이션 완료
+        // 회전과 크기 최종 적용
+        fogImage.transform.rotation = Quaternion.Euler(0f, 0f, totalRotation); // 두 바퀴 회전 완료
+        fogImage.transform.localScale = originalScale;  // 원래 크기로 복귀
     }
 }
