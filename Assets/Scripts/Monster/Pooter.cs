@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pooter : MonsterBasic
 {
     [SerializeField, Tooltip("투사체 프리팹")] private GameObject bullet;
+    private SpriteRenderer renderer;
 
     [SerializeField, Tooltip("푸터 이동 속도")] private float moveSpeed = 0.5f;
     [SerializeField, Tooltip("푸터 공격 범위")] private float attackRange = 5f;
@@ -22,10 +23,14 @@ public class Pooter : MonsterBasic
     // 이동 시간 체크 용도
     private float checkMoveTime = 0f;
 
+    // 애니메이터 해시
+    private readonly int Attack = Animator.StringToHash("Attack");
+
     void Start()
     {
         base.Start();
         playerTrs = GameObject.FindAnyObjectByType<Player>().transform;
+        renderer = GetComponentInChildren<SpriteRenderer>();
         monsterState = MonsterState.Trace;
         checkMoveTime = moveTime;
         checkRestTime = attackRestTime;
@@ -40,18 +45,6 @@ public class Pooter : MonsterBasic
     // Pooter의 전체적인 행동
     private void PooterTrace(float _distance)
     {
-        if (_distance < attackRange)
-        {
-            if (checkRestTime > 0f)
-            {
-                checkRestTime -= Time.deltaTime;
-            }
-            else
-            {
-                PooterShot();
-            }
-        }
-
         if (_distance > stopDistance)
         {
             if (checkMoveTime > 0f)
@@ -63,6 +56,7 @@ public class Pooter : MonsterBasic
                 float randomY = Random.Range(0f, randomMaxY);
                 direction.x = direction.x > 0f ? direction.x + randomX : direction.x - randomX;
                 direction.y = direction.y > 0f ? direction.y + randomY : direction.y - randomY;
+                renderer.flipX = direction.x < 0f ? true : false;
 
                 rigid.velocity = direction * moveSpeed;
             }
@@ -76,11 +70,27 @@ public class Pooter : MonsterBasic
         {
             rigid.velocity = Vector2.zero;
         }
+
+        if (_distance < attackRange)
+        {
+            if (checkRestTime > 0f)
+            {
+                checkRestTime -= Time.deltaTime;
+            }
+            else
+            {
+                PooterShot();
+                return;
+            }
+        }
     }
 
     private void PooterShot()
     {
+        rigid.velocity = Vector2.zero;
         checkRestTime = attackRestTime;
+        anim.SetTrigger(Attack);
+
         // 투사체 발사
     }
 }
