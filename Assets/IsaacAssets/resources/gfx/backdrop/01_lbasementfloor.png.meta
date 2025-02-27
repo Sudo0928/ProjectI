@@ -121,7 +121,763 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 01_lbasementfloor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 303.33334
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d932b7d884a8e7428058df99e27c9a6
+      internalID: 1542502961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 303.33334
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d777b02ad3ba7044eb0c85ecb55b1fd4
+      internalID: -790013831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 303.33334
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2adbae5e6ae4a8478d348ed8aaacf31
+      internalID: -1459488514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 303.33334
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0840af0a20b644096ab86817acea9a
+      internalID: 1023765126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_4
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 303.33334
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55797d5bcc79dee4b9273a47dcf102bd
+      internalID: -268992201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 303.33334
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9b0fc1b004d964481b80d80daeb796
+      internalID: -390603507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 243.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcf98a29088cfd44956aedbc961434b
+      internalID: -732833041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 243.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d96c6c945d6f7498b205a9f9d60743
+      internalID: -1724054207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_8
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 243.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f90b1f91d3b92498064dff89422792
+      internalID: -214594456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_9
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 243.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d26382713b9b1c42819cb34a8a2b13e
+      internalID: -1453648682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_10
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 243.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2d6cbeb9788bd4db06f917dfbf975b
+      internalID: -584341482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_11
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 243.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b23a3947646e74cae6ca474bae8334
+      internalID: -560524865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 183.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ef92d857257354286c7bf7eda253bd
+      internalID: 1551466963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 183.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6915e29a82ddb9458b6b03e4a15f465
+      internalID: -1877705573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 183.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd385292b230684fa537af0e1b614c0
+      internalID: 1391820512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_15
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 183.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae4af873730bc9458f078268bebff8b
+      internalID: 1073591414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_16
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 183.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d81ffa151d4c4e42add36f8b361e298
+      internalID: -1010369585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_17
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 183.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187fb55b8f20bf14dbcdc8a0fae0238f
+      internalID: 1643767667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 123.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5b5539b96a22d4aaf1b0c684aaca84
+      internalID: 1325336838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 123.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29dd126c08eb98949b4a1dcd01989da8
+      internalID: 225392911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_20
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 123.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5894ed585bd68c84984fed89a70b6f57
+      internalID: -200559629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_21
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 123.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1341ca68c00b4746aa7195a25ca60e0
+      internalID: -1210299112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_22
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 123.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e78247f142750f42a0666c3c0a5d534
+      internalID: 2130177110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_23
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 123.33333
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d5a995d143934459c1688abbe5a64e
+      internalID: 1892053881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e54f29e7d874d64c9d0f55b59114865
+      internalID: -674091792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_25
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 63.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee584c653aaecc40b70a9282bead642
+      internalID: -456488798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_26
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 63.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee331a55eb82084692d5c0c807cf49a
+      internalID: 409481714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_27
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 63.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cb3b318abef4b45847cebaa2bfb5e5
+      internalID: 2021788824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_28
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 63.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e898ff3dba3c73948bf014f3cec03de6
+      internalID: -327657055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_29
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 63.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d9b48183d286f47857925e1e27b57b
+      internalID: -1330173368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8344ec8eda6a0504a985a4aea291d0e2
+      internalID: -2065934267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_31
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 3.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7caf7148fca40064780398587fb48bcd
+      internalID: 2020192144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_32
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 3.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff3f10487133fc4394b4d159428322a
+      internalID: -883174491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_33
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 3.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e9ee0e9b2fafa45b07d2aff0610ca9
+      internalID: 169757330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_34
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 3.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bfbe0d53c9c8c41b34cd81c5905c2a
+      internalID: 1874024043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01_lbasementfloor_35
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 3.333332
+        width: 170.66667
+        height: 60.666668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a698f942197c4843820319c87c7dce3
+      internalID: -1122975753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +888,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      01_lbasementfloor_0: 1542502961
+      01_lbasementfloor_1: -790013831
+      01_lbasementfloor_10: -584341482
+      01_lbasementfloor_11: -560524865
+      01_lbasementfloor_12: 1551466963
+      01_lbasementfloor_13: -1877705573
+      01_lbasementfloor_14: 1391820512
+      01_lbasementfloor_15: 1073591414
+      01_lbasementfloor_16: -1010369585
+      01_lbasementfloor_17: 1643767667
+      01_lbasementfloor_18: 1325336838
+      01_lbasementfloor_19: 225392911
+      01_lbasementfloor_2: -1459488514
+      01_lbasementfloor_20: -200559629
+      01_lbasementfloor_21: -1210299112
+      01_lbasementfloor_22: 2130177110
+      01_lbasementfloor_23: 1892053881
+      01_lbasementfloor_24: -674091792
+      01_lbasementfloor_25: -456488798
+      01_lbasementfloor_26: 409481714
+      01_lbasementfloor_27: 2021788824
+      01_lbasementfloor_28: -327657055
+      01_lbasementfloor_29: -1330173368
+      01_lbasementfloor_3: 1023765126
+      01_lbasementfloor_30: -2065934267
+      01_lbasementfloor_31: 2020192144
+      01_lbasementfloor_32: -883174491
+      01_lbasementfloor_33: 169757330
+      01_lbasementfloor_34: 1874024043
+      01_lbasementfloor_35: -1122975753
+      01_lbasementfloor_4: -268992201
+      01_lbasementfloor_5: -390603507
+      01_lbasementfloor_6: -732833041
+      01_lbasementfloor_7: -1724054207
+      01_lbasementfloor_8: -214594456
+      01_lbasementfloor_9: -1453648682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

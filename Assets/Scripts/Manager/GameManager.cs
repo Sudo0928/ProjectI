@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,13 @@ public class GameManager : Singleton<GameManager>
 
 	}
 
-	public T Instantiate<T>(T prefab) where T : Object
+	public Sprite GetItemSprite(ItemInfo item)
 	{
+		return Resources.Load<Sprite>("images/items/" + item.Image);
+	}
+
+	public T Instantiate<T>(T prefab) where T : UnityEngine.Object
+    {
 		var go = UnityEngine.Object.Instantiate<T>(prefab);
 		return go;
 	}
@@ -29,4 +35,18 @@ public class GameManager : Singleton<GameManager>
     {
         base.StopAllCoroutines();
     }
+
+	public void SetTimer(Action action, float time)
+	{
+		StartCoroutine(Timer(action, time));
+
+	}
+
+	IEnumerator Timer(Action action, float time)
+	{
+		yield return new WaitForSeconds(time);
+		action?.Invoke();
+
+	}
+
 }

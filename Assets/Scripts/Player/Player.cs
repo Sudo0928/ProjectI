@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject tear;
 
-    [SerializeField] private Stat stat;
+   
 
     private Vector2 movementDirection = Vector2.zero;
     public Vector2 MovementDirection { get => movementDirection; }
@@ -59,23 +59,32 @@ public class Player : MonoBehaviour
     private float projectileVelocityAngle = 0.2f;
 
     private bool isAttack = false;
+    private PlayerUIHandler playerUIHandler;
+    public PlayerUIHandler PlayerUIHandler => playerUIHandler;
+	private Stat stat = new Stat();
+    public Stat Stat => stat;
+	private Inventory inventory = new Inventory();
+    public Inventory Inventory => inventory;
 
-    [SerializeField][Range(0.001f, 10f)]
+	[SerializeField][Range(0.001f, 10f)]
     private float maxChargingTime = 1f;
 
     [SerializeField]
     private bool isCharging = false;
 
     private float timeSincePressAttack = 0;
-
-    private void Awake()
+    public Vector2 GetMoveDir => inputActions.Player.Move.ReadValue<Vector2>();
+	private void Awake()
     {
         inputActions = new PlayerInputAction();
 
         _rigidbody2D = GetComponent<Rigidbody2D>();
         animationHandler = GetComponent<AnimationHandler>();
 
-        AddInputActionsCallbacks();
+        //    inventory.onAddItem.AddListener(() => { anim.SetTrigger("getItem")});
+        inventory.stat = stat;
+        
+		AddInputActionsCallbacks();
     }
 
     private void OnEnable()
@@ -87,7 +96,7 @@ public class Player : MonoBehaviour
     {
         inputActions.Disable();
     }
-
+     
     private void Update()
     {
         movementDirection = inputActions.Player.Move.ReadValue<Vector2>();
@@ -190,9 +199,9 @@ public class Player : MonoBehaviour
         inputActions.Player.Move.performed -= OnMove;
     }
 
-    #endregion
+    //#endregion
 
-    #region Input Methods
+    //#region Input Methods
 
     private void OnAttack(InputAction.CallbackContext context)
     {
