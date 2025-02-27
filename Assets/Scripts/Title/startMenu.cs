@@ -58,6 +58,7 @@ public class ArrowMenuNavigation : MonoBehaviour
             SelectMenu();
         }
     }
+
     void ArrowPosition()
     {
 
