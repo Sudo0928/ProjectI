@@ -29,6 +29,7 @@ public class PlayerStatUI : MonoBehaviour
 
     [Space(10)]
     [SerializeField] Image activeItemSprite;
+    [SerializeField] GameObject gauge;
 
     [Space(10)]
     [SerializeField] List<GameObject> gaugeLevels = new List<GameObject>();
@@ -38,15 +39,18 @@ public class PlayerStatUI : MonoBehaviour
     {
 
         // playerStat의 Heart 값이 변경될 때 UpdateHealthBar() 호출
+        playerStat.AddListener(DesignEnums.Option.MaxHeart, UpdateHealthBar);
         playerStat.AddListener(DesignEnums.Option.CurHeart, UpdateHealthBar);
         playerStat.AddListener(DesignEnums.Option.Coin, UpdateItemText);
         playerStat.AddListener(DesignEnums.Option.Boom, UpdateItemText);
         playerStat.AddListener(DesignEnums.Option.Key, UpdateItemText); 
         playerStat.onChangeGauge.AddListener(UpdateGaugeLevel);
-
+        playerStat.onChangeGauge.AddListener(UpdateGaugeState);
+         
         // 처음 상태 업데이트
         UpdateItemText();
         UpdateHealthBar();
+        UpdateGaugeLevel();
         UpdateGaugeState();
     }
 
@@ -60,10 +64,10 @@ public class PlayerStatUI : MonoBehaviour
     void UpdateGaugeState()
     {
         int maxGauge = playerStat.MaxGauge;  // 최대 게이지
-        int curGauge = playerStat.CurGauge;  // 최대 게이지
+        int curGauge = playerStat.CurGauge;  // 최대 게이지 
 
-        // 게이지의 비율을 계산하여 0과 1 사이로 설정
-        gaugeFill.fillAmount = curGauge / maxGauge;
+        // 게이지의 비율을 계산하여 0과 1 사이로 설정 
+   //     gaugeFill.fillAmount = curGauge / maxGauge;
     }
 
     // 3. 아이템에 맞는 게이지 레벨에 따라 gaugeLevels 활성화/비활성화
@@ -72,24 +76,21 @@ public class PlayerStatUI : MonoBehaviour
         // 아이템에 맞는 게이지 개수를 가져오기 (아이템에 필요한 게이지 레벨을 가져옴)
         int requiredGaugeLevel = playerStat.MaxGauge;
 
+        activeItemSprite.gameObject.SetActive(requiredGaugeLevel > 0);
+		gauge.gameObject.SetActive(requiredGaugeLevel > 0);
+
+		 
         // gaugeLevels는 여러 개의 이미지나 오브젝트들 리스트
         // 그중에서 필요한 만큼만 활성화하고 나머지는 비활성화
         for (int i = 0; i < gaugeLevels.Count; i++)
         {
-            if (i < requiredGaugeLevel)
-            {
-                gaugeLevels[i].SetActive(true);  // 해당 레벨은 활성화
-            }
-            else
-            {
-                gaugeLevels[i].SetActive(false);  // 그 외의 레벨은 비활성화
-            }
-        }
+                gaugeLevels[i].SetActive(i == requiredGaugeLevel-1);  // 해당 레벨은 활성화
+        } 
     }
 
     // 4. 체력바 업데이트 
     public void UpdateHealthBar()
-    {
+    { 
         float maxHealth = playerStat.GetStat(DesignEnums.Option.MaxHeart);  // 최대 체력
         float currentHealth = playerStat.GetStat(DesignEnums.Option.CurHeart);  // 현재 체력
 
@@ -109,7 +110,8 @@ public class PlayerStatUI : MonoBehaviour
             {
                 hearts[i-1].sprite = emptyHeart;
             }
-        }
+			hearts[i-1].gameObject.SetActive(true);
+		}
 
         // 최대 체력에 맞게 하트 개수 조정
         for (int i = cnt; i < hearts.Count; i++)

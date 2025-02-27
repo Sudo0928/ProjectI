@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 6
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -121,7 +121,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: biglaser_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 56
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469244301d0261747a1781ece5336b0f
+      internalID: -1908418128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: biglaser_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 56
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34dc73619c1ae934aa74a7fa233ee8d2
+      internalID: 1292275454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: biglaser_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 56
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617949e520a41f7468901f4121f08205
+      internalID: -1189895440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: biglaser_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 56
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b26b20c854ea5044be772c6909c1311
+      internalID: 376158213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: biglaser_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 80
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc49b9725034a24eade1c6e2a2a2f1d
+      internalID: 1125124020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: biglaser_5
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 80
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0672a9ae49fd8a40a4e7188a131af8e
+      internalID: 1186666693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: biglaser_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 32
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fa493f4601ca04aa2e1358dea1ba66
+      internalID: -822678453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: biglaser_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 32
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e289114f6e185924cae806f3e3425687
+      internalID: 1226769042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +300,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      biglaser_0: -1908418128
+      biglaser_1: 1292275454
+      biglaser_10: 1226769042
+      biglaser_11: -921692930
+      biglaser_12: -1085817370
+      biglaser_2: -1189895440
+      biglaser_3: 376158213
+      biglaser_4: 1125124020
+      biglaser_5: 1186666693
+      biglaser_6: -881588428
+      biglaser_7: 39084873
+      biglaser_8: 698856722
+      biglaser_9: -822678453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
