@@ -214,6 +214,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.59375, y: 3.21875}
   m_EdgeRadius: 0
+--- !u!1 &2424810577885897070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947389152909553738}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &947389152909553738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424810577885897070}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.71, y: 7.22, z: -0.12749097}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7934657424724870540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2789092660515083619
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +635,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.59375, y: 3.21875}
   m_EdgeRadius: 0
+--- !u!1 &3355069128715092982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8052049056038894840}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8052049056038894840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355069128715092982}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.09, y: 8.65, z: -0.12749097}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7934657424724870540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4090365206260851998
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +796,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.59375, y: 3.21875}
   m_EdgeRadius: 0
+--- !u!1 &5450624252279343645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2751284215437568976}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2751284215437568976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450624252279343645}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.313241, y: 8.393738, z: -0.12749097}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7934657424724870540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5532502262608263697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1217,68 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.59375, y: 1.59375}
   m_EdgeRadius: 0
+--- !u!1 &8468797486295738720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7851576589498977236}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7851576589498977236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8468797486295738720}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.72, y: -0.06, z: -0.12749097}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7934657424724870540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8491706985443486553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3261764749118350190}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3261764749118350190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491706985443486553}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.23, y: -3.58, z: -0.12749097}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7934657424724870540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8798479215136505796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,6 +1789,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3804511037520250294}
     - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: monsterSpawnPos.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: upDoor.Array.data[0].pos.y
       value: 0
       objectReference: {fileID: 0}
@@ -1697,6 +1856,26 @@ PrefabInstance:
       propertyPath: rightDoor.Array.data[1].door
       value: 
       objectReference: {fileID: 5182950779620541471}
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[0]
+      value: 
+      objectReference: {fileID: 3261764749118350190}
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[1]
+      value: 
+      objectReference: {fileID: 7851576589498977236}
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[2]
+      value: 
+      objectReference: {fileID: 2751284215437568976}
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[3]
+      value: 
+      objectReference: {fileID: 8052049056038894840}
+    - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[4]
+      value: 
+      objectReference: {fileID: 947389152909553738}
     - target: {fileID: 822412886529182010, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       propertyPath: rightDoor.Array.data[0].pos.x
       value: 1
@@ -2067,6 +2246,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2868075465070197030, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5996892214397280964}
+    - targetCorrespondingSourceObject: {fileID: 2868075465070197030, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3261764749118350190}
+    - targetCorrespondingSourceObject: {fileID: 2868075465070197030, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7851576589498977236}
+    - targetCorrespondingSourceObject: {fileID: 2868075465070197030, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2751284215437568976}
+    - targetCorrespondingSourceObject: {fileID: 2868075465070197030, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8052049056038894840}
+    - targetCorrespondingSourceObject: {fileID: 2868075465070197030, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 947389152909553738}
     - targetCorrespondingSourceObject: {fileID: 7624602311683992516, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 276249302331412769}

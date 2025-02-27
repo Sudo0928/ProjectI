@@ -130,6 +130,68 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.65625, y: 1.59375}
   m_EdgeRadius: 0
+--- !u!1 &1806585257227841876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187627618611426073}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1187627618611426073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806585257227841876}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.03, y: 1.33, z: -0.033019513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2868075465070197030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4436411912179836407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3740740119651506563}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3740740119651506563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4436411912179836407}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.283594, y: 0.47709656, z: -0.033019513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2868075465070197030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4798376857556661314
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +322,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.65625, y: 1.59375}
   m_EdgeRadius: 0
+--- !u!1 &5913231505939559722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7314352121828382158}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7314352121828382158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913231505939559722}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.4, y: 0.25, z: -0.033019513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2868075465070197030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6052716655230184405
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +567,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8214299457917359915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3634665258939412416}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3634665258939412416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214299457917359915}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.98, y: -1.91, z: -0.033019513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2868075465070197030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8912339418109364772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6030412232466838861}
+  m_Layer: 0
+  m_Name: MonsterSpawnPos (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6030412232466838861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912339418109364772}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.79, y: -1.37, z: -0.033019513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2868075465070197030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9080499009167188772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1212,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3907800181727498130}
     - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      propertyPath: monsterSpawnPos.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
       propertyPath: upDoor.Array.data[1].pos.x
       value: 1
       objectReference: {fileID: 0}
@@ -1080,6 +1239,26 @@ PrefabInstance:
       propertyPath: rightDoor.Array.data[0].door
       value: 
       objectReference: {fileID: 3184443030984741327}
+    - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[0]
+      value: 
+      objectReference: {fileID: 7314352121828382158}
+    - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[1]
+      value: 
+      objectReference: {fileID: 1187627618611426073}
+    - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[2]
+      value: 
+      objectReference: {fileID: 6030412232466838861}
+    - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[3]
+      value: 
+      objectReference: {fileID: 3740740119651506563}
+    - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      propertyPath: monsterSpawnPos.Array.data[4]
+      value: 
+      objectReference: {fileID: 3634665258939412416}
     - target: {fileID: 5350608980342618422, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
       propertyPath: rightDoor.Array.data[0].pos.x
       value: 1
@@ -1189,6 +1368,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7414492744096483626, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9173863107643886463}
+    - targetCorrespondingSourceObject: {fileID: 7414492744096483626, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7314352121828382158}
+    - targetCorrespondingSourceObject: {fileID: 7414492744096483626, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3634665258939412416}
+    - targetCorrespondingSourceObject: {fileID: 7414492744096483626, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3740740119651506563}
+    - targetCorrespondingSourceObject: {fileID: 7414492744096483626, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6030412232466838861}
+    - targetCorrespondingSourceObject: {fileID: 7414492744096483626, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1187627618611426073}
     - targetCorrespondingSourceObject: {fileID: 2952362214584703944, guid: 05aea389d7095e14ebc62fcea6952ca2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7191175310446954214}

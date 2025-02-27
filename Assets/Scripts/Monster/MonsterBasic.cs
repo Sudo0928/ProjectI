@@ -38,7 +38,7 @@ public class MonsterBasic : MonoBehaviour
      
     public void GetDamage(float _damage)
     {
-        if (monsterCurrentHP <= 0)
+        if (gameObject.activeSelf == false)
             return;
 
         monsterCurrentHP -= _damage;

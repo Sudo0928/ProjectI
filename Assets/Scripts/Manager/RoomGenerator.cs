@@ -20,6 +20,9 @@ public class RoomGenerator : MonoBehaviour
 	[Space(10)]
 	[SerializeField] int roomDepth;
 
+	[Space(20)]
+	[SerializeField] List<GameObject> monsters;
+
 	int[][] dungeonDirs =
 	{
 		new int[]{0, 2},
@@ -53,6 +56,8 @@ public class RoomGenerator : MonoBehaviour
 		var room = Instantiate<GameObject>(GetRandomRoom(depth));
 		room.transform.position = new Vector3(-1000, -1000, 0);
 		var curRoomManager = room.GetComponent<RoomManager>();
+
+		curRoomManager.SpawnMonster(monsters);
 
 		RoomDoor curDoor = null;
 		while (!curRoomManager.GetDoor(doorDir[dir], out curDoor, depth +2== roomDepth)) {

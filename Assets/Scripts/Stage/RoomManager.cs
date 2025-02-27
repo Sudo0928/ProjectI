@@ -4,10 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 
 public class RoomManager : MonoBehaviour
 {
+	[SerializeField] List<Transform> monsterSpawnPos;
+	[Space(20)]
     [SerializeField] public List<RoomDoor> myDoor = new List<RoomDoor>();
 	CinemachineConfiner2D virtualCamera;
 	[SerializeField] StageReward stageReward;
@@ -19,8 +21,9 @@ public class RoomManager : MonoBehaviour
 	[SerializeField] public List<RoomDoor> downDoor;  
 
 	int monsterCnt = 0;   
-	public bool isClear => monsterCnt == 0; 
+	public bool isClear => monsterCnt == 0;
 
+	List<GameObject> roomMonsters = new List<GameObject>();
 	public virtual bool GetDoor(int dir, out RoomDoor door, bool prevBossRoom = false)
 	{
 		door = null;
@@ -48,6 +51,31 @@ public class RoomManager : MonoBehaviour
 
 		door = list[idx];
 		return true;
+	}
+	
+	public void SpawnMonster(List<GameObject> monsters)
+	{
+		if (monsterSpawnPos.Count <= 0)
+			return;
+
+		int spawnCnt = Random.Range(monsterSpawnPos.Count - 1, monsterSpawnPos.Count + 1);
+
+		while (spawnCnt-- > 0) 
+		{
+			var mst = Instantiate(monsters[Random.Range(0, monsters.Count)]);
+			mst.transform.SetParent(transform, false);
+			mst.transform.position = monsterSpawnPos[Random.Range(0, monsterSpawnPos.Count)].position;
+			mst.SetActive(false);
+			roomMonsters.Add(mst);
+			monsterCnt++;
+			mst.GetComponent<MonsterBasic>().onDie.AddListener(() =>
+			{
+				monsterCnt--;
+				if (monsterCnt == 0)
+					ClearRoom();
+			});
+		}
+		 
 	} 
 
 	private void Awake()
@@ -85,6 +113,9 @@ public class RoomManager : MonoBehaviour
 		virtualCamera.m_BoundingShape2D = GetComponent<PolygonCollider2D>(); 
 		gameObject.SetActive(true);
 
+		foreach (var go in roomMonsters)
+			go.SetActive(true);
+
 		if (monsterCnt > 0)
 			CloseDoor(); 
 		else
@@ -97,20 +128,6 @@ public class RoomManager : MonoBehaviour
 		gameObject.SetActive(false);
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (collision.gameObject.CompareTag("Monster"))
-		{
-			monsterCnt++;
-
-			collision.GetComponent<MonsterBasic>().onDie.AddListener(() => 
-			{
-				monsterCnt--;
-				if (monsterCnt == 0)
-					ClearRoom(); 
-			});
-		}
-	}
 
 	void CloseDoor()
 	{
