@@ -1,8 +1,8 @@
 public class TearDestroyEvent : Event
 {
-    public Tear tear;
+    public BaseTear tear;
 
-    public TearDestroyEvent(Tear tear)
+    public TearDestroyEvent(BaseTear tear)
     {
         this.tear = tear;
     }

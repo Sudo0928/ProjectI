@@ -8,7 +8,8 @@ public abstract class BaseAttackHandler : MonoBehaviour
 
     protected Rigidbody2D _rigidbody2D;
 
-    protected Player owner;
+    protected GameObject owner;
+    public GameObject Owner => owner;
 
     [SerializeField] protected float damage = 3;
     public float Damage => damage;
@@ -31,12 +32,12 @@ public abstract class BaseAttackHandler : MonoBehaviour
     protected float lerpTime = 0;
     protected float currentTime = 0;
 
-    public virtual void Init(Player owner, Vector2 attackDirection)
+    public virtual void Init(GameObject owner, float speed, float distance, float size, Vector2 attackDirection)
     {
         this.owner = owner;
-        this.speed = owner.ProjectileSpeed;
-        this.distance = owner.ProjectileDistance;
-        this.size = owner.ProjectileSize;
+        this.speed = speed;
+        this.distance = distance;
+        this.size = size;
         this.attackDirection = attackDirection.normalized;
         this.lerpTime = distance / speed;
     }
