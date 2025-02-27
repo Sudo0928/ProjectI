@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8630401879533614738}
   - component: {fileID: 5701401382576567272}
   - component: {fileID: 9168128676382115687}
-  - component: {fileID: -676131525173709197}
+  - component: {fileID: 7657641340646070166}
   - component: {fileID: 4955681130193124101}
   m_Layer: 0
   m_Name: Item
@@ -101,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sprite: {fileID: 5701401382576567272}
   key: 1000
---- !u!61 &-676131525173709197
-BoxCollider2D:
+--- !u!58 &7657641340646070166
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,18 +134,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.3}
-  m_EdgeRadius: 0
+  m_Radius: 0.3
 --- !u!58 &4955681130193124101
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1475561062417394386}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ChargeEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +34,37 @@ Transform:
   - {fileID: 3979849319401017633}
   m_Father: {fileID: 1538326687777137124}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1722314937387458808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4030114737360255778}
+  m_Layer: 3
+  m_Name: PickUpPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4030114737360255778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722314937387458808}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538326687777137124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745692244414378512
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3979849319401017633}
   - component: {fileID: 8762529363869140630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chargebar_Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227466950923982032}
   - component: {fileID: 1789613469537549355}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +244,7 @@ GameObject:
   - component: {fileID: 4286007958137444288}
   - component: {fileID: 2711860377954592960}
   - component: {fileID: 2326876683918295130}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chargebar_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1091857696421845860}
   - component: {fileID: 3706588275889855996}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3663702204489059108}
   - component: {fileID: 3876521046597070036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chargebar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,9 +552,10 @@ GameObject:
   - component: {fileID: 2056306616961450048}
   - component: {fileID: 1375815790460968446}
   - component: {fileID: 8075001022138827372}
-  m_Layer: 0
+  - component: {fileID: 840425699234848576}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -544,6 +576,7 @@ Transform:
   - {fileID: 8276223738728828268}
   - {fileID: 1475561062417394386}
   - {fileID: 835249138185262742}
+  - {fileID: 4030114737360255778}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8605405283846607345
@@ -558,22 +591,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0683420fc772b4491640e1032b0710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpPivot: {fileID: 4030114737360255778}
   maxSpeed: 4
   maxAcceleration: 15
   maxSlideDistance: 1
-  attackSpeed: 0.5
-  projectileDistance: 3
-  projectileSpeed: 1
-  projectileSize: 0.5
   projectileVelocityAngle: 0.2
   maxChargingTime: 0.5
   isCharging: 0
   isParbolic: 0
   ignoreExplosions: 0
-  autoAttack: 1
+  autoAttack: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!114 &9162618023899749388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +701,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.35}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &840425699234848576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660473317590961936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29166a3cb01797438363c5d8533da4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInfoUIPrefab: {fileID: 4643223495038973725, guid: 06314889c1924ff40b1b8c37d579d311, type: 3}
+  itemPreviewUIPrefab: {fileID: 8084490498787307894, guid: f799182f81eaa624d874536e67b48a6e, type: 3}
+  playerStatUIPrefab: {fileID: 4917358022865020412, guid: 74250479e6f3a804bafff0874c88b970, type: 3}
 --- !u!1 &6224212094468400228
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452492501358222351}
   - component: {fileID: 500883120683135925}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8276223738728828268}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835249138185262742}
   - component: {fileID: 2260541358423751223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BaseTear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
