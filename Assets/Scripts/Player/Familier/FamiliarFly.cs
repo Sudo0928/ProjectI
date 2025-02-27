@@ -11,8 +11,11 @@ public class FamiliarFly : MonoBehaviour
 		{
 			var Tear = collision.GetComponent<BaseTear>();
 			if (Tear.Owner.gameObject.CompareTag("Monster"))
-				Tear.Remove();
-			 
+			{
+		//		Tear.
+			}
+
+
 		}
 	}
 }

@@ -32,7 +32,7 @@ public class Familiar_DryBaby : MonoBehaviour
 			BaseTear tear = collision.gameObject.GetComponent<BaseTear>();
 			if (tear.Owner.gameObject.CompareTag("Monster"))
 			{
-				tear.Remove();
+				//tear.Remove();
 				anim.Play("Hit");
 			}
 		}

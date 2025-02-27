@@ -50,23 +50,7 @@ public class MonsterBasic : MonoBehaviour
     }
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		//if (collision.gameObject.CompareTag("Tear"))
-		//{
-		//	var tear = collision.gameObject.GetComponent<BaseTear>();
-		//	if (tear != null)
-		//	{
 
-		//		GetDamage(tear.Damage);
-		//		tear.Remove();
-  //              Debug.Log("몬스터 한대 맞음");
-		//	}
-		//}
-
-		//if (collision.gameObject.CompareTag("Player"))
-  //      {
-		//	GetComponent<Player>()?.TakeDamage(monsterAtk);
-  //          Debug.Log("플레이어 한대 맞음");
-		//}
 
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -74,7 +58,7 @@ public class MonsterBasic : MonoBehaviour
         if (collision.CompareTag("Tear"))
         {
             var tear = collision.GetComponent<BaseTear>();
-            if (tear != null)
+            if (tear != null && tear.Owner.CompareTag("Player"))
             {
                  
                 GetDamage(tear.Damage);

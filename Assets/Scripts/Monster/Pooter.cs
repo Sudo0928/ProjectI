@@ -91,6 +91,20 @@ public class Pooter : MonsterBasic
         checkRestTime = attackRestTime;
         anim.SetTrigger(Attack);
 
-        // 투사체 발사
-    }
+
+        Vector2 direction = (playerTrs.position - transform.position).normalized;
+
+		BaseTear tear = Instantiate(
+            GameManager.Instance.tear, 
+            transform.position, Quaternion.identity);
+		tear.Init(gameObject,
+            5.0f,
+            7.0f,
+            0.5f,
+            direction, 
+            false); 
+
+		// 투사체 발사
+		// var tear = Instantiate<GameObject>(GameManager.Instance.tear);
+	}
 }

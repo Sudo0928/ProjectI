@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
 
 	}
 
-	public BaseTear tear;
+	[SerializeField] public BaseTear tear;
 
 	public Sprite GetItemSprite(ItemInfo item)
 	{
