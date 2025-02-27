@@ -5,12 +5,6 @@ using UnityEngine;
 
 public static class Expansion
 {
-    public static T GetOrAnyComponent<T>(this Component obj) where T : Component
-    {
-        if(!obj.TryGetComponent<T>(out var component)) return obj.AddComponent<T>();
-        else return component;
-    }
-
     public static void CatmullRom(ref this Vector2 mathf, float t, Vector2 p0, Vector2 p1, Vector2 p2, Vector2 p3)
     {
         mathf = 0.5f * ((2f * p1) +

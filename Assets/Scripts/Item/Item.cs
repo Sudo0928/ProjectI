@@ -34,7 +34,11 @@ public class Item : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Player"))
 		{
-			//collision.GetComponent<PlayerController>()?.playerData.AddItem(item); 
+			
+			if (collision.gameObject.TryGetComponent<Player>(out Player player))
+			{
+				player.Inventory.AddItem(item); 
+			}
 			var pu = collision.gameObject.GetComponent<PlayerUIHandler>();
 			pu?.myPickupItemInfoUI.PickupItem(item);
 			gameObject.SetActive(false);

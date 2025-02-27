@@ -37,6 +37,11 @@ public class ItemInfo
     public List<int> SpecialOptions;
 
     /// <summary>
+    /// 0
+    /// </summary>
+    public int Gauge;
+
+    /// <summary>
     /// 설명
     /// </summary>
     public string Description;

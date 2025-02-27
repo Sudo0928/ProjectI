@@ -121,7 +121,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: effect_018_giantlaser_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 104
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69020d677d301934aa6d5d4c514e6058
+      internalID: 232272006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_018_giantlaser_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 0
+        width: 104
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3941cae03920cd94ba9b67de6ec432d9
+      internalID: 1989387733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_018_giantlaser_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 107
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c6c3f7edc105b41bf1fb8e320aff44
+      internalID: -1184074671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_018_giantlaser_3
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 106
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b3b8f1e6548454189bf757a0879463
+      internalID: -398971598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_018_giantlaser_4
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 176
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9621d90a25bf964b9fb33bf7b262e8c
+      internalID: 561736614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_018_giantlaser_5
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 176
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2620e86c3789c0d439d46ec908866321
+      internalID: 357716014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_018_giantlaser_6
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 96
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df64731696e7be4419b1f6af00b115b8
+      internalID: 1098435309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effect_018_giantlaser_7
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 96
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b8de54e4351964eb6cdae5099f46cb
+      internalID: 1642534786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +300,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      effect_018_giantlaser_0: 232272006
+      effect_018_giantlaser_1: 1989387733
+      effect_018_giantlaser_2: -1184074671
+      effect_018_giantlaser_3: -398971598
+      effect_018_giantlaser_4: 561736614
+      effect_018_giantlaser_5: 357716014
+      effect_018_giantlaser_6: 1098435309
+      effect_018_giantlaser_7: 1642534786
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
