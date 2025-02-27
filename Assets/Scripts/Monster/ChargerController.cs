@@ -70,6 +70,7 @@ public class ChargerController : MonsterBasic
             if(Physics2D.Raycast(transform.position, Vector2.up, eyeSight, layerMask))
             {
                 SetDashDirection(Vector2.up);
+                Debug.DrawRay(transform.position, Vector2.up);
                 return;
             }
             else if(Physics2D.Raycast(transform.position, Vector2.down, eyeSight, layerMask))
