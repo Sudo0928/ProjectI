@@ -29,12 +29,12 @@ public class Stat
     {
         options = new float[Enum.GetValues(typeof(Option)).Length];
         options[(int)Option.Attack] = 1.0f;
-        options[(int)Option.AttackSpeed] = 1.0f;
+        options[(int)Option.AttackSpeed] = 0.5f;
         options[(int)Option.AttackScale] = 1.0f;
-        options[(int)Option.Range] = 1.0f;
+        options[(int)Option.Range] = 6.0f;
         options[(int)Option.RangeScale] = 1.0f; 
-        options[(int)Option.ProjectileSize] = 1.0f;
-        options[(int)Option.ProjectileSpeed] = 1.0f;
+        options[(int)Option.ProjectileSize] = 1.0f; 
+        options[(int)Option.ProjectileSpeed] = 5.0f;
         options[(int)Option.MaxHeart] = 3.5f;
         options[(int)Option.CurHeart] = options[(int)Option.MaxHeart];
 		options[(int)Option.Speed] = 3.0f; 
@@ -65,8 +65,6 @@ public class Stat
 
         if (onChangedOption.TryGetValue(option, out UnityEvent e))
             e.Invoke();
-
-
 	}
 
 	void UpdateHeartSystem(Option heart, float value)

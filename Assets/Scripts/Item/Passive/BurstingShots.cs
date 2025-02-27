@@ -1,17 +1,17 @@
 using UnityEngine;
 
-public class CricketsBody : MonoBehaviour
+public class BurstingShots : SpecialAbility
 {
     private void OnEnable()
     {
-        EventManager.RegisterListener<TearDestroyEvent>(Division, 1);
+        //EventManager.RegisterListener<TearDestroyEvent>(Division, 1);
     }
 
     private void OnDisable()
     {
-        EventManager.UnregisterListener<TearDestroyEvent>(Division);
+        //EventManager.UnregisterListener<TearDestroyEvent>(Division);
     }
-
+     
     private void Division(TearDestroyEvent e)
     {
         if (e.tear.Size < 0.5f) return;
@@ -42,4 +42,14 @@ public class CricketsBody : MonoBehaviour
         tear = Instantiate(e.tear);
         tear.Init(e.tear.Owner, e.tear.Speed, e.tear.Distance, e.tear.Size * 0.5f, new Vector2(-randomX, -randomY), e.tear.IsParbolic);
     }
+
+	public override void OnAbility(Player player)
+	{
+		EventManager.RegisterListener<TearDestroyEvent>(Division, 1);
+	}
+
+	public override void RemoveSkill()
+	{
+		EventManager.UnregisterListener<TearDestroyEvent>(Division);
+	}
 }

@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ipecac : MonoBehaviour
+public class Ipecac : SpecialAbility
 {
     private void OnEnable()
     {
-        EventManager.RegisterListener<TearDestroyEvent>(Explosion, 2);
-        EventManager.RegisterListener<TearLaunchEvent>(ChangeColor, 1);
+        //EventManager.RegisterListener<TearDestroyEvent>(Explosion, 2);
+        //EventManager.RegisterListener<TearLaunchEvent>(ChangeColor, 1);
     }
 
     private void OnDisable()
     {
-        EventManager.UnregisterListener<TearDestroyEvent>(Explosion);
-        EventManager.UnregisterListener<TearLaunchEvent>(ChangeColor);
+        //EventManager.UnregisterListener<TearDestroyEvent>(Explosion);
+        //EventManager.UnregisterListener<TearLaunchEvent>(ChangeColor);
     }
 
     private void ChangeColor(TearLaunchEvent e)
@@ -33,4 +33,16 @@ public class Ipecac : MonoBehaviour
             }
         }
     }
+
+	public override void OnAbility(Player player)
+	{
+		EventManager.RegisterListener<TearDestroyEvent>(Explosion, 2);
+		EventManager.RegisterListener<TearLaunchEvent>(ChangeColor, 1);
+	}
+
+	public override void RemoveSkill()
+	{
+		EventManager.UnregisterListener<TearDestroyEvent>(Explosion);
+		EventManager.UnregisterListener<TearLaunchEvent>(ChangeColor);
+	}
 }

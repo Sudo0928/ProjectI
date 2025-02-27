@@ -67,7 +67,7 @@ public class PlayerStatUI : MonoBehaviour
         int curGauge = playerStat.CurGauge;  // 최대 게이지 
 
         // 게이지의 비율을 계산하여 0과 1 사이로 설정 
-        gaugeFill.fillAmount = curGauge / maxGauge;
+   //     gaugeFill.fillAmount = curGauge / maxGauge;
     }
 
     // 3. 아이템에 맞는 게이지 레벨에 따라 gaugeLevels 활성화/비활성화

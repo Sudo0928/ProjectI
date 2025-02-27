@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using static DesignEnums;
 public class Player : MonoBehaviour, IDamagedable
 {
     private Rigidbody2D _rigidbody2D;
@@ -36,24 +36,13 @@ public class Player : MonoBehaviour, IDamagedable
 
     private float timeSinceLastAttack = 1;
 
-    [SerializeField][Range(0f, 500f)]
-    private float attackSpeed = 0.1f;
 
-    [SerializeField][Range(0f, 500f)]
-    private float projectileDistance = 3f;
-    public float ProjectileDistance { get => projectileDistance; }
-
-    [SerializeField][Range(0f, 500f)]
-    private float projectileSpeed = 3f;
-    public float ProjectileSpeed { get => projectileSpeed; }
-
-    [SerializeField][Range(0f, 10)]
-    private float projectileSize = 3f;
-    public float ProjectileSize { get => projectileSize; }
-
-    public float AttackSpeed { get => attackSpeed; }
-
-    [SerializeField] [Range(0f, 1f)]
+    public float projectileDistance => 3.0f + (1.0f / stat.GetStat(Option.Range));
+    public float projectileSpeed => 3.0f + (1.0f / stat.GetStat(Option.ProjectileSpeed));
+    public float projectileSize => 0.5f + (1.0f / stat.GetStat(Option.ProjectileSize)); 
+    public float attackSpeed => 0.5f + (1.0f / stat.GetStat(Option.AttackSpeed));
+     
+	[SerializeField] [Range(0f, 1f)]
     private float projectileVelocityAngle = 0.2f;
 
     private bool isAttack = false;
@@ -112,7 +101,7 @@ public class Player : MonoBehaviour, IDamagedable
         inputActions.Disable();
     }
      
-    private void Update()
+    private void Update() 
     {
         movementDirection = inputActions.Player.Move.ReadValue<Vector2>();
         if (!autoAttack) lookDirection = inputActions.Player.Attack.ReadValue<Vector2>();
