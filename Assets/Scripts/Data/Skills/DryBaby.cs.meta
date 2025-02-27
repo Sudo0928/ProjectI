@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 6e50965e8fbdf32439f305c7fc66c411
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dryBaby: {fileID: 3448211048698381297, guid: 6eb1d5262cd528548afd7ebe73a5d23d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
