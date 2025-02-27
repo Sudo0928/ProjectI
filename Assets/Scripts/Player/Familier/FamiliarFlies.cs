@@ -24,4 +24,6 @@ public class FamiliarFlies : MonoBehaviour
         // fly2의 위치 계산 (fly1과 반대쪽 위치)
         fly2.transform.position = transform.position + new Vector3(Mathf.Cos(rad + Mathf.PI), Mathf.Sin(rad + Mathf.PI), 0) * dist;
     }
+
+
 }

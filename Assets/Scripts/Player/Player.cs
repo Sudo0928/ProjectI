@@ -274,14 +274,17 @@ public class Player : MonoBehaviour, IDamagedable
     public bool TakeDamage(float damage)
     {
         animationHandler.PlayTakeDamageAnim();
+        Debug.Log("Damaged");
+        stat.AddStat(Option.CurHeart, -damage); 
         return true;
-    }
+    } 
 
     public bool TakeBoomDamage(float damage)
     {
         if (ignoreExplosions) return false;
-
         animationHandler.PlayTakeDamageAnim();
+		stat.AddStat(Option.CurHeart, -damage);
+		Debug.Log("Boomb");
         return true;
     }
 

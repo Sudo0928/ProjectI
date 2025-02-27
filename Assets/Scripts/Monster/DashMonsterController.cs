@@ -86,8 +86,4 @@ public class DashMonsterController : MonsterBasic
         // 플레이어의 방향으로 이동
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // 충돌한 오브젝트가 플레이어라면 추적 모드로
-    }
 }

@@ -121,7 +121,763 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 10_cathedral_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8ea4c0f0a4b2e4194641b662884121
+      internalID: -716763741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 390
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc36d94605041c04aa2f10eab0e970b2
+      internalID: -600341368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 390
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a0cec4a05f24e49a447d21364fcd9c
+      internalID: -1221551073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_3
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 390
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe31d2fb9e6d1c4d9684c90eb40c5df
+      internalID: 2099742644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_4
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 390
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dede21c51a5cf479c81ceeef6e6737
+      internalID: -1170914949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_5
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 390
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef182e0f720e26f48be90d601a02d91f
+      internalID: -1244436912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228cb472813383545817bb04c591d3f3
+      internalID: 1606111855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_7
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 312
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575702c8883429c44bde50cc1c4e09b1
+      internalID: -1560563172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_8
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 312
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1b193947d81844cbca48e9555e61e7
+      internalID: -2034103087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_9
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 312
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b0b9655563f39448fcbdf77fafae88
+      internalID: 1768224464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_10
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 312
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c10d49ba54b7234ca74e81525d3b28f
+      internalID: -1321078418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_11
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 312
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c697cc11ce96f4ab3e6a1a04973131
+      internalID: 572617757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f163f4c62590de4409d10bb36ca1c5da
+      internalID: 281489663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_13
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 234
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd7eb13656c3b24e8de66ead7bc47d0
+      internalID: 836354056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_14
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 234
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b632f5d8e7a63d4498755b5cfe5cc35a
+      internalID: 517038763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_15
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 234
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc86e353be31e140b1f8613274cf04c
+      internalID: 2098756023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_16
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 234
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a207fc3a78ea4940a3d0bcd7547b13b
+      internalID: -1158403325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_17
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 234
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4032bcf095ccc2047b82aba3b4b84bdc
+      internalID: -561666067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef29be10255eb845a1559f53a77ac84
+      internalID: 468614530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_19
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 156
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82743bc606c462c4c89047bf7faa36c5
+      internalID: -626326525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_20
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 156
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d5c6592bcd70b40b84e411c6d29be7
+      internalID: -1564887536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_21
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 156
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2607ac9afd03153438d38af2a03c6096
+      internalID: -1301659536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_22
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 156
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6beb416defecc7d45a1fcb9a3114ae2d
+      internalID: 579515314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_23
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 156
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4408b84f3c1a22846805f249645c519b
+      internalID: 146647855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82af61206cd1d2742b7222b3c4dfa3f9
+      internalID: -982306888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_25
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 78
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bc9a1edd07350418735b967cc50581
+      internalID: -580199833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_26
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 78
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac708f96b170b748a4123607b6fd9d3
+      internalID: 848631120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_27
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 78
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ebd09941df3034eb8be9c1002f112d
+      internalID: -133824535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_28
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 78
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0e234da5e60da43a87b661419ba8a7
+      internalID: 2119272032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_29
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 78
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed131d9c8852924dbb11dfb057bf38d
+      internalID: -1728804690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2347be30effc09945a535a57c8786567
+      internalID: 1491707713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_31
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309c9f0f247ed06449630481da03e01a
+      internalID: -1712383204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_32
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 0
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5c86218a5ec00429ea71e6a964a43a
+      internalID: -33317748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_33
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a410d9861a637e4ab328e7ee28e714e
+      internalID: -1497616425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_34
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf5901bbaa30f54580cfbea1c8374d0
+      internalID: 2046494386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10_cathedral_35
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 86.666664
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f76e1ff95112749a20901919358c13
+      internalID: 1055399069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +888,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      10_cathedral_0: -716763741
+      10_cathedral_1: -600341368
+      10_cathedral_10: -1321078418
+      10_cathedral_11: 572617757
+      10_cathedral_12: 281489663
+      10_cathedral_13: 836354056
+      10_cathedral_14: 517038763
+      10_cathedral_15: 2098756023
+      10_cathedral_16: -1158403325
+      10_cathedral_17: -561666067
+      10_cathedral_18: 468614530
+      10_cathedral_19: -626326525
+      10_cathedral_2: -1221551073
+      10_cathedral_20: -1564887536
+      10_cathedral_21: -1301659536
+      10_cathedral_22: 579515314
+      10_cathedral_23: 146647855
+      10_cathedral_24: -982306888
+      10_cathedral_25: -580199833
+      10_cathedral_26: 848631120
+      10_cathedral_27: -133824535
+      10_cathedral_28: 2119272032
+      10_cathedral_29: -1728804690
+      10_cathedral_3: 2099742644
+      10_cathedral_30: 1491707713
+      10_cathedral_31: -1712383204
+      10_cathedral_32: -33317748
+      10_cathedral_33: -1497616425
+      10_cathedral_34: 2046494386
+      10_cathedral_35: 1055399069
+      10_cathedral_4: -1170914949
+      10_cathedral_5: -1244436912
+      10_cathedral_6: 1606111855
+      10_cathedral_7: -1560563172
+      10_cathedral_8: -2034103087
+      10_cathedral_9: 1768224464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,7 +11,8 @@ public class ChargerController : MonsterBasic
     [SerializeField, Tooltip("차저 방향 전환 시간 최소값")] private float minChangeDirectionTime = 0.5f;
     [SerializeField, Tooltip("차저 방향 전환 시간 최대값")] private float maxChangeDirectionTime = 1f;
     [SerializeField, Tooltip("플레이어를 감지하는 레이 길이")] private float eyeSight = 1f;
-    [SerializeField, Tooltip("레이캐스트로 플레이어를 감지할 수 있도록")] private LayerMask layerMask;
+    [SerializeField, Tooltip("플레이어 레이어")] private LayerMask playerLayerMask;
+    [SerializeField, Tooltip("벽 레이어")] private LayerMask wallLayerMask;
 
     private Vector2 moveDir = Vector2.zero;
 
@@ -63,42 +64,66 @@ public class ChargerController : MonsterBasic
     {
         if (moveDir == Vector2.zero) return;
 
+        CircleCollider2D collider = GetComponent<CircleCollider2D>();
+        float colSize = collider.radius + 0.1f;
 
-
-		// 플레이어 구분이 아직 없음
-		// 지금 상태로는 벽, 장애물을 향해서도 돌진
-		if (moveDir.x != 0)
+        // 몬스터가 Trace 상태라면
+        if (monsterState == MonsterState.Trace)
         {
-            if(Physics2D.Raycast(transform.position, Vector2.up, eyeSight, layerMask))
+            // 돌진 방향에 벽이 감지될 경우
+            if (Physics2D.Raycast(transform.position, moveDir, colSize, wallLayerMask))
             {
-                SetDashDirection(Vector2.up);
-               Debug.DrawRay(transform.position, Vector2.up);
-                return; 
-            }
-            else if(Physics2D.Raycast(transform.position, Vector2.down, eyeSight, layerMask))
-            {
-                SetDashDirection(Vector2.down);
-                return;
-            }
-        }
-        else
-        {
-            if(Physics2D.Raycast(transform.position, Vector2.right, eyeSight, layerMask))
-            {
-                SetDashDirection(Vector2.right);
-                return;
-            }
-            else if(Physics2D.Raycast(transform.position, Vector2.left, eyeSight, layerMask))
-            {
-                SetDashDirection(Vector2.left);
+                monsterState = MonsterState.Move;
+                anim.SetBool(IsDash, false);
+                changeDirectionTime = 0;
                 return;
             }
         }
 
-        if(Physics2D.Raycast(transform.position, moveDir, eyeSight, layerMask))
+        // 몬스터가 Move 상태라면
+        if (monsterState == MonsterState.Move)
         {
-            SetDashDirection(moveDir);
-            return;
+            // 몬스터의 이동 방향에서 플레이어가 감지될 경우
+            if (Physics2D.Raycast(transform.position, moveDir, eyeSight, playerLayerMask))
+            {
+                SetDashDirection(moveDir);
+                return;
+            }
+            else if (Physics2D.Raycast(transform.position, moveDir, colSize, wallLayerMask))
+            {
+                // 이동중 앞에 벽이 있으면 방향 변경
+                SetMoveDirection();
+            }
+
+            // 몬스터의 이동 방향 외의 감지 방향에서
+            // 플레이어가 감지될 경우
+            if (moveDir.x != 0)
+            {
+                if (Physics2D.Raycast(transform.position, Vector2.up, eyeSight, playerLayerMask))
+                {
+                    SetDashDirection(Vector2.up);
+                    Debug.DrawRay(transform.position, Vector2.up);
+                    return;
+                }
+                else if (Physics2D.Raycast(transform.position, Vector2.down, eyeSight, playerLayerMask))
+                {
+                    SetDashDirection(Vector2.down);
+                    return;
+                }
+            }
+            else
+            {
+                if (Physics2D.Raycast(transform.position, Vector2.right, eyeSight, playerLayerMask))
+                {
+                    SetDashDirection(Vector2.right);
+                    return;
+                }
+                else if (Physics2D.Raycast(transform.position, Vector2.left, eyeSight, playerLayerMask))
+                {
+                    SetDashDirection(Vector2.left);
+                    return;
+                }
+            }
         }
     }
 
@@ -122,15 +147,15 @@ public class ChargerController : MonsterBasic
                 moveDir = Vector2.right;
                 break;
 
-                case 1:
+            case 1:
                 moveDir = Vector2.left;
                 break;
 
-                case 2:
+            case 2:
                 moveDir = Vector2.up;
                 break;
 
-                case 3:
+            case 3:
                 moveDir = Vector2.down;
                 break;
         }
@@ -152,7 +177,7 @@ public class ChargerController : MonsterBasic
 
     void SetFlipX()
     {
-        if(moveDir.x < 0)
+        if (moveDir.x < 0)
         {
             renderer.flipX = true;
         }

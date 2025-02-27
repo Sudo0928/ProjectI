@@ -18,15 +18,15 @@ public class Item : MonoBehaviour
 
 	private void Awake()
 	{
-		collider = GetComponent<BoxCollider2D>();	
+		 
 		item = DataManager.itemInfoLoader.GetByKey(key);
 		if (item != null)
 			_sprite.sprite = GameManager.Instance.GetItemSprite(item);
 	}
 	 
-	public void SetActiveCollider(bool active) => collider.enabled = active;
+	public void SetActiveCollider(bool active) => GetComponent<BoxCollider2D>().enabled = active;
 
-	public void SetItem(ItemInfo item)
+	public void SetItem(ItemInfo item) 
 	{ 
 		this.item = item;
 		key = item.key;
