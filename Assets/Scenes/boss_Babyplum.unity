@@ -211,12 +211,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c43f9872f947c45b084183eff4f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDuration: 1
   animationType: 1
   moveDuration: 0.5
-  returnDuration: 0.5
+  returnDuration: 0
   returnDuration2: 3500
-  scaleDuration: 0.1
+  scaleDuration: 0
   maxScale: 1.2
+  fogImage: {fileID: 0}
   leftOffScreenPosition: {x: -15, y: 0, z: 0}
   rightOffScreenPosition: {x: 5000, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -770,12 +772,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c43f9872f947c45b084183eff4f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDuration: 1
   animationType: 1
   moveDuration: 0.5
-  returnDuration: 0.5
+  returnDuration: 0
   returnDuration2: 3
-  scaleDuration: 0.1
+  scaleDuration: 0
   maxScale: 1.2
+  fogImage: {fileID: 0}
   leftOffScreenPosition: {x: -15, y: 0, z: 0}
   rightOffScreenPosition: {x: 5000, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -2129,12 +2133,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c43f9872f947c45b084183eff4f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDuration: 1
   animationType: 0
   moveDuration: 0.5
-  returnDuration: 0.5
+  returnDuration: 0
   returnDuration2: 3
-  scaleDuration: 0.1
+  scaleDuration: 0
   maxScale: 1.2
+  fogImage: {fileID: 0}
   leftOffScreenPosition: {x: -5000, y: 0, z: 0}
   rightOffScreenPosition: {x: 15, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -2354,12 +2360,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c43f9872f947c45b084183eff4f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDuration: 1
   animationType: 1
   moveDuration: 0.5
-  returnDuration: 0.5
+  returnDuration: 0
   returnDuration2: 3
-  scaleDuration: 0.1
+  scaleDuration: 0
   maxScale: 1.2
+  fogImage: {fileID: 0}
   leftOffScreenPosition: {x: -15, y: 0, z: 0}
   rightOffScreenPosition: {x: 5000, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -2519,12 +2527,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c43f9872f947c45b084183eff4f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDuration: 1
   animationType: 0
   moveDuration: 0.5
-  returnDuration: 0.5
+  returnDuration: 0
   returnDuration2: 3500
-  scaleDuration: 0.1
+  scaleDuration: 0
   maxScale: 1.2
+  fogImage: {fileID: 0}
   leftOffScreenPosition: {x: -5000, y: 0, z: 0}
   rightOffScreenPosition: {x: 15, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -3539,12 +3549,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c43f9872f947c45b084183eff4f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDuration: 1
   animationType: 2
   moveDuration: 0.5
   returnDuration: 0.5
   returnDuration2: 3
   scaleDuration: 0.1
   maxScale: 1.2
+  fogImage: {fileID: 1279008661}
   leftOffScreenPosition: {x: -15, y: 0, z: 0}
   rightOffScreenPosition: {x: 15, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
@@ -5062,12 +5074,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c43f9872f947c45b084183eff4f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationDuration: 1
   animationType: 0
   moveDuration: 0.5
-  returnDuration: 0.5
+  returnDuration: 0
   returnDuration2: 3
-  scaleDuration: 0.1
+  scaleDuration: 0
   maxScale: 1.2
+  fogImage: {fileID: 0}
   leftOffScreenPosition: {x: -5000, y: 0, z: 0}
   rightOffScreenPosition: {x: 15, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
