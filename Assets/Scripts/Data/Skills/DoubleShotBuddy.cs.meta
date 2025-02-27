@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 584e01828bd89494b82ced031da3ab80
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - harlequin: {fileID: 8014280422429116337, guid: 1d1830df7b31535428dfb4d345f107b2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
