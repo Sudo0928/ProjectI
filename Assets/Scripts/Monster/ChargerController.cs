@@ -64,14 +64,14 @@ public class ChargerController : MonsterBasic
     {
         if (moveDir == Vector2.zero) return;
 
-        // 몬스터가 Trace 상태라면
-        if(monsterState == MonsterState.Trace)
-        {
-            CircleCollider2D collider = GetComponent<CircleCollider2D>();
-            float colSize = collider.radius + 0.1f;
+        CircleCollider2D collider = GetComponent<CircleCollider2D>();
+        float colSize = collider.radius + 0.1f;
 
+        // 몬스터가 Trace 상태라면
+        if (monsterState == MonsterState.Trace)
+        {
             // 돌진 방향에 벽이 감지될 경우
-            if(Physics2D.Raycast(transform.position, moveDir, colSize, wallLayerMask))
+            if (Physics2D.Raycast(transform.position, moveDir, colSize, wallLayerMask))
             {
                 monsterState = MonsterState.Move;
                 anim.SetBool(IsDash, false);
@@ -88,6 +88,11 @@ public class ChargerController : MonsterBasic
             {
                 SetDashDirection(moveDir);
                 return;
+            }
+            else if (Physics2D.Raycast(transform.position, moveDir, colSize, wallLayerMask))
+            {
+                // 이동중 앞에 벽이 있으면 방향 변경
+                SetMoveDirection();
             }
 
             // 몬스터의 이동 방향 외의 감지 방향에서
@@ -142,15 +147,15 @@ public class ChargerController : MonsterBasic
                 moveDir = Vector2.right;
                 break;
 
-                case 1:
+            case 1:
                 moveDir = Vector2.left;
                 break;
 
-                case 2:
+            case 2:
                 moveDir = Vector2.up;
                 break;
 
-                case 3:
+            case 3:
                 moveDir = Vector2.down;
                 break;
         }
@@ -172,7 +177,7 @@ public class ChargerController : MonsterBasic
 
     void SetFlipX()
     {
-        if(moveDir.x < 0)
+        if (moveDir.x < 0)
         {
             renderer.flipX = true;
         }
