@@ -94,7 +94,7 @@ public class PlayerStatUI : MonoBehaviour
         float maxHealth = playerStat.GetStat(DesignEnums.Option.MaxHeart);  // 최대 체력
         float currentHealth = playerStat.GetStat(DesignEnums.Option.CurHeart);  // 현재 체력
 
-        int cnt = (int)Mathf.Ceil(maxHealth);
+        int cnt = Mathf.RoundToInt(maxHealth / 2);
 		// 체력 UI 업데이트
 		for (int i = 1; i <= cnt; i++) 
         {

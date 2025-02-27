@@ -51,6 +51,8 @@ public class StageReward : MonoBehaviour
     {
         for (int i = 0; i < gachaPools.Count; i++)
         {
+            if (items[i].isPickUp) continue;
+
             itemTables[i].SetActive(false);
             items[i].gameObject.SetActive(false);
 		} 

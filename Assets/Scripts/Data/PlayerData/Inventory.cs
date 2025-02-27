@@ -12,9 +12,9 @@ public class Inventory
 	ItemInfo myActiveItem = null;
 
 	Stat stat = null;
-	Player player = null;
+	PlayerController player = null;
 
-	public void InitInventory(Stat stat, Player player)
+	public void InitInventory(Stat stat, PlayerController player)
 	{
 		this.stat = stat;
 		this.player = player;

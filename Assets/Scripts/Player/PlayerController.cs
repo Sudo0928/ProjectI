@@ -1,130 +1,327 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static DesignEnums;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDamagedable
 {
-    Vector2 moveDir = Vector2.zero;
-	public PlayerData playerData;
-	[SerializeField] GameObject tear;
+    private Rigidbody2D _rigidbody2D;
+    public Rigidbody2D Rigidbody2D => _rigidbody2D;
 
-	[SerializeField] SpriteRenderer head;
-	[SerializeField] SpriteRenderer body;
+    private Vector2 movementDirection = Vector2.zero;
+    public Vector2 MovementDirection { get => movementDirection; }
 
-	public Animator anim;
-	Animator bodyAnim;
-	Rigidbody2D rigid;
+    private Vector2 lookDirection = Vector2.zero;
+    public Vector2 LookDirection { get => lookDirection; }
 
-	bool isAttack = false;
-	bool isMove = false;
+    private Vector2 desiredVelocity = Vector2.zero;
+
+    private Vector2 velocity;
+
+    public Transform pickUpPivot;
+
+    [SerializeField][Range(0f, 100f)]
+    private float maxSpeed = 10f;
+
+    [SerializeField][Range(0f, 100f)]
+    private float maxAcceleration = 10f;
+
+    [SerializeField][Range(0f, 100f)]
+    private float maxSlideDistance = 0.5f;
+
+    private AnimationHandler animationHandler;
+
+    private PlayerInputAction inputActions;
+
+    private Coroutine onIdleHead = null;
+
+    private float timeSinceLastAttack = 1;
+
+    public float hp;
+
+    public float projectileDistance => stat.GetStat(Option.Range);
+    public float projectileSpeed => stat.GetStat(Option.ProjectileSpeed);
+    public float projectileSize => stat.GetStat(Option.ProjectileSize); 
+    public float attackSpeed => 1.0f / stat.GetStat(Option.AttackSpeed);
+     
+	[SerializeField] [Range(0f, 1f)]
+    private float projectileVelocityAngle = 0.2f;
+
+    private bool isAttack = false;
+
+    public PlayerUIHandler PlayerUIHandler => GetComponent<PlayerUIHandler>();
+	private Stat stat = new Stat();
+
+    public Stat Stat => stat;
+	private Inventory inventory = new Inventory();
+    public Inventory Inventory => inventory;
+
+	[SerializeField][Range(0.001f, 10f)]
+    private float maxChargingTime = 1f;
+
+    [SerializeField]
+    private bool isCharging = false;
+
+    [SerializeField]
+    private bool isParbolic = false;
+    public bool IsParbolic => isParbolic;
+
+    private float timeSincePressAttack = 0;
+    public Vector2 GetMoveDir => inputActions.Player.Move.ReadValue<Vector2>();
 
 
-	[SerializeField, Range(0f, 1f)] float sliderFactor = 0.2f;
+    [SerializeField]
+    private bool ignoreExplosions = false;
+    public bool IgnoreExplosions => ignoreExplosions;
 
+    [SerializeField]
+    private bool autoAttack = false;
 
-	private void Awake()
-	{
-		//playerData = new PlayerData(this);
+    [SerializeField]
+    private LayerMask layerMask;
 
-		bodyAnim = body.gameObject.GetComponent<Animator>();
-		rigid = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
-	}
-	void Start()
+    private bool isTakeDamge = false;
+
+    private void Awake()
     {
-        InputSystem.Instance.move.action.performed += OnMove;
-		InputSystem.Instance.space.action.performed += Action;
-	}
+        inputActions = new PlayerInputAction();
 
-	private void Update()
-	{
-		//if (moveDir.magnitude > 0) 
-		//{
-		//	var pos = transform.position; 
-		//	float speed = playerData.GetOptionValue(DesignEnums.Option.Speed);
-		//	transform.position = pos + (new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime);
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        animationHandler = GetComponent<AnimationHandler>();
 
-		//	if (isMove == false)
-		//		moveDir *= Mathf.Pow(sliderFactor, Time.deltaTime);
-		//}   
-	}
+        //    inventory.onAddItem.AddListener(() => { anim.SetTrigger("getItem")});
+        inventory.InitInventory(stat, this);
+        
+		AddInputActionsCallbacks();
+    }
 
-	void OnMove(InputAction.CallbackContext obj)
+    private void OnEnable()
     {
-		Vector2 dir = obj.ReadValue<Vector2>();
-		isMove = dir.magnitude > 0;
-		BodyAnim(dir);
+        inputActions.Enable();
+    }
 
-	}
+    private void OnDisable()
+    {
+        inputActions.Disable();
+    }
+     
+    private void Update() 
+    {
+        hp = stat.GetStat(Option.CurHeart);
 
-	void Action(InputAction.CallbackContext obj)
-	{
-		Vector2 dir = obj.ReadValue<Vector2>();
-		HeadAnim(dir);
+        movementDirection = inputActions.Player.Move.ReadValue<Vector2>();
+        if (!autoAttack) lookDirection = inputActions.Player.Attack.ReadValue<Vector2>();
 
-		var go = Instantiate<GameObject>(tear);
-		go.transform.position = transform.position;
-		go.GetComponent<TearCtrl>().InitTear(dir, 10.0f, 10.0f);
-	}
+        animationHandler.PlayMoveAnim(movementDirection);
+        animationHandler.PlayLookAnim(movementDirection);
 
-	Coroutine onIdleHead = null;
-	void HeadAnim(Vector2 dir)
-	{
-		if (dir.magnitude <= 0)
-		{
-			onIdleHead = StartCoroutine(OnIdleHead());
-			isAttack = false;
-			return;
-		}
+        desiredVelocity = movementDirection * maxSpeed;
 
-		if (onIdleHead != null)
-			StopCoroutine(onIdleHead);
+        if (timeSinceLastAttack <= attackSpeed)
+        {
+            timeSinceLastAttack += Time.deltaTime;
+        }
+
+        if (lookDirection == Vector2.zero) return;
+
+        if (isAttack || autoAttack)
+        {
+            if (isCharging)
+            {
+                animationHandler.PlayLookAnim(lookDirection);
+                animationHandler.SetChargeSpeed(maxChargingTime);
+                animationHandler.PlayerCharging(isAttack);
+                timeSincePressAttack += Time.deltaTime;
+            }
+            else
+            {
+                animationHandler.PlayLookAnim(lookDirection);
+                HandleAttackDelay();
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        AdjustVelocity();
+
+        if (autoAttack)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, projectileDistance, layerMask);
+
+            if (colliders.Length == 0)
+            {
+                lookDirection = Vector2.zero;
+                return;
+            }
+
+            Vector3 direction = colliders[0].transform.position - transform.position;
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            Debug.Log(angle);
+
+            if (angle < 45 && angle > -45) lookDirection = Vector2.right;
+            else if (angle > 45 && angle < 135) lookDirection = Vector2.up;
+            else if (angle > 135 || angle < -135) lookDirection = Vector2.left;
+            else if (angle > -135 && angle < -45) lookDirection = Vector2.down;
+        }
+        
+    }
+
+    #region Main Methods
+
+    private void HandleAttackDelay()
+    {
+        if (timeSinceLastAttack > attackSpeed)
+        {
+            timeSinceLastAttack = 0;
+            Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        PlayerAttackEvent playerAttackEvent;
+        playerAttackEvent = new PlayerAttackEvent(this, lookDirection + _rigidbody2D.velocity * 0.2f);
+        EventManager.DispatchEvent(playerAttackEvent);
+
+        animationHandler.PlayAttackAnim();
+    }
+
+    private int GetMinusSign(float value)
+    {
+        if (value < 0) return -1;
+        else return 1;
+    }
+
+    private void AdjustVelocity()
+    {
+        velocity = _rigidbody2D.velocity;
+        float maxSpeedChange = maxAcceleration * Time.fixedDeltaTime;
+
+        velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
+        velocity.y = Mathf.MoveTowards(velocity.y, desiredVelocity.y, maxSpeedChange);
+
+        if(desiredVelocity == Vector2.zero)
+        {
+            float maxSlideSpeed = Mathf.Sqrt(2f * maxAcceleration * maxSlideDistance);
+            velocity = Vector2.ClampMagnitude(velocity, maxSlideSpeed);
+        }
+
+        _rigidbody2D.velocity = velocity;
+    }
+
+    public void AddItem(ItemInfo item)
+    {
+        inventory.AddItem(item);
+        animationHandler.PlayPickUpAnim(true);
+
+        Action action = () => animationHandler.PlayPickUpAnim(false);
+
+        GameManager.Instance.SetTimer(action, 1f);
+    }
+    
+
+    #endregion
+
+    #region Reusable Methods
+
+    private void AddInputActionsCallbacks()
+    {
+        inputActions.Player.Attack.started += OnAttack;
+        inputActions.Player.Attack.canceled += OffAttack;
+        inputActions.Player.Move.performed += OnMove;
+
+        EventManager.RegisterListener<TearHitEntityEvent>(TakeDamage);
+        EventManager.RegisterListener<EnemyAttackEvent>(TakeDamage);
+        
+    }
+
+    private void RemoveInputActionsCallbacks()
+    {
+        inputActions.Player.Attack.started -= OnAttack;
+        inputActions.Player.Attack.canceled -= OffAttack;
+        inputActions.Player.Move.performed -= OnMove;
+
+        EventManager.UnregisterListener<TearHitEntityEvent>(TakeDamage);
+        EventManager.UnregisterListener<EnemyAttackEvent>(TakeDamage);
+    }
+
+    //#endregion
+
+    //#region Input Methods
+
+    private void OnAttack(InputAction.CallbackContext context)
+    {
+        isAttack = true;
+        timeSincePressAttack = 0;
+    }
+
+    private void OffAttack(InputAction.CallbackContext context)
+    {
+        bool upPress = Keyboard.current.upArrowKey.isPressed;
+        bool downPress = Keyboard.current.downArrowKey.isPressed;
+        bool LeftPress = Keyboard.current.leftArrowKey.isPressed;
+        bool RightPress = Keyboard.current.rightArrowKey.isPressed;
+
+        if (upPress || downPress || LeftPress || RightPress) return;
+
+        isAttack = false;
+        animationHandler.PlayerCharging(isAttack);
+        if (timeSincePressAttack > maxChargingTime)
+        {
+            Attack();
+            timeSincePressAttack = 0;
+        }
+    }
+
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        if (movementDirection != Vector2.zero) return;
 
 
-		isAttack = true;
-		anim.SetBool("isMove", true);
+    }
 
-		head.flipX = dir.x < 0;
-		anim.SetFloat("dirX", Math.Abs(dir.x));
-		anim.SetFloat("dirY", dir.y);
-	}
-	void BodyAnim(Vector2 dir)
-	{
-		bodyAnim.SetBool("isMove", isMove);
+    public void TakeDamage(TearHitEntityEvent e)
+    {
+        if (e.entity.gameObject != gameObject) return;
 
-		if (dir.magnitude > 0)
-		{
-			moveDir = dir;
-			body.flipX = moveDir.x < 0;
+        TakeDamage(e.tear.Damage);
+    }
 
-			bodyAnim.SetFloat("dirX", Math.Abs(moveDir.x));
-			bodyAnim.SetFloat("dirY", Math.Abs(moveDir.y));
-		}
+    public void TakeDamage(EnemyAttackEvent e)
+    {
+        if (e.entity.gameObject != gameObject) return;
 
+        TakeDamage(e.damage);
+    }
 
-		if (!isAttack)
-		{
-			head.flipX = moveDir.x < 0;
-			anim.SetFloat("dirX", Math.Abs(moveDir.x));
-			anim.SetBool("isMove", isMove);
-			anim.SetFloat("dirY", moveDir.y);
-		}
-	}
-	
-	IEnumerator OnIdleHead()
-	{
-		yield return new WaitForSeconds(0.5f);
-		anim.SetFloat("dirX", -1);
-		anim.SetFloat("dirY", -1);
-	}
+    public bool TakeDamage(float damage)
+    {
+        if (isTakeDamge) return false;
 
+        isTakeDamge = true;
+
+        Action action = () => isTakeDamge = false;
+        GameManager.Instance.SetTimer(action, 0.5f);
+
+        animationHandler.PlayTakeDamageAnim();
+        Debug.Log("Damaged");
+        stat.AddStat(Option.CurHeart, -damage); 
+        return true;
+    } 
+
+    public bool TakeBoomDamage(float damage)
+    {
+        if (ignoreExplosions) return false;
+        animationHandler.PlayTakeDamageAnim();
+		stat.AddStat(Option.CurHeart, -damage);
+		Debug.Log("Boomb");
+        return true;
+    }
+
+    #endregion
 }
-
-
-// 1. 플레이어가 공격 버튼을 누를 때, 어떤 투사체를 사용할지 불러오기
-// 2. 차징 Event 실행
-// 3. 차징 종료 후, 없다면 생략 후, 공격 Event 실행,
-// 4. 투사체가 벽이나 적에 닿으면 종료 Event가 실행

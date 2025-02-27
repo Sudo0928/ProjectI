@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5092723830654806952}
   - component: {fileID: 7318397791016889955}
   - component: {fileID: 1402777976428713742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NewPooter
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterState: 0
-  monsterMaxHP: 5
-  monsterAtk: 1
+  monsterMaxHP: 10
+  monsterAtk: 0.5
   onDie:
     m_PersistentCalls:
       m_Calls: []
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8995944558623520010}
   - component: {fileID: 2486320236089334908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 6486996909460108088}
   - component: {fileID: 1843758356364342781}
   - component: {fileID: 3721199306023525042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PooterMainRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

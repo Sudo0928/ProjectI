@@ -16,7 +16,7 @@ public class BaseBrimstone : MonoBehaviour
 
     private void Attack(PlayerAttackEvent e)
     {
-        Player player = e.player;
+        PlayerController player = e.player;
         //Vector2 direction = player.LookDirection
     }
 }

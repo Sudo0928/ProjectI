@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Pool;
+using static DesignEnums;
 
 public class DoubleShot: SpecialAbility
 {
@@ -12,7 +14,7 @@ public class DoubleShot: SpecialAbility
         EventManager.UnregisterListener<PlayerAttackEvent>(Attack);
     }
 
-    public override void OnAbility(Player player)
+    public override void OnAbility(PlayerController player)
     {
         EventManager.RegisterListener<PlayerAttackEvent>(Attack, 1);
     }
@@ -38,7 +40,7 @@ public class DoubleShot: SpecialAbility
             Vector2 direction = new Vector2(randomX, randomY).normalized;
 
             BaseTear tear = Instantiate(GameManager.Instance.tear, e.player.transform.position, Quaternion.identity);
-            tear.Init(e.player.gameObject, e.player.projectileSpeed, e.player.projectileDistance, e.player.projectileSize, direction, e.player.IsParbolic);
+            tear.Init(e.player.gameObject, e.player.Stat.GetStat(Option.Attack), e.player.projectileSpeed, e.player.projectileDistance, e.player.projectileSize, direction, e.player.IsParbolic);
         }
     }
 }

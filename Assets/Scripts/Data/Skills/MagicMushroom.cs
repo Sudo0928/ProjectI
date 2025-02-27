@@ -5,7 +5,7 @@ using static DesignEnums;
 
 public class MagicMushroom : SpecialAbility
 {
-	public override void OnAbility(Player player)
+	public override void OnAbility(PlayerController player)
 	{
 		player.Stat.AddStat(Option.CurHeart, player.Stat.GetStat(Option.MaxHeart));
 	}  

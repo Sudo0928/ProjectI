@@ -5,7 +5,7 @@ using UnityEngine;
 public class DryBaby : SpecialAbility
 {
 	[SerializeField] GameObject dryBaby;
-	public override void OnAbility(Player player)
+	public override void OnAbility(PlayerController player)
 	{
 		var go = Instantiate<GameObject>(dryBaby);
 		go.GetComponent<Familiar_DryBaby>().player = player;

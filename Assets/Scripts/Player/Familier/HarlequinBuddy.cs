@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static DesignEnums;
 
 public class HarlequinBuddy : MonoBehaviour
 {
     [SerializeField] GameObject tear;
-	public Player player { private get; set; }
+	public PlayerController player { private get; set; }
 	// Start is called before the first frame update
 	void Update()
     {
@@ -22,7 +23,7 @@ public class HarlequinBuddy : MonoBehaviour
 
 	public void Attack(PlayerAttackEvent e)
 	{
-		Player player = e.player;
+		PlayerController player = e.player;
 
 		Vector2 velocity = player.Rigidbody2D.velocity;
 
@@ -35,7 +36,8 @@ public class HarlequinBuddy : MonoBehaviour
 
 			gameObject.GetComponent<BaseTear>().Init(
 				player.gameObject,
-				5.0f, // 속도
+                e.player.Stat.GetStat(Option.Attack) * 0.5f,
+                5.0f, // 속도
 				6.0f, // 거리
 				0.5f, // 사이즈
 				dirs[i],

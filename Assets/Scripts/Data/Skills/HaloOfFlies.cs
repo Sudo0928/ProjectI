@@ -8,7 +8,7 @@ public class HaloOfFlies : SpecialAbility
     [SerializeField] GameObject fliesPrefab;
 	GameObject files;
 
-	public override void OnAbility(Player player)
+	public override void OnAbility(PlayerController player)
 	{
 		files = GameManager.Instance.Instantiate<GameObject>(fliesPrefab);
 		files.transform.SetParent(player.gameObject.transform, false);
