@@ -35,6 +35,78 @@
       "Name": "풀 힐",
       "ComponentName": "FullHeal",
       "Description": "모든 체력 회복"
+    },
+    {
+      "key": 7,
+      "Name": "말라빠진 아기",
+      "ComponentName": "DryBaby",
+      "Description": "투사체 공격을 방어하는 패밀리어"
+    },
+    {
+      "key": 8,
+      "Name": "악마친구",
+      "ComponentName": "EvilFriend",
+      "Description": "캐릭터가 공격할 때 같이 공격하는 패밀리어"
+    },
+    {
+      "key": 9,
+      "Name": "더블샷친구",
+      "ComponentName": "DoubleShotBuddy",
+      "Description": "캐릭터가 공격할 때 눈물 2개를 V자 궤도로 발사하는 패밀리어"
+    },
+    {
+      "key": 10,
+      "Name": "어둠의 친구",
+      "ComponentName": "DarkFriend",
+      "Description": "캐릭터를 따라다니며 캐릭터와 같이 공격하는 패밀리어"
+    },
+    {
+      "key": 11,
+      "Name": "막역한친구",
+      "ComponentName": "SwornFriend",
+      "Description": "캐릭터가 공격할때, 느린속도의 유도 눈물을 발사하는 패밀리어"
+    },
+    {
+      "key": 12,
+      "Name": "갈라지는눈물",
+      "ComponentName": "BurstingShots",
+      "Description": "눈물이 지형물이나 적에게 닿으면 4갈래로 갈라진다"
+    },
+    {
+      "key": 13,
+      "Name": "쿼드 샷",
+      "ComponentName": "Quad Shot",
+      "Description": "눈이 2개 더 생기고, 모든 눈에서 눈물을 발사한다"
+    },
+    {
+      "key": 14,
+      "Name": "구토제",
+      "ComponentName": "IPecac",
+      "Description": "눈물이 적, 벽에 닿으면 주변 적에게 중독 상태를 주는 폭탄이 됩니다"
+    },
+    {
+      "key": 15,
+      "Name": "더블샷",
+      "ComponentName": "DoubleShot",
+      "Description": "캐릭터가 눈물을 정면으로 2발씩 발사한다"
+    },
+    {
+      "key": 16,
+      "Name": "엄마의 식칼",
+      "ComponentName": "MomsKnife",
+      "Description": "캐릭터가 식칼을 항상 소지하게 되며 식칼을 부메랑 처럼 사용한다"
+    },
+    {
+      "key": 17,
+      "Name": "주사위",
+      "ComponentName": "Dice6",
+      "Description": "사용시 방 안의 모든 아이템을 다시 생성한다"
+    },
+    {
+      "key": 18,
+      "Name": "똥",
+      "ComponentName": "Plop",
+      "Description": "캐릭터가 서 있는 자리에 똥을 싸면서 주위의 적을 밀쳐낸다"
     }
   ]
 }

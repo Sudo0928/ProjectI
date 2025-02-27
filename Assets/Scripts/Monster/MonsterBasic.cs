@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum MonsterState
 {
@@ -14,6 +15,7 @@ public enum MonsterState
 public class MonsterBasic : MonoBehaviour
 {
     // 몬스터 상태
+   
     [SerializeField] protected MonsterState monsterState = MonsterState.Idle;
 
     protected Rigidbody2D rigid;
@@ -25,6 +27,7 @@ public class MonsterBasic : MonoBehaviour
     protected int monsterCurrentHP = 0;
     [SerializeField, Tooltip("몬스터 공격력")] protected int monsterAtk = 1;
 
+    public UnityEvent onDie = new UnityEvent();
     protected void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -35,9 +38,22 @@ public class MonsterBasic : MonoBehaviour
     {
         monsterCurrentHP = monsterMaxHP;
     }
-
-    protected void GetDamage(int _damage)
+     
+    public void GetDamage(int _damage)
     {
-
+        monsterCurrentHP -= _damage;
+        if (monsterCurrentHP <= 0)
+        {
+            onDie?.Invoke(); 
+            gameObject.SetActive(false);
+        }
     }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag("Tear"))
+        {
+            GetDamage(1);
+        }
+	}
 }

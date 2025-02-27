@@ -7,14 +7,27 @@ using static DesignEnums;
 public class Inventory
 {
 	HashSet<SpecialAbility> specialAbilitys = new HashSet<SpecialAbility>();
-	Dictionary<Option, int> myItems = new Dictionary<Option, int>();
+	Dictionary<ItemInfo, int> myItems = new Dictionary<ItemInfo, int>();
 	public UnityEvent onAddItem = new UnityEvent();
-	 
-	public Stat stat { private get; set; }
+	ItemInfo myActiveItem = null;
+
+	Stat stat = null;
+	Player player = null;
+
+	public void InitInventory(Stat stat, Player player)
+	{
+		this.stat = stat;
+		this.player = player;
+	}
 
 	public void AddItem(ItemInfo item)
 	{
 		int size = item.OptionValues.Count;
+		if (!myItems.ContainsKey(item))
+			myItems.Add(item, 0);
+
+		myItems[item] += 1;
+
 		for (int i = 0; i < size; i++)
 		{
 			int idx = item.AvailableOptions[i];
@@ -22,13 +35,7 @@ public class Inventory
 			var target = DataManager.itemOptionLoader.GetByKey(idx);
 
 			if (target != null)
-			{
 				stat.AddStat(target.Name, value);
-				if (myItems.ContainsKey(target.Name))
-					myItems[target.Name] += 1;
-				else
-					myItems.Add(target.Name, 1);
-			} 
 		}
 
 		foreach (int idx in item.SpecialOptions)
@@ -39,10 +46,22 @@ public class Inventory
 				var skill = DataManager.specialAbilityData.GetSpecialAbility(sp.ComponentName);
 				if (skill != null)
 				{
-					//skill.OnAbility(playerController); 
+					skill.OnAbility(player);  
 					specialAbilitys.Add(skill);
 				}
 			}
+		}
+
+		// 액티브 아이템 이라면
+		if (item.Gauge > 0)
+		{
+			if (myActiveItem != null)
+				myItems.Remove(myActiveItem);
+
+			myActiveItem = item;
+			player.PlayerUIHandler.StatUI.UpdateActiveItem(myActiveItem);
+			stat.MaxGauge = item.Gauge;
+			stat.CurGauge = item.Gauge;
 		}
 	}
 
@@ -57,9 +76,9 @@ public class Inventory
 
 			stat.AddStat(target.Name, -value);
 
-			myItems[target.Name] -= 1;
-			if (myItems[target.Name] == 0)
-				myItems.Remove(target.Name); 
+			myItems[item] -= 1; 
+			if (myItems[item] == 0)
+				myItems.Remove(item); 
 		}
 	}
 

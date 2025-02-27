@@ -108,10 +108,9 @@ public class ItemPreviewUI : MonoBehaviour
 
 			slot = slots[idx++];
 			slot.SetActive(true);
-			slot.transform.SetParent(parent.transform);
+		//	slot.transform.SetParent(parent.transform);
 
-			name = slot.transform.Find("ItemName");
-			name.GetComponent<Text>().text = " - " +  string.Format(op.Description, value);
+			slot.GetComponent<Text>().text = " - " +  string.Format(op.Description, value);
 		}
 
 		for (int i = 0; i < item.SpecialOptions.Count; i++)
@@ -124,10 +123,10 @@ public class ItemPreviewUI : MonoBehaviour
 
 			slot = slots[idx++];
 			slot.SetActive(true);
-			slot.transform.SetParent(parent.transform);
+			//slot.transform.SetParent(parent.transform); 
 
-			name = slot.transform.Find("ItemName");
-			name.GetComponent<Text>().text =  " - " + sa.Description;
+		//	name = slot.transform.Find("ItemName");
+			slot.GetComponent<Text>().text =  " - " + sa.Description;
 		}
 
 		for (int i = idx; i < slots.Count; i++)

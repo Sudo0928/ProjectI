@@ -23,7 +23,7 @@ public class RoomManager : MonoBehaviour
 	private void Start()
 	{
 		if (isStartRoom == false)
-			GameManager.Instance.SetTimer(()=>gameObject.SetActive(false), 0.1f);
+			GameManager.Instance.SetTimer(()=>gameObject.SetActive(false), 0.3f);
 	}  
 
 	public void EnterRoom()
@@ -52,11 +52,11 @@ public class RoomManager : MonoBehaviour
 			// 몬스터가 죽을 때 호출되는 Event에 monsterCnt를  -1
 			// monster Cnt 가 0이 될 때, SpawnItem 함수 실행
 
-			collision.GetComponent<TestMonster>().onDie.AddListener(() => 
+			collision.GetComponent<MonsterBasic>().onDie.AddListener(() => 
 			{
 				monsterCnt--;
 				if (monsterCnt == 0)
-					ClearRoom();
+					ClearRoom(); 
 			});
 		}
 	}

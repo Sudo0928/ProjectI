@@ -59,8 +59,8 @@ public class Player : MonoBehaviour
     private float projectileVelocityAngle = 0.2f;
 
     private bool isAttack = false;
-    private PlayerUIHandler playerUIHandler;
-    public PlayerUIHandler PlayerUIHandler => playerUIHandler;
+
+    public PlayerUIHandler PlayerUIHandler => GetComponent<PlayerUIHandler>();
 	private Stat stat = new Stat();
     public Stat Stat => stat;
 	private Inventory inventory = new Inventory();
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
         animationHandler = GetComponent<AnimationHandler>();
 
         //    inventory.onAddItem.AddListener(() => { anim.SetTrigger("getItem")});
-        inventory.stat = stat;
+        inventory.InitInventory(stat, this);
         
 		AddInputActionsCallbacks();
     }

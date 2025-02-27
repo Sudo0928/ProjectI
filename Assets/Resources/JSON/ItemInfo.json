@@ -1,23 +1,114 @@
 {
   "Items": [
     {
-      "key": 1004,
-      "Name": "크리켓의 머리",
-      "Grade": 4,
+      "key": 1009,
+      "Name": "스카톨",
+      "Grade": 0,
       "AvailableOptions": [
-        1,
-        2
+        0
       ],
       "OptionValues": [
-        0.5,
-        1.5
+        0
+      ],
+      "SpecialOptions": [
+        2
+      ],
+      "Gauge": 0,
+      "Description": "똥을 머리에 쓴다.",
+      "Massage": "파리 사랑",
+      "Image": "collectibles_009_skatole"
+    },
+    {
+      "key": 1036,
+      "Name": "똥",
+      "Grade": 0,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        18
+      ],
+      "Gauge": 1,
+      "Description": "캐릭터가 서 있는 자리에 똥을 싸면서 주위의 적을 밀쳐낸다",
+      "Massage": "뿌직!",
+      "Image": "collectibles_036_thepoop"
+    },
+    {
+      "key": 1008,
+      "Name": "보비 형",
+      "Grade": 1,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        1
+      ],
+      "Gauge": 0,
+      "Description": "캐릭터가 공격할 때\u00A0눈물을 같이 초당 2번 발사하는 패밀리어",
+      "Massage": "영원한 친구",
+      "Image": "collectibles_008_brotherbobby"
+    },
+    {
+      "key": 1025,
+      "Name": "아침밥",
+      "Grade": 1,
+      "AvailableOptions": [
+        9
+      ],
+      "OptionValues": [
+        1
       ],
       "SpecialOptions": [
         0
       ],
-      "Description": "공격력 증가",
-      "Massage": "공격력 증가",
-      "Image": "collectibles_004_cricketshead"
+      "Gauge": 0,
+      "Description": "체력 증가",
+      "Massage": "체력 증가",
+      "Image": "collectibles_025_breakfast"
+    },
+    {
+      "key": 1129,
+      "Name": "돼지기름",
+      "Grade": 1,
+      "AvailableOptions": [
+        10,
+        8
+      ],
+      "OptionValues": [
+        2,
+        0.2
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "체력 증가",
+      "Massage": "체력, 이동속도 증가",
+      "Image": "collectibles_129_bucketoflard"
+    },
+    {
+      "key": 1167,
+      "Name": "할리퀸 아기",
+      "Grade": 1,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        9
+      ],
+      "Gauge": 0,
+      "Description": "캐릭터와 같이 공격하는 패밀리어가 생긴다",
+      "Massage": "더블 샷 친구",
+      "Image": "collectibles_167_harlequinbaby"
     },
     {
       "key": 1005,
@@ -38,6 +129,7 @@
       "SpecialOptions": [
         0
       ],
+      "Gauge": 0,
       "Description": "눈물이 부메랑처럼 되돌아온다.",
       "Massage": "부메랑 공격",
       "Image": "collectibles_005_myreflection"
@@ -59,60 +151,10 @@
       "SpecialOptions": [
         0
       ],
-      "Description": "캐릭터의 눈물 색이 노래지며 눈물 위치가 아래로 바뀌어서 오줌을 싸는 것처럼 보이게 된다.\r\n사거리가 극도로 짧아지고 눈물이 나가는 위치도 낮아지는 특성상 함정 조합이 상당히 많다.",
+      "Gauge": 0,
+      "Description": "캐릭터의 눈물 색이 노래지며 사거리가 극도로 짧아진다",
       "Massage": "공격 속도 증가, 사거리 감소",
       "Image": "collectibles_006_numberone"
-    },
-    {
-      "key": 1007,
-      "Name": "순교자의 피",
-      "Grade": 3,
-      "AvailableOptions": [
-        1
-      ],
-      "OptionValues": [
-        1
-      ],
-      "SpecialOptions": [
-        0
-      ],
-      "Description": "눈물 색깔을 빨간색으로 바꾼다.",
-      "Massage": "공격력 증가",
-      "Image": "collectibles_007_bloodofthemartyr"
-    },
-    {
-      "key": 1008,
-      "Name": "보비 형",
-      "Grade": 1,
-      "AvailableOptions": [
-        0
-      ],
-      "OptionValues": [
-        0
-      ],
-      "SpecialOptions": [
-        1
-      ],
-      "Description": "캐릭터를 따라다니면서 캐릭터가 공격할 때\u00A0공격력 3.5의 눈물을 같이 초당 2번 발사하는 패밀리어가 생긴다.",
-      "Massage": "영원한 친구",
-      "Image": "collectibles_008_brotherbobby"
-    },
-    {
-      "key": 1009,
-      "Name": "스카톨",
-      "Grade": 0,
-      "AvailableOptions": [
-        0
-      ],
-      "OptionValues": [
-        0
-      ],
-      "SpecialOptions": [
-        2
-      ],
-      "Description": "똥을 머리에 쓴다. 아이템 획득 이후 적으로 나오는 파리들이 대부분 중립 또는 친화적으로 변한다.",
-      "Massage": "파리 사랑",
-      "Image": "collectibles_009_skatole"
     },
     {
       "key": 1010,
@@ -127,9 +169,282 @@
       "SpecialOptions": [
         3
       ],
-      "Description": "검은 파리 두 마리가 캐릭터 주위를 맴돌며 적들의 발사체를 막아준다.",
+      "Gauge": 0,
+      "Description": "파리 두 마리가 적들의 발사체를 막아준다.",
       "Massage": "투사체 방어",
       "Image": "collectibles_010_haloofflies"
+    },
+    {
+      "key": 1013,
+      "Name": "바이러스",
+      "Grade": 2,
+      "AvailableOptions": [
+        8
+      ],
+      "OptionValues": [
+        0.2
+      ],
+      "SpecialOptions": [
+        5
+      ],
+      "Gauge": 0,
+      "Description": "캐릭터와 접촉한 적에게 틱당 24, 초당 48의 접촉 피해와 함께\u00A0중독\u00A0상태이상을 건다 ",
+      "Massage": "독성 \u002B 이동 속도 증가",
+      "Image": "collectibles_013_thevirus"
+    },
+    {
+      "key": 1428,
+      "Name": "잠옷",
+      "Grade": 2,
+      "AvailableOptions": [
+        14
+      ],
+      "OptionValues": [
+        4
+      ],
+      "SpecialOptions": [
+        6
+      ],
+      "Gauge": 0,
+      "Description": "소울하트, 공격 속도 증가",
+      "Massage": "소울하트, 공격 속도 증가",
+      "Image": "collectibles_428_pjs"
+    },
+    {
+      "key": 1275,
+      "Name": "작은 유황불",
+      "Grade": 2,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        8
+      ],
+      "Gauge": 0,
+      "Description": "캐릭터와 같이 공격하는 패밀리어가 생긴다",
+      "Massage": "악마 친구",
+      "Image": "collectibles_275_lilbrimstone"
+    },
+    {
+      "key": 1330,
+      "Name": "두유",
+      "Grade": 2,
+      "AvailableOptions": [
+        2,
+        3,
+        6
+      ],
+      "OptionValues": [
+        0.2,
+        5.5,
+        -0.3
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "공격력 감소 \u002B 공격속도 대폭 상승",
+      "Massage": "공격력 감소, 공격속도 증가",
+      "Image": "collectibles_330_soymilk"
+    },
+    {
+      "key": 1007,
+      "Name": "순교자의 피",
+      "Grade": 3,
+      "AvailableOptions": [
+        1
+      ],
+      "OptionValues": [
+        1
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "눈물 색깔을 빨간색으로 바꾼다.",
+      "Massage": "공격력 증가",
+      "Image": "collectibles_007_bloodofthemartyr"
+    },
+    {
+      "key": 1051,
+      "Name": "오망성",
+      "Grade": 3,
+      "AvailableOptions": [
+        1,
+        10,
+        11
+      ],
+      "OptionValues": [
+        1,
+        10,
+        10
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "악마 방/천사 방의 출현 확률을 10% 증가시킨다.",
+      "Massage": "공격력 증가",
+      "Image": "collectibles_051_pentagram"
+    },
+    {
+      "key": 1080,
+      "Name": "계약",
+      "Grade": 3,
+      "AvailableOptions": [
+        12,
+        1,
+        3
+      ],
+      "OptionValues": [
+        2,
+        0.5,
+        0.7
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "공격력과 공격 속도 증가",
+      "Massage": "공격력과 공격 속도 증가",
+      "Image": "collectibles_080_thepact"
+    },
+    {
+      "key": 1109,
+      "Name": "돈의힘",
+      "Grade": 3,
+      "AvailableOptions": [
+        13
+      ],
+      "OptionValues": [
+        0.04
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "보유한 코인당 공격력 증가",
+      "Massage": "$$$ = 공격력",
+      "Image": "collectibles_109_moneyispower"
+    },
+    {
+      "key": 1165,
+      "Name": "아홉 가닥 채찍",
+      "Grade": 3,
+      "AvailableOptions": [
+        1,
+        7
+      ],
+      "OptionValues": [
+        1,
+        0.23
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "투사체 속도, 공격력 증가",
+      "Massage": "투사체 속도, 공격력 증가",
+      "Image": "collectibles_165_catoninetails"
+    },
+    {
+      "key": 1265,
+      "Name": "말라빠진 아기",
+      "Grade": 3,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        7
+      ],
+      "Gauge": 0,
+      "Description": "투사체를 방어하는 패밀리어가 생긴다",
+      "Massage": "불멸의 친구",
+      "Image": "collectibles_265_drybaby"
+    },
+    {
+      "key": 1390,
+      "Name": "세라핌",
+      "Grade": 3,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        11
+      ],
+      "Gauge": 0,
+      "Description": "캐릭터와 같이 공격하는 패밀리어가 생긴다 ",
+      "Massage": "막역한 친구",
+      "Image": "collectibles_390_seraphim"
+    },
+    {
+      "key": 1224,
+      "Name": "크리켓의 몸뚱이",
+      "Grade": 3,
+      "AvailableOptions": [
+        3,
+        5,
+        6
+      ],
+      "OptionValues": [
+        0.5,
+        0.8,
+        0.1
+      ],
+      "SpecialOptions": [
+        12
+      ],
+      "Gauge": 0,
+      "Description": "눈물이 지형이나 적에게 닿으면 4갈래로 나뉘어짐",
+      "Massage": "갈라지는 눈물 \u002B 공격 속도 증가",
+      "Image": "collectibles_224_cricketsbody"
+    },
+    {
+      "key": 1153,
+      "Name": "돌연변이 거미",
+      "Grade": 3,
+      "AvailableOptions": [
+        3
+      ],
+      "OptionValues": [
+        0.42
+      ],
+      "SpecialOptions": [
+        13
+      ],
+      "Gauge": 0,
+      "Description": "눈이 두 개 더 생긴다. 캐릭터의 모든 눈에서 눈물을 발사한다.",
+      "Massage": "쿼드 샷",
+      "Image": "collectibles_153_mutantspider"
+    },
+    {
+      "key": 1004,
+      "Name": "크리켓의 머리",
+      "Grade": 4,
+      "AvailableOptions": [
+        1,
+        2
+      ],
+      "OptionValues": [
+        0.5,
+        1.5
+      ],
+      "SpecialOptions": [
+        0
+      ],
+      "Gauge": 0,
+      "Description": "공격력 증가",
+      "Massage": "공격력 증가",
+      "Image": "collectibles_004_cricketshead"
     },
     {
       "key": 1012,
@@ -152,157 +467,88 @@
       "SpecialOptions": [
         4
       ],
-      "Description": "캐릭터의 크기가 한 단계 커진다. 캐릭터의 크기가 커져도 피격 판정은 커지지 않는다.",
+      "Gauge": 0,
+      "Description": "캐릭터의 크기가 한 단계 커진다.",
       "Massage": "모든 능력치 증가!",
       "Image": "collectibles_012_magicmushroom"
     },
     {
-      "key": 1013,
-      "Name": "바이러스",
-      "Grade": 2,
+      "key": 1360,
+      "Name": "몽마",
+      "Grade": 4,
       "AvailableOptions": [
-        8
-      ],
-      "OptionValues": [
-        0.2
-      ],
-      "SpecialOptions": [
-        5
-      ],
-      "Description": "캐릭터와 접촉한 적에게 틱당 24, 초당 48의 접촉 피해와 함께\u00A0중독\u00A0상태이상을 건다.",
-      "Massage": "독성 \u002B 이동 속도 증가",
-      "Image": "collectibles_013_thevirus"
-    },
-    {
-      "key": 1025,
-      "Name": "아침밥",
-      "Grade": 1,
-      "AvailableOptions": [
-        9
-      ],
-      "OptionValues": [
-        1
-      ],
-      "SpecialOptions": [
         0
       ],
-      "Description": "체력 증가",
-      "Massage": "체력 증가",
-      "Image": "collectibles_025_breakfast"
-    },
-    {
-      "key": 1051,
-      "Name": "오망성",
-      "Grade": 3,
-      "AvailableOptions": [
-        1,
-        10,
-        11
-      ],
       "OptionValues": [
-        1,
-        10,
+        0
+      ],
+      "SpecialOptions": [
         10
       ],
-      "SpecialOptions": [
-        0
-      ],
-      "Description": "악마 방/천사 방의 출현 확률을 10% 증가시킨다.",
-      "Massage": "공격력 증가",
-      "Image": "collectibles_051_pentagram"
+      "Gauge": 0,
+      "Description": "캐릭터와 같이 공격하는 패밀리어가 생긴다",
+      "Massage": "어둠의 친구",
+      "Image": "collectibles_360_incubus"
     },
     {
-      "key": 1080,
-      "Name": "계약",
-      "Grade": 3,
-      "AvailableOptions": [
-        12,
-        1,
-        3
-      ],
-      "OptionValues": [
-        2,
-        0.5,
-        0.7
-      ],
-      "SpecialOptions": [
-        0
-      ],
-      "Description": "공격력과 공격 속도 증가",
-      "Massage": "공격력과 공격 속도 증가",
-      "Image": "collectibles_080_thepact"
-    },
-    {
-      "key": 1109,
-      "Name": "돈의힘",
-      "Grade": 3,
-      "AvailableOptions": [
-        13
-      ],
-      "OptionValues": [
-        0.04
-      ],
-      "SpecialOptions": [
-        0
-      ],
-      "Description": "보유한 코인당 공격력 증가",
-      "Massage": "$$$ = 공격력",
-      "Image": "collectibles_109_moneyispower"
-    },
-    {
-      "key": 1129,
-      "Name": "돼지기름",
-      "Grade": 1,
-      "AvailableOptions": [
-        9,
-        8
-      ],
-      "OptionValues": [
-        2,
-        0.2
-      ],
-      "SpecialOptions": [
-        0
-      ],
-      "Description": "체력 증가",
-      "Massage": "체력, 이동속도 증가",
-      "Image": "collectibles_129_bucketoflard"
-    },
-    {
-      "key": 1165,
-      "Name": "아홉 가닥 채찍",
-      "Grade": 3,
+      "key": 1149,
+      "Name": "구토제",
+      "Grade": 4,
       "AvailableOptions": [
         1,
+        3,
+        4,
         7
       ],
       "OptionValues": [
-        1,
-        0.23
+        40,
+        0.33,
+        -0.1,
+        -0.2
       ],
       "SpecialOptions": [
         0
       ],
-      "Description": "투사체 속도, 공격력 증가",
-      "Massage": "투사체 속도, 공격력 증가",
-      "Image": "collectibles_165_catoninetails"
+      "Gauge": 0,
+      "Description": "눈물이 적, 벽에 닿으면 주변 적에게 중독 상태를 주는 폭탄이 됩니다",
+      "Massage": "폭탄 눈물",
+      "Image": "collectibles_149_ipecac"
     },
     {
-      "key": 1428,
-      "Name": "잠옷",
-      "Grade": 2,
+      "key": 1114,
+      "Name": "엄마의 식칼",
+      "Grade": 4,
       "AvailableOptions": [
-        14
+        0
       ],
       "OptionValues": [
-        4
+        0
       ],
       "SpecialOptions": [
-        6
+        16
       ],
-      "Description": "소울하트, 공격 속도 증가",
-      "Massage": "소울하트, 공격 속도 증가",
-      "Image": "collectibles_428_pjs"
+      "Gauge": 0,
+      "Description": "캐릭터가 식칼을 항상 소지하게 되며 식칼을 부메랑 처럼 사용한다",
+      "Massage": "찌르자 찌르자 찌르자",
+      "Image": "collectibles_114_momsknife"
+    },
+    {
+      "key": 1105,
+      "Name": "6면 주사위",
+      "Grade": 4,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        17
+      ],
+      "Gauge": 6,
+      "Description": "사용 시 방 안의 모든 아이템을 다시 생성한다",
+      "Massage": "운명을 바꾸는 능력",
+      "Image": "collectibles_105_dice_0"
     }
   ]
 }

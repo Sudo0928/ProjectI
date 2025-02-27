@@ -11,8 +11,8 @@ public class Stat
     [field: SerializeField] private float[] options = new float[Enum.GetValues(typeof(Option)).Length];
     public Dictionary<Option, UnityEvent> onChangedOption = new Dictionary<Option, UnityEvent>();
 
-    private int maxGauge = 6;
-	private int curGauge = 5;
+    private int maxGauge = 0;
+	private int curGauge = 0; 
 
     public UnityEvent onChangeGauge = new UnityEvent();
     public int MaxGauge { get => maxGauge; set => maxGauge = value; }
