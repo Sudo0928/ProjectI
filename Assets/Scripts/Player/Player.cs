@@ -176,8 +176,6 @@ public class Player : MonoBehaviour, IDamagedable
 
     private void Attack()
     {
-        Debug.Log(velocity);
-
         PlayerAttackEvent playerAttackEvent;
         playerAttackEvent = new PlayerAttackEvent(this, lookDirection + _rigidbody2D.velocity * 0.2f);
         EventManager.DispatchEvent(playerAttackEvent);

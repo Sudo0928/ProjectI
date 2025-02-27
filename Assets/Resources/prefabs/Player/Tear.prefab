@@ -205,6 +205,9 @@ MonoBehaviour:
   tearSprite: {fileID: 4434129361828653953}
   shadowSprite: {fileID: 2300241669872616491}
   projectileHeigh: {x: 0, y: 0}
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &5505274870338210723
 GameObject:
   m_ObjectHideFlags: 0

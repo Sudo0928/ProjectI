@@ -14,11 +14,13 @@ public class BaseTear : BaseAttackHandler
 
     [SerializeField]private Vector2 projectileHeigh = Vector2.zero;
 
+    [SerializeField] private LayerMask hitMask;
+    public LayerMask HitMask => hitMask;
+
     private List<Vector2> segments = new List<Vector2>();
 
     private Vector2 startPos = Vector2.zero;
     private Vector2 endPos = Vector2.zero;
-    private Vector2 yHeigh = Vector2.zero;
 
     private float heigh = 0;
 
@@ -65,11 +67,13 @@ public class BaseTear : BaseAttackHandler
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
-
         if (collision.gameObject.CompareTag("Player")) return;
 
-        Remove();
+        if ((HitMask.value | (1 << collision.gameObject.layer)) == HitMask.value)
+        {
+            TearHitObstacleEvent tearHit = new TearHitObstacleEvent(this, collision, Vector2.zero);
+            InvokeEvent(tearHit);
+        }
     }
 
     IEnumerator MoveInStraightLine(Vector2 startPos, Vector2 endPos, float lerpTime)
@@ -87,7 +91,8 @@ public class BaseTear : BaseAttackHandler
         // 최종 위치로 보정
         transform.position = endPos;
 
-        Remove();
+        TearDropEvent tearDrop = new TearDropEvent(this);
+        InvokeEvent(tearDrop);
     }
 
     IEnumerator MoveAlongParabola(Vector2 startPos, Vector2 endPos, float lerpTime)
@@ -111,10 +116,9 @@ public class BaseTear : BaseAttackHandler
         tearSprite.transform.position = endPos;
     }
 
-    public void Remove()
+    public void InvokeEvent<T>(T tearEvent) where T : Event
     {
-        TearDropEvent tearDestroyEvent = new TearDropEvent(this);
-        EventManager.DispatchEvent(tearDestroyEvent);
+        EventManager.DispatchEvent(tearEvent);
 
         Destroy(gameObject);
     }
