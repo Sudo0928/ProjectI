@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6430050316277847963}
   - component: {fileID: 1568051651611892874}
   - component: {fileID: 6103277584090652080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MonsterMainRenderer (1)
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6629601059460211743}
   - component: {fileID: 7977042226144201882}
   - component: {fileID: 2580580434687919426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New BabyPlum
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterState: 0
-  monsterMaxHP: 5
-  monsterAtk: 1
+  monsterMaxHP: 300
+  monsterAtk: 0.5
   onDie:
     m_PersistentCalls:
       m_Calls: []

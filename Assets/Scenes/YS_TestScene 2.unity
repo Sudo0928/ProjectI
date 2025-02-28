@@ -2399,7 +2399,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3b34f475fedf5634aaf67631aa85a7d4, type: 3}
   - {fileID: 8300000, guid: 9a011fc87657a0044bb15ff60b1e1026, type: 3}
   playerDamagedSounds:
-  - {fileID: 8300000, guid: e0d3082a35ec41b46a6473be57f31038, type: 3}
+  - {fileID: 8300000, guid: 2f362d22ed303b740be10d7cbe969119, type: 3}
+  - {fileID: 8300000, guid: aab17059ecbbf8c4ca3b3bc31f71eb48, type: 3}
+  - {fileID: 8300000, guid: 92d2ac0ca1f10944eb032dc410f1227b, type: 3}
+  backgroundSound: {fileID: 8300000, guid: d891fc3109f861e4a96bc9ab7da6b26f, type: 3}
 --- !u!1 &2115049549
 GameObject:
   m_ObjectHideFlags: 0

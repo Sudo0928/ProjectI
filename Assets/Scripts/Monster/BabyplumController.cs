@@ -33,7 +33,6 @@ public class BabyplumController : MonsterBasic
             moveDir = (playerTrs.position - transform.position).normalized;
     
         transform.position += new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime ;
-
     }
 
 
@@ -54,6 +53,7 @@ public class BabyplumController : MonsterBasic
             AnimSetBool(nextSkill, true);   
             monsterState = MonsterState.Attack;
         }, Random.Range(2.0f, 3.0f));
+
     } 
     
     // 원형으로 투사체 발사 
@@ -87,9 +87,11 @@ public class BabyplumController : MonsterBasic
 
     } 
     
-    private void OnCollisionEnter2D(Collision2D collision)
-    { 
-        if (collision.gameObject.layer == 9)  
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        base.OnCollisionEnter2D(collision);
+
+		if (collision.gameObject.layer == 9)  
         {
             var normal = collision.contacts[0].normal; 
             if (Vector2.Dot(normal, moveDir) > 0.5f)
@@ -131,7 +133,7 @@ public class BabyplumController : MonsterBasic
             float angle = i * angleStep;
             float angleInRadians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
-            BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
+            BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
             newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
             if (time > 0)
@@ -145,10 +147,10 @@ public class BabyplumController : MonsterBasic
 
     IEnumerator ShootStraight(float time)
     {
-        while(true)
+        while(true) 
         { 
             Vector2 direction = -moveDir;
-            BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
+            BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
             newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
             if (time > 0) 

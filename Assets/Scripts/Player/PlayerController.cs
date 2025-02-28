@@ -315,10 +315,19 @@ public class PlayerController : MonoBehaviour, IDamagedable
         PlayerDamagedEvent e = new PlayerDamagedEvent(damage);
         EventManager.DispatchEvent(e);
 
+        
+
         if (stat.GetStat(Option.CurHeart) <= 0)
+        {
             animationHandler.SetDieTrigger();
+			PlayerDieEvent d = new PlayerDieEvent();
+			EventManager.DispatchEvent(d); 
+		}
 		else
+        {
 			animationHandler.PlayTakeDamageAnim();
+
+        }
 
 
 		return true;
