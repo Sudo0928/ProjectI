@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 233199509}
   - component: {fileID: 233199508}
   m_Layer: 0
-  m_Name: "\uB9DE\uC558\uC744\uB54C(\uD53C\uCE58\uAC12\uC870\uC815\uD544\uC694) 2"
+  m_Name: "\uB9DE\uC558\uC744\uB54C 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -938,7 +938,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e0d3082a35ec41b46a6473be57f31038, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b119994524330d54daa303ecfacb0fa9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3255,7 +3255,7 @@ GameObject:
   - component: {fileID: 1171375692}
   - component: {fileID: 1171375691}
   m_Layer: 0
-  m_Name: "\uB9DE\uC558\uC744\uB54C(\uD53C\uCE58\uAC12\uC870\uC815\uD544\uC694)"
+  m_Name: "\uB9DE\uC558\uC744\uB54C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3271,7 +3271,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2afaab0658df1484c919221fb5566b78, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 743bec787de6deb4c833af2e0785b9cb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 3
@@ -3699,7 +3699,7 @@ GameObject:
   - component: {fileID: 1367693141}
   - component: {fileID: 1367693140}
   m_Layer: 0
-  m_Name: "\uB9DE\uC558\uC744\uB54C 3(\uD53C\uCE58\uAC12\uC870\uC815\uD544\uC694)"
+  m_Name: "\uB9DE\uC558\uC744\uB54C 3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3715,7 +3715,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c94afa02546c251489c68f3c7f13c093, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 084b2421d990cbc49825ac6423a0ddeb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
