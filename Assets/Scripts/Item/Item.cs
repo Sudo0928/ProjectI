@@ -16,14 +16,16 @@ public class Item : MonoBehaviour
 
 	public bool isPickUp = false;
 
+
 	private void Awake()
 	{
-		 
 		item = DataManager.itemInfoLoader.GetByKey(key);
 		if (item != null)
 			_sprite.sprite = GameManager.Instance.GetItemSprite(item);
 	}
+
 	 
+
 	public void SetActiveCollider(bool active) => GetComponent<CircleCollider2D>().enabled = active;
 
 	public void SetItem(ItemInfo item) 

@@ -94,31 +94,26 @@ public class PlayerStatUI : MonoBehaviour
         float maxHealth = playerStat.GetStat(DesignEnums.Option.MaxHeart);  // 최대 체력
         float currentHealth = playerStat.GetStat(DesignEnums.Option.CurHeart);  // 현재 체력
 
-        int cnt = Mathf.RoundToInt(maxHealth / 2);
-		// 체력 UI 업데이트
-		for (int i = 1; i <= cnt; i++) 
-        {
-            if (i < currentHealth)  // 체력이 가득 찬 하트로 채우기
-            {
-                hearts[i-1].sprite = fullHeart;
-            }
-            else if ((float)i - currentHealth == 0.5f)  // 반 칸 체력
-            {
-                hearts[i-1].sprite = halfHeart;
-            }
-            else  // 빈 하트
-            {
-                hearts[i-1].sprite = emptyHeart;
-            }
-			hearts[i-1].gameObject.SetActive(true);
-		}
+        int fullHeartCnt = (int)currentHealth;
+        bool hashalfHeart = currentHealth % 1.0f > 0.0f;
+         
+        int idx = 0;
+        while (idx < fullHeartCnt)
+			hearts[idx++].sprite = fullHeart;
 
-        // 최대 체력에 맞게 하트 개수 조정
-        for (int i = cnt; i < hearts.Count; i++)
-        {
-            hearts[i].gameObject.SetActive(false);  // 남는 하트는 비활성화
-        }
-    }
+        if (hashalfHeart)
+			hearts[idx++].sprite = halfHeart;
+         
+		while (idx < maxHealth)
+			hearts[idx++].sprite = emptyHeart;
+
+		for (int i = 0; i < idx; i++) 
+			hearts[i].gameObject.SetActive(true);
+		  
+        
+        for (int i = idx; i < hearts.Count; i++)
+            hearts[i].gameObject.SetActive(false); 
+    } 
 
     // 아이템 수치 텍스트 업데이트
     void UpdateItemText()
