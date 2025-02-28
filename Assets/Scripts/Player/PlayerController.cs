@@ -168,7 +168,6 @@ public class PlayerController : MonoBehaviour, IDamagedable
             else if (angle > 135 || angle < -135) lookDirection = Vector2.left;
             else if (angle > -135 && angle < -45) lookDirection = Vector2.down;
         }
-        
     }
 
     #region Main Methods
@@ -301,20 +300,28 @@ public class PlayerController : MonoBehaviour, IDamagedable
 
     public bool TakeDamage(float damage)
     {
-        if (isTakeDamge) return false;
+        if (stat.GetStat(Option.CurHeart) <= 0)
+            return false;
+
+		if (isTakeDamge) return false; 
 
         isTakeDamge = true;
 
         Action action = () => isTakeDamge = false;
         GameManager.Instance.SetTimer(action, 0.5f);
 
-        animationHandler.PlayTakeDamageAnim();
         stat.AddStat(Option.CurHeart, -damage);
 
         PlayerDamagedEvent e = new PlayerDamagedEvent(damage);
         EventManager.DispatchEvent(e);
 
-        return true;
+        if (stat.GetStat(Option.CurHeart) <= 0)
+            animationHandler.SetDieTrigger();
+		else
+			animationHandler.PlayTakeDamageAnim();
+
+
+		return true;
     } 
 
     public bool TakeBoomDamage(float damage)
