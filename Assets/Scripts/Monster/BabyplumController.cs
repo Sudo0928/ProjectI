@@ -7,28 +7,28 @@ public class BabyplumController : MonsterBasic
 {
     [SerializeField, Tooltip("투사체 프리팹")] private GameObject bullet;
     [SerializeField, Tooltip("베이비 플럼이 플레이어를 향해 이동하는 속도")] private float moveSpeed = 0.5f;
-    [SerializeField, Tooltip("패턴3의 돌진 속도")] private float pattern3DashSpeed = 3f;
+    //[SerializeField, Tooltip("패턴3의 돌진 속도")] private float pattern3DashSpeed = 3f;
     [SerializeField, Tooltip("다음 공격을 하는 최소 시간")] private float minAttackTime = 2f;
     [SerializeField, Tooltip("다음 공격을 하는 최대 시간")] private float maxAttackTime = 4f;
     [SerializeField, Tooltip("벽 레이어")] private LayerMask wallLayer;
 
     // 플레이어 위치
     private Transform playerTrs;
-    private SpriteRenderer renderer;
+    private SpriteRenderer _renderer;
 
     Vector2 moveDir = Vector2.zero;
     float speed = 0.0f;
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
-        renderer = GetComponentInChildren<SpriteRenderer>();
+        _renderer = GetComponentInChildren<SpriteRenderer>();
         playerTrs = GameObject.FindAnyObjectByType<PlayerController>().transform;
     }
 
     private void Update()
     {
-        renderer.flipX = moveDir.x < 0;
+        _renderer.flipX = moveDir.x < 0;
         if (monsterState == MonsterState.Idle) 
             moveDir = (playerTrs.position - transform.position).normalized;
     
@@ -96,7 +96,7 @@ public class BabyplumController : MonsterBasic
                 return;
 
             moveDir = Vector2.Reflect(moveDir, normal); 
-            renderer.flipX = !renderer.flipX;
+            _renderer.flipX = !_renderer.flipX;
         } 
     }
 

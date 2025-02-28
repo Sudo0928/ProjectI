@@ -18,9 +18,10 @@ public class DashMonsterController : MonsterBasic
     // 애니메이터 해시값
     readonly private int IsMoveHash = Animator.StringToHash("IsMove");
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
+
         // 대기 상태로 시작
         stateChangeTime = idleTime;
     }

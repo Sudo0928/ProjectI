@@ -18,7 +18,7 @@ public class ImageAnimation : MonoBehaviour
     private Vector3 originalScale;  // 원래 크기
 
     private bool isMoving = false;  // 애니메이션 진행 중 여부
-    private bool hasRotated = false; // 회전 애니메이션이 끝났는지 여부
+    //private bool hasRotated = false; // 회전 애니메이션이 끝났는지 여부
 
     // Start is called before the first frame update
     void Start()

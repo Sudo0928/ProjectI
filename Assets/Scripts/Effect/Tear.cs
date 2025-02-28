@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseTear : BaseAttackHandler
 {
-    private float virtualY = 0f;
+    //private float virtualY = 0f;
 
     [SerializeField] private SpriteRenderer tearSprite;
     public SpriteRenderer TearSprite => tearSprite;

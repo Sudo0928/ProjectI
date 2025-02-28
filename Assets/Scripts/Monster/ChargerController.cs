@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChargerController : MonsterBasic
 {
-    private SpriteRenderer renderer;
+    private SpriteRenderer _renderer;
 
     [SerializeField, Tooltip("차저 이동 속도")] private float moveSpeed = 3f;
     [SerializeField, Tooltip("차저 돌진 속도")] private float dashSpeed = 8f;
@@ -24,13 +24,13 @@ public class ChargerController : MonsterBasic
     private readonly int MoveX = Animator.StringToHash("MoveX");
     private readonly int MoveY = Animator.StringToHash("MoveY");
 
-    void Start()
+    protected override void Start()
     {
         // 기본적으로 Idle로 되어있기 때문에
         // 대기 상태가 없는 Charger는 Move로 바꿔주고 시작
         monsterState = MonsterState.Move;
         changeDirectionTime = Random.Range(minChangeDirectionTime, maxChangeDirectionTime);
-        renderer = GetComponentInChildren<SpriteRenderer>();
+        _renderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -179,11 +179,11 @@ public class ChargerController : MonsterBasic
     {
         if (moveDir.x < 0)
         {
-            renderer.flipX = true;
+            _renderer.flipX = true;
         }
         else
         {
-            renderer.flipX = false;
+            _renderer.flipX = false;
         }
     }
 }

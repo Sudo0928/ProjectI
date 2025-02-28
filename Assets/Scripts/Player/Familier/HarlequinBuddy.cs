@@ -41,7 +41,7 @@ public class HarlequinBuddy : MonoBehaviour
 				6.0f, // 거리
 				0.5f, // 사이즈
 				dirs[i],
-				player.IsParbolic);
+				player.isParbolic);
 		}
 		
 

@@ -18,8 +18,6 @@ public class TearCtrl : MonoBehaviour
 
 	public void InitTear(Vector2 dir, float distacne, float speed )
     { 
-        moveDist = 0;
-
 		this.speed = speed;
         moveDir = dir;
 		targetDist = distacne;
