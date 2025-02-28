@@ -50,7 +50,10 @@ public class RoomManager : MonoBehaviour
 		} while (list[idx].isLinked);
 
 		door = list[idx];
-		return true;
+		return true;  
+
+
+
 	}
 	
 	public void SpawnMonster(List<GameObject> monsters)

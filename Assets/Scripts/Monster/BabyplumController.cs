@@ -34,6 +34,9 @@ public class BabyplumController : MonsterBasic
 		
 		transform.position += new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime ;
 
+
+
+
 	}
 
 

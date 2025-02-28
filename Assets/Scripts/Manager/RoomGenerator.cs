@@ -7,6 +7,9 @@ using Random = UnityEngine.Random;
 
 public class RoomGenerator : MonoBehaviour
 {
+
+
+
 	[SerializeField] GameObject miniRoom;
 	[SerializeField] GameObject LRoom;
 	[SerializeField] GameObject longRoom;
