@@ -7,7 +7,7 @@ public enum MonsterState
     Move,
     Trace,
     Attack
-}
+} 
 
 public class MonsterBasic : MonoBehaviour
 {

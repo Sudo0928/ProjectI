@@ -8,10 +8,10 @@ public class AnimationEventReporter : MonoBehaviour
 
     public void AE_StartPattern1()
     {
-		controller.PlayPattern1();
-
+		controller.PlayPattern1(); 
+         
 	}
-
+     
     public void AE_StartPattern2()
     {
 		controller.PlayPattern2();

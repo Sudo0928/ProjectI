@@ -47,7 +47,7 @@ public class RoomManager : MonoBehaviour
 			idx = UnityEngine.Random.Range(0, list.Count);
 			idxs.Add(idx);
 
-		} while (list[idx].isLinked);
+		} while (list[idx].isLinked); 
 
 		door = list[idx];
 		return true;  

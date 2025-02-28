@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class RoomGenerator : MonoBehaviour
+public class RoomGenerator : MonoBehaviour 
 {
 
 

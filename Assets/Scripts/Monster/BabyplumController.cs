@@ -25,7 +25,7 @@ public class BabyplumController : MonsterBasic
         renderer = GetComponentInChildren<SpriteRenderer>();
         playerTrs = GameObject.FindAnyObjectByType<Player>().transform;
     }
-
+     
 	private void Update()
 	{
 		renderer.flipX = moveDir.x < 0;
