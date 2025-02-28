@@ -159,7 +159,7 @@ MonoBehaviour:
   bossRoom: {fileID: 8010632415988721716, guid: 2b2c5991ca46abe4ea42c338b5eaeed7, type: 3}
   bossPrevRoom: {fileID: 8010632415988721716, guid: be99c15b09c90054dba6e17b0abb1113, type: 3}
   startRoom: {fileID: 2024799854}
-  roomDepth: 100
+  roomDepth: 5
   monsters:
   - {fileID: 8726924010258949925, guid: e1911f7dc0353e5479e08a1c24dc088a, type: 3}
   - {fileID: 565466290736095529, guid: 5d73d7d97b06acb48ba1bb8cc6985c98, type: 3}
@@ -943,6 +943,18 @@ PrefabInstance:
     - target: {fileID: 4660473317590961936, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392955238816323316, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
+      propertyPath: autoAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392955238816323316, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
+      propertyPath: isCharging
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392955238816323316, guid: bff511eda14e7c44681ad5aa855f32e0, type: 3}
+      propertyPath: isParbolic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2318,7 +2330,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3b34f475fedf5634aaf67631aa85a7d4, type: 3}
   - {fileID: 8300000, guid: 9a011fc87657a0044bb15ff60b1e1026, type: 3}
   playerDamagedSounds:
-  - {fileID: 8300000, guid: e0d3082a35ec41b46a6473be57f31038, type: 3}
+  - {fileID: 8300000, guid: 743bec787de6deb4c833af2e0785b9cb, type: 3}
+  - {fileID: 8300000, guid: b119994524330d54daa303ecfacb0fa9, type: 3}
+  - {fileID: 8300000, guid: 084b2421d990cbc49825ac6423a0ddeb, type: 3}
 --- !u!1 &2115049549
 GameObject:
   m_ObjectHideFlags: 0

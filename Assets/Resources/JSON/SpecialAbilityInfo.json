@@ -75,7 +75,7 @@
     {
       "key": 13,
       "Name": "쿼드 샷",
-      "ComponentName": "Quad Shot",
+      "ComponentName": "MutantSpider",
       "Description": "눈이 2개 더 생기고, 모든 눈에서 눈물을 발사한다"
     },
     {
@@ -107,6 +107,12 @@
       "Name": "똥",
       "ComponentName": "Plop",
       "Description": "캐릭터가 서 있는 자리에 똥을 싸면서 주위의 적을 밀쳐낸다"
+    },
+    {
+      "key": 19,
+      "Name": "초코우유",
+      "ComponentName": "ChocoMilk",
+      "Description": "공격 방식을 차징 방식으로 바꾸고, 눈물의 크기를 키운다."
     }
   ]
 }

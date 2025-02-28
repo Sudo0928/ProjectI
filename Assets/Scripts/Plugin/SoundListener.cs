@@ -37,13 +37,13 @@ public class SoundListener : MonoBehaviour
 
     private void ExplosionSound(ExplosionEvent e)
     {
-        int random = Random.Range(0, 3);
-        SoundManager.Instance.PlaySFX(explosionSounds[random], 1, 0.1f);
+        int random = Random.Range(0, explosionSounds.Length);
+        SoundManager.Instance.PlaySFX(explosionSounds[random]);
     }
 
     private void TearLunchSound(TearLaunchEvent e)
     {
-        int random = Random.Range(0, 2);
+        int random = Random.Range(0, tearLunchSounds.Length);
         SoundManager.Instance.PlaySFX(tearLunchSounds[random]);
     }
 
@@ -64,21 +64,21 @@ public class SoundListener : MonoBehaviour
 
     private void PlayerDeadSound()
     {
-        int random = Random.Range(0, 3);
+        int random = Random.Range(0, playerDeadSounds.Length);
         SoundManager.Instance.PlaySFX(playerDeadSounds[random]);
     }
 
     private void PlayerDamagedSound(PlayerDamagedEvent e)
     {
-        int random = Random.Range(0, 1);
-        SoundManager.Instance.PlaySFX(playerDamagedSounds[random], 2);
+        int random = Random.Range(0, playerDamagedSounds.Length);
+        SoundManager.Instance.PlaySFX(playerDamagedSounds[random]);
     }
 
     
 
     private void TearHitSound(TearHitEntityEvent e)
     {
-        int random = Random.Range(0, 2);
+        int random = Random.Range(0, tearHitSounds.Length);
         SoundManager.Instance.PlaySFX(tearHitSounds[random]);
     }
 }
