@@ -23,7 +23,7 @@ public class BabyplumController : MonsterBasic
     {
         base.Start();
         renderer = GetComponentInChildren<SpriteRenderer>();
-        playerTrs = GameObject.FindAnyObjectByType<Player>().transform;
+        playerTrs = GameObject.FindAnyObjectByType<PlayerController>().transform;
     }
 
     private void Update()
@@ -88,8 +88,8 @@ public class BabyplumController : MonsterBasic
     } 
     
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 8)  
+    { 
+        if (collision.gameObject.layer == 9)  
         {
             var normal = collision.contacts[0].normal; 
             if (Vector2.Dot(normal, moveDir) > 0.5f)
@@ -132,7 +132,7 @@ public class BabyplumController : MonsterBasic
             float angleInRadians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
             BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
-            newTear.Init(gameObject, 6f, 10f, 0.5f, direction, false);
+            newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
             if (time > 0)
                 yield return new WaitForSeconds(time / cnt);
@@ -149,7 +149,7 @@ public class BabyplumController : MonsterBasic
         { 
             Vector2 direction = -moveDir;
             BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
-            newTear.Init(gameObject, 6f, 10f, 0.5f, direction, false);
+            newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
             if (time > 0) 
                 yield return new WaitForSeconds(time);  

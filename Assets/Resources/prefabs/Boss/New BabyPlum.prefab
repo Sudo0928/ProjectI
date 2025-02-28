@@ -295,4 +295,4 @@ MonoBehaviour:
   maxAttackTime: 4
   wallLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
