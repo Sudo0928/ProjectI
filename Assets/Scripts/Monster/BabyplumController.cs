@@ -134,7 +134,15 @@ public class BabyplumController : MonsterBasic
             float angleInRadians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
             BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
-            newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
+			var colder = newTear.gameObject.GetComponent<CircleCollider2D>();
+			if (colder != null)
+			{
+				colder.enabled = false; 
+
+				GameManager.Instance.SetTimer(() => { colder.enabled = true; }, 0.3f);
+			}
+
+			newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
             if (time > 0)
                 yield return new WaitForSeconds(time / cnt);
@@ -153,7 +161,16 @@ public class BabyplumController : MonsterBasic
             BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
             newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
-            if (time > 0) 
+			var colder = newTear.gameObject.GetComponent<CircleCollider2D>();
+			if (colder != null)
+            {
+				colder.enabled = false;
+
+				GameManager.Instance.SetTimer(() => { colder.enabled = true; }, 0.3f);
+			}
+				
+
+			if (time > 0) 
                 yield return new WaitForSeconds(time);  
         }
     }
