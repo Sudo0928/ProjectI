@@ -39,7 +39,7 @@ public class MutantSpider : SpecialAbility
             Vector2 direction = new Vector2(randomX, randomY).normalized;
 
             BaseTear tear = Instantiate(GameManager.Instance.tear, e.player.transform.position, Quaternion.identity);
-            tear.Init(e.player.gameObject, e.player.projectileSpeed, e.player.Stat.GetStat(Option.Attack), e.player.projectileDistance, e.player.projectileSize, direction, e.player.IsParbolic);
+            tear.Init(e.player.gameObject, e.player.projectileSpeed, e.player.Stat.GetStat(Option.Attack), e.player.projectileDistance, e.player.projectileSize, direction, e.player.isParbolic);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PickupItemInfoUI : MonoBehaviour
 { 
-    [SerializeField] Text name;
+    [SerializeField] Text _name;
     [SerializeField] Text description; 
     Animator anim;
 	private void Start()
@@ -19,7 +19,7 @@ public class PickupItemInfoUI : MonoBehaviour
         gameObject.SetActive(true);
         anim.Play("Open");
 
-		name.text = item.Name;   
+		_name.text = item.Name;   
         description.text = item.Massage;
         gameObject.SetActive(true);
         GameManager.Instance.SetTimer(() => { anim.Play("Close");}, 3.0f); 

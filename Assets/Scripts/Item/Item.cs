@@ -12,7 +12,6 @@ public class Item : MonoBehaviour
     [SerializeField] SpriteRenderer _sprite; 
     [SerializeField] int key;
 	ItemInfo item;
-	BoxCollider2D collider;
 
 	public bool isPickUp = false;
 

@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour, IDamagedable
     public float projectileSize => stat.GetStat(Option.ProjectileSize); 
     public float attackSpeed => 1.0f / stat.GetStat(Option.AttackSpeed);
      
-	[SerializeField] [Range(0f, 1f)]
-    private float projectileVelocityAngle = 0.2f;
+	//[SerializeField] [Range(0f, 1f)]
+    //private float projectileVelocityAngle = 0.2f;
 
     private bool isAttack = false;
 
@@ -61,20 +61,14 @@ public class PlayerController : MonoBehaviour, IDamagedable
 	[SerializeField][Range(0.001f, 10f)]
     private float maxChargingTime = 1f;
 
-    [SerializeField]
-    private bool isCharging = false;
+    public bool isCharging = false;
 
-    [SerializeField]
-    private bool isParbolic = false;
-    public bool IsParbolic => isParbolic;
+    public bool isParbolic = false;
 
     private float timeSincePressAttack = 0;
     public Vector2 GetMoveDir => inputActions.Player.Move.ReadValue<Vector2>();
 
-
-    [SerializeField]
-    private bool ignoreExplosions = false;
-    public bool IgnoreExplosions => ignoreExplosions;
+    public bool ignoreExplosions = false;
 
     [SerializeField]
     private bool autoAttack = false;
@@ -233,6 +227,7 @@ public class PlayerController : MonoBehaviour, IDamagedable
         inputActions.Player.Attack.started += OnAttack;
         inputActions.Player.Attack.canceled += OffAttack;
         inputActions.Player.Move.performed += OnMove;
+        inputActions.Player.AutoAttack.started += ToggleAutoAttack;
 
         EventManager.RegisterListener<TearHitEntityEvent>(TakeDamage);
         EventManager.RegisterListener<EnemyAttackEvent>(TakeDamage);
@@ -244,6 +239,7 @@ public class PlayerController : MonoBehaviour, IDamagedable
         inputActions.Player.Attack.started -= OnAttack;
         inputActions.Player.Attack.canceled -= OffAttack;
         inputActions.Player.Move.performed -= OnMove;
+        inputActions.Player.AutoAttack.started -= ToggleAutoAttack;
 
         EventManager.UnregisterListener<TearHitEntityEvent>(TakeDamage);
         EventManager.UnregisterListener<EnemyAttackEvent>(TakeDamage);
@@ -275,6 +271,10 @@ public class PlayerController : MonoBehaviour, IDamagedable
             Attack();
             timeSincePressAttack = 0;
         }
+    }
+    private void ToggleAutoAttack(InputAction.CallbackContext context)
+    {
+        autoAttack = !autoAttack;
     }
 
     private void OnMove(InputAction.CallbackContext context)

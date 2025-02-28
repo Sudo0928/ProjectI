@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pooter : MonsterBasic
 {
     [SerializeField, Tooltip("투사체 프리팹")] private GameObject bullet;
-    private SpriteRenderer renderer;
+    private SpriteRenderer _renderer;
 
     [SerializeField, Tooltip("푸터 이동 속도")] private float moveSpeed = 0.5f;
     [SerializeField, Tooltip("푸터 공격 범위")] private float attackRange = 5f;
@@ -26,11 +26,11 @@ public class Pooter : MonsterBasic
     // 애니메이터 해시
     private readonly int Attack = Animator.StringToHash("Attack");
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
         playerTrs = GameObject.FindAnyObjectByType<PlayerController>().transform;
-        renderer = GetComponentInChildren<SpriteRenderer>();
+        _renderer = GetComponentInChildren<SpriteRenderer>();
         monsterState = MonsterState.Trace;
         checkMoveTime = moveTime;
         checkRestTime = attackRestTime;
@@ -56,7 +56,7 @@ public class Pooter : MonsterBasic
                 float randomY = Random.Range(0f, randomMaxY);
                 direction.x = direction.x > 0f ? direction.x + randomX : direction.x - randomX;
                 direction.y = direction.y > 0f ? direction.y + randomY : direction.y - randomY;
-                renderer.flipX = direction.x < 0f ? true : false;
+                _renderer.flipX = direction.x < 0f ? true : false;
 
                 rigid.velocity = direction * moveSpeed;
             }

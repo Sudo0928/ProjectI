@@ -31,7 +31,7 @@ public class MonsterBasic : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
-     protected void Start()
+    protected virtual void Start()
     {
         monsterCurrentHP = monsterMaxHP;
     }
