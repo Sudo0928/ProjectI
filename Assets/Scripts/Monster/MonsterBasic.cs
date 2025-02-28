@@ -44,7 +44,11 @@ public class MonsterBasic : MonoBehaviour
         monsterCurrentHP -= _damage;
         if (monsterCurrentHP <= 0)
         {
-            onDie?.Invoke(); 
+            onDie?.Invoke();
+
+            MonsterDeadEvent e = new MonsterDeadEvent(this);
+            EventManager.DispatchEvent(e);
+
             gameObject.SetActive(false);
         }
     }

@@ -207,7 +207,7 @@ MonoBehaviour:
   projectileHeigh: {x: 0, y: 0}
   hitMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
 --- !u!1 &5505274870338210723
 GameObject:
   m_ObjectHideFlags: 0

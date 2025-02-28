@@ -1331,7 +1331,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &271719126
@@ -1500,7 +1503,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &273596478
@@ -1949,7 +1955,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &396965305
@@ -2206,7 +2215,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &553850899
@@ -2375,7 +2387,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &717015869
@@ -3518,7 +3533,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &916792305
@@ -3753,7 +3771,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &982683259
@@ -4438,6 +4459,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2868075465070197030, guid: d86a050dbe53c914cbbff9e4fde57cb2, type: 3}
   m_PrefabInstance: {fileID: 1060307855}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1080845923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080845925}
+  - component: {fileID: 1080845924}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1080845924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080845923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1b291dd9e2e2c46a7d9d4e084ab21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tear: {fileID: 1659112748970384882, guid: b33cc810f25452c4f972153be541bbab, type: 3}
+  enemyTear: {fileID: 1659112748970384882, guid: f7f44537d4ee6324cbaaeea506253c00, type: 3}
+--- !u!4 &1080845925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080845923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1573167, y: -2.7029574, z: -0.03542195}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085438800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5044,7 +5111,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1209496509
@@ -5451,7 +5521,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1270295639
@@ -6632,6 +6705,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7254684167326511469, guid: b78bbaeb19040164e93836aecf372b42, type: 3}
   m_PrefabInstance: {fileID: 1456476240}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1467271856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467271858}
+  - component: {fileID: 1467271857}
+  m_Layer: 0
+  m_Name: EffectListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1467271857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467271856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6b6970acf42a546b554ab641721b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LbloodPrefab: {fileID: 7444102620038916471, guid: 9253a9adfc7666f49a5491980e155de1, type: 3}
+  SbloodPrefab: {fileID: 7889464797184861753, guid: 2668aa5d596f9bd4f9d43d054df448b7, type: 3}
+  Effect_fart: {fileID: 9154897897601372562, guid: 21ba93f3c1899b640973ea30ebc9c0c8, type: 3}
+  TearsPop: {fileID: 617130690073293584, guid: e74fc2fda6867894fbc4f9fc6e1eac46, type: 3}
+--- !u!4 &1467271858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467271856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1573167, y: -2.7029574, z: -0.03542195}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497981634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6802,7 +6923,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1522729513
@@ -7034,6 +7158,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1580552108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580552110}
+  - component: {fileID: 1580552109}
+  m_Layer: 0
+  m_Name: SoundListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1580552109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580552108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f06ddb8ead3e94cac7855c8b203f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionSounds:
+  - {fileID: 8300000, guid: 654f21dda9f4b4044aae603c7d7aec8d, type: 3}
+  - {fileID: 8300000, guid: 856ed8196a3802c41b6c2a72f438bac3, type: 3}
+  - {fileID: 8300000, guid: de5e2459f65d90b42bd759e71b6825e5, type: 3}
+  tearLunchSounds:
+  - {fileID: 8300000, guid: 4d3e6e71e08298c4fad8106142f5969e, type: 3}
+  - {fileID: 8300000, guid: e9925d02634628e40a7b8d201259a9fb, type: 3}
+  tearDropSound: {fileID: 8300000, guid: ce78c47a6db1298428dc6ca32184b170, type: 3}
+  tearHitSounds:
+  - {fileID: 8300000, guid: c951710108ff9a642963065a43af990c, type: 3}
+  - {fileID: 8300000, guid: 3f1fcd3652649c742b8770932cfae2ea, type: 3}
+  playerDeadSounds:
+  - {fileID: 8300000, guid: f3f5943e2edd37a448c0b3d50ec0863d, type: 3}
+  - {fileID: 8300000, guid: 3b34f475fedf5634aaf67631aa85a7d4, type: 3}
+  - {fileID: 8300000, guid: 9a011fc87657a0044bb15ff60b1e1026, type: 3}
+  playerDamagedSounds:
+  - {fileID: 8300000, guid: e0d3082a35ec41b46a6473be57f31038, type: 3}
+--- !u!4 &1580552110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580552108}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.650492, y: -2.2717893, z: 0.0027491963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599485476
 GameObject:
   m_ObjectHideFlags: 0
@@ -7077,7 +7262,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1599485478
@@ -7988,7 +8176,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1770056695
@@ -8157,7 +8348,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1787222095
@@ -8593,7 +8787,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1878780798
@@ -8762,7 +8959,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &1967864472
@@ -9342,7 +9542,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &2106386253
@@ -9511,7 +9714,10 @@ MonoBehaviour:
   minChangeDirectionTime: 0.8
   maxChangeDirectionTime: 1
   eyeSight: 1
-  layerMask:
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
     serializedVersion: 2
     m_Bits: 0
 --- !u!61 &2114207202
@@ -10071,3 +10277,6 @@ SceneRoots:
   - {fileID: 1809672928}
   - {fileID: 846910363}
   - {fileID: 1040223841}
+  - {fileID: 1080845925}
+  - {fileID: 1580552110}
+  - {fileID: 1467271858}

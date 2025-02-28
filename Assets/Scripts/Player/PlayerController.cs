@@ -309,17 +309,20 @@ public class PlayerController : MonoBehaviour, IDamagedable
         GameManager.Instance.SetTimer(action, 0.5f);
 
         animationHandler.PlayTakeDamageAnim();
-        Debug.Log("Damaged");
-        stat.AddStat(Option.CurHeart, -damage); 
+        stat.AddStat(Option.CurHeart, -damage);
+
+        PlayerDamagedEvent e = new PlayerDamagedEvent(damage);
+        EventManager.DispatchEvent(e);
+
         return true;
     } 
 
     public bool TakeBoomDamage(float damage)
     {
         if (ignoreExplosions) return false;
-        animationHandler.PlayTakeDamageAnim();
-		stat.AddStat(Option.CurHeart, -damage);
-		Debug.Log("Boomb");
+
+        TakeDamage(damage);
+
         return true;
     }
 

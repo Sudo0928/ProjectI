@@ -3984,6 +3984,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1484381541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484381543}
+  - component: {fileID: 1484381542}
+  m_Layer: 0
+  m_Name: Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1484381542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484381541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f06ddb8ead3e94cac7855c8b203f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionSounds:
+  - {fileID: 8300000, guid: 8c05c8a8bd2b9b446b5702e0c8fc229a, type: 3}
+  - {fileID: 8300000, guid: 3582d77156b34db4cbabae64d0f650d2, type: 3}
+  - {fileID: 8300000, guid: d61b4324353551a4eb56949713a092a0, type: 3}
+  tearLunchSounds:
+  - {fileID: 8300000, guid: 4d3e6e71e08298c4fad8106142f5969e, type: 3}
+  - {fileID: 8300000, guid: e9925d02634628e40a7b8d201259a9fb, type: 3}
+  tearDropSound: {fileID: 8300000, guid: ce78c47a6db1298428dc6ca32184b170, type: 3}
+  tearHitSounds:
+  - {fileID: 8300000, guid: c951710108ff9a642963065a43af990c, type: 3}
+  - {fileID: 8300000, guid: 3f1fcd3652649c742b8770932cfae2ea, type: 3}
+  playerDeadSounds:
+  - {fileID: 8300000, guid: f3f5943e2edd37a448c0b3d50ec0863d, type: 3}
+  - {fileID: 8300000, guid: 3b34f475fedf5634aaf67631aa85a7d4, type: 3}
+  - {fileID: 8300000, guid: 9a011fc87657a0044bb15ff60b1e1026, type: 3}
+  playerDamagedSounds:
+  - {fileID: 8300000, guid: 2afaab0658df1484c919221fb5566b78, type: 3}
+  - {fileID: 8300000, guid: e0d3082a35ec41b46a6473be57f31038, type: 3}
+  - {fileID: 8300000, guid: c94afa02546c251489c68f3c7f13c093, type: 3}
+--- !u!4 &1484381543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484381541}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.650492, y: -2.2717893, z: 0.0027491963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544802053
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,3 +5220,4 @@ SceneRoots:
   - {fileID: 905887334}
   - {fileID: 946793213}
   - {fileID: 728969923}
+  - {fileID: 1484381543}

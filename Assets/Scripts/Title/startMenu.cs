@@ -107,7 +107,7 @@ public class ArrowMenuNavigation : MonoBehaviour
                 Debug.Log("Menu 1 selected");
 
                 // "Menu 1" 선택 시 페이드 인, 페이드 아웃 효과 추가
-                StartCoroutine(FadeInOutScene("GY_TestScene"));
+                StartCoroutine(FadeInOutScene("Game"));
                 break;
 
             case 1:

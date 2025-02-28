@@ -5,6 +5,15 @@ using UnityEngine;
 
 public static class Expansion
 {
+    public static T GetOrAnyComponent<T>(this GameObject obj) where T : Component
+    {
+        if(obj.TryGetComponent<T>(out var source))
+        {
+            return source;
+        }
+        return obj.AddComponent<T>();
+    }
+
     public static float GetRange(this float value, float min, float max)
     {
         float random;

@@ -28,8 +28,8 @@ public class Stat
 	public Stat()
     {
         options = new float[Enum.GetValues(typeof(Option)).Length];
-        options[(int)Option.Attack] = 1.0f;
-        options[(int)Option.AttackSpeed] = 1.0f;
+        options[(int)Option.Attack] = 5.0f;
+        options[(int)Option.AttackSpeed] = 3.0f;
         options[(int)Option.AttackScale] = 1.0f;
         options[(int)Option.Range] = 3.0f;
         options[(int)Option.RangeScale] = 1f; 
