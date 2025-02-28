@@ -87,8 +87,10 @@ public class BabyplumController : MonsterBasic
 
     } 
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     { 
+        base.OnCollisionEnter2D(collision);
+
         if (collision.gameObject.layer == 9)  
         {
             var normal = collision.contacts[0].normal; 
@@ -131,7 +133,7 @@ public class BabyplumController : MonsterBasic
             float angle = i * angleStep;
             float angleInRadians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
-            BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
+            BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
             newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
             if (time > 0)
@@ -148,7 +150,7 @@ public class BabyplumController : MonsterBasic
         while(true)
         { 
             Vector2 direction = -moveDir;
-            BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
+            BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
             newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
             if (time > 0) 

@@ -1,9 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Diagnostics;
-using static UnityEditor.Progress;
-
 
 public class StageReward : MonoBehaviour
 {

@@ -25,5 +25,7 @@ public class Tear : MonoBehaviour
         GameObject gameObject = Instantiate(tear);
         gameObject.transform.position = player.transform.position - new Vector3(0, 0.1f, 0);
         gameObject.GetComponent<BaseTear>().Init(player.gameObject, player.Stat.GetStat(Option.Attack), player.projectileSpeed, player.projectileDistance, player.projectileSize, e.direction, player.isParbolic);
+
+        e.Cancel();
     }
 }
