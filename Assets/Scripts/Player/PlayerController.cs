@@ -234,6 +234,7 @@ public class PlayerController : MonoBehaviour, IDamagedable
         inputActions.Player.Attack.started += OnAttack;
         inputActions.Player.Attack.canceled += OffAttack;
         inputActions.Player.Move.performed += OnMove;
+        inputActions.Player.AutoAttack.started += ToggleAutoAttack;
 
         EventManager.RegisterListener<TearHitEntityEvent>(TakeDamage);
         EventManager.RegisterListener<EnemyAttackEvent>(TakeDamage);
@@ -245,6 +246,7 @@ public class PlayerController : MonoBehaviour, IDamagedable
         inputActions.Player.Attack.started -= OnAttack;
         inputActions.Player.Attack.canceled -= OffAttack;
         inputActions.Player.Move.performed -= OnMove;
+        inputActions.Player.AutoAttack.started -= ToggleAutoAttack;
 
         EventManager.UnregisterListener<TearHitEntityEvent>(TakeDamage);
         EventManager.UnregisterListener<EnemyAttackEvent>(TakeDamage);
@@ -276,6 +278,10 @@ public class PlayerController : MonoBehaviour, IDamagedable
             Attack();
             timeSincePressAttack = 0;
         }
+    }
+    private void ToggleAutoAttack(InputAction.CallbackContext context)
+    {
+        autoAttack = !autoAttack;
     }
 
     private void OnMove(InputAction.CallbackContext context)

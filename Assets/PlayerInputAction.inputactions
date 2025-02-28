@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "AutoAttack",
+                    "type": "Button",
+                    "id": "1807e994-a9df-4783-8144-0cc094fd937d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -134,6 +143,17 @@
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "41e8cb8e-179e-4c41-8272-aabc4de84871",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AutoAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
