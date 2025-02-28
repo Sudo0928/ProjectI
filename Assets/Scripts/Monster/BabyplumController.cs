@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿    using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,143 +16,145 @@ public class BabyplumController : MonsterBasic
     private Transform playerTrs;
     private SpriteRenderer renderer;
 
-    // 이동 방향
-    private Vector2 moveDir = Vector2.zero;
-    // 다음 공격까지 남은 시간
-    private float nextAttackTime;
-    // 공격할 패턴을 0, 1, 2로 판정
-    // 공격 상태가 아닐 때는 -1을 값으로
-    private int patternNum = -1;
-    // 패턴3으로 돌진중인가?
-    private bool pattern3 = false;
-
-    // 애니메이터 해시
-    private readonly int Pattern_1 = Animator.StringToHash("Pattern_1");
-    private readonly int Pattern_2 = Animator.StringToHash("Pattern_2");
-    private readonly int Pattern_3 = Animator.StringToHash("Pattern_3");
-    private readonly int IsAttack = Animator.StringToHash("IsAttack");
+    Vector2 moveDir = Vector2.zero;
+    float speed = 0.0f;
 
     void Start()
     {
         base.Start();
         renderer = GetComponentInChildren<SpriteRenderer>();
-        playerTrs = GameObject.FindAnyObjectByType<PlayerController>().transform;
-        nextAttackTime = Random.Range(minAttackTime, maxAttackTime);
+        playerTrs = GameObject.FindAnyObjectByType<Player>().transform;
     }
 
-    void Update()
+    private void Update()
     {
-        if( monsterState == MonsterState.Move && nextAttackTime > 0f)
-        {
-            nextAttackTime -= Time.deltaTime;
-        }
-        else
-        {
-            nextAttackTime = Random.Range(minAttackTime, maxAttackTime);
-            monsterState = MonsterState.Attack;
-            anim.SetBool(IsAttack, true);
-        }
+        renderer.flipX = moveDir.x < 0;
+        if (monsterState == MonsterState.Idle) 
+            moveDir = (playerTrs.position - transform.position).normalized;
+    
+        transform.position += new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime ;
 
-        switch(monsterState)
-        {
-            case MonsterState.Move:
-                PlumMove();
-                break;
-
-                case MonsterState.Attack:
-                ChoiceAttackPattern();
-                break;
-        }
     }
 
-    private void PlumMove()
+
+    public void OnIdleMode()
     {
-        moveDir = (playerTrs.position - transform.position).normalized;
-        rigid.velocity = moveDir * moveSpeed;
-    }
-
-    private void ChoiceAttackPattern()
-    {
-        if (patternNum == -1)
-        {
-            patternNum = Random.Range(0, 3);
-        }
-
-        switch(patternNum)
-        {
-            case 0:
-                PlumPattern1();
-                break;
-
-            case 1:
-                PlumPattern2();
-                break;
-
-            case 2:
-                moveDir = Vector2.zero;
-                PlumPattern3();
-                break;
-        }
-    }
-
-    private void PlumPattern1()
-    {
-        anim.SetBool(Pattern_1, true);
-        // 원형으로 투사체 발사
-    }
-
-    private void PlumPattern2()
-    {
-        anim.SetBool(Pattern_2, true);
-        PlumMove();
-        SetPlumFlipX();
-
-        // 회전하면서 투사체 발사
-    }
-
-    private void PlumPattern3()
-    {
-        if(moveDir == Vector2.zero)
-        {
-            anim.SetBool(Pattern_3, true);
-            float dirX = Random.Range(-1f, 1f);
-            float dirY = Random.Range(-1f, 1f);
-            moveDir = new Vector2(dirX, dirY);
-            SetPlumFlipX();
-        }
-
-        rigid.velocity = moveDir * pattern3DashSpeed;
+        OffAnims();
+        monsterState = MonsterState.Idle;
+        speed = 2.0f;
         
-        // 돌진하면서 투사체 흩뿌리기
-    }
+        if (shootStraight != null)
+            StopCoroutine(shootStraight);
 
-    // 스프라이트 렌더러 플립 제어
-    void SetPlumFlipX()
+        int rand = Random.Range(0, 100);
+        int nextSkill = rand < 40 ? 1 : rand < 80 ? 2 : 3;
+
+        anim.Play("Idle"); 
+        GameManager.Instance.SetTimer(()=> {
+            AnimSetBool(nextSkill, true);   
+            monsterState = MonsterState.Attack;
+        }, Random.Range(2.0f, 3.0f));
+    } 
+    
+    // 원형으로 투사체 발사 
+    public void PlayPattern1()
     {
-        if(moveDir.x > 0)
-        {
-            renderer.flipX = false;
-        }
-        else
-        {
-            renderer.flipX = true;
-        }
+        StartCoroutine(ShootCircular(0, 20));
+    } 
+
+
+    // 회전하면서 투사체 발사
+    public void PlayPattern2()
+    {
+        StartCoroutine(ShootCircular(1, 20));
+
     }
 
+    Coroutine shootStraight;
+    // 돌아댕기면서 투사체 발사
+    public void PlayPattern3()
+    {
+        moveDir = -(playerTrs.position - transform.position).normalized;
+        speed = 15.0f;
+        shootStraight = StartCoroutine(ShootStraight(0.05f));
+    }
+
+    public void OffAnims() 
+    {
+        AnimSetBool(1, false);
+        AnimSetBool(2, false);
+        AnimSetBool(3, false);
+
+    } 
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == wallLayer)
+        if (collision.gameObject.layer == 8)  
         {
-            moveDir = -moveDir;
+            var normal = collision.contacts[0].normal; 
+            if (Vector2.Dot(normal, moveDir) > 0.5f)
+                return;
+
+            moveDir = Vector2.Reflect(moveDir, normal); 
             renderer.flipX = !renderer.flipX;
+        } 
+    }
+
+
+
+    public void AnimSetBool(int num, bool active)
+    {
+        string name = $"Pattern_{num}";
+        anim.SetBool(name, active);
+
+        if (num == 1)
+            moveDir = Vector2.zero; 
+
+        else if (num == 2)
+        { 
+            moveDir = (playerTrs.position - transform.position).normalized;
+            speed = 3.0f;  
+        }   
+
+        else if (num == 3)
+        {
+        
+        }
+    }  
+
+    IEnumerator ShootCircular(float time, int cnt)
+    {
+        float angleStep = 360f / cnt;
+
+        for (int i = 0; i < cnt; i++)
+        {
+            float angle = i * angleStep;
+            float angleInRadians = angle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
+            BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
+            newTear.Init(gameObject, 6f, 10f, 0.5f, direction, false);
+
+            if (time > 0)
+                yield return new WaitForSeconds(time / cnt);
+        
+        }
+    
+        yield break;
+    }
+
+
+    IEnumerator ShootStraight(float time)
+    {
+        while(true)
+        { 
+            Vector2 direction = -moveDir;
+            BaseTear newTear = Instantiate(GameManager.Instance.tear, transform.position, Quaternion.identity);
+            newTear.Init(gameObject, 6f, 10f, 0.5f, direction, false);
+
+            if (time > 0) 
+                yield return new WaitForSeconds(time);  
         }
     }
 
-    public void EndAttack()
-    {
-        anim.SetBool(IsAttack, false);
-        anim.SetBool(Pattern_1, false);
-        anim.SetBool(Pattern_2, false);
-        anim.SetBool(Pattern_3, false);
-    }
 }
+
