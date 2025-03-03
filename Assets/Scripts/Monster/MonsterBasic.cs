@@ -23,19 +23,22 @@ public class MonsterBasic : MonoBehaviour
     // 몬스터 현재 체력
     protected float monsterCurrentHP = 0;
     [SerializeField, Tooltip("몬스터 공격력")] protected float monsterAtk = 0.5f;
-
     public UnityEvent onDie = new UnityEvent();
-    protected void Awake()
+    public bool isDie => monsterCurrentHP <= 0;
+
+
+	protected void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
-    }
+        monsterCurrentHP = monsterMaxHP;
+	}
 
     protected virtual void Start()
     {
-        monsterCurrentHP = monsterMaxHP;
+
     }
-     
+    
     public void GetDamage(float _damage)
     {
         if (gameObject.activeSelf == false)
@@ -49,10 +52,12 @@ public class MonsterBasic : MonoBehaviour
             MonsterDeadEvent e = new MonsterDeadEvent(this);
             EventManager.DispatchEvent(e);
 
+
             gameObject.SetActive(false);
         }
     }
-	public void OnCollisionEnter2D(Collision2D collision)
+    
+	protected virtual void OnCollisionEnter2D(Collision2D collision)
 	{
 
         if (collision.gameObject.CompareTag("Tear"))

@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class Ipecac : SpecialAbility
 {
-    private void OnEnable()
-    {
-        //EventManager.RegisterListener<TearDestroyEvent>(Explosion, 2);
-        //EventManager.RegisterListener<TearLaunchEvent>(ChangeColor, 1);
-    }
-
-    private void OnDisable()
-    {
-        //EventManager.UnregisterListener<TearDestroyEvent>(Explosion);
-        //EventManager.UnregisterListener<TearLaunchEvent>(ChangeColor);
-    }
+    private PlayerController player;
 
     private void ChangeColor(TearLaunchEvent e)
     {
@@ -77,6 +67,9 @@ public class Ipecac : SpecialAbility
 
     public override void OnAbility(PlayerController player)
 	{
+        this.player = player;
+        player.isParbolic = true;
+
 		EventManager.RegisterListener<TearDropEvent>(Explosion, 2);
 		EventManager.RegisterListener<TearHitObstacleEvent>(Explosion, 2);
 		EventManager.RegisterListener<TearHitEntityEvent>(Explosion, 2);
@@ -85,7 +78,8 @@ public class Ipecac : SpecialAbility
 
 	public override void RemoveSkill()
 	{
-		EventManager.UnregisterListener<TearDropEvent>(Explosion);
+        player.isParbolic = false;
+        EventManager.UnregisterListener<TearDropEvent>(Explosion);
 		EventManager.UnregisterListener<TearHitObstacleEvent>(Explosion);
 		EventManager.UnregisterListener<TearHitEntityEvent>(Explosion);
 		EventManager.UnregisterListener<TearLaunchEvent>(ChangeColor);

@@ -87,11 +87,12 @@ public class BabyplumController : MonsterBasic
 
     } 
     
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
+
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    { 
         base.OnCollisionEnter2D(collision);
 
-		if (collision.gameObject.layer == 9)  
+        if (collision.gameObject.layer == 9)  
         {
             var normal = collision.contacts[0].normal; 
             if (Vector2.Dot(normal, moveDir) > 0.5f)
@@ -143,6 +144,7 @@ public class BabyplumController : MonsterBasic
 			}
 
 			newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
+
 
             if (time > 0)
                 yield return new WaitForSeconds(time / cnt);

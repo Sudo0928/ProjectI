@@ -3,16 +3,6 @@ using static DesignEnums;
 
 public class MutantSpider : SpecialAbility
 {
-    private void OnEnable()
-    {
-        EventManager.RegisterListener<PlayerAttackEvent>(Attack, 1);
-    }
-
-    private void OnDisable()
-    {
-        EventManager.UnregisterListener<PlayerAttackEvent>(Attack);
-    }
-
     public override void OnAbility(PlayerController player)
     {
         EventManager.RegisterListener<PlayerAttackEvent>(Attack, 1);

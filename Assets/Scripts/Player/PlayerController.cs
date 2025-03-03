@@ -124,9 +124,17 @@ public class PlayerController : MonoBehaviour, IDamagedable
         {
             if (isCharging)
             {
+                if (timeSincePressAttack > maxChargingTime)
+                {
+                    Attack();
+                    timeSincePressAttack = 0;
+                    autoAttack = false;
+                    GameManager.Instance.SetTimer(() => autoAttack = true, 0.01f);
+                }
+
                 animationHandler.PlayLookAnim(lookDirection);
                 animationHandler.SetChargeSpeed(maxChargingTime);
-                animationHandler.PlayerCharging(isAttack);
+                animationHandler.PlayerCharging(isAttack || autoAttack);
                 timeSincePressAttack += Time.deltaTime;
             }
             else

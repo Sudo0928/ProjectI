@@ -4,16 +4,6 @@ using static DesignEnums;
 
 public class DoubleShot: SpecialAbility
 {
-    private void OnEnable()
-    {
-        EventManager.RegisterListener<PlayerAttackEvent>(Attack, 1);
-    }
-
-    private void OnDisable()
-    {
-        EventManager.UnregisterListener<PlayerAttackEvent>(Attack);
-    }
-
     public override void OnAbility(PlayerController player)
     {
         EventManager.RegisterListener<PlayerAttackEvent>(Attack, 1);
@@ -26,6 +16,8 @@ public class DoubleShot: SpecialAbility
 
     public void Attack(PlayerAttackEvent e)
     {
+        Debug.Log("test");
+
         for(int i = 0; i < 1; i++)
         {
             float randomX = 0;

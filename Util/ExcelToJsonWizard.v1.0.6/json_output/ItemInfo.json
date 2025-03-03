@@ -549,6 +549,42 @@
       "Description": "사용 시 방 안의 모든 아이템을 다시 생성한다",
       "Massage": "운명을 바꾸는 능력",
       "Image": "collectibles_105_dice_0"
+    },
+    {
+      "key": 3001,
+      "Name": "초코우유",
+      "Grade": 3,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        19
+      ],
+      "Gauge": 0,
+      "Description": "공격 방식을 차징 방식으로 바꾼다. 눈물 크기 증가",
+      "Massage": "굉장해 엄청나!",
+      "Image": "collectibles_069_chocolatemilk"
+    },
+    {
+      "key": 3002,
+      "Name": "더블샷",
+      "Grade": 3,
+      "AvailableOptions": [
+        0
+      ],
+      "OptionValues": [
+        0
+      ],
+      "SpecialOptions": [
+        15
+      ],
+      "Gauge": 0,
+      "Description": "눈물을 2개 발사한다. 추가로 먹을시 눈물을 1개 추가한다.",
+      "Massage": "삐뿌엔삐뿌!",
+      "Image": "collectibles_245_2020"
     }
   ]
 }
