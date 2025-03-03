@@ -18,9 +18,10 @@
 - 보스 몬스터 패턴 
 - 몬스터 설계
 - 플레이어 로직
-- User Interface
-
+  
 <br><br>
+
+---
 # 📜 Dungeon System
 ## 방 이동 시스템 <br>
 ![던전이동](https://github.com/user-attachments/assets/d2e2d1fa-b5c3-4f4f-b862-17cd24cdc57d)
@@ -82,6 +83,17 @@
 - 아이템 Trigger Collider에 플레이어가 들어가면 **ItemPreviewUI** Class의 Enter Item 함수를 통해 아이템 정보를 등록하도록 했습니다. <br>
   이후, 가장 가까운 아이템을 찾아서 UI에 출력하는 방식으로 구현했습니다.
 
+<br><br> 
+
+---
 
 # 🦙 몬스터 설계
+## 일반 몬스터
+<img src="https://github.com/user-attachments/assets/9976dfc3-0523-48d8-8609-86f0a8c2979c" alt="몬스터" width="500px"> <br>
+- 3종류의 몬스터를 설계했습니다. <br>
+  플레이어를 따라다니며, 투사체를 발사하는 몬스터 <br>
+  랜덤한 방향으로 돌아다니는 거미 몬스터 <br>
+  직각으로만 움직이며 플레이어가 앞에 있으면 돌진하는 몬스터 <br>
+  <br>
 
+## 보스 몬스터
