@@ -16,7 +16,6 @@
 - 던전 시스템
 - 아이템 설계
 - 보스 몬스터 패턴 
-- 특수 기능
 - 몬스터 설계
 - 플레이어 로직
 - User Interface
@@ -45,6 +44,7 @@
   이 때, 엑셀에 정의한 아이템 데이터를 통해 확률이 적용되도록 했습니다.  
 <br><br>
 
+---
 
 # 🎲 Item System
 ## 아이템 데이터
@@ -69,6 +69,19 @@
 ![image](https://github.com/user-attachments/assets/d0145c0a-a4dd-4998-abce-cdc3df12fa0f)
 <br><br>
 
-## 아이템
+## 아이템 습득
+![아이템 UI   습득](https://github.com/user-attachments/assets/f0e8c11d-2035-4c2d-bd40-1dcc6fc5ede0) <br>
+- 아이템 오브젝트는 아이템의 Key값만 들고있게 되며, 플레이어와 충돌시, key값을 통해 아이템 정보를 불러오고 <br>
+  플레이어에게 전달하는 방식으로 아이템 습득을 구현했습니다.
+  
+![image](https://github.com/user-attachments/assets/a395287c-935d-4d47-908c-2ddb930ba4ee) <br>
+- 엑셀에 저장한 아이템 이미지 이름을 통해 이미지를 불러와서 아이템의 SpriteRenderer에 적용시키도록 했습니다.
 
+### 아이템 미리보기 UI
+![image](https://github.com/user-attachments/assets/d55802c8-5a8a-4dd4-bc42-d5168a6965be)
+- 아이템 Trigger Collider에 플레이어가 들어가면 **ItemPreviewUI** Class의 Enter Item 함수를 통해 아이템 정보를 등록하도록 했습니다. <br>
+  이후, 가장 가까운 아이템을 찾아서 UI에 출력하는 방식으로 구현했습니다.
+
+
+# 🦙 몬스터 설계
 
