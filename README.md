@@ -97,3 +97,18 @@
   <br>
 
 ## 보스 몬스터
+<img src="https://github.com/user-attachments/assets/0225dae3-74e2-4a41-a07b-36cde0e53984" alt="몬스터" width="500px"> <br>
+- 기본적으로 플레이어를 쫓아다니도록 설계를 하였고, 3개의 공격 패턴중에 1개를 선택해서 사용하도록 하였습니다. <br>
+  
+###
+![image](https://github.com/user-attachments/assets/1791c11a-f75f-4839-9143-2473cc043429) <br>
+![image](https://github.com/user-attachments/assets/8625d107-52d9-4c08-96ce-001f91563030)
+- 위 두개의 코루틴을 사용하여 투사체를 발사하도록 하였습니다. <br>
+  ShootCircular 함수는 time초 동안 원형으로 cnt개의 투사체를 발사하는 함수이며, <br>
+  ShootStraight 함수는 이동 방향의 반대 방향으로 time초에 한발 씩 발사하는 함수입니다.
+
+- 보스 몬스터의 공격 애니메이션에 특정 함수가 실행되도록 하였고, 해당 함수에서 투사체 발사 코루틴을 실행하도록 설계했습니다.
+  
+
+
+# 감사합니다.
