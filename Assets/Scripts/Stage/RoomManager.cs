@@ -114,7 +114,9 @@
 			gameObject.SetActive(true);
 
 			foreach (var go in roomMonsters)
-				go.SetActive(true);
+			{
+					go.SetActive(!go.GetComponent<MonsterBasic>().isDie);
+			}
 
 			if (monsterCnt > 0)
 				CloseDoor(); 
