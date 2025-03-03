@@ -283,10 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterState: 0
-
-  monsterMaxHP: 300
+  monsterMaxHP: 1000
   monsterAtk: 0.5
-
   onDie:
     m_PersistentCalls:
       m_Calls: []
@@ -296,4 +294,4 @@ MonoBehaviour:
   maxAttackTime: 4
   wallLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
