@@ -57,7 +57,18 @@
   아이템의 옵션 Key를 통해 옵션 정보를 꺼내올 수 있게 하였습니다. <br>
 ###
 ![image](https://github.com/user-attachments/assets/d69a9f50-86f2-4f47-abf1-b74c87f6c176)
+<br><br>
 
-  
+## 아이템 특수 효과
+![image](https://github.com/user-attachments/assets/2012d25d-7359-42e4-bee1-a01a7a0b9651)
+- 아이템의 특수효과는 Component의 이름을 저장하였습니다.
+###
+![image](https://github.com/user-attachments/assets/fc4d3361-030c-44a4-a2a7-565ef4014ca8)
+- 특수 효과에 해당하는 Component는 게임 시작시 리플렉션을 통해 미리 캐싱해두고, 필요시 꺼내쓰는 방식으로 구현했습니다. <br>
+###
+![image](https://github.com/user-attachments/assets/d0145c0a-a4dd-4998-abce-cdc3df12fa0f)
+<br><br>
+
+## 아이템
 
 
