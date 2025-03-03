@@ -7,3 +7,14 @@ public class PlayerDamagedEvent : Event
         this.damage = damage;
     }
 }
+
+
+public class PlayerDieEvent : Event
+{ 
+
+    public PlayerDieEvent()
+    {
+
+    }
+}
+

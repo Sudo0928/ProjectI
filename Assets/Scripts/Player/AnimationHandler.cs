@@ -83,6 +83,11 @@ public class AnimationHandler : MonoBehaviour
         playerAnim.SetFloat(ChargeSpeed, 1 / chargeSpeed);
     }
 
+    public void SetDieTrigger()
+    { 
+        playerAnim.SetTrigger("die");
+    }
+
     private IEnumerator DelayTrans()
     {
         yield return new WaitForSeconds(0.5f);

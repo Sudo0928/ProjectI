@@ -56,6 +56,7 @@ public class MonsterBasic : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    
 	protected virtual void OnCollisionEnter2D(Collision2D collision)
 	{
 
@@ -75,6 +76,7 @@ public class MonsterBasic : MonoBehaviour
             EventManager.DispatchEvent(e);
         }
     }
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
         

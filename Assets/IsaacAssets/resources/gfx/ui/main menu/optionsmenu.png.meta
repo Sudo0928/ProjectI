@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: optionsmenu_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 272
+        width: 226
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9750f5f86c68d0a429e153fc9afe3081
+      internalID: -18014664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 469
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69575f0a808266642af9af8fc309345c
+      internalID: 1236819760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 253
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f12388cfc252a4294d11db502c1076
+      internalID: 876955951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 346
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3161887d7c789a040ae4671c9f7a92e0
+      internalID: 546734569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 399
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca15a6bdf27aa84ba2617e5e2c1170e
+      internalID: 1804722170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 32
+        width: 47
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f168f4cb762b664d8b0638737eb83bd
+      internalID: -733233725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_4
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 224
+        width: 61
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7750c3ba89085a3448c2daf349bc9926
+      internalID: 1984939331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 256
+        width: 60
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e420a775437cfe428fd16d4c74572fd
+      internalID: 1322671233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 240
+        width: 60
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea31f3f6673d4424280c989a9d767558
+      internalID: 1136862691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 208
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368bd8ebabc398b46a18e6e3de9ce90f
+      internalID: -955734434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_10
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 192
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1515d5ce520c55478e40bdf93036cee
+      internalID: -1791102673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 176
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efa3dda341ef574da0c0f9344be33d1
+      internalID: -773902381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_12
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 160
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d1eb88ef6e5fc43a2bc6101dc7f5f1
+      internalID: 2121703066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_13
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 144
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2028aae308033604e824e6f37a74477f
+      internalID: -505366517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_14
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 128
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ebe7aed0892e04eb6de5a268ecc187
+      internalID: -1977208753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_15
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 112
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc73953623296e4e9e405ba9b480fda
+      internalID: -2141112991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: optionsmenu_16
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 96
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e579db616c5465b4c8a6b5490743fd0d
+      internalID: 1748789356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +489,235 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      optionsmenu_0: -18014664
+      optionsmenu_1: -733233725
+      optionsmenu_10: -1791102673
+      optionsmenu_100: -587493642
+      optionsmenu_101: 1490617746
+      optionsmenu_102: 875949730
+      optionsmenu_103: 1038389679
+      optionsmenu_104: -1796245482
+      optionsmenu_105: -1660236075
+      optionsmenu_106: -1841089398
+      optionsmenu_107: -1933447370
+      optionsmenu_108: -1698683600
+      optionsmenu_109: -898292122
+      optionsmenu_11: -773902381
+      optionsmenu_110: -2437992
+      optionsmenu_111: -949668797
+      optionsmenu_112: -548687433
+      optionsmenu_113: 332645863
+      optionsmenu_114: -186280463
+      optionsmenu_115: 659562345
+      optionsmenu_116: 57979411
+      optionsmenu_117: -1490536490
+      optionsmenu_118: -1316786873
+      optionsmenu_119: -1905260805
+      optionsmenu_12: 2121703066
+      optionsmenu_120: 362147535
+      optionsmenu_121: 1480018801
+      optionsmenu_122: -68519721
+      optionsmenu_123: 1942060295
+      optionsmenu_124: -1947952805
+      optionsmenu_125: 842709864
+      optionsmenu_126: 1796793901
+      optionsmenu_127: 989258510
+      optionsmenu_128: 2144326237
+      optionsmenu_129: -992612084
+      optionsmenu_13: -505366517
+      optionsmenu_130: -1878178458
+      optionsmenu_131: 307762131
+      optionsmenu_132: -2094516302
+      optionsmenu_133: 258143659
+      optionsmenu_134: 260755897
+      optionsmenu_135: 440671550
+      optionsmenu_136: 341679355
+      optionsmenu_137: 235560351
+      optionsmenu_138: -18957858
+      optionsmenu_139: 1435836446
+      optionsmenu_14: -1977208753
+      optionsmenu_140: -196525566
+      optionsmenu_141: 1207129348
+      optionsmenu_142: 165116004
+      optionsmenu_143: -1869750364
+      optionsmenu_144: -2129983537
+      optionsmenu_145: -1754271216
+      optionsmenu_146: 1563732388
+      optionsmenu_147: 1984309725
+      optionsmenu_148: 177502516
+      optionsmenu_149: 667304304
+      optionsmenu_15: -2141112991
+      optionsmenu_150: -1337354877
+      optionsmenu_151: -1168469686
+      optionsmenu_152: 216814190
+      optionsmenu_153: -1879734386
+      optionsmenu_154: 505460425
+      optionsmenu_155: 1931946625
+      optionsmenu_156: -1847209003
+      optionsmenu_157: -629858154
+      optionsmenu_158: -1816507486
+      optionsmenu_159: 1713052789
+      optionsmenu_16: 1748789356
+      optionsmenu_160: 164517562
+      optionsmenu_161: 855050506
+      optionsmenu_162: 598728154
+      optionsmenu_163: 396371782
+      optionsmenu_164: 1138123558
+      optionsmenu_165: -320322713
+      optionsmenu_166: -1580653458
+      optionsmenu_167: 1927896334
+      optionsmenu_168: 1712880009
+      optionsmenu_169: -802528548
+      optionsmenu_17: -770624994
+      optionsmenu_170: -605785188
+      optionsmenu_171: 1815360127
+      optionsmenu_172: -1163564745
+      optionsmenu_173: 522314718
+      optionsmenu_174: 2077753380
+      optionsmenu_175: -624830671
+      optionsmenu_176: 49354486
+      optionsmenu_177: -1803471642
+      optionsmenu_178: 2052588681
+      optionsmenu_179: 381291754
+      optionsmenu_18: -1997249800
+      optionsmenu_180: -449492060
+      optionsmenu_181: -1621890429
+      optionsmenu_182: 1686421579
+      optionsmenu_183: -424990429
+      optionsmenu_184: 911235891
+      optionsmenu_185: -2143524890
+      optionsmenu_186: -1998604907
+      optionsmenu_187: -1550632926
+      optionsmenu_188: -198901505
+      optionsmenu_189: 1655319232
+      optionsmenu_19: -1974092535
+      optionsmenu_190: -187844393
+      optionsmenu_191: 465949898
+      optionsmenu_192: 1045809538
+      optionsmenu_193: 1319059174
+      optionsmenu_194: 1533797560
+      optionsmenu_195: -601999046
+      optionsmenu_196: 1975698429
+      optionsmenu_197: -919650559
+      optionsmenu_198: -1324057039
+      optionsmenu_199: -1491102056
+      optionsmenu_2: 1236819760
+      optionsmenu_20: -447337562
+      optionsmenu_200: -1454407035
+      optionsmenu_201: 1171347523
+      optionsmenu_202: -1838583120
+      optionsmenu_203: 1815306111
+      optionsmenu_204: -1861827336
+      optionsmenu_205: -1912999999
+      optionsmenu_206: 1441125315
+      optionsmenu_207: -1280864343
+      optionsmenu_208: -263734406
+      optionsmenu_209: 1812373262
+      optionsmenu_21: -708175340
+      optionsmenu_210: -1141327206
+      optionsmenu_211: -501430087
+      optionsmenu_212: -416033355
+      optionsmenu_213: 570739111
+      optionsmenu_214: -931710484
+      optionsmenu_215: 1133307914
+      optionsmenu_216: 1827887012
+      optionsmenu_217: 431574368
+      optionsmenu_218: -600910118
+      optionsmenu_219: 1564191069
+      optionsmenu_22: 106697387
+      optionsmenu_220: -995775236
+      optionsmenu_221: -369990514
+      optionsmenu_222: -161450972
+      optionsmenu_223: -843683461
+      optionsmenu_224: -1457966633
+      optionsmenu_225: -1607202513
+      optionsmenu_226: -946280224
+      optionsmenu_227: 1357199910
+      optionsmenu_23: -1758603802
+      optionsmenu_24: 2026342526
+      optionsmenu_25: 1024212107
+      optionsmenu_26: -503403719
+      optionsmenu_27: 1484949141
+      optionsmenu_28: 2119059352
+      optionsmenu_29: -921409869
+      optionsmenu_3: 1804722170
+      optionsmenu_30: 638793436
+      optionsmenu_31: -1291623100
+      optionsmenu_32: 1402096062
+      optionsmenu_33: 861423457
+      optionsmenu_34: 859259375
+      optionsmenu_35: 1360415942
+      optionsmenu_36: -848833624
+      optionsmenu_37: 729825014
+      optionsmenu_38: -348539806
+      optionsmenu_39: 861703358
+      optionsmenu_4: 1984939331
+      optionsmenu_40: -796296593
+      optionsmenu_41: -1362938750
+      optionsmenu_42: 426322661
+      optionsmenu_43: 1303459405
+      optionsmenu_44: 418686756
+      optionsmenu_45: 1236382000
+      optionsmenu_46: -1916123559
+      optionsmenu_47: -173073715
+      optionsmenu_48: -51700649
+      optionsmenu_49: 1485376706
+      optionsmenu_5: 546734569
+      optionsmenu_50: 821554764
+      optionsmenu_51: -2061970261
+      optionsmenu_52: -840170067
+      optionsmenu_53: 1929992364
+      optionsmenu_54: 1218339664
+      optionsmenu_55: -179978835
+      optionsmenu_56: 63026509
+      optionsmenu_57: -2090752059
+      optionsmenu_58: -1334172142
+      optionsmenu_59: 1738782966
+      optionsmenu_6: 1322671233
+      optionsmenu_60: 331987753
+      optionsmenu_61: -1686921319
+      optionsmenu_62: -1283429176
+      optionsmenu_63: 1205167413
+      optionsmenu_64: -1712986938
+      optionsmenu_65: 1589126546
+      optionsmenu_66: 151696256
+      optionsmenu_67: 480171517
+      optionsmenu_68: 1947832131
+      optionsmenu_69: -1689359692
+      optionsmenu_7: 876955951
+      optionsmenu_70: -1945671166
+      optionsmenu_71: 945145121
+      optionsmenu_72: 1238077523
+      optionsmenu_73: -1818618382
+      optionsmenu_74: 673357473
+      optionsmenu_75: 278799642
+      optionsmenu_76: 321400255
+      optionsmenu_77: -311934795
+      optionsmenu_78: 1390423445
+      optionsmenu_79: 656122702
+      optionsmenu_8: 1136862691
+      optionsmenu_80: -998215764
+      optionsmenu_81: -316442907
+      optionsmenu_82: 594952089
+      optionsmenu_83: -2046776533
+      optionsmenu_84: -2101401105
+      optionsmenu_85: -1422132028
+      optionsmenu_86: -1510722569
+      optionsmenu_87: 797297512
+      optionsmenu_88: -1294198288
+      optionsmenu_89: -1307010029
+      optionsmenu_9: -955734434
+      optionsmenu_90: -1416141575
+      optionsmenu_91: 408033705
+      optionsmenu_92: -1589154602
+      optionsmenu_93: -55094508
+      optionsmenu_94: -1286720216
+      optionsmenu_95: 1945194002
+      optionsmenu_96: 1115572613
+      optionsmenu_97: 10712737
+      optionsmenu_98: -1573664320
+      optionsmenu_99: 1832832370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -113,6 +113,7 @@ public class ArrowMenuNavigation : MonoBehaviour
             case 1:
                 Debug.Log("Menu 2 selected");
                 // SceneManager.LoadScene("Scene2");
+                StartCoroutine(FadeInOutScene("GY_TestScene"));
                 break;
 
             case 2:

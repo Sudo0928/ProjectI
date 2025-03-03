@@ -33,7 +33,6 @@ public class BabyplumController : MonsterBasic
             moveDir = (playerTrs.position - transform.position).normalized;
     
         transform.position += new Vector3(moveDir.x, moveDir.y, 0) * speed * Time.deltaTime ;
-
     }
 
 
@@ -54,6 +53,7 @@ public class BabyplumController : MonsterBasic
             AnimSetBool(nextSkill, true);   
             monsterState = MonsterState.Attack;
         }, Random.Range(2.0f, 3.0f));
+
     } 
     
     // 원형으로 투사체 발사 
@@ -87,6 +87,7 @@ public class BabyplumController : MonsterBasic
 
     } 
     
+
     protected override void OnCollisionEnter2D(Collision2D collision)
     { 
         base.OnCollisionEnter2D(collision);
@@ -134,7 +135,16 @@ public class BabyplumController : MonsterBasic
             float angleInRadians = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
             BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
-            newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
+			var colder = newTear.gameObject.GetComponent<CircleCollider2D>();
+			if (colder != null)
+			{
+				colder.enabled = false; 
+
+				GameManager.Instance.SetTimer(() => { colder.enabled = true; }, 0.3f);
+			}
+
+			newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
+
 
             if (time > 0)
                 yield return new WaitForSeconds(time / cnt);
@@ -147,13 +157,22 @@ public class BabyplumController : MonsterBasic
 
     IEnumerator ShootStraight(float time)
     {
-        while(true)
+        while(true) 
         { 
             Vector2 direction = -moveDir;
             BaseTear newTear = Instantiate(GameManager.Instance.enemyTear, transform.position, Quaternion.identity);
             newTear.Init(gameObject, 1.0f, 6f, 10f, 0.5f, direction, false);
 
-            if (time > 0) 
+			var colder = newTear.gameObject.GetComponent<CircleCollider2D>();
+			if (colder != null)
+            {
+				colder.enabled = false;
+
+				GameManager.Instance.SetTimer(() => { colder.enabled = true; }, 0.3f);
+			}
+				
+
+			if (time > 0) 
                 yield return new WaitForSeconds(time);  
         }
     }

@@ -11,8 +11,15 @@ public class SoundListener : MonoBehaviour
     public AudioClip[] playerDeadSounds;
     public AudioClip[] playerDamagedSounds;
 
-    private void OnEnable()
+    public AudioClip backgroundSound;
+	private void Awake()  
+	{
+    //    SoundManager.Instance.ChangeBGM(backgroundSound);
+	}
+	private void OnEnable()
     {
+
+        EventManager.RegisterListener<PlayerDieEvent>(PlayerDieSound);
         EventManager.RegisterListener<ExplosionEvent>(ExplosionSound);
 
         EventManager.RegisterListener<TearLaunchEvent>(TearLunchSound);
@@ -35,7 +42,14 @@ public class SoundListener : MonoBehaviour
         EventManager.UnregisterListener<PlayerDamagedEvent>(PlayerDamagedSound);
     }
 
-    private void ExplosionSound(ExplosionEvent e)
+	private void PlayerDieSound(PlayerDieEvent e)
+	{
+		int random = Random.Range(0, 3);
+		SoundManager.Instance.PlaySFX(playerDeadSounds[random]);
+	}
+
+	
+	private void ExplosionSound(ExplosionEvent e)
     {
         int random = Random.Range(0, explosionSounds.Length);
         SoundManager.Instance.PlaySFX(explosionSounds[random]);
@@ -62,7 +76,7 @@ public class SoundListener : MonoBehaviour
 
     }
 
-    private void PlayerDeadSound()
+    private void PlayerDeadSound() 
     {
         int random = Random.Range(0, playerDeadSounds.Length);
         SoundManager.Instance.PlaySFX(playerDeadSounds[random]);
@@ -73,7 +87,7 @@ public class SoundListener : MonoBehaviour
         int random = Random.Range(0, playerDamagedSounds.Length);
         SoundManager.Instance.PlaySFX(playerDamagedSounds[random]);
     }
-
+     
     
 
     private void TearHitSound(TearHitEntityEvent e)

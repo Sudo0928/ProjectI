@@ -283,8 +283,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterState: 0
-  monsterMaxHP: 1000
-  monsterAtk: 1
+
+  monsterMaxHP: 300
+  monsterAtk: 0.5
+
   onDie:
     m_PersistentCalls:
       m_Calls: []
